@@ -11,3 +11,5 @@ for league in ("nfl","cfb"):
         for key in ("game_id","kickoff","home","away","projected_margin_home","projected_total","home_win_probability","data_reliability"):assert key in game
 print("Output validation passed")
 
+underdogs=json.loads((ROOT/"data"/"output"/"underdog_ml_picks.json").read_text())
+assert isinstance(underdogs.get("picks"),list)
