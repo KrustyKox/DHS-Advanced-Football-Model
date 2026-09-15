@@ -17,7 +17,9 @@ def selection_gate(play: dict[str, Any], projection: dict[str, Any], validation:
         reasons.append("market edge below threshold")
     if float(play.get("model_probability", 0)) < SETTINGS.min_selection_confidence:
         reasons.append("probability below threshold")
-    if float(projection.get("data_reliability", 0)) < .72:
+    league = str(projection.get("league", "")).lower()
+    min_reliability = SETTINGS.nfl_min_reliability if league == "nfl" else SETTINGS.cfb_min_reliability
+    if float(projection.get("data_reliability", 0)) < min_reliability:
         reasons.append("input reliability below threshold")
     raw = float(play.get("raw_point_edge", 0) or 0)
     if play.get("market") == "Spread" and raw > SETTINGS.max_plausible_spread_edge:
@@ -61,4 +63,3 @@ def grade_locked(locked: list[dict[str, Any]], finals: dict[str, tuple[float,flo
             item["actual_home"],item["actual_away"] = score
         out.append(item)
     return out
-
