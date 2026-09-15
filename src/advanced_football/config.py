@@ -19,6 +19,8 @@ class Settings:
     sportsbooks: tuple[str, ...] = ("draftkings", "bovada")
     min_market_edge: float = float(os.getenv("MIN_MARKET_EDGE", "0.035"))
     min_selection_confidence: float = float(os.getenv("MIN_SELECTION_CONFIDENCE", "0.70"))
+    nfl_min_reliability: float = float(os.getenv("NFL_MIN_RELIABILITY", "0.64"))
+    cfb_min_reliability: float = float(os.getenv("CFB_MIN_RELIABILITY", "0.72"))
     max_plausible_spread_edge: float = float(os.getenv("MAX_SPREAD_EDGE", "12"))
     max_plausible_total_edge: float = float(os.getenv("MAX_TOTAL_EDGE", "14"))
     min_validation_games: int = int(os.getenv("MIN_VALIDATION_GAMES", "150"))
