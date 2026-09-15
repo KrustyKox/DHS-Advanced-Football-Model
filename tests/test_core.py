@@ -3,6 +3,7 @@ from datetime import datetime,timezone
 from src.advanced_football.evaluation import selection_gate,summarize_performance
 from src.advanced_football.math_utils import american_to_probability,no_vig_two_way,stable_seed
 from src.advanced_football.markets import normalize_events
+from src.advanced_football.pipeline import build_underdog_ml_board
 
 
 def test_stable_seed():assert stable_seed("NFL",1)==stable_seed("NFL",1)!=stable_seed("NFL",2)
@@ -28,3 +29,8 @@ def test_gate_rejects_implausible_edge():
     projection={"data_reliability":.9};ok,reasons=selection_gate(play,projection,{"games":300})
     assert not ok and "spread edge requires review" in reasons
 
+
+def test_underdog_board_requires_model_to_pick_the_longer_price():
+    results={"nfl":{"games":[{"game_id":"1","week":2,"kickoff":"2026-09-20T17:00:00Z","home":"Home","away":"Away","predicted_winner":"Away","home_win_probability":.42,"winner_confidence":.58,"data_reliability":.9,"sportsbooks":[{"sportsbook":"draftkings","home_moneyline":-150,"away_moneyline":130,"evaluations":[{"market":"Moneyline","side":"Away","qualified":True,"gate_reasons":[]}]}]}]}}
+    picks=build_underdog_ml_board(results)
+    assert len(picks)==1 and picks[0]["underdog"]=="Away" and picks[0]["qualified"]
