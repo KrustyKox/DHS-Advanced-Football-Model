@@ -7,7 +7,7 @@ from typing import Any
 import requests
 
 from .config import SETTINGS
-from .math_utils import american_to_probability, no_vig_two_way, normal_probability_above
+from .math_utils import american_to_probability, no_vig_two_way, normal_probability_above, normalize_american_odds
 
 
 def fetch_market_board(league: str) -> dict[str, Any]:
@@ -76,7 +76,9 @@ def normalize_events(payload: dict[str, Any]) -> list[dict[str, Any]]:
                     if not isinstance(outcome, dict):
                         continue
                     name = _name(outcome.get("name") or outcome.get("team") or outcome.get("side"))
-                    price = _num(outcome.get("price") or outcome.get("odds") or outcome.get("american_odds"))
+                    price = _num(outcome.get("american_odds"))
+                    if price is None:price=_num(outcome.get("price") or outcome.get("odds") or outcome.get("decimal_odds"))
+                    if price is not None:price=normalize_american_odds(price)
                     point = _num(outcome.get("point") or outcome.get("line") or outcome.get("handicap"))
                     lname = name.lower()
                     if key in {"h2h", "moneyline", "money_line", "ml"}:
@@ -113,4 +115,3 @@ def evaluate_market(projection: dict[str, Any], market: dict[str, Any], margin_s
         over = normal_probability_above(total, line, total_sigma); side = "Over" if over >= .5 else "Under"
         out.append({"market": "Total", "side": side, "line": line, "odds": market.get("over_odds") if side == "Over" else market.get("under_odds"), "model_probability": max(over,1-over), "market_probability": .5, "edge": abs(over-.5), "raw_point_edge": abs(total-line)})
     return out
-
