@@ -105,7 +105,9 @@ def train(data:pd.DataFrame,features:list[str],league:str,current_season:int) ->
     pred_margin=np.average(mp,axis=0,weights=mw);pred_total=np.average(tp,axis=0,weights=tw)
     y=(val.actual_margin>0).astype(int);cal=None
     if y.nunique()>1:
-        cal=LogisticRegression(C=.7).fit(pred_margin.reshape(-1,1),y);prob=cal.predict_proba(pred_margin.reshape(-1,1))[:,1]
+        # A zero projected margin must map to 50%. Removing the intercept keeps the
+        # calibrated probability direction consistent with the projected score winner.
+        cal=LogisticRegression(C=.7,fit_intercept=False).fit(pred_margin.reshape(-1,1),y);prob=cal.predict_proba(pred_margin.reshape(-1,1))[:,1]
     else:prob=1/(1+np.exp(-pred_margin/10))
     validation={"games":len(val),"margin_mae":float(mean_absolute_error(val.actual_margin,pred_margin)),"total_mae":float(mean_absolute_error(val.actual_total,pred_total)),"winner_accuracy":float(((pred_margin>0)==(val.actual_margin>0)).mean()),"brier_score":float(brier_score_loss(y,prob)),"log_loss":float(log_loss(y,np.clip(prob,.001,.999),labels=[0,1])),"method":"chronological holdout; recency-weighted training; market-free features"}
     # Refit every component on all completed games after honest validation.
