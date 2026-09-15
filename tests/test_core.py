@@ -1,7 +1,7 @@
 from datetime import datetime,timezone
 
 from src.advanced_football.evaluation import selection_gate,summarize_performance
-from src.advanced_football.math_utils import american_to_probability,no_vig_two_way,stable_seed
+from src.advanced_football.math_utils import american_to_probability,no_vig_two_way,normalize_american_odds,stable_seed
 from src.advanced_football.markets import normalize_events
 from src.advanced_football.pipeline import build_underdog_ml_board
 
@@ -12,6 +12,9 @@ def test_stable_seed():assert stable_seed("NFL",1)==stable_seed("NFL",1)!=stable
 def test_odds_math():
     assert round(american_to_probability(-110),4)==.5238
     a,b=no_vig_two_way(.5238,.5238);assert round(a,3)==round(b,3)==.5
+    assert normalize_american_odds(2.8)==180.0
+    assert normalize_american_odds(1.5)==-200.0
+    assert normalize_american_odds(-110)==-110
 
 
 def test_market_normalization():
