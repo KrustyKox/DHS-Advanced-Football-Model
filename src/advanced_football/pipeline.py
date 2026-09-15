@@ -94,6 +94,6 @@ def run()->dict[str,Any]:
         results[league],plays,performance[league]=build_league(league,schedule,teams,market,now);all_plays.extend(plays);_write(OUTPUT/f"{league}.json",results[league])
     all_plays.sort(key=lambda x:(x["kickoff"],-float(x.get("edge",0))))
     underdogs=build_underdog_ml_board(results)
-    _write(OUTPUT/"qualified_plays.json",_finite({"generated_at":now.isoformat(),"plays":all_plays,"gate_policy":{"min_probability":SETTINGS.min_selection_confidence,"min_market_edge":SETTINGS.min_market_edge,"research_only":True}}));_write(OUTPUT/"performance.json",_finite(performance))
+    _write(OUTPUT/"qualified_plays.json",_finite({"generated_at":now.isoformat(),"plays":all_plays,"gate_policy":{"min_probability":SETTINGS.min_selection_confidence,"min_market_edge":SETTINGS.min_market_edge,"min_reliability":{"nfl":SETTINGS.nfl_min_reliability,"cfb":SETTINGS.cfb_min_reliability},"research_only":True}}));_write(OUTPUT/"performance.json",_finite(performance))
     _write(OUTPUT/"underdog_ml_picks.json",_finite({"generated_at":now.isoformat(),"picks":underdogs,"definition":"Sportsbook moneyline underdog independently projected by DHS to win. Qualified status requires every wagering gate to pass."}))
     return {"nfl_games":len(results["nfl"]["games"]),"cfb_games":len(results["cfb"]["games"]),"qualified_plays":len(all_plays),"underdog_ml_picks":len(underdogs)}
