@@ -30,10 +30,10 @@ def central_time(value):
     return stamp.tz_convert("America/Chicago") if pd.notna(stamp) else stamp
 
 
-nfl,cfb,perf,qualified=load("nfl.json"),load("cfb.json"),load("performance.json"),load("qualified_plays.json")
+nfl,cfb,perf,qualified,underdogs=load("nfl.json"),load("cfb.json"),load("performance.json"),load("qualified_plays.json"),load("underdog_ml_picks.json")
 st.title("DHS Advanced Football Model")
 st.caption("Independent projections • market comparison • kickoff-locked evaluation • research mode")
-tab_overview,tab_board,tab_plays,tab_lab,tab_perf,tab_validation,tab_method=st.tabs(["Overview","Game Board","Qualified Plays","Matchup Lab","Performance","Validation & Goals","Methodology"])
+tab_overview,tab_board,tab_plays,tab_underdogs,tab_lab,tab_perf,tab_validation,tab_method=st.tabs(["Overview","Game Board","Qualified Plays","Underdog ML Picks","Matchup Lab","Performance","Validation & Goals","Methodology"])
 
 with tab_overview:
     st.subheader("Decision dashboard")
@@ -78,6 +78,31 @@ with tab_plays:
         frame["Probability"]=frame.model_probability.map(pct);frame["Edge"]=frame.edge.map(pct)
         st.dataframe(frame[["Game time (CT)","league","away","home","sportsbook","market","side","line","odds","Probability","Edge"]],hide_index=True,use_container_width=True)
     st.caption("Qualification means the statistical gates passed. It does not guarantee profit or eliminate variance.")
+
+with tab_underdogs:
+    st.subheader("Underdogs projected to win outright")
+    st.caption("A team appears here only when it has the longer sportsbook moneyline and the model independently predicts it to win.")
+    picks=underdogs.get("picks",[])
+    if not picks:
+        st.warning("No current sportsbook underdogs are projected to win, or market moneylines have not been loaded yet.")
+    else:
+        frame=pd.DataFrame(picks)
+        c1,c2,c3=st.columns(3)
+        leagues=c1.multiselect("League",sorted(frame.league.unique()),default=sorted(frame.league.unique()),key="dog_league")
+        books=c2.multiselect("Sportsbook",sorted(frame.sportsbook.dropna().unique()),default=sorted(frame.sportsbook.dropna().unique()),key="dog_book")
+        status=c3.selectbox("Status",["All picks","Qualified only","Watchlist only"])
+        frame=frame[frame.league.isin(leagues)&frame.sportsbook.isin(books)]
+        if status=="Qualified only":frame=frame[frame.qualified]
+        elif status=="Watchlist only":frame=frame[~frame.qualified]
+        frame=frame.sort_values(["kickoff","probability_edge"],ascending=[True,False])
+        frame["Game time (CT)"]=pd.to_datetime(frame.kickoff,utc=True,errors="coerce").dt.tz_convert("America/Chicago").dt.strftime("%a %b %d • %I:%M %p %Z")
+        frame["Model win %"]=frame.model_probability.map(pct);frame["Market fair %"]=frame.market_probability.map(pct);frame["Probability edge"]=frame.probability_edge.map(pct);frame["Confidence"]=frame.winner_confidence.map(pct);frame["Reliability"]=frame.data_reliability.map(pct)
+        frame["Status"]=frame.qualified.map({True:"QUALIFIED",False:"WATCHLIST"})
+        st.dataframe(frame[["Game time (CT)","league","away","home","sportsbook","underdog","moneyline","Model win %","Market fair %","Probability edge","Confidence","Reliability","Status"]],hide_index=True,use_container_width=True)
+        with st.expander("Why watchlist picks did not qualify"):
+            review=frame[~frame.qualified][["underdog","sportsbook","gate_reasons"]]
+            st.dataframe(review,hide_index=True,use_container_width=True)
+    st.info("An underdog prediction is not automatically a wager. Only rows marked QUALIFIED have passed the probability, edge, reliability, validation-sample and plausibility gates.")
 
 with tab_lab:
     league=st.selectbox("League",["NFL","CFB"],key="lab_league");games=(nfl if league=="NFL" else cfb).get("games",[])
