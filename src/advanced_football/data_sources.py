@@ -75,21 +75,22 @@ def nfl_team_games(schedule: pd.DataFrame,pbp: pd.DataFrame) -> pd.DataFrame:
     return x.merge(opponent,on=["game_id","opponent"],how="left")
 
 
-def _cfb_week(args: tuple[int,int,int]) -> list[dict]:
+def _cfb_week(args: tuple[int,int,int]) -> tuple[int,int,list[dict]]:
     season,seasontype,week=args
-    try:return _get(CFB_SCOREBOARD,params={"dates":season,"seasontype":seasontype,"week":week,"limit":1000,"groups":80},timeout=30).json().get("events",[])
-    except Exception:return []
+    try:return season,week,(_get(CFB_SCOREBOARD,params={"dates":str(season),"seasontype":seasontype,"week":week,"limit":500,"groups":80},timeout=30).json().get("events") or [])
+    except Exception:return season,week,[]
 
 
 def load_cfb_schedules(current_season: int,history_seasons: int) -> pd.DataFrame:
     tasks=[]
     for season in range(current_season-history_seasons+1,current_season+1):
         tasks.extend((season,2,week) for week in range(1,16));tasks.extend((season,3,week) for week in range(1,6))
-    events=[]
-    with ThreadPoolExecutor(max_workers=10) as pool:
-        for rows in pool.map(_cfb_week,tasks):events.extend(rows)
     parsed={}
-    for event in events:
+    fetched=[]
+    with ThreadPoolExecutor(max_workers=18) as pool:
+        for future in as_completed([pool.submit(_cfb_week,task) for task in tasks]):fetched.append(future.result())
+    for task_season,task_week,events in fetched:
+      for event in events:
         comps=event.get("competitions") or []
         if not comps:continue
         c=comps[0];teams=c.get("competitors") or [];home=next((x for x in teams if x.get("homeAway")=="home"),None);away=next((x for x in teams if x.get("homeAway")=="away"),None)
@@ -100,10 +101,10 @@ def load_cfb_schedules(current_season: int,history_seasons: int) -> pd.DataFrame
             try:return float(x.get("score"))
             except Exception:return np.nan
         status=((event.get("status") or {}).get("type") or {})
-        season=(event.get("season") or {}).get("year")
-        week=((event.get("week") or {}).get("number"))
-        parsed[str(event.get("id"))]={"game_id":str(event.get("id")),"season":int(season) if season else np.nan,"week":int(week) if week else np.nan,"gameday":pd.to_datetime(event.get("date") or c.get("date"),errors="coerce",utc=True),"home_team":name(home),"away_team":name(away),"home_score":score(home) if status.get("completed") else np.nan,"away_score":score(away) if status.get("completed") else np.nan,"neutral":int(bool(c.get("neutralSite",False)))}
-    return pd.DataFrame(parsed.values()).sort_values(["gameday","game_id"]).reset_index(drop=True)
+        gid=str(event.get("id") or "")
+        if gid and gid not in parsed:parsed[gid]={"game_id":gid,"season":int(task_season),"week":int(task_week),"gameday":pd.to_datetime(event.get("date") or c.get("date"),errors="coerce",utc=True),"home_team":name(home),"away_team":name(away),"home_score":score(home) if status.get("completed") else np.nan,"away_score":score(away) if status.get("completed") else np.nan,"neutral":int(bool(c.get("neutralSite",False)))}
+    if not parsed:raise RuntimeError("Unable to download college football schedule/history from ESPN public data")
+    return pd.DataFrame(parsed.values()).sort_values(["season","gameday","week","game_id"]).reset_index(drop=True)
 
 
 def cfb_team_games(schedule: pd.DataFrame) -> pd.DataFrame:
