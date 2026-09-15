@@ -17,6 +17,14 @@ def american_to_probability(odds: float) -> float:
     return 100.0 / (odds + 100.0) if odds > 0 else -odds / (-odds + 100.0)
 
 
+def normalize_american_odds(odds: float) -> float:
+    """Convert provider decimal odds to American while preserving American prices."""
+    value=float(odds)
+    if 1.0 < value < 100.0:
+        return round((value-1.0)*100.0,1) if value>=2.0 else round(-100.0/(value-1.0),1)
+    return value
+
+
 def no_vig_two_way(p1: float, p2: float) -> tuple[float, float]:
     total = p1 + p2
     return (p1 / total, p2 / total) if total > 0 else (math.nan, math.nan)
@@ -33,4 +41,3 @@ def confidence_from_probability(probability: float, reliability: float = 1.0) ->
     p = min(max(float(probability), 0.0), 1.0)
     r = min(max(float(reliability), 0.0), 1.0)
     return 0.5 + (abs(p - 0.5) * r)
-
