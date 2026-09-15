@@ -25,6 +25,9 @@ def metric_card(label,value,sub="",state=""):
 
 def pct(v):return "—" if v is None else f"{100*float(v):.1f}%"
 def num(v,d=2):return "—" if v is None else f"{float(v):.{d}f}"
+def central_time(value):
+    stamp=pd.to_datetime(value,utc=True,errors="coerce")
+    return stamp.tz_convert("America/Chicago") if pd.notna(stamp) else stamp
 
 
 nfl,cfb,perf,qualified=load("nfl.json"),load("cfb.json"),load("performance.json"),load("qualified_plays.json")
@@ -54,7 +57,7 @@ with tab_board:
     weeks=sorted({g.get("week") for g in games if g.get("week") is not None});selected=st.multiselect("Week",weeks,default=weeks)
     shown=[g for g in games if not selected or g.get("week") in selected]
     for g in shown:
-        kickoff=pd.to_datetime(g.get("kickoff"),utc=True,errors="coerce");label=f"{kickoff.strftime('%a %b %d • %I:%M %p UTC') if pd.notna(kickoff) else 'TBD'} — {g.get('away')} at {g.get('home')}"
+        kickoff=central_time(g.get("kickoff"));label=f"{kickoff.strftime('%a %b %d • %I:%M %p %Z') if pd.notna(kickoff) else 'TBD'} — {g.get('away')} at {g.get('home')}"
         with st.expander(label):
             c=st.columns([1.4,1,1,1,1]);c[0].markdown(f"### {g.get('away')} {g.get('projected_away')}  \n### {g.get('home')} {g.get('projected_home')}");c[1].metric("Winner",g.get("predicted_winner"));c[2].metric("Confidence",pct(g.get("winner_confidence")));c[3].metric("Projected margin",f"{g.get('projected_margin_home'):+.1f} home");c[4].metric("Projected total",g.get("projected_total"))
             st.caption(f"Reliability {pct(g.get('data_reliability'))} • Margin uncertainty ±{num(g.get('margin_uncertainty'),1)} • Current-season games: {g.get('current_season_games_min',0)}")
@@ -71,8 +74,9 @@ with tab_plays:
     else:
         frame=pd.DataFrame(plays);c1,c2,c3=st.columns(3);league_filter=c1.multiselect("League",sorted(frame.league.unique()),default=sorted(frame.league.unique()));market_filter=c2.multiselect("Market",sorted(frame.market.unique()),default=sorted(frame.market.unique()));book_filter=c3.multiselect("Sportsbook",sorted(frame.sportsbook.dropna().unique()),default=sorted(frame.sportsbook.dropna().unique()))
         frame=frame[frame.league.isin(league_filter)&frame.market.isin(market_filter)&frame.sportsbook.isin(book_filter)].sort_values(["kickoff","model_probability"],ascending=[True,False])
+        frame["Game time (CT)"]=pd.to_datetime(frame.kickoff,utc=True,errors="coerce").dt.tz_convert("America/Chicago").dt.strftime("%a %b %d • %I:%M %p %Z")
         frame["Probability"]=frame.model_probability.map(pct);frame["Edge"]=frame.edge.map(pct)
-        st.dataframe(frame[["kickoff","league","away","home","sportsbook","market","side","line","odds","Probability","Edge"]],hide_index=True,use_container_width=True)
+        st.dataframe(frame[["Game time (CT)","league","away","home","sportsbook","market","side","line","odds","Probability","Edge"]],hide_index=True,use_container_width=True)
     st.caption("Qualification means the statistical gates passed. It does not guarantee profit or eliminate variance.")
 
 with tab_lab:
