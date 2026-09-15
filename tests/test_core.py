@@ -33,6 +33,16 @@ def test_gate_rejects_implausible_edge():
     assert not ok and "spread edge requires review" in reasons
 
 
+def test_nfl_uses_temporary_64_percent_reliability_gate():
+    play={"market":"Spread","edge":.10,"model_probability":.76,"raw_point_edge":4}
+    nfl_projection={"league":"nfl","data_reliability":.65}
+    cfb_projection={"league":"cfb","data_reliability":.65}
+    nfl_ok,_=selection_gate(play,nfl_projection,{"games":300})
+    cfb_ok,cfb_reasons=selection_gate(play,cfb_projection,{"games":300})
+    assert nfl_ok
+    assert not cfb_ok and "input reliability below threshold" in cfb_reasons
+
+
 def test_underdog_board_requires_model_to_pick_the_longer_price():
     results={"nfl":{"games":[{"game_id":"1","week":2,"kickoff":"2026-09-20T17:00:00Z","home":"Home","away":"Away","predicted_winner":"Away","home_win_probability":.42,"winner_confidence":.58,"data_reliability":.9,"sportsbooks":[{"sportsbook":"draftkings","home_moneyline":-150,"away_moneyline":130,"evaluations":[{"market":"Moneyline","side":"Away","qualified":True,"gate_reasons":[]}]}]}]}}
     picks=build_underdog_ml_board(results)
