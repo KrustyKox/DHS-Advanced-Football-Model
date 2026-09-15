@@ -14,6 +14,7 @@ NFL_SCHEDULES=(
 )
 NFL_PBP="https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_{season}.parquet"
 CFB_SCOREBOARD="https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard"
+CFB_SCHEDULE_CSV="https://raw.githubusercontent.com/sportsdataverse/cfbfastR-data/main/schedules/csv/cfb_schedules_{season}.csv"
 
 
 def _get(url: str, **kwargs) -> requests.Response:
@@ -82,6 +83,19 @@ def _cfb_week(args: tuple[int,int,int]) -> tuple[int,int,list[dict]]:
 
 
 def load_cfb_schedules(current_season: int,history_seasons: int) -> pd.DataFrame:
+    # SportsDataverse publishes a stable season file and is the primary source. ESPN
+    # remains a fallback because its scoreboard endpoint occasionally rejects CI traffic.
+    frames=[]
+    for season in range(current_season-history_seasons+1,current_season+1):
+        try:
+            raw=_get(CFB_SCHEDULE_CSV.format(season=season),timeout=60).content;frame=pd.read_csv(io.BytesIO(raw),low_memory=False)
+            frame=frame.rename(columns={"start_date":"gameday","home_points":"home_score","away_points":"away_score","neutral_site":"neutral"})
+            needed=["game_id","season","week","gameday","home_team","away_team","home_score","away_score","neutral"]
+            if all(c in frame for c in needed):frames.append(frame[needed])
+        except Exception:continue
+    if frames:
+        out=pd.concat(frames,ignore_index=True).drop_duplicates("game_id");out["game_id"]=out.game_id.astype(str);out["gameday"]=pd.to_datetime(out.gameday,errors="coerce",utc=True);out["neutral"]=out.neutral.fillna(False).astype(int)
+        return out.sort_values(["season","gameday","week","game_id"]).reset_index(drop=True)
     tasks=[]
     for season in range(current_season-history_seasons+1,current_season+1):
         tasks.extend((season,2,week) for week in range(1,16));tasks.extend((season,3,week) for week in range(1,6))
