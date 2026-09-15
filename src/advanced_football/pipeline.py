@@ -13,6 +13,7 @@ from .data_sources import cfb_team_games, load_cfb_schedules, load_nfl_pbp, load
 from .evaluation import grade_locked, selection_gate, summarize_performance
 from .locks import update_locks
 from .markets import evaluate_market, fetch_market_board, normalize_events
+from .math_utils import american_to_probability, no_vig_two_way
 from .modeling import add_rolling_features, matchup_dataset, predict, train
 
 
@@ -33,6 +34,29 @@ def _market_match(game:dict[str,Any],markets:list[dict[str,Any]])->list[dict[str
     exact=[m for m in markets if clean(m.get("home"))==home and clean(m.get("away"))==away]
     if exact:return exact
     return [m for m in markets if (home in clean(m.get("home")) or clean(m.get("home")) in home) and (away in clean(m.get("away")) or clean(m.get("away")) in away)]
+
+
+def build_underdog_ml_board(results:dict[str,dict[str,Any]])->list[dict[str,Any]]:
+    """Return model-picked winners whose no-vig market probability is the lower side."""
+    picks=[]
+    for league,data in results.items():
+        for game in data.get("games",[]):
+            winner=game.get("predicted_winner")
+            for book in game.get("sportsbooks",[]):
+                try:
+                    home_odds=float(book["home_moneyline"]);away_odds=float(book["away_moneyline"])
+                    home_raw=american_to_probability(home_odds);away_raw=american_to_probability(away_odds)
+                    home_market,away_market=no_vig_two_way(home_raw,away_raw)
+                except (KeyError,TypeError,ValueError):continue
+                if home_market==away_market:continue
+                underdog_side="Home" if home_market<away_market else "Away"
+                underdog_team=game["home"] if underdog_side=="Home" else game["away"]
+                if winner!=underdog_team:continue
+                model_probability=float(game["home_win_probability"] if underdog_side=="Home" else 1-game["home_win_probability"])
+                market_probability=home_market if underdog_side=="Home" else away_market
+                evaluation=next((e for e in book.get("evaluations",[]) if e.get("market")=="Moneyline" and e.get("side")==underdog_side),{})
+                picks.append({"game_id":game["game_id"],"league":league,"week":game.get("week"),"kickoff":game["kickoff"],"away":game["away"],"home":game["home"],"sportsbook":book.get("sportsbook"),"underdog":underdog_team,"side":underdog_side,"moneyline":home_odds if underdog_side=="Home" else away_odds,"model_probability":model_probability,"market_probability":market_probability,"probability_edge":model_probability-market_probability,"winner_confidence":game.get("winner_confidence"),"data_reliability":game.get("data_reliability"),"qualified":bool(evaluation.get("qualified",False)),"gate_reasons":evaluation.get("gate_reasons",[])})
+    return sorted(picks,key=lambda x:(x["kickoff"],-x["probability_edge"],x.get("sportsbook") or ""))
 
 
 def build_league(league:str,schedule:pd.DataFrame,team_games:pd.DataFrame,market_payload:dict[str,Any],now:datetime)->tuple[dict,list[dict]]:
@@ -69,5 +93,7 @@ def run()->dict[str,Any]:
         _write(RAW/f"{league}_markets_schema.json",{"generated_at":now.isoformat(),"records":len(market.get("events",[])),"sample_keys":sorted({str(k) for r in market.get("events",[])[:25] if isinstance(r,dict) for k in r})})
         results[league],plays,performance[league]=build_league(league,schedule,teams,market,now);all_plays.extend(plays);_write(OUTPUT/f"{league}.json",results[league])
     all_plays.sort(key=lambda x:(x["kickoff"],-float(x.get("edge",0))))
+    underdogs=build_underdog_ml_board(results)
     _write(OUTPUT/"qualified_plays.json",_finite({"generated_at":now.isoformat(),"plays":all_plays,"gate_policy":{"min_probability":SETTINGS.min_selection_confidence,"min_market_edge":SETTINGS.min_market_edge,"research_only":True}}));_write(OUTPUT/"performance.json",_finite(performance))
-    return {"nfl_games":len(results["nfl"]["games"]),"cfb_games":len(results["cfb"]["games"]),"qualified_plays":len(all_plays)}
+    _write(OUTPUT/"underdog_ml_picks.json",_finite({"generated_at":now.isoformat(),"picks":underdogs,"definition":"Sportsbook moneyline underdog independently projected by DHS to win. Qualified status requires every wagering gate to pass."}))
+    return {"nfl_games":len(results["nfl"]["games"]),"cfb_games":len(results["cfb"]["games"]),"qualified_plays":len(all_plays),"underdog_ml_picks":len(underdogs)}
