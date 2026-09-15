@@ -27,7 +27,13 @@ def load_nfl_schedules() -> pd.DataFrame:
     for url in NFL_SCHEDULES:
         try:
             frame=pd.read_csv(io.BytesIO(_get(url).content),low_memory=False)
-            frame["gameday"]=pd.to_datetime(frame["gameday"],errors="coerce",utc=True)
+            # nflverse stores the calendar date and the announced kickoff clock
+            # separately. `gametime` is Eastern Time, including DST. Combine them
+            # before converting to UTC so kickoff locks use the actual instant.
+            dates=pd.to_datetime(frame["gameday"],errors="coerce").dt.strftime("%Y-%m-%d")
+            clocks=frame["gametime"].astype("string").str.strip() if "gametime" in frame else pd.Series(pd.NA,index=frame.index,dtype="string")
+            combined=pd.to_datetime(dates+" "+clocks.fillna("12:00"),errors="coerce")
+            frame["gameday"]=combined.dt.tz_localize("America/New_York",ambiguous="NaT",nonexistent="shift_forward").dt.tz_convert("UTC")
             return frame
         except Exception as exc: errors.append(f"{url}: {exc}")
     raise RuntimeError("Unable to load NFL schedules: "+" | ".join(errors))
