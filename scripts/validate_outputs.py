@@ -13,3 +13,6 @@ print("Output validation passed")
 
 underdogs=json.loads((ROOT/"data"/"output"/"underdog_ml_picks.json").read_text())
 assert isinstance(underdogs.get("picks"),list)
+cannot_miss=json.loads((ROOT/"data"/"output"/"cannot_miss.json").read_text())
+assert len(cannot_miss.get("current",[]))==2
+assert all(row.get("status") in {"QUALIFIED","PASS"} for row in cannot_miss["current"])

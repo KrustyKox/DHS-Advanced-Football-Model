@@ -17,6 +17,20 @@ def american_to_probability(odds: float) -> float:
     return 100.0 / (odds + 100.0) if odds > 0 else -odds / (-odds + 100.0)
 
 
+def american_to_decimal(odds: float) -> float:
+    odds = float(odds)
+    if odds == 0:
+        raise ValueError("American odds cannot be zero")
+    return 1.0 + (odds / 100.0 if odds > 0 else 100.0 / -odds)
+
+
+def decimal_to_american(odds: float) -> float:
+    odds = float(odds)
+    if odds <= 1.0:
+        raise ValueError("Decimal odds must be greater than 1")
+    return round((odds - 1.0) * 100.0, 1) if odds >= 2.0 else round(-100.0 / (odds - 1.0), 1)
+
+
 def normalize_american_odds(odds: float) -> float:
     """Convert provider decimal odds to American while preserving American prices."""
     value=float(odds)

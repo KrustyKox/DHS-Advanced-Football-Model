@@ -34,6 +34,7 @@ Only DraftKings and Bovada are requested by default. The API key is used only by
 - Executive overview and target tracking
 - Date-ordered NFL and CFB boards
 - Qualified ATS, moneyline, and total plays
+- Weekly NFL and CFB “Cannot Miss” moneyline parlay optimizer with strict +250 floor, PASS behavior, kickoff locking, and separate ROI history
 - Matchup lab with model/market differences and uncertainty
 - Locked performance and edge-bucket diagnostics
 - Walk-forward validation, calibration, and methodology
@@ -48,4 +49,3 @@ streamlit run app.py
 ```
 
 If market credentials are absent, the model still builds projections and records a market-data warning. It will not invent sportsbook prices.
-

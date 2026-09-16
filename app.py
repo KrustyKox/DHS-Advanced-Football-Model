@@ -56,9 +56,9 @@ def scorecard(game):
     </div>'''
 
 
-nfl,cfb,perf,qualified,underdogs=load("nfl.json"),load("cfb.json"),load("performance.json"),load("qualified_plays.json"),load("underdog_ml_picks.json")
+nfl,cfb,perf,qualified,underdogs,cannot_miss=load("nfl.json"),load("cfb.json"),load("performance.json"),load("qualified_plays.json"),load("underdog_ml_picks.json"),load("cannot_miss.json")
 st.markdown('''<div class="dhs-app-header"><div class="dhs-brand"><div class="dhs-logo">🏈</div><div><div class="dhs-title">DHS Football</div><div class="dhs-subtitle">Advanced game markets • Central Time</div></div></div><div class="dhs-live"><span class="dhs-dot"></span>RESEARCH</div></div>''',unsafe_allow_html=True)
-tab_overview,tab_board,tab_plays,tab_underdogs,tab_lab,tab_perf,tab_validation,tab_method=st.tabs(["🏠 Home","🏈 Games","✅ Picks","🐶 Underdogs","🔬 Matchup","📊 Results","🎯 Goals","ℹ️ About"])
+tab_overview,tab_board,tab_plays,tab_parlay,tab_underdogs,tab_lab,tab_perf,tab_validation,tab_method=st.tabs(["🏠 Home","🏈 Games","✅ Picks","🔥 Cannot Miss","🐶 Underdogs","🔬 Matchup","📊 Results","🎯 Goals","ℹ️ About"])
 
 with tab_overview:
     st.markdown('''<div class="dhs-hero"><div class="dhs-hero-kicker">Decision dashboard</div><div class="dhs-hero-title">This week’s football board</div><div class="dhs-hero-copy">Independent projections, current market comparisons, and kickoff-locked results in one mobile-first view.</div></div>''',unsafe_allow_html=True)
@@ -103,6 +103,35 @@ with tab_plays:
         frame["Probability"]=frame.model_probability.map(pct);frame["Edge"]=frame.edge.map(pct)
         st.dataframe(frame[["Game time (CT)","league","away","home","sportsbook","market","side","line","odds","Probability","Edge"]],hide_index=True,use_container_width=True)
     st.caption("Qualification means the statistical gates passed. It does not guarantee profit or eliminate variance.")
+
+with tab_parlay:
+    st.subheader("🔥 DHS Cannot Miss ML Parlays")
+    st.caption("One strictly filtered weekly moneyline parlay for each league. +250 is the minimum—not a reason to add unnecessary legs.")
+    current={str(row.get("league","")).upper():row for row in cannot_miss.get("current",[])}
+    for league in ("NFL","CFB"):
+        row=current.get(league,{"status":"PASS","reason":"Run the pipeline to evaluate this week's board."})
+        st.markdown(f"### {league}")
+        if row.get("status")!="QUALIFIED":
+            st.warning(f"NO CANNOT MISS PARLAY QUALIFIED THIS WEEK — {row.get('reason','Strict qualification gates were not met.')}")
+            counts=row.get("candidate_counts",{})
+            if counts:st.caption("Eligible legs by sportsbook: "+" • ".join(f"{str(k).title()} {v}" for k,v in counts.items()))
+            continue
+        c=st.columns(5)
+        c[0].metric("Week",row.get("week"));c[1].metric("Sportsbook",str(row.get("sportsbook","")).title());c[2].metric("Legs",row.get("leg_count"));c[3].metric("Parlay",f"+{float(row.get('parlay_odds',0)):.0f}");c[4].metric("DHS edge",pct(row.get("probability_edge")))
+        legs=pd.DataFrame(row.get("legs",[]))
+        legs["Game time (CT)"]=pd.to_datetime(legs.kickoff,utc=True,errors="coerce").dt.tz_convert("America/Chicago").dt.strftime("%a %b %d • %I:%M %p %Z")
+        legs["Model win %"]=legs.model_probability.map(pct);legs["Market fair %"]=legs.market_probability.map(pct);legs["Reliability"]=legs.reliability.map(pct)
+        st.dataframe(legs[["Game time (CT)","away","home","team","moneyline","Model win %","Market fair %","Reliability"]],hide_index=True,use_container_width=True)
+        st.caption(f"Model combined probability {pct(row.get('model_combined_probability'))} • Sportsbook implied probability {pct(row.get('sportsbook_implied_probability'))}")
+    st.markdown("### Cannot Miss record")
+    completed=[r for r in cannot_miss.get("history",[]) if r.get("status")=="QUALIFIED" and r.get("result") in {"WIN","LOSS"}]
+    if not completed:st.info("No completed Cannot Miss parlays have been graded yet.")
+    else:
+        wins=sum(r.get("result")=="WIN" for r in completed);units=sum(float(r.get("units_profit",0)) for r in completed);roi=units/len(completed)
+        c=st.columns(4);c[0].metric("Record",f"{wins}-{len(completed)-wins}");c[1].metric("Units",f"{units:+.2f}");c[2].metric("ROI",pct(roi));c[3].metric("Avg. odds",f"+{sum(float(r['parlay_odds']) for r in completed)/len(completed):.0f}")
+        history=pd.DataFrame(completed);history["Parlay"]=history.parlay_odds.map(lambda x:f"+{float(x):.0f}")
+        st.dataframe(history[["season","week","league","sportsbook","leg_count","Parlay","result","units_profit"]],hide_index=True,use_container_width=True)
+    st.info("“Cannot Miss” is the feature name, not a promise. Football parlays can lose, and PASS is the correct output when the model cannot meet every gate.")
 
 with tab_underdogs:
     st.subheader("Underdogs projected to win outright")

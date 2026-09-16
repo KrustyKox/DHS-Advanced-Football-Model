@@ -9,6 +9,7 @@ import pandas as pd
 import numpy as np
 
 from .config import LOCKS, OUTPUT, RAW, SETTINGS, ensure_dirs
+from .cannot_miss import build_cannot_miss, update_history
 from .data_sources import cfb_team_games, load_cfb_schedules, load_nfl_pbp, load_nfl_schedules, nfl_team_games
 from .evaluation import grade_locked, selection_gate, summarize_performance
 from .locks import update_locks
@@ -18,6 +19,11 @@ from .modeling import add_rolling_features, matchup_dataset, predict, train
 
 
 def _write(path:Path,value:Any)->None:path.write_text(json.dumps(value,indent=2,default=str,allow_nan=False),encoding="utf-8")
+
+
+def _read(path:Path,default:Any)->Any:
+    try:return json.loads(path.read_text(encoding="utf-8"))
+    except (FileNotFoundError,json.JSONDecodeError):return default
 
 
 def _finite(value:Any)->Any:
@@ -94,6 +100,12 @@ def run()->dict[str,Any]:
         results[league],plays,performance[league]=build_league(league,schedule,teams,market,now);all_plays.extend(plays);_write(OUTPUT/f"{league}.json",results[league])
     all_plays.sort(key=lambda x:(x["kickoff"],-float(x.get("edge",0))))
     underdogs=build_underdog_ml_board(results)
+    cannot_miss=[build_cannot_miss(results[league],now) for league in ("nfl","cfb")]
+    finals={}
+    for schedule in (nfl_schedule,cfb_schedule):
+        finals.update({str(r.game_id):(float(r.home_score),float(r.away_score)) for _,r in schedule[schedule.home_score.notna()&schedule.away_score.notna()].iterrows()})
+    history_path=LOCKS/"cannot_miss.json";history=update_history(_read(history_path,[]),cannot_miss,finals,now)
     _write(OUTPUT/"qualified_plays.json",_finite({"generated_at":now.isoformat(),"plays":all_plays,"gate_policy":{"min_probability":SETTINGS.min_selection_confidence,"min_market_edge":SETTINGS.min_market_edge,"min_reliability":{"nfl":SETTINGS.nfl_min_reliability,"cfb":SETTINGS.cfb_min_reliability},"research_only":True}}));_write(OUTPUT/"performance.json",_finite(performance))
     _write(OUTPUT/"underdog_ml_picks.json",_finite({"generated_at":now.isoformat(),"picks":underdogs,"definition":"Sportsbook moneyline underdog independently projected by DHS to win. Qualified status requires every wagering gate to pass."}))
-    return {"nfl_games":len(results["nfl"]["games"]),"cfb_games":len(results["cfb"]["games"]),"qualified_plays":len(all_plays),"underdog_ml_picks":len(underdogs)}
+    _write(history_path,_finite(history));_write(OUTPUT/"cannot_miss.json",_finite({"generated_at":now.isoformat(),"current":cannot_miss,"history":history,"disclaimer":"Cannot Miss is a feature name, not a guarantee. A PASS is expected when strict gates are not met."}))
+    return {"nfl_games":len(results["nfl"]["games"]),"cfb_games":len(results["cfb"]["games"]),"qualified_plays":len(all_plays),"underdog_ml_picks":len(underdogs),"cannot_miss_qualified":sum(x.get("status")=="QUALIFIED" for x in cannot_miss)}
