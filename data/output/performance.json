@@ -1,8 +1,26 @@
 {
-  "generated_at": "2026-09-18T01:23:43.047251+00:00",
+  "generated_at": "2026-09-18T07:25:10.668453+00:00",
   "nfl": {
-    "games": 0,
-    "status": "Awaiting completed locked games"
+    "games": 1,
+    "winner_accuracy": 1.0,
+    "margin_mae": 1.5,
+    "total_mae": 25.700000000000003,
+    "high_confidence_games": 0,
+    "high_confidence_margin_mae": null,
+    "overall_target": {
+      "target": 5.0,
+      "passed": true
+    },
+    "high_confidence_target": {
+      "target": 2.5,
+      "passed": false
+    },
+    "confidence_buckets": {
+      "Under 70%": {
+        "games": 1,
+        "margin_mae": 1.5
+      }
+    }
   },
   "cfb": {
     "games": 0,
