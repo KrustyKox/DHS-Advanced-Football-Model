@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T19:22:53.525503+00:00",
+  "generated_at": "2026-09-19T01:24:08.095576+00:00",
   "picks": [
     {
       "game_id": "401856812",
@@ -112,10 +112,10 @@
       "sportsbook": "draftkings",
       "underdog": "Maryland",
       "side": "Home",
-      "moneyline": 124.0,
+      "moneyline": 120.0,
       "model_probability": 0.6661196206629287,
-      "market_probability": 0.4280070994965435,
-      "probability_edge": 0.23811252116638526,
+      "market_probability": 0.43650793650793646,
+      "probability_edge": 0.22961168415499228,
       "winner_confidence": 0.6229285192905673,
       "data_reliability": 0.74,
       "qualified": false,
@@ -162,6 +162,49 @@
       "data_reliability": 0.74,
       "qualified": true,
       "gate_reasons": []
+    },
+    {
+      "game_id": "401860886",
+      "league": "cfb",
+      "week": 3,
+      "kickoff": "2026-09-20T03:00:00+00:00",
+      "away": "Montana",
+      "home": "Oregon State",
+      "sportsbook": "draftkings",
+      "underdog": "Montana",
+      "side": "Away",
+      "moneyline": 600.0,
+      "model_probability": 0.7890489112587777,
+      "market_probability": 0.13697449091307204,
+      "probability_edge": 0.6520744203457057,
+      "winner_confidence": 0.6676483685300911,
+      "data_reliability": 0.58,
+      "qualified": false,
+      "gate_reasons": [
+        "input reliability below threshold"
+      ]
+    },
+    {
+      "game_id": "2026_02_CIN_HOU",
+      "league": "nfl",
+      "week": 2,
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "away": "CIN",
+      "home": "HOU",
+      "sportsbook": "bovada",
+      "underdog": "CIN",
+      "side": "Away",
+      "moneyline": 130.0,
+      "model_probability": 0.5154883848234231,
+      "market_probability": 0.42023307044243025,
+      "probability_edge": 0.09525531438099283,
+      "winner_confidence": 0.5097919199209978,
+      "data_reliability": 0.6322105263157893,
+      "qualified": false,
+      "gate_reasons": [
+        "probability below threshold",
+        "input reliability below threshold"
+      ]
     },
     {
       "game_id": "2026_02_CIN_HOU",
