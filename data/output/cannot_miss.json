@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-20T13:23:22.408169+00:00",
+  "generated_at": "2026-09-20T19:21:07.985421+00:00",
   "current": [
     {
       "league": "nfl",
       "season": 2026,
-      "generated_at": "2026-09-20T13:23:22.408169+00:00",
+      "generated_at": "2026-09-20T19:21:07.985421+00:00",
       "status": "PASS",
       "policy": {
         "min_probability": 0.7,
@@ -20,16 +20,16 @@
       },
       "week": 2,
       "candidate_counts": {
-        "bovada": 1,
-        "draftkings": 1
+        "bovada": 0,
+        "draftkings": 0
       },
       "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
     },
     {
       "league": "cfb",
       "season": 2026,
-      "generated_at": "2026-09-20T13:23:22.408169+00:00",
-      "status": "PASS",
+      "generated_at": "2026-09-20T19:21:07.985421+00:00",
+      "status": "QUALIFIED",
       "policy": {
         "min_probability": 0.75,
         "min_reliability": 0.72,
@@ -43,17 +43,91 @@
         "preferred_max_odds": 350.0
       },
       "week": 4,
-      "candidate_counts": {
-        "draftkings": 6
-      },
-      "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
+      "sportsbook": "draftkings",
+      "legs": [
+        {
+          "game_id": "401858243",
+          "kickoff": "2026-09-26T16:00:00+00:00",
+          "away": "Wake Forest",
+          "home": "Louisville",
+          "team": "Louisville",
+          "side": "Home",
+          "moneyline": -534.8,
+          "model_probability": 0.9266948252933682,
+          "market_probability": 0.8081479690522244,
+          "probability_edge": 0.1185468562411438,
+          "reliability": 0.82,
+          "safety_score": 0.8703844049097401
+        },
+        {
+          "game_id": "401856696",
+          "kickoff": "2026-09-26T23:00:00+00:00",
+          "away": "South Carolina",
+          "home": "Alabama",
+          "team": "Alabama",
+          "side": "Home",
+          "moneyline": -454.5,
+          "model_probability": 0.9110090824469809,
+          "market_probability": 0.786710260601981,
+          "probability_edge": 0.12429882184499985,
+          "reliability": 0.82,
+          "safety_score": 0.8571821063739856
+        },
+        {
+          "game_id": "401858466",
+          "kickoff": "2026-09-26T21:00:00+00:00",
+          "away": "Wisconsin",
+          "home": "Penn State",
+          "team": "Penn State",
+          "side": "Home",
+          "moneyline": -500.0,
+          "model_probability": 0.9017640918311568,
+          "market_probability": 0.7999999999999999,
+          "probability_edge": 0.10176409183115687,
+          "reliability": 0.82,
+          "safety_score": 0.8558820459155784
+        },
+        {
+          "game_id": "401871048",
+          "kickoff": "2026-09-26T23:00:00+00:00",
+          "away": "Middle Tennessee",
+          "home": "Jacksonville State",
+          "team": "Jacksonville State",
+          "side": "Home",
+          "moneyline": -324.7,
+          "model_probability": 0.9342585837035738,
+          "market_probability": 0.7334998305744155,
+          "probability_edge": 0.20075875312915836,
+          "reliability": 0.82,
+          "safety_score": 0.8555042494953907
+        },
+        {
+          "game_id": "401869931",
+          "kickoff": "2026-09-26T23:00:00+00:00",
+          "away": "Kennesaw State",
+          "home": "Arkansas State",
+          "team": "Arkansas State",
+          "side": "Home",
+          "moneyline": -179.9,
+          "model_probability": 0.8263397548747135,
+          "market_probability": 0.6163914205440965,
+          "probability_edge": 0.209948334330617,
+          "reliability": 0.82,
+          "safety_score": 0.7722677325733808
+        }
+      ],
+      "leg_count": 5,
+      "parlay_odds": 253.6,
+      "model_combined_probability": 0.5877303610340648,
+      "sportsbook_implied_probability": 0.2828054298642534,
+      "probability_edge": 0.30492493116981145
     }
   ],
   "history": [
     {
       "league": "nfl",
       "season": 2026,
-      "generated_at": "2026-09-20T13:23:22.408169+00:00",
+      "generated_at": "2026-09-20T19:21:07.985421+00:00",
       "status": "PASS",
       "policy": {
         "min_probability": 0.7,
@@ -69,8 +143,8 @@
       },
       "week": 2,
       "candidate_counts": {
-        "bovada": 1,
-        "draftkings": 1
+        "bovada": 0,
+        "draftkings": 0
       },
       "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
     },
@@ -168,8 +242,8 @@
     {
       "league": "cfb",
       "season": 2026,
-      "generated_at": "2026-09-20T13:23:22.408169+00:00",
-      "status": "PASS",
+      "generated_at": "2026-09-20T19:21:07.985421+00:00",
+      "status": "QUALIFIED",
       "policy": {
         "min_probability": 0.75,
         "min_reliability": 0.72,
@@ -183,10 +257,93 @@
         "preferred_max_odds": 350.0
       },
       "week": 4,
-      "candidate_counts": {
-        "draftkings": 6
-      },
-      "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
+      "sportsbook": "draftkings",
+      "legs": [
+        {
+          "game_id": "401858243",
+          "kickoff": "2026-09-26T16:00:00+00:00",
+          "away": "Wake Forest",
+          "home": "Louisville",
+          "team": "Louisville",
+          "side": "Home",
+          "moneyline": -534.8,
+          "model_probability": 0.9266948252933682,
+          "market_probability": 0.8081479690522244,
+          "probability_edge": 0.1185468562411438,
+          "reliability": 0.82,
+          "safety_score": 0.8703844049097401
+        },
+        {
+          "game_id": "401856696",
+          "kickoff": "2026-09-26T23:00:00+00:00",
+          "away": "South Carolina",
+          "home": "Alabama",
+          "team": "Alabama",
+          "side": "Home",
+          "moneyline": -454.5,
+          "model_probability": 0.9110090824469809,
+          "market_probability": 0.786710260601981,
+          "probability_edge": 0.12429882184499985,
+          "reliability": 0.82,
+          "safety_score": 0.8571821063739856
+        },
+        {
+          "game_id": "401858466",
+          "kickoff": "2026-09-26T21:00:00+00:00",
+          "away": "Wisconsin",
+          "home": "Penn State",
+          "team": "Penn State",
+          "side": "Home",
+          "moneyline": -500.0,
+          "model_probability": 0.9017640918311568,
+          "market_probability": 0.7999999999999999,
+          "probability_edge": 0.10176409183115687,
+          "reliability": 0.82,
+          "safety_score": 0.8558820459155784
+        },
+        {
+          "game_id": "401871048",
+          "kickoff": "2026-09-26T23:00:00+00:00",
+          "away": "Middle Tennessee",
+          "home": "Jacksonville State",
+          "team": "Jacksonville State",
+          "side": "Home",
+          "moneyline": -324.7,
+          "model_probability": 0.9342585837035738,
+          "market_probability": 0.7334998305744155,
+          "probability_edge": 0.20075875312915836,
+          "reliability": 0.82,
+          "safety_score": 0.8555042494953907
+        },
+        {
+          "game_id": "401869931",
+          "kickoff": "2026-09-26T23:00:00+00:00",
+          "away": "Kennesaw State",
+          "home": "Arkansas State",
+          "team": "Arkansas State",
+          "side": "Home",
+          "moneyline": -179.9,
+          "model_probability": 0.8263397548747135,
+          "market_probability": 0.6163914205440965,
+          "probability_edge": 0.209948334330617,
+          "reliability": 0.82,
+          "safety_score": 0.7722677325733808
+        }
+      ],
+      "leg_count": 5,
+      "parlay_odds": 253.6,
+      "model_combined_probability": 0.5877303610340648,
+      "sportsbook_implied_probability": 0.2828054298642534,
+      "probability_edge": 0.30492493116981145,
+      "leg_results": [
+        "PENDING",
+        "PENDING",
+        "PENDING",
+        "PENDING",
+        "PENDING"
+      ],
+      "result": "PENDING",
+      "units_profit": null
     }
   ],
   "disclaimer": "Cannot Miss is a feature name, not a guarantee. A PASS is expected when strict gates are not met."
