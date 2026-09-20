@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-19T19:20:33.212197+00:00",
+  "generated_at": "2026-09-20T01:23:52.063687+00:00",
   "current": [
     {
       "league": "nfl",
       "season": 2026,
-      "generated_at": "2026-09-19T19:20:33.212197+00:00",
+      "generated_at": "2026-09-20T01:23:52.063687+00:00",
       "status": "PASS",
       "policy": {
         "min_probability": 0.7,
@@ -28,8 +28,8 @@
     {
       "league": "cfb",
       "season": 2026,
-      "generated_at": "2026-09-19T19:20:33.212197+00:00",
-      "status": "QUALIFIED",
+      "generated_at": "2026-09-20T01:23:52.063687+00:00",
+      "status": "PASS",
       "policy": {
         "min_probability": 0.75,
         "min_reliability": 0.72,
@@ -43,77 +43,17 @@
         "preferred_max_odds": 350.0
       },
       "week": 3,
-      "sportsbook": "draftkings",
-      "legs": [
-        {
-          "game_id": "401858231",
-          "kickoff": "2026-09-19T20:00:00+00:00",
-          "away": "Stanford",
-          "home": "Duke",
-          "team": "Duke",
-          "side": "Home",
-          "moneyline": -374.5,
-          "model_probability": 0.9683492201089976,
-          "market_probability": 0.7571368248646851,
-          "probability_edge": 0.21121239524431246,
-          "reliability": 0.74,
-          "safety_score": 0.8584588162706701
-        },
-        {
-          "game_id": "401862776",
-          "kickoff": "2026-09-20T00:00:00+00:00",
-          "away": "UAB",
-          "home": "Louisiana",
-          "team": "Louisiana",
-          "side": "Home",
-          "moneyline": -277.8,
-          "model_probability": 0.9460752824763584,
-          "market_probability": 0.704993557958849,
-          "probability_edge": 0.24108172451750942,
-          "reliability": 0.74,
-          "safety_score": 0.8342860307278914
-        },
-        {
-          "game_id": "401869948",
-          "kickoff": "2026-09-19T23:00:00+00:00",
-          "away": "Georgia Southern",
-          "home": "Jacksonville State",
-          "team": "Jacksonville State",
-          "side": "Home",
-          "moneyline": -175.1,
-          "model_probability": 0.8584402560257809,
-          "market_probability": 0.6092856787791421,
-          "probability_edge": 0.2491545772466388,
-          "reliability": 0.74,
-          "safety_score": 0.766541547707676
-        },
-        {
-          "game_id": "401856691",
-          "kickoff": "2026-09-19T20:15:00+00:00",
-          "away": "Mississippi State",
-          "home": "South Carolina",
-          "team": "South Carolina",
-          "side": "Home",
-          "moneyline": -175.1,
-          "model_probability": 0.7561088214610366,
-          "market_probability": 0.6092856787791421,
-          "probability_edge": 0.14682314268189456,
-          "reliability": 0.74,
-          "safety_score": 0.715375830425304
-        }
-      ],
-      "leg_count": 4,
-      "parlay_odds": 325.3,
-      "model_combined_probability": 0.594637212007015,
-      "sportsbook_implied_probability": 0.2351281448389372,
-      "probability_edge": 0.35950906716807784
+      "candidate_counts": {
+        "draftkings": 1
+      },
+      "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
     }
   ],
   "history": [
     {
       "league": "nfl",
       "season": 2026,
-      "generated_at": "2026-09-19T19:20:33.212197+00:00",
+      "generated_at": "2026-09-20T01:23:52.063687+00:00",
       "status": "PASS",
       "policy": {
         "min_probability": 0.7,
@@ -220,7 +160,7 @@
         "PENDING",
         "PENDING",
         "PENDING",
-        "PENDING"
+        "WIN"
       ],
       "result": "PENDING",
       "units_profit": null
