@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T07:23:28.364405+00:00",
+  "generated_at": "2026-09-20T13:23:22.408169+00:00",
   "nfl": {
     "games": 1,
     "winner_accuracy": 1.0,
@@ -23,12 +23,12 @@
     }
   },
   "cfb": {
-    "games": 20,
-    "winner_accuracy": 0.95,
-    "margin_mae": 11.2,
-    "total_mae": 10.145,
-    "high_confidence_games": 12,
-    "high_confidence_margin_mae": 14.058333333333332,
+    "games": 75,
+    "winner_accuracy": 0.88,
+    "margin_mae": 11.461333333333332,
+    "total_mae": 13.017333333333333,
+    "high_confidence_games": 45,
+    "high_confidence_margin_mae": 12.54888888888889,
     "overall_target": {
       "target": 5.0,
       "passed": false
@@ -39,12 +39,12 @@
     },
     "confidence_buckets": {
       "Under 70%": {
-        "games": 8,
-        "margin_mae": 6.9125
+        "games": 30,
+        "margin_mae": 9.83
       },
       "70%+": {
-        "games": 12,
-        "margin_mae": 14.058333333333332
+        "games": 45,
+        "margin_mae": 12.54888888888889
       }
     }
   }

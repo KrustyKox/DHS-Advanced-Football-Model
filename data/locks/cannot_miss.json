@@ -2,7 +2,7 @@
   {
     "league": "nfl",
     "season": 2026,
-    "generated_at": "2026-09-20T07:23:28.364405+00:00",
+    "generated_at": "2026-09-20T13:23:22.408169+00:00",
     "status": "PASS",
     "policy": {
       "min_probability": 0.7,
@@ -106,18 +106,18 @@
     "sportsbook_implied_probability": 0.2824858757062147,
     "probability_edge": 0.38648555580862093,
     "leg_results": [
-      "PENDING",
-      "PENDING",
-      "PENDING",
+      "WIN",
+      "WIN",
+      "WIN",
       "WIN"
     ],
-    "result": "PENDING",
-    "units_profit": null
+    "result": "WIN",
+    "units_profit": 2.54
   },
   {
     "league": "cfb",
     "season": 2026,
-    "generated_at": "2026-09-20T07:23:28.364405+00:00",
+    "generated_at": "2026-09-20T13:23:22.408169+00:00",
     "status": "PASS",
     "policy": {
       "min_probability": 0.75,
@@ -132,7 +132,9 @@
       "preferred_max_odds": 350.0
     },
     "week": 4,
-    "candidate_counts": {},
+    "candidate_counts": {
+      "draftkings": 6
+    },
     "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
   }
 ]
