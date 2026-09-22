@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T19:24:18.142912+00:00",
+  "updated_at": "2026-09-22T01:22:55.539085+00:00",
   "games": [
     {
       "game_id": "2026_02_DET_BUF",
@@ -1239,7 +1239,7 @@
       "current_season_games_min": 1,
       "sportsbooks": [],
       "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
-      "kickoff_locked": false
+      "kickoff_locked": true
     },
     {
       "game_id": "2026_03_ATL_GB",
@@ -1258,10 +1258,10 @@
       "winner_confidence": 0.5416283425547793,
       "data_reliability": 0.724421052631579,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -1281,12 +1281,12 @@
       "winner_confidence": 0.5148282533118855,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [
         {
           "sportsbook": "draftkings",
-          "home_spread": 3.0,
+          "home_spread": null,
           "home_moneyline": 130.0,
           "away_moneyline": -155.0,
           "total": 42.5,
@@ -1299,20 +1299,6 @@
               "model_probability": 0.47996181984880326,
               "market_probability": 0.4170073589533933,
               "edge": 0.06295446089540996,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Home",
-              "line": 3.0,
-              "odds": -118.1,
-              "model_probability": 0.5558611446823057,
-              "market_probability": 0.5,
-              "edge": 0.05586114468230574,
-              "raw_point_edge": 1.9,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -1339,7 +1325,7 @@
           "home_spread": 3.0,
           "home_moneyline": 130.0,
           "away_moneyline": -149.9,
-          "total": 42.0,
+          "total": 42.5,
           "evaluations": [
             {
               "market": "Moneyline",
@@ -1371,12 +1357,12 @@
             {
               "market": "Total",
               "side": "Over",
-              "line": 42.0,
-              "odds": -114.9,
-              "model_probability": 0.6036415053592985,
+              "line": 42.5,
+              "odds": -105.0,
+              "model_probability": 0.5902574361188346,
               "market_probability": 0.5,
-              "edge": 0.1036415053592985,
-              "raw_point_edge": 3.799999999999997,
+              "edge": 0.09025743611883463,
+              "raw_point_edge": 3.299999999999997,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -1385,7 +1371,7 @@
           ]
         }
       ],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -1405,7 +1391,7 @@
       "winner_confidence": 0.5095970988596871,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [
         {
@@ -1496,7 +1482,7 @@
               "market": "Total",
               "side": "Under",
               "line": 42.5,
-              "odds": -110.0,
+              "odds": -114.9,
               "model_probability": 0.6274179569014924,
               "market_probability": 0.5,
               "edge": 0.12741795690149238,
@@ -1509,7 +1495,7 @@
           ]
         }
       ],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -1529,7 +1515,7 @@
       "winner_confidence": 0.5831610124400367,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [
         {
@@ -1585,7 +1571,7 @@
         },
         {
           "sportsbook": "bovada",
-          "home_spread": 3.0,
+          "home_spread": 2.5,
           "home_moneyline": 120.0,
           "away_moneyline": -140.1,
           "total": 43.5,
@@ -1606,12 +1592,12 @@
             {
               "market": "Spread",
               "side": "Away",
-              "line": -3.0,
-              "odds": -110.0,
-              "model_probability": 0.6020998360642895,
+              "line": -2.5,
+              "odds": -114.9,
+              "model_probability": 0.6162915865008246,
               "market_probability": 0.5,
-              "edge": 0.10209983606428952,
-              "raw_point_edge": 3.5,
+              "edge": 0.1162915865008246,
+              "raw_point_edge": 4.0,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -1635,7 +1621,7 @@
           ]
         }
       ],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -1655,10 +1641,10 @@
       "winner_confidence": 0.5771886314305198,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -1678,10 +1664,10 @@
       "winner_confidence": 0.6581381083258333,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -1701,10 +1687,10 @@
       "winner_confidence": 0.5245006016164406,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -1724,10 +1710,10 @@
       "winner_confidence": 0.5393518380630025,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -1747,7 +1733,7 @@
       "winner_confidence": 0.6059678431162054,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [
         {
@@ -1755,7 +1741,7 @@
           "home_spread": 6.5,
           "home_moneyline": 230.0,
           "away_moneyline": -284.9,
-          "total": 39.5,
+          "total": 40.5,
           "evaluations": [
             {
               "market": "Moneyline",
@@ -1787,12 +1773,12 @@
             {
               "market": "Total",
               "side": "Over",
-              "line": 39.5,
-              "odds": -118.1,
-              "model_probability": 0.6063042672885501,
+              "line": 40.5,
+              "odds": -102.0,
+              "model_probability": 0.5794731142368582,
               "market_probability": 0.5,
-              "edge": 0.10630426728855014,
-              "raw_point_edge": 3.8999999999999986,
+              "edge": 0.07947311423685821,
+              "raw_point_edge": 2.8999999999999986,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -1803,18 +1789,18 @@
         {
           "sportsbook": "bovada",
           "home_spread": 6.5,
-          "home_moneyline": 235.0,
-          "away_moneyline": -284.9,
+          "home_moneyline": 240.0,
+          "away_moneyline": -289.9,
           "total": 40.0,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": 235.0,
+              "odds": 240.0,
               "model_probability": 0.3568002120051278,
-              "market_probability": 0.2873857158323471,
-              "edge": 0.06941449617278067,
+              "market_probability": 0.28344819564395596,
+              "edge": 0.07335201636117183,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -1851,7 +1837,7 @@
           ]
         }
       ],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -1871,10 +1857,10 @@
       "winner_confidence": 0.6394532999583387,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -1894,10 +1880,10 @@
       "winner_confidence": 0.6801571287160283,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -1917,10 +1903,10 @@
       "winner_confidence": 0.5166124954025453,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -1940,7 +1926,7 @@
       "winner_confidence": 0.5396172603706952,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [
         {
@@ -1968,7 +1954,7 @@
               "market": "Spread",
               "side": "Home",
               "line": 3.0,
-              "odds": -114.9,
+              "odds": -112.0,
               "model_probability": 0.5029497072317133,
               "market_probability": 0.5,
               "edge": 0.0029497072317132833,
@@ -1998,20 +1984,21 @@
         {
           "sportsbook": "bovada",
           "home_spread": 3.0,
-          "home_moneyline": 135.0,
-          "away_moneyline": -160.0,
+          "home_moneyline": 130.0,
+          "away_moneyline": -149.9,
           "total": 52.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": 135.0,
+              "odds": 130.0,
               "model_probability": 0.4464631616612227,
-              "market_probability": 0.4088050314465409,
-              "edge": 0.037658130214681784,
+              "market_probability": 0.42023307044243025,
+              "edge": 0.02623009121879244,
               "qualified": false,
               "gate_reasons": [
+                "market edge below threshold",
                 "probability below threshold"
               ]
             },
@@ -2019,7 +2006,7 @@
               "market": "Spread",
               "side": "Home",
               "line": 3.0,
-              "odds": -114.9,
+              "odds": -110.0,
               "model_probability": 0.5029497072317133,
               "market_probability": 0.5,
               "edge": 0.0029497072317132833,
@@ -2034,7 +2021,7 @@
               "market": "Total",
               "side": "Over",
               "line": 52.5,
-              "odds": -114.9,
+              "odds": -110.0,
               "model_probability": 0.544051441056095,
               "market_probability": 0.5,
               "edge": 0.04405144105609504,
@@ -2047,7 +2034,7 @@
           ]
         }
       ],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2067,10 +2054,10 @@
       "winner_confidence": 0.5144399078796197,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2090,10 +2077,10 @@
       "winner_confidence": 0.5331757699521082,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2113,24 +2100,24 @@
       "winner_confidence": 0.511917662638548,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [
         {
           "sportsbook": "draftkings",
           "home_spread": 3.5,
-          "home_moneyline": 154.0,
-          "away_moneyline": -184.8,
+          "home_moneyline": 150.0,
+          "away_moneyline": -179.9,
           "total": 44.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": 154.0,
+              "odds": 150.0,
               "model_probability": 0.5161049495115513,
-              "market_probability": 0.37762267433226554,
-              "edge": 0.13848227517928574,
+              "market_probability": 0.38360857945590354,
+              "edge": 0.13249637005564774,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -2219,7 +2206,7 @@
           ]
         }
       ],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2239,10 +2226,10 @@
       "winner_confidence": 0.5045433955081303,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2262,10 +2249,10 @@
       "winner_confidence": 0.5470608624127544,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2285,10 +2272,10 @@
       "winner_confidence": 0.6216634924206483,
       "data_reliability": 0.6322105263157893,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2308,10 +2295,10 @@
       "winner_confidence": 0.5364226238928158,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2331,10 +2318,10 @@
       "winner_confidence": 0.5111384429588028,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2354,10 +2341,10 @@
       "winner_confidence": 0.5560812094040769,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2377,10 +2364,10 @@
       "winner_confidence": 0.5146779375367957,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2400,10 +2387,10 @@
       "winner_confidence": 0.577595669100926,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2423,10 +2410,10 @@
       "winner_confidence": 0.566649701133482,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2446,10 +2433,10 @@
       "winner_confidence": 0.6494380587615566,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2469,10 +2456,10 @@
       "winner_confidence": 0.6391851594585664,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2492,10 +2479,10 @@
       "winner_confidence": 0.6822412450968467,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2515,10 +2502,10 @@
       "winner_confidence": 0.5044658417610163,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2538,10 +2525,10 @@
       "winner_confidence": 0.6620956352881974,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2561,10 +2548,10 @@
       "winner_confidence": 0.5164198844239746,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2584,10 +2571,10 @@
       "winner_confidence": 0.6017472818051004,
       "data_reliability": 0.724421052631579,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2602,15 +2589,15 @@
       "projected_away": 19.2,
       "projected_margin_home": 8.1,
       "projected_total": 46.5,
-      "home_win_probability": 0.6436029714306698,
+      "home_win_probability": 0.6436029714306697,
       "predicted_winner": "DAL",
-      "winner_confidence": 0.6062661988586957,
+      "winner_confidence": 0.6062661988586956,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2630,10 +2617,10 @@
       "winner_confidence": 0.5066238080609767,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2653,10 +2640,10 @@
       "winner_confidence": 0.5184538488858247,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2676,10 +2663,10 @@
       "winner_confidence": 0.53514677778657,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2699,10 +2686,10 @@
       "winner_confidence": 0.5349175941671481,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2722,10 +2709,10 @@
       "winner_confidence": 0.5287705310719474,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2745,10 +2732,10 @@
       "winner_confidence": 0.5444986129000166,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2768,10 +2755,10 @@
       "winner_confidence": 0.5588713836806218,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2791,10 +2778,10 @@
       "winner_confidence": 0.5290873014873385,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2814,10 +2801,10 @@
       "winner_confidence": 0.5051860878131219,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2837,10 +2824,10 @@
       "winner_confidence": 0.5601289576130392,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2860,10 +2847,10 @@
       "winner_confidence": 0.5602367964357189,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2883,10 +2870,10 @@
       "winner_confidence": 0.5331656678172336,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2906,10 +2893,10 @@
       "winner_confidence": 0.6247347443631037,
       "data_reliability": 0.724421052631579,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2929,10 +2916,10 @@
       "winner_confidence": 0.54855770226899,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2952,10 +2939,10 @@
       "winner_confidence": 0.5482561723659556,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2975,10 +2962,10 @@
       "winner_confidence": 0.614281365323221,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -2998,10 +2985,10 @@
       "winner_confidence": 0.5992525465874694,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3021,10 +3008,10 @@
       "winner_confidence": 0.5254925519184974,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3044,10 +3031,10 @@
       "winner_confidence": 0.5746534343025591,
       "data_reliability": 0.724421052631579,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3067,10 +3054,10 @@
       "winner_confidence": 0.6038917735747265,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3090,10 +3077,10 @@
       "winner_confidence": 0.6188206283402391,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3113,10 +3100,10 @@
       "winner_confidence": 0.5264736090912356,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3136,10 +3123,10 @@
       "winner_confidence": 0.5495305126956798,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3159,10 +3146,10 @@
       "winner_confidence": 0.5621464695130163,
       "data_reliability": 0.6322105263157893,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3182,10 +3169,10 @@
       "winner_confidence": 0.5309846103763602,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3205,10 +3192,10 @@
       "winner_confidence": 0.6423927034668824,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3228,10 +3215,10 @@
       "winner_confidence": 0.5389572633883981,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3251,10 +3238,10 @@
       "winner_confidence": 0.6690007077746587,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3274,10 +3261,10 @@
       "winner_confidence": 0.5239237515152574,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3297,10 +3284,10 @@
       "winner_confidence": 0.5789694984118497,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3320,10 +3307,10 @@
       "winner_confidence": 0.5717271668847429,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3343,10 +3330,10 @@
       "winner_confidence": 0.5256266734220515,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3366,10 +3353,10 @@
       "winner_confidence": 0.5964329728878456,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3389,10 +3376,10 @@
       "winner_confidence": 0.5029282721616596,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3412,10 +3399,10 @@
       "winner_confidence": 0.54593932835908,
       "data_reliability": 0.6322105263157893,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3435,10 +3422,10 @@
       "winner_confidence": 0.6208257570182228,
       "data_reliability": 0.724421052631579,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3458,10 +3445,10 @@
       "winner_confidence": 0.5106596896439176,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3481,10 +3468,10 @@
       "winner_confidence": 0.5556479291195285,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3504,10 +3491,10 @@
       "winner_confidence": 0.5038157049162888,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3527,10 +3514,10 @@
       "winner_confidence": 0.5204813426303034,
       "data_reliability": 0.6322105263157893,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3550,10 +3537,10 @@
       "winner_confidence": 0.564620856026673,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3573,10 +3560,10 @@
       "winner_confidence": 0.5140406242186144,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3596,10 +3583,10 @@
       "winner_confidence": 0.5376827236534936,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3619,10 +3606,10 @@
       "winner_confidence": 0.6120067347107987,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3642,10 +3629,10 @@
       "winner_confidence": 0.5297429076489739,
       "data_reliability": 0.724421052631579,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3665,10 +3652,10 @@
       "winner_confidence": 0.5226118182373938,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3688,10 +3675,10 @@
       "winner_confidence": 0.5507677965465186,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3711,10 +3698,10 @@
       "winner_confidence": 0.6254897958849813,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3734,10 +3721,10 @@
       "winner_confidence": 0.5359998486116003,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3757,10 +3744,10 @@
       "winner_confidence": 0.5814209693553445,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3780,10 +3767,10 @@
       "winner_confidence": 0.566130758300566,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3803,10 +3790,10 @@
       "winner_confidence": 0.5374232477369035,
       "data_reliability": 0.6322105263157893,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3826,10 +3813,10 @@
       "winner_confidence": 0.5085798927217089,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3849,10 +3836,10 @@
       "winner_confidence": 0.593993012905132,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3872,10 +3859,10 @@
       "winner_confidence": 0.5351190238578634,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3895,10 +3882,10 @@
       "winner_confidence": 0.5972864949437218,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3918,10 +3905,10 @@
       "winner_confidence": 0.5298932400170699,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3941,10 +3928,10 @@
       "winner_confidence": 0.5430316003172757,
       "data_reliability": 0.724421052631579,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3964,10 +3951,10 @@
       "winner_confidence": 0.5159566905059888,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -3982,15 +3969,15 @@
       "projected_away": 27.7,
       "projected_margin_home": -6.4,
       "projected_total": 49.0,
-      "home_win_probability": 0.38548046771475014,
+      "home_win_probability": 0.38548046771475025,
       "predicted_winner": "DAL",
-      "winner_confidence": 0.584744453891085,
+      "winner_confidence": 0.5847444538910848,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4010,10 +3997,10 @@
       "winner_confidence": 0.5205314425218027,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4033,10 +4020,10 @@
       "winner_confidence": 0.5682816151085728,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4056,10 +4043,10 @@
       "winner_confidence": 0.5564243031444677,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4079,10 +4066,10 @@
       "winner_confidence": 0.5163992847214347,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4102,10 +4089,10 @@
       "winner_confidence": 0.6304045080096743,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4125,10 +4112,10 @@
       "winner_confidence": 0.5449415639965053,
       "data_reliability": 0.6932631578947368,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4148,10 +4135,10 @@
       "winner_confidence": 0.6158373994857761,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4171,10 +4158,10 @@
       "winner_confidence": 0.6426366698833409,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4194,10 +4181,10 @@
       "winner_confidence": 0.5819663641854076,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4217,10 +4204,10 @@
       "winner_confidence": 0.5420933792718478,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4240,10 +4227,10 @@
       "winner_confidence": 0.5005512161302683,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4263,10 +4250,10 @@
       "winner_confidence": 0.60767979569534,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4286,24 +4273,24 @@
       "winner_confidence": 0.5772189117959527,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [
         {
           "sportsbook": "draftkings",
           "home_spread": -6.5,
-          "home_moneyline": -277.8,
-          "away_moneyline": 225.0,
+          "home_moneyline": -297.6,
+          "away_moneyline": 240.0,
           "total": 48.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Away",
               "line": null,
-              "odds": 225.0,
+              "odds": 240.0,
               "model_probability": 0.6043498808053416,
-              "market_probability": 0.295006442041151,
-              "edge": 0.30934343876419057,
+              "market_probability": 0.28209785446702235,
+              "edge": 0.32225202633831923,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -4342,18 +4329,18 @@
         {
           "sportsbook": "bovada",
           "home_spread": -6.5,
-          "home_moneyline": -289.9,
-          "away_moneyline": 240.0,
+          "home_moneyline": -300.3,
+          "away_moneyline": 250.0,
           "total": 48.0,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Away",
               "line": null,
-              "odds": 240.0,
+              "odds": 250.0,
               "model_probability": 0.6043498808053416,
-              "market_probability": 0.28344819564395596,
-              "edge": 0.3209016851613856,
+              "market_probability": 0.2758121748716712,
+              "edge": 0.3285377059336704,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -4390,7 +4377,7 @@
           ]
         }
       ],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4410,10 +4397,10 @@
       "winner_confidence": 0.5802987434388254,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4433,10 +4420,10 @@
       "winner_confidence": 0.5419607172796602,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4456,10 +4443,10 @@
       "winner_confidence": 0.5274151684205995,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4479,10 +4466,10 @@
       "winner_confidence": 0.552861741734036,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4502,10 +4489,10 @@
       "winner_confidence": 0.5848404087578084,
       "data_reliability": 0.724421052631579,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4525,10 +4512,10 @@
       "winner_confidence": 0.5776725352047453,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4548,10 +4535,10 @@
       "winner_confidence": 0.5656472019209686,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4571,10 +4558,10 @@
       "winner_confidence": 0.5721346202881438,
       "data_reliability": 0.6322105263157893,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4594,10 +4581,10 @@
       "winner_confidence": 0.5413246665842646,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4617,10 +4604,10 @@
       "winner_confidence": 0.5177225429012369,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4640,10 +4627,10 @@
       "winner_confidence": 0.5712378471261886,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4663,10 +4650,10 @@
       "winner_confidence": 0.6582534726323189,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4686,10 +4673,10 @@
       "winner_confidence": 0.5048164386205943,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4709,10 +4696,10 @@
       "winner_confidence": 0.6251058110631069,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4732,10 +4719,10 @@
       "winner_confidence": 0.6059110613338696,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4755,10 +4742,10 @@
       "winner_confidence": 0.5583671780603853,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4778,10 +4765,10 @@
       "winner_confidence": 0.6478215045412817,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4801,10 +4788,10 @@
       "winner_confidence": 0.5675223318549784,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4824,10 +4811,10 @@
       "winner_confidence": 0.5160063416936195,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4847,10 +4834,10 @@
       "winner_confidence": 0.6463861660550297,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4870,10 +4857,10 @@
       "winner_confidence": 0.5195306177009947,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4893,10 +4880,10 @@
       "winner_confidence": 0.5148031868528561,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4916,10 +4903,10 @@
       "winner_confidence": 0.5715252776120673,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4939,10 +4926,10 @@
       "winner_confidence": 0.5755595217520736,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4962,10 +4949,10 @@
       "winner_confidence": 0.5055457594030025,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -4985,10 +4972,10 @@
       "winner_confidence": 0.5418303933553344,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5008,10 +4995,10 @@
       "winner_confidence": 0.551799218861763,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5031,10 +5018,10 @@
       "winner_confidence": 0.5214430060472,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5054,10 +5041,10 @@
       "winner_confidence": 0.5620223305791481,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5077,10 +5064,10 @@
       "winner_confidence": 0.5129847227063841,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5100,10 +5087,10 @@
       "winner_confidence": 0.6792601277361164,
       "data_reliability": 0.724421052631579,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5123,10 +5110,10 @@
       "winner_confidence": 0.5742308195637851,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5146,10 +5133,10 @@
       "winner_confidence": 0.543110938199349,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5169,10 +5156,10 @@
       "winner_confidence": 0.5046016445445187,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5192,10 +5179,10 @@
       "winner_confidence": 0.6078622711638163,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5215,10 +5202,10 @@
       "winner_confidence": 0.5016060582134578,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5238,10 +5225,10 @@
       "winner_confidence": 0.651010213981182,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5261,10 +5248,10 @@
       "winner_confidence": 0.5662737907910109,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5284,10 +5271,10 @@
       "winner_confidence": 0.5304336472143877,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5307,10 +5294,10 @@
       "winner_confidence": 0.5857057231051234,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5330,10 +5317,10 @@
       "winner_confidence": 0.501814808120887,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5353,10 +5340,10 @@
       "winner_confidence": 0.5417914420510473,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5376,10 +5363,10 @@
       "winner_confidence": 0.5333157923813809,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5399,10 +5386,10 @@
       "winner_confidence": 0.5691952640453762,
       "data_reliability": 0.724421052631579,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5422,10 +5409,10 @@
       "winner_confidence": 0.533062298437358,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5445,10 +5432,10 @@
       "winner_confidence": 0.5367283188424069,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5468,10 +5455,10 @@
       "winner_confidence": 0.520685747004703,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5491,10 +5478,10 @@
       "winner_confidence": 0.5124547226268698,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5514,10 +5501,10 @@
       "winner_confidence": 0.5401296133498376,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5537,10 +5524,10 @@
       "winner_confidence": 0.589340171018339,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5560,10 +5547,10 @@
       "winner_confidence": 0.5642471499133669,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5583,10 +5570,10 @@
       "winner_confidence": 0.520845423924929,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5606,10 +5593,10 @@
       "winner_confidence": 0.6023994138232018,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5629,10 +5616,10 @@
       "winner_confidence": 0.5138964714619416,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5652,10 +5639,10 @@
       "winner_confidence": 0.5451525457388225,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5675,24 +5662,24 @@
       "winner_confidence": 0.5427256841181398,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [
         {
           "sportsbook": "draftkings",
-          "home_spread": 2.5,
-          "home_moneyline": 110.0,
-          "away_moneyline": -130.0,
+          "home_spread": 1.5,
+          "home_moneyline": 102.0,
+          "away_moneyline": -122.0,
           "total": 42.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": 110.0,
+              "odds": 102.0,
               "model_probability": 0.5577374109704593,
-              "market_probability": 0.4572564612326044,
-              "edge": 0.10048094973785487,
+              "market_probability": 0.4739134147382802,
+              "edge": 0.08382399623217907,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -5701,12 +5688,12 @@
             {
               "market": "Spread",
               "side": "Home",
-              "line": 2.5,
-              "odds": -114.9,
-              "model_probability": 0.6632873100016505,
+              "line": 1.5,
+              "odds": -110.0,
+              "model_probability": 0.6358969048750436,
               "market_probability": 0.5,
-              "edge": 0.16328731000165053,
-              "raw_point_edge": 5.7,
+              "edge": 0.13589690487504358,
+              "raw_point_edge": 4.7,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -5731,19 +5718,19 @@
         },
         {
           "sportsbook": "bovada",
-          "home_spread": 2.5,
-          "home_moneyline": 110.0,
-          "away_moneyline": -130.0,
+          "home_spread": 1.5,
+          "home_moneyline": 100.0,
+          "away_moneyline": -120.0,
           "total": 42.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": 110.0,
+              "odds": 100.0,
               "model_probability": 0.5577374109704593,
-              "market_probability": 0.4572564612326044,
-              "edge": 0.10048094973785487,
+              "market_probability": 0.4782608695652174,
+              "edge": 0.07947654140524185,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -5752,12 +5739,12 @@
             {
               "market": "Spread",
               "side": "Home",
-              "line": 2.5,
-              "odds": -114.9,
-              "model_probability": 0.6632873100016505,
+              "line": 1.5,
+              "odds": -110.0,
+              "model_probability": 0.6358969048750436,
               "market_probability": 0.5,
-              "edge": 0.16328731000165053,
-              "raw_point_edge": 5.7,
+              "edge": 0.13589690487504358,
+              "raw_point_edge": 4.7,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -5781,7 +5768,7 @@
           ]
         }
       ],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5801,10 +5788,10 @@
       "winner_confidence": 0.5296984297415036,
       "data_reliability": 0.724421052631579,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5824,24 +5811,24 @@
       "winner_confidence": 0.5450023821938749,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [
         {
           "sportsbook": "draftkings",
           "home_spread": 11.5,
-          "home_moneyline": 550.0,
-          "away_moneyline": -800.0,
+          "home_moneyline": 575.0,
+          "away_moneyline": -847.5,
           "total": 45.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": 550.0,
+              "odds": 575.0,
               "model_probability": 0.43918597000827725,
-              "market_probability": 0.1475409836065574,
-              "edge": 0.2916449864017199,
+              "market_probability": 0.14209391695566592,
+              "edge": 0.2970920530526113,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -5878,18 +5865,18 @@
         {
           "sportsbook": "bovada",
           "home_spread": 11.5,
-          "home_moneyline": 550.0,
-          "away_moneyline": -847.5,
+          "home_moneyline": 575.0,
+          "away_moneyline": -900.9,
           "total": 45.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": 550.0,
+              "odds": 575.0,
               "model_probability": 0.43918597000827725,
-              "market_probability": 0.14675701839303001,
-              "edge": 0.29242895161524723,
+              "market_probability": 0.14133063163877307,
+              "edge": 0.2978553383695042,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -5924,7 +5911,7 @@
           ]
         }
       ],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5944,10 +5931,10 @@
       "winner_confidence": 0.5623377374411413,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5967,10 +5954,10 @@
       "winner_confidence": 0.5039441910244986,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -5990,10 +5977,10 @@
       "winner_confidence": 0.5582320752500703,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6013,10 +6000,10 @@
       "winner_confidence": 0.5060838200472372,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6031,15 +6018,15 @@
       "projected_away": 17.1,
       "projected_margin_home": 10.6,
       "projected_total": 44.9,
-      "home_win_probability": 0.6857915022244994,
+      "home_win_probability": 0.6857915022244992,
       "predicted_winner": "BAL",
-      "winner_confidence": 0.6374857116461295,
+      "winner_confidence": 0.6374857116461294,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6059,10 +6046,10 @@
       "winner_confidence": 0.5742796801451511,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6082,10 +6069,10 @@
       "winner_confidence": 0.6063808928263015,
       "data_reliability": 0.6932631578947368,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6105,10 +6092,10 @@
       "winner_confidence": 0.5375675976668687,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6128,10 +6115,10 @@
       "winner_confidence": 0.6408161621132882,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6151,10 +6138,10 @@
       "winner_confidence": 0.5141029800784706,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6169,15 +6156,15 @@
       "projected_away": 26.5,
       "projected_margin_home": -6.3,
       "projected_total": 46.7,
-      "home_win_probability": 0.3859071858963621,
+      "home_win_probability": 0.38590718589636214,
       "predicted_winner": "BUF",
       "winner_confidence": 0.5844286824366921,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6197,10 +6184,10 @@
       "winner_confidence": 0.6240146972505051,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6220,10 +6207,10 @@
       "winner_confidence": 0.6109498391129915,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6243,10 +6230,10 @@
       "winner_confidence": 0.5547143157640874,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6266,10 +6253,10 @@
       "winner_confidence": 0.5925356813908403,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6289,10 +6276,10 @@
       "winner_confidence": 0.5347733265408658,
       "data_reliability": 0.724421052631579,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6312,10 +6299,10 @@
       "winner_confidence": 0.5659718058630252,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6335,10 +6322,10 @@
       "winner_confidence": 0.5220051910987071,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6358,10 +6345,10 @@
       "winner_confidence": 0.6337806093074893,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6381,10 +6368,10 @@
       "winner_confidence": 0.5196183519560218,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6404,10 +6391,10 @@
       "winner_confidence": 0.5499920511597189,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6427,10 +6414,10 @@
       "winner_confidence": 0.5111015216399669,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6450,10 +6437,10 @@
       "winner_confidence": 0.5021477436905573,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6473,10 +6460,10 @@
       "winner_confidence": 0.506455460648921,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6496,10 +6483,10 @@
       "winner_confidence": 0.5171119204696639,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6519,10 +6506,10 @@
       "winner_confidence": 0.5715001725833199,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6542,10 +6529,10 @@
       "winner_confidence": 0.5760023585771324,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6565,10 +6552,10 @@
       "winner_confidence": 0.5735160951393365,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6588,10 +6575,10 @@
       "winner_confidence": 0.5587241122742955,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6611,10 +6598,10 @@
       "winner_confidence": 0.5321485204557032,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6634,10 +6621,10 @@
       "winner_confidence": 0.5215726938281853,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6657,10 +6644,10 @@
       "winner_confidence": 0.5787766471993471,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6680,10 +6667,10 @@
       "winner_confidence": 0.5731991880134921,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6703,10 +6690,10 @@
       "winner_confidence": 0.5161430360241271,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6726,10 +6713,10 @@
       "winner_confidence": 0.5799011524505171,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6749,10 +6736,10 @@
       "winner_confidence": 0.5910885530809712,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6772,10 +6759,10 @@
       "winner_confidence": 0.5403671416669557,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6795,10 +6782,10 @@
       "winner_confidence": 0.5598213850060433,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6818,10 +6805,10 @@
       "winner_confidence": 0.5709750970469325,
       "data_reliability": 0.724421052631579,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6841,10 +6828,10 @@
       "winner_confidence": 0.5999783471146535,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6864,10 +6851,10 @@
       "winner_confidence": 0.5967842454483797,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6887,10 +6874,10 @@
       "winner_confidence": 0.526002842607368,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6910,10 +6897,10 @@
       "winner_confidence": 0.5506236678752021,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6933,10 +6920,10 @@
       "winner_confidence": 0.5691151522281793,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6956,10 +6943,10 @@
       "winner_confidence": 0.5780963554133632,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -6979,10 +6966,10 @@
       "winner_confidence": 0.6108245097590301,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7002,10 +6989,10 @@
       "winner_confidence": 0.5796171262317884,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7025,10 +7012,10 @@
       "winner_confidence": 0.5155978664712292,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7048,10 +7035,10 @@
       "winner_confidence": 0.5868788328461665,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7071,10 +7058,10 @@
       "winner_confidence": 0.5536862880312667,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7089,15 +7076,15 @@
       "projected_away": 23.4,
       "projected_margin_home": -6.6,
       "projected_total": 40.1,
-      "home_win_probability": 0.3807302445978373,
+      "home_win_probability": 0.38073024459783733,
       "predicted_winner": "MIN",
       "winner_confidence": 0.5882596189976004,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7117,10 +7104,10 @@
       "winner_confidence": 0.5513181400619466,
       "data_reliability": 0.724421052631579,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7140,10 +7127,10 @@
       "winner_confidence": 0.5095545447716533,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7163,10 +7150,10 @@
       "winner_confidence": 0.5148877200830428,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7186,10 +7173,10 @@
       "winner_confidence": 0.6254196841023233,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7209,10 +7196,10 @@
       "winner_confidence": 0.6042808383420148,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7232,10 +7219,10 @@
       "winner_confidence": 0.5407381853859164,
       "data_reliability": 0.6932631578947368,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7255,10 +7242,10 @@
       "winner_confidence": 0.5253986362274224,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7278,10 +7265,10 @@
       "winner_confidence": 0.6609827244485887,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7301,10 +7288,10 @@
       "winner_confidence": 0.5141665442219419,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7324,10 +7311,10 @@
       "winner_confidence": 0.6077726366863385,
       "data_reliability": 0.724421052631579,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7347,10 +7334,10 @@
       "winner_confidence": 0.5662290335696897,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7370,10 +7357,10 @@
       "winner_confidence": 0.5517305513716089,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7388,15 +7375,15 @@
       "projected_away": 24.5,
       "projected_margin_home": 0.8,
       "projected_total": 49.8,
-      "home_win_probability": 0.5147097156828963,
+      "home_win_probability": 0.5147097156828961,
       "predicted_winner": "WAS",
-      "winner_confidence": 0.5108851896053432,
+      "winner_confidence": 0.5108851896053431,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7416,10 +7403,10 @@
       "winner_confidence": 0.5243918325803829,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7439,10 +7426,10 @@
       "winner_confidence": 0.6096041231652353,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7457,15 +7444,15 @@
       "projected_away": 17.6,
       "projected_margin_home": 5.3,
       "projected_total": 40.6,
-      "home_win_probability": 0.5961810409477241,
+      "home_win_probability": 0.596181040947724,
       "predicted_winner": "DEN",
-      "winner_confidence": 0.5681771715517867,
+      "winner_confidence": 0.5681771715517866,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7485,10 +7472,10 @@
       "winner_confidence": 0.5551275057669096,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7508,10 +7495,10 @@
       "winner_confidence": 0.6296071982526636,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7531,10 +7518,10 @@
       "winner_confidence": 0.6248652650784756,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7554,10 +7541,10 @@
       "winner_confidence": 0.524509145106109,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7577,10 +7564,10 @@
       "winner_confidence": 0.6012754862896637,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7600,10 +7587,10 @@
       "winner_confidence": 0.5353290286690152,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 1,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7623,10 +7610,10 @@
       "winner_confidence": 0.6164926404668732,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7646,10 +7633,10 @@
       "winner_confidence": 0.5374351443428335,
       "data_reliability": 0.74,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     },
     {
@@ -7669,10 +7656,10 @@
       "winner_confidence": 0.5474463681294363,
       "data_reliability": 0.7088421052631578,
       "margin_uncertainty": 13.524686149935466,
-      "total_uncertainty": 14.460539894811888,
+      "total_uncertainty": 14.46053989481189,
       "current_season_games_min": 2,
       "sportsbooks": [],
-      "snapshot_at": "2026-09-21T19:24:18.142912+00:00",
+      "snapshot_at": "2026-09-22T01:22:55.539085+00:00",
       "kickoff_locked": false
     }
   ]

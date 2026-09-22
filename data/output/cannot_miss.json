@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-21T19:24:18.142912+00:00",
+  "generated_at": "2026-09-22T01:22:55.539085+00:00",
   "current": [
     {
       "league": "nfl",
       "season": 2026,
-      "generated_at": "2026-09-21T19:24:18.142912+00:00",
+      "generated_at": "2026-09-22T01:22:55.539085+00:00",
       "status": "PASS",
       "policy": {
         "min_probability": 0.7,
@@ -18,14 +18,17 @@
         "minimum_parlay_odds": 250.0,
         "preferred_max_odds": 350.0
       },
-      "week": 2,
-      "candidate_counts": {},
+      "week": 3,
+      "candidate_counts": {
+        "bovada": 0,
+        "draftkings": 0
+      },
       "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
     },
     {
       "league": "cfb",
       "season": 2026,
-      "generated_at": "2026-09-21T19:24:18.142912+00:00",
+      "generated_at": "2026-09-22T01:22:55.539085+00:00",
       "status": "QUALIFIED",
       "policy": {
         "min_probability": 0.75,
@@ -57,18 +60,18 @@
           "safety_score": 0.868347412646684
         },
         {
-          "game_id": "401856696",
-          "kickoff": "2026-09-26T23:00:00+00:00",
-          "away": "South Carolina",
-          "home": "Alabama",
-          "team": "Alabama",
+          "game_id": "401856700",
+          "kickoff": "2026-09-26T19:30:00+00:00",
+          "away": "Oklahoma",
+          "home": "Georgia",
+          "team": "Georgia",
           "side": "Home",
-          "moneyline": -534.8,
-          "model_probability": 0.9110090824469809,
-          "market_probability": 0.8081479690522244,
-          "probability_edge": 0.10286111339475645,
+          "moneyline": -574.7,
+          "model_probability": 0.9139171780965049,
+          "market_probability": 0.8172473336719146,
+          "probability_edge": 0.09666984442459026,
           "reliability": 0.82,
-          "safety_score": 0.8625415334865465
+          "safety_score": 0.8662704224662311
         },
         {
           "game_id": "401871048",
@@ -91,12 +94,12 @@
           "home": "Penn State",
           "team": "Penn State",
           "side": "Home",
-          "moneyline": -374.5,
+          "moneyline": -359.7,
           "model_probability": 0.9017640918311568,
-          "market_probability": 0.7571368248646851,
-          "probability_edge": 0.14462726696647166,
+          "market_probability": 0.7507786473086858,
+          "probability_edge": 0.15098544452247098,
           "reliability": 0.82,
-          "safety_score": 0.8451662521317497
+          "safety_score": 0.8435767077427498
         },
         {
           "game_id": "401869931",
@@ -114,10 +117,10 @@
         }
       ],
       "leg_count": 5,
-      "parlay_odds": 251.8,
-      "model_combined_probability": 0.5877303610340648,
-      "sportsbook_implied_probability": 0.2842524161455372,
-      "probability_edge": 0.30347794488852764
+      "parlay_odds": 250.9,
+      "model_combined_probability": 0.5896064961231086,
+      "sportsbook_implied_probability": 0.28498147620404674,
+      "probability_edge": 0.3046250199190618
     }
   ],
   "history": [
@@ -234,9 +237,33 @@
       "units_profit": 2.54
     },
     {
+      "league": "nfl",
+      "season": 2026,
+      "generated_at": "2026-09-22T01:22:55.539085+00:00",
+      "status": "PASS",
+      "policy": {
+        "min_probability": 0.7,
+        "min_reliability": 0.64,
+        "min_legs": 3,
+        "max_legs": 6,
+        "preferred_odds": [
+          -500,
+          -150
+        ],
+        "minimum_parlay_odds": 250.0,
+        "preferred_max_odds": 350.0
+      },
+      "week": 3,
+      "candidate_counts": {
+        "bovada": 0,
+        "draftkings": 0
+      },
+      "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
+    },
+    {
       "league": "cfb",
       "season": 2026,
-      "generated_at": "2026-09-21T19:24:18.142912+00:00",
+      "generated_at": "2026-09-22T01:22:55.539085+00:00",
       "status": "QUALIFIED",
       "policy": {
         "min_probability": 0.75,
@@ -268,18 +295,18 @@
           "safety_score": 0.868347412646684
         },
         {
-          "game_id": "401856696",
-          "kickoff": "2026-09-26T23:00:00+00:00",
-          "away": "South Carolina",
-          "home": "Alabama",
-          "team": "Alabama",
+          "game_id": "401856700",
+          "kickoff": "2026-09-26T19:30:00+00:00",
+          "away": "Oklahoma",
+          "home": "Georgia",
+          "team": "Georgia",
           "side": "Home",
-          "moneyline": -534.8,
-          "model_probability": 0.9110090824469809,
-          "market_probability": 0.8081479690522244,
-          "probability_edge": 0.10286111339475645,
+          "moneyline": -574.7,
+          "model_probability": 0.9139171780965049,
+          "market_probability": 0.8172473336719146,
+          "probability_edge": 0.09666984442459026,
           "reliability": 0.82,
-          "safety_score": 0.8625415334865465
+          "safety_score": 0.8662704224662311
         },
         {
           "game_id": "401871048",
@@ -302,12 +329,12 @@
           "home": "Penn State",
           "team": "Penn State",
           "side": "Home",
-          "moneyline": -374.5,
+          "moneyline": -359.7,
           "model_probability": 0.9017640918311568,
-          "market_probability": 0.7571368248646851,
-          "probability_edge": 0.14462726696647166,
+          "market_probability": 0.7507786473086858,
+          "probability_edge": 0.15098544452247098,
           "reliability": 0.82,
-          "safety_score": 0.8451662521317497
+          "safety_score": 0.8435767077427498
         },
         {
           "game_id": "401869931",
@@ -325,10 +352,10 @@
         }
       ],
       "leg_count": 5,
-      "parlay_odds": 251.8,
-      "model_combined_probability": 0.5877303610340648,
-      "sportsbook_implied_probability": 0.2842524161455372,
-      "probability_edge": 0.30347794488852764,
+      "parlay_odds": 250.9,
+      "model_combined_probability": 0.5896064961231086,
+      "sportsbook_implied_probability": 0.28498147620404674,
+      "probability_edge": 0.3046250199190618,
       "leg_results": [
         "PENDING",
         "PENDING",
