@@ -114,7 +114,7 @@
   {
     "league": "nfl",
     "season": 2026,
-    "generated_at": "2026-09-22T13:26:27.830747+00:00",
+    "generated_at": "2026-09-22T19:22:53.608684+00:00",
     "status": "PASS",
     "policy": {
       "min_probability": 0.7,
@@ -138,7 +138,7 @@
   {
     "league": "cfb",
     "season": 2026,
-    "generated_at": "2026-09-22T13:26:27.830747+00:00",
+    "generated_at": "2026-09-22T19:22:53.608684+00:00",
     "status": "QUALIFIED",
     "policy": {
       "min_probability": 0.75,
@@ -156,6 +156,20 @@
     "sportsbook": "draftkings",
     "legs": [
       {
+        "game_id": "401858243",
+        "kickoff": "2026-09-26T16:00:00+00:00",
+        "away": "Wake Forest",
+        "home": "Louisville",
+        "team": "Louisville",
+        "side": "Home",
+        "moneyline": -500.0,
+        "model_probability": 0.9266948252933682,
+        "market_probability": 0.7999999999999999,
+        "probability_edge": 0.12669482529336829,
+        "reliability": 0.82,
+        "safety_score": 0.868347412646684
+      },
+      {
         "game_id": "401856696",
         "kickoff": "2026-09-26T23:00:00+00:00",
         "away": "South Carolina",
@@ -163,11 +177,25 @@
         "team": "Alabama",
         "side": "Home",
         "moneyline": -485.4,
-        "model_probability": 0.9110090824469815,
+        "model_probability": 0.9110090824469809,
         "market_probability": 0.7957987707462728,
-        "probability_edge": 0.11521031170070872,
+        "probability_edge": 0.11521031170070806,
         "reliability": 0.82,
-        "safety_score": 0.8594542339100589
+        "safety_score": 0.8594542339100586
+      },
+      {
+        "game_id": "401871048",
+        "kickoff": "2026-09-26T23:00:00+00:00",
+        "away": "Middle Tennessee",
+        "home": "Jacksonville State",
+        "team": "Jacksonville State",
+        "side": "Home",
+        "moneyline": -284.9,
+        "model_probability": 0.9342585837035738,
+        "market_probability": 0.7095247798229528,
+        "probability_edge": 0.22473380388062103,
+        "reliability": 0.82,
+        "safety_score": 0.8495104868075251
       },
       {
         "game_id": "401858466",
@@ -177,11 +205,11 @@
         "team": "Penn State",
         "side": "Home",
         "moneyline": -374.5,
-        "model_probability": 0.901764091831157,
+        "model_probability": 0.9017640918311568,
         "market_probability": 0.7571368248646851,
-        "probability_edge": 0.14462726696647188,
+        "probability_edge": 0.14462726696647166,
         "reliability": 0.82,
-        "safety_score": 0.8451662521317498
+        "safety_score": 0.8451662521317497
       },
       {
         "game_id": "401869931",
@@ -190,34 +218,21 @@
         "home": "Arkansas State",
         "team": "Arkansas State",
         "side": "Home",
-        "moneyline": -217.9,
-        "model_probability": 0.8263397548747128,
-        "market_probability": 0.657442727527424,
-        "probability_edge": 0.16889702734728873,
+        "moneyline": -225.2,
+        "model_probability": 0.8263397548747135,
+        "market_probability": 0.6637091270087485,
+        "probability_edge": 0.16263062786596494,
         "reliability": 0.82,
-        "safety_score": 0.7825305593192123
-      },
-      {
-        "game_id": "401858240",
-        "kickoff": "2026-09-27T02:30:00+00:00",
-        "away": "Georgia Tech",
-        "home": "Stanford",
-        "team": "Georgia Tech",
-        "side": "Away",
-        "moneyline": -175.1,
-        "model_probability": 0.7565843235242778,
-        "market_probability": 0.6092856787791421,
-        "probability_edge": 0.14729864474513576,
-        "reliability": 0.82,
-        "safety_score": 0.7356135814569243
+        "safety_score": 0.7840971591895438
       }
     ],
-    "leg_count": 4,
-    "parlay_odds": 250.2,
-    "model_combined_probability": 0.5136078228666692,
-    "sportsbook_implied_probability": 0.28555111364934327,
-    "probability_edge": 0.2280567092173259,
+    "leg_count": 5,
+    "parlay_odds": 257.7,
+    "model_combined_probability": 0.5877303610340648,
+    "sportsbook_implied_probability": 0.27956388034665924,
+    "probability_edge": 0.3081664806874056,
     "leg_results": [
+      "PENDING",
       "PENDING",
       "PENDING",
       "PENDING",
