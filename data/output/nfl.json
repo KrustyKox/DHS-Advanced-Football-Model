@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-23T01:24:08.299821+00:00",
+  "generated_at": "2026-09-23T07:26:07.505220+00:00",
   "league": "nfl",
   "season": 2026,
   "validation": {
     "games": 235,
     "margin_mae": 11.16172797130018,
-    "total_mae": 11.413568760810781,
+    "total_mae": 11.41356876081078,
     "winner_accuracy": 0.6,
     "brier_score": 0.23654352125394268,
     "log_loss": 0.6654549016608416,
@@ -34,7 +34,7 @@
       "predicted_winner": "GB",
       "winner_confidence": 0.5459193066427542,
       "data_reliability": 0.724421052631579,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -55,7 +55,7 @@
       "predicted_winner": "BUF",
       "winner_confidence": 0.6627303117250886,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -76,60 +76,10 @@
       "predicted_winner": "CAR",
       "winner_confidence": 0.5100073838443453,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": 2.5,
-          "home_moneyline": 124.0,
-          "away_moneyline": -147.9,
-          "total": 42.5,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Home",
-              "line": null,
-              "odds": 124.0,
-              "model_probability": 0.4864765083184524,
-              "market_probability": 0.4280070994965435,
-              "edge": 0.05846940882190893,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Home",
-              "line": 2.5,
-              "odds": 100.0,
-              "model_probability": 0.5527172882196888,
-              "market_probability": 0.5,
-              "edge": 0.052717288219688796,
-              "raw_point_edge": 1.8,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 42.5,
-              "odds": -108.0,
-              "model_probability": 0.5956882846209156,
-              "market_probability": 0.5,
-              "edge": 0.09568828462091561,
-              "raw_point_edge": 3.5,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
         {
           "sportsbook": "bovada",
           "home_spread": 3.0,
@@ -179,6 +129,43 @@
               ]
             }
           ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 2.5,
+          "home_moneyline": null,
+          "away_moneyline": null,
+          "total": 42.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": 2.5,
+              "odds": 100.0,
+              "model_probability": 0.5527172882196888,
+              "market_probability": 0.5,
+              "edge": 0.052717288219688796,
+              "raw_point_edge": 1.8,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 42.5,
+              "odds": -108.0,
+              "model_probability": 0.5956882846209156,
+              "market_probability": 0.5,
+              "edge": 0.09568828462091561,
+              "raw_point_edge": 3.5,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -198,7 +185,7 @@
       "predicted_winner": "DET",
       "winner_confidence": 0.5464418688450466,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -219,10 +206,62 @@
       "predicted_winner": "HOU",
       "winner_confidence": 0.561161186277546,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": [
+        {
+          "sportsbook": "bovada",
+          "home_spread": 2.5,
+          "home_moneyline": 125.0,
+          "away_moneyline": -144.9,
+          "total": 42.5,
+          "evaluations": [
+            {
+              "market": "Moneyline",
+              "side": "Away",
+              "line": null,
+              "odds": -144.9,
+              "model_probability": 0.5862832298242778,
+              "market_probability": 0.5710469851556684,
+              "edge": 0.0152362446686094,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": -2.5,
+              "odds": -120.0,
+              "model_probability": 0.5643394362414258,
+              "market_probability": 0.5,
+              "edge": 0.0643394362414258,
+              "raw_point_edge": 2.2,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 42.5,
+              "odds": -110.0,
+              "model_probability": 0.5082815247301564,
+              "market_probability": 0.5,
+              "edge": 0.00828152473015642,
+              "raw_point_edge": 0.29999999999999716,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            }
+          ]
+        },
         {
           "sportsbook": "draftkings",
           "home_spread": 3.0,
@@ -293,7 +332,7 @@
       "predicted_winner": "NE",
       "winner_confidence": 0.5168333569825465,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -314,7 +353,7 @@
       "predicted_winner": "KC",
       "winner_confidence": 0.578574887035899,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -335,7 +374,7 @@
       "predicted_winner": "NYG",
       "winner_confidence": 0.5904889549712614,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -356,60 +395,10 @@
       "predicted_winner": "PIT",
       "winner_confidence": 0.5130550449320499,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": 3.5,
-          "home_moneyline": 164.0,
-          "away_moneyline": -198.0,
-          "total": 42.5,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Home",
-              "line": null,
-              "odds": 164.0,
-              "model_probability": 0.5176419526108783,
-              "market_probability": 0.3630958183058778,
-              "edge": 0.15454613430500053,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Home",
-              "line": 3.5,
-              "odds": -105.0,
-              "model_probability": 0.6298001039467043,
-              "market_probability": 0.5,
-              "edge": 0.12980010394670427,
-              "raw_point_edge": 4.5,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Under",
-              "line": 42.5,
-              "odds": -110.0,
-              "model_probability": 0.6222528357176343,
-              "market_probability": 0.5,
-              "edge": 0.12225283571763434,
-              "raw_point_edge": 4.5,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
         {
           "sportsbook": "bovada",
           "home_spread": 3.5,
@@ -459,6 +448,43 @@
               ]
             }
           ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 3.5,
+          "home_moneyline": null,
+          "away_moneyline": null,
+          "total": 42.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": 3.5,
+              "odds": -105.0,
+              "model_probability": 0.6298001039467043,
+              "market_probability": 0.5,
+              "edge": 0.12980010394670427,
+              "raw_point_edge": 4.5,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 42.5,
+              "odds": -110.0,
+              "model_probability": 0.6222528357176343,
+              "market_probability": 0.5,
+              "edge": 0.12225283571763434,
+              "raw_point_edge": 4.5,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -478,30 +504,68 @@
       "predicted_winner": "SEA",
       "winner_confidence": 0.5972499011279263,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": [
         {
-          "sportsbook": "draftkings",
+          "sportsbook": "bovada",
           "home_spread": 7.0,
-          "home_moneyline": 240.0,
-          "away_moneyline": -297.6,
-          "total": 40.5,
+          "home_moneyline": 250.0,
+          "away_moneyline": -300.3,
+          "total": 40.0,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": 240.0,
+              "odds": 250.0,
               "model_probability": 0.36858121469199145,
-              "market_probability": 0.28209785446702235,
-              "edge": 0.08648336022496911,
+              "market_probability": 0.2758121748716712,
+              "edge": 0.09276903982032025,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
               ]
             },
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": -7.0,
+              "odds": -110.0,
+              "model_probability": 0.5088112260176231,
+              "market_probability": 0.5,
+              "edge": 0.008811226017623075,
+              "raw_point_edge": 0.2999999999999998,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 40.0,
+              "odds": -110.0,
+              "model_probability": 0.5876258854791248,
+              "market_probability": 0.5,
+              "edge": 0.08762588547912475,
+              "raw_point_edge": 3.200000000000003,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 7.0,
+          "home_moneyline": null,
+          "away_moneyline": null,
+          "total": 40.5,
+          "evaluations": [
             {
               "market": "Spread",
               "side": "Away",
@@ -532,43 +596,6 @@
               ]
             }
           ]
-        },
-        {
-          "sportsbook": "bovada",
-          "home_spread": 7.0,
-          "home_moneyline": 250.0,
-          "away_moneyline": -300.3,
-          "total": null,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Home",
-              "line": null,
-              "odds": 250.0,
-              "model_probability": 0.36858121469199145,
-              "market_probability": 0.2758121748716712,
-              "edge": 0.09276903982032025,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Away",
-              "line": -7.0,
-              "odds": -110.0,
-              "model_probability": 0.5088112260176231,
-              "market_probability": 0.5,
-              "edge": 0.008811226017623075,
-              "raw_point_edge": 0.2999999999999998,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            }
-          ]
         }
       ]
     },
@@ -588,7 +615,7 @@
       "predicted_winner": "SF",
       "winner_confidence": 0.6784966411308478,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -609,7 +636,7 @@
       "predicted_winner": "MIN",
       "winner_confidence": 0.5073790603599466,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -630,7 +657,7 @@
       "predicted_winner": "NO",
       "winner_confidence": 0.5180932225564476,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -651,61 +678,10 @@
       "predicted_winner": "BAL",
       "winner_confidence": 0.5339100348947665,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": 3.5,
-          "home_moneyline": 150.0,
-          "away_moneyline": -179.9,
-          "total": 52.5,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Home",
-              "line": null,
-              "odds": 150.0,
-              "model_probability": 0.45417562852058574,
-              "market_probability": 0.38360857945590354,
-              "edge": 0.0705670490646822,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Home",
-              "line": 3.5,
-              "odds": -114.9,
-              "model_probability": 0.529346624556704,
-              "market_probability": 0.5,
-              "edge": 0.029346624556704004,
-              "raw_point_edge": 1.0,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 52.5,
-              "odds": -112.0,
-              "model_probability": 0.5413363539885176,
-              "market_probability": 0.5,
-              "edge": 0.04133635398851765,
-              "raw_point_edge": 1.5,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
         {
           "sportsbook": "bovada",
           "home_spread": 3.5,
@@ -756,6 +732,57 @@
               ]
             }
           ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 3.5,
+          "home_moneyline": 150.0,
+          "away_moneyline": -179.9,
+          "total": 52.5,
+          "evaluations": [
+            {
+              "market": "Moneyline",
+              "side": "Home",
+              "line": null,
+              "odds": 150.0,
+              "model_probability": 0.45417562852058574,
+              "market_probability": 0.38360857945590354,
+              "edge": 0.0705670490646822,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": 3.5,
+              "odds": -114.9,
+              "model_probability": 0.529346624556704,
+              "market_probability": 0.5,
+              "edge": 0.029346624556704004,
+              "raw_point_edge": 1.0,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 52.5,
+              "odds": -112.0,
+              "model_probability": 0.5413363539885176,
+              "market_probability": 0.5,
+              "edge": 0.04133635398851765,
+              "raw_point_edge": 1.5,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -775,7 +802,7 @@
       "predicted_winner": "LA",
       "winner_confidence": 0.5177318598845725,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -796,60 +823,10 @@
       "predicted_winner": "CHI",
       "winner_confidence": 0.5118909320671917,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": 4.5,
-          "home_moneyline": 185.0,
-          "away_moneyline": -225.2,
-          "total": 41.5,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Home",
-              "line": null,
-              "odds": 185.0,
-              "model_probability": 0.5160688271178266,
-              "market_probability": 0.3362908729912515,
-              "edge": 0.17977795412657516,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Home",
-              "line": 4.5,
-              "odds": -110.0,
-              "model_probability": 0.6545333251262743,
-              "market_probability": 0.5,
-              "edge": 0.15453332512627427,
-              "raw_point_edge": 5.4,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 41.5,
-              "odds": -112.0,
-              "model_probability": 0.5495645150320926,
-              "market_probability": 0.5,
-              "edge": 0.04956451503209258,
-              "raw_point_edge": 1.7999999999999972,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
         {
           "sportsbook": "bovada",
           "home_spread": 4.5,
@@ -875,9 +852,9 @@
               "side": "Home",
               "line": 4.5,
               "odds": -110.0,
-              "model_probability": 0.6545333251262743,
+              "model_probability": 0.6545333251262742,
               "market_probability": 0.5,
-              "edge": 0.15453332512627427,
+              "edge": 0.15453332512627416,
               "raw_point_edge": 5.4,
               "qualified": false,
               "gate_reasons": [
@@ -889,6 +866,43 @@
               "side": "Over",
               "line": 41.5,
               "odds": -110.0,
+              "model_probability": 0.5495645150320926,
+              "market_probability": 0.5,
+              "edge": 0.04956451503209258,
+              "raw_point_edge": 1.7999999999999972,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 4.5,
+          "home_moneyline": null,
+          "away_moneyline": null,
+          "total": 41.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": 4.5,
+              "odds": -110.0,
+              "model_probability": 0.6545333251262742,
+              "market_probability": 0.5,
+              "edge": 0.15453332512627416,
+              "raw_point_edge": 5.4,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 41.5,
+              "odds": -112.0,
               "model_probability": 0.5495645150320926,
               "market_probability": 0.5,
               "edge": 0.04956451503209258,
@@ -918,10 +932,48 @@
       "predicted_winner": "PIT",
       "winner_confidence": 0.5118299266363511,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
-      "sportsbooks": []
+      "sportsbooks": [
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 3.0,
+          "home_moneyline": null,
+          "away_moneyline": null,
+          "total": 38.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": 3.0,
+              "odds": -114.9,
+              "model_probability": 0.5614387014204857,
+              "market_probability": 0.5,
+              "edge": 0.061438701420485686,
+              "raw_point_edge": 2.1,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 38.5,
+              "odds": -110.0,
+              "model_probability": 0.5358408354074876,
+              "market_probability": 0.5,
+              "edge": 0.035840835407487615,
+              "raw_point_edge": 1.2999999999999972,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "game_id": "2026_04_IND_WAS",
@@ -939,10 +991,47 @@
       "predicted_winner": "WAS",
       "winner_confidence": 0.5503116275289301,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
-      "sportsbooks": []
+      "sportsbooks": [
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 4.5,
+          "home_moneyline": null,
+          "away_moneyline": null,
+          "total": 46.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": 4.5,
+              "odds": -110.0,
+              "model_probability": 0.7269937002244438,
+              "market_probability": 0.5,
+              "edge": 0.22699370022444376,
+              "raw_point_edge": 8.2,
+              "qualified": true,
+              "gate_reasons": []
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 46.5,
+              "odds": -110.0,
+              "model_probability": 0.5027606845011021,
+              "market_probability": 0.5,
+              "edge": 0.0027606845011021175,
+              "raw_point_edge": 0.10000000000000142,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "game_id": "2026_04_TEN_BAL",
@@ -960,30 +1049,17 @@
       "predicted_winner": "BAL",
       "winner_confidence": 0.6588862417012451,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": [
         {
           "sportsbook": "draftkings",
           "home_spread": -10.5,
-          "home_moneyline": -598.8,
-          "away_moneyline": 440.0,
+          "home_moneyline": null,
+          "away_moneyline": null,
           "total": 44.5,
           "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Away",
-              "line": null,
-              "odds": 440.0,
-              "model_probability": 0.28528886256588504,
-              "market_probability": 0.1777067990397526,
-              "edge": 0.10758206352613245,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
             {
               "market": "Spread",
               "side": "Home",
@@ -1032,10 +1108,47 @@
       "predicted_winner": "BUF",
       "winner_confidence": 0.5839245165521083,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
-      "sportsbooks": []
+      "sportsbooks": [
+        {
+          "sportsbook": "draftkings",
+          "home_spread": -5.5,
+          "home_moneyline": null,
+          "away_moneyline": null,
+          "total": 49.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": -5.5,
+              "odds": -110.0,
+              "model_probability": 0.5234849326095701,
+              "market_probability": 0.5,
+              "edge": 0.023484932609570075,
+              "raw_point_edge": 0.7999999999999998,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 49.5,
+              "odds": -110.0,
+              "model_probability": 0.7310150496760284,
+              "market_probability": 0.5,
+              "edge": 0.23101504967602837,
+              "raw_point_edge": 8.899999999999999,
+              "qualified": true,
+              "gate_reasons": []
+            }
+          ]
+        }
+      ]
     },
     {
       "game_id": "2026_04_NYJ_CHI",
@@ -1053,7 +1166,7 @@
       "predicted_winner": "CHI",
       "winner_confidence": 0.57398986185618,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1074,7 +1187,7 @@
       "predicted_winner": "JAX",
       "winner_confidence": 0.5564074746044344,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1095,10 +1208,48 @@
       "predicted_winner": "DAL",
       "winner_confidence": 0.5255388667081999,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
-      "sportsbooks": []
+      "sportsbooks": [
+        {
+          "sportsbook": "draftkings",
+          "home_spread": -3.0,
+          "home_moneyline": null,
+          "away_moneyline": null,
+          "total": 47.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": 3.0,
+              "odds": -110.0,
+              "model_probability": 0.6436147333670088,
+              "market_probability": 0.5,
+              "edge": 0.1436147333670088,
+              "raw_point_edge": 5.0,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 47.5,
+              "odds": -110.0,
+              "model_probability": 0.643102262667021,
+              "market_probability": 0.5,
+              "edge": 0.14310226266702097,
+              "raw_point_edge": 5.299999999999997,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "game_id": "2026_04_ARI_NYG",
@@ -1116,7 +1267,7 @@
       "predicted_winner": "NYG",
       "winner_confidence": 0.5769483229285546,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1137,7 +1288,7 @@
       "predicted_winner": "LA",
       "winner_confidence": 0.507018782354932,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1158,7 +1309,7 @@
       "predicted_winner": "GB",
       "winner_confidence": 0.5094823280499163,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1179,30 +1330,17 @@
       "predicted_winner": "MIN",
       "winner_confidence": 0.6389931565092525,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": [
         {
           "sportsbook": "draftkings",
           "home_spread": -10.5,
-          "home_moneyline": -751.9,
-          "away_moneyline": 525.0,
+          "home_moneyline": null,
+          "away_moneyline": null,
           "total": 42.5,
           "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Away",
-              "line": null,
-              "odds": 525.0,
-              "model_probability": 0.31217141012263183,
-              "market_probability": 0.15346024111577972,
-              "edge": 0.15871116900685212,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
             {
               "market": "Spread",
               "side": "Home",
@@ -1253,7 +1391,7 @@
       "predicted_winner": "SEA",
       "winner_confidence": 0.6748292517425943,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1274,7 +1412,7 @@
       "predicted_winner": "SF",
       "winner_confidence": 0.6887758217398982,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1295,7 +1433,7 @@
       "predicted_winner": "LV",
       "winner_confidence": 0.5002662992926735,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1316,61 +1454,10 @@
       "predicted_winner": "DET",
       "winner_confidence": 0.514511807760222,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
-      "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": 3.0,
-          "home_moneyline": 130.0,
-          "away_moneyline": -155.0,
-          "total": 49.5,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Home",
-              "line": null,
-              "odds": 130.0,
-              "model_probability": 0.48038944897267294,
-              "market_probability": 0.4170073589533933,
-              "edge": 0.06338209001927964,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Home",
-              "line": 3.0,
-              "odds": -120.0,
-              "model_probability": 0.555627473316126,
-              "market_probability": 0.5,
-              "edge": 0.05562747331612605,
-              "raw_point_edge": 1.9,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 49.5,
-              "odds": -110.0,
-              "model_probability": 0.5523026854342736,
-              "market_probability": 0.5,
-              "edge": 0.05230268543427363,
-              "raw_point_edge": 1.8999999999999986,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        }
-      ]
+      "sportsbooks": []
     },
     {
       "game_id": "2026_04_ATL_NO",
@@ -1388,7 +1475,7 @@
       "predicted_winner": "NO",
       "winner_confidence": 0.5842689148046736,
       "data_reliability": 0.724421052631579,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1409,7 +1496,7 @@
       "predicted_winner": "DAL",
       "winner_confidence": 0.5991766150722272,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1430,7 +1517,7 @@
       "predicted_winner": "PHI",
       "winner_confidence": 0.5047183874902532,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1451,7 +1538,7 @@
       "predicted_winner": "MIA",
       "winner_confidence": 0.5033203963636066,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1472,7 +1559,7 @@
       "predicted_winner": "NE",
       "winner_confidence": 0.5489692514386139,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1493,7 +1580,7 @@
       "predicted_winner": "MIN",
       "winner_confidence": 0.5494515318932921,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1514,7 +1601,7 @@
       "predicted_winner": "CLE",
       "winner_confidence": 0.5381788620283913,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1535,7 +1622,7 @@
       "predicted_winner": "PIT",
       "winner_confidence": 0.5154987462747063,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1556,7 +1643,7 @@
       "predicted_winner": "HOU",
       "winner_confidence": 0.5522298242547381,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1577,7 +1664,7 @@
       "predicted_winner": "WAS",
       "winner_confidence": 0.5294829417429486,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1598,7 +1685,7 @@
       "predicted_winner": "DEN",
       "winner_confidence": 0.5000164855400133,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1619,7 +1706,7 @@
       "predicted_winner": "SF",
       "winner_confidence": 0.5074843387883179,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1640,7 +1727,7 @@
       "predicted_winner": "DET",
       "winner_confidence": 0.5695115985412964,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1661,7 +1748,7 @@
       "predicted_winner": "CHI",
       "winner_confidence": 0.5518761389305973,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1682,7 +1769,7 @@
       "predicted_winner": "BAL",
       "winner_confidence": 0.616564859622169,
       "data_reliability": 0.724421052631579,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1703,7 +1790,7 @@
       "predicted_winner": "BUF",
       "winner_confidence": 0.5215107730905479,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1724,7 +1811,7 @@
       "predicted_winner": "SEA",
       "winner_confidence": 0.5455405440428285,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1745,7 +1832,7 @@
       "predicted_winner": "JAX",
       "winner_confidence": 0.6177328849733178,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1766,7 +1853,7 @@
       "predicted_winner": "TB",
       "winner_confidence": 0.5172968314714387,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1787,7 +1874,7 @@
       "predicted_winner": "CHI",
       "winner_confidence": 0.5733336385783463,
       "data_reliability": 0.724421052631579,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1808,7 +1895,7 @@
       "predicted_winner": "BAL",
       "winner_confidence": 0.5865280199094484,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1829,7 +1916,7 @@
       "predicted_winner": "TEN",
       "winner_confidence": 0.523025996674863,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1850,7 +1937,7 @@
       "predicted_winner": "NE",
       "winner_confidence": 0.6171385292157359,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1871,7 +1958,7 @@
       "predicted_winner": "NYG",
       "winner_confidence": 0.5580889159094533,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1892,7 +1979,7 @@
       "predicted_winner": "PHI",
       "winner_confidence": 0.5235781623640339,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1913,7 +2000,7 @@
       "predicted_winner": "LA",
       "winner_confidence": 0.6255371047290113,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1934,7 +2021,7 @@
       "predicted_winner": "BUF",
       "winner_confidence": 0.5326152342785236,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1955,7 +2042,7 @@
       "predicted_winner": "KC",
       "winner_confidence": 0.6352754942138961,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1976,7 +2063,7 @@
       "predicted_winner": "DAL",
       "winner_confidence": 0.501743499802586,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -1997,7 +2084,7 @@
       "predicted_winner": "SF",
       "winner_confidence": 0.6670312275287695,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2018,10 +2105,48 @@
       "predicted_winner": "NE",
       "winner_confidence": 0.5280696353405263,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
-      "sportsbooks": []
+      "sportsbooks": [
+        {
+          "sportsbook": "draftkings",
+          "home_spread": -3.0,
+          "home_moneyline": null,
+          "away_moneyline": null,
+          "total": 43.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": 3.0,
+              "odds": -110.0,
+              "model_probability": 0.64635585979946,
+              "market_probability": 0.5,
+              "edge": 0.14635585979945998,
+              "raw_point_edge": 5.1,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 43.5,
+              "odds": -110.0,
+              "model_probability": 0.6090341585698278,
+              "market_probability": 0.5,
+              "edge": 0.10903415856982779,
+              "raw_point_edge": 4.0,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "game_id": "2026_07_PIT_NO",
@@ -2039,7 +2164,7 @@
       "predicted_winner": "NO",
       "winner_confidence": 0.5606766778924247,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2060,7 +2185,7 @@
       "predicted_winner": "SF",
       "winner_confidence": 0.6209459990334009,
       "data_reliability": 0.724421052631579,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2081,7 +2206,7 @@
       "predicted_winner": "BAL",
       "winner_confidence": 0.5690170178933978,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2102,7 +2227,7 @@
       "predicted_winner": "CAR",
       "winner_confidence": 0.5107158419152217,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2123,7 +2248,7 @@
       "predicted_winner": "NYG",
       "winner_confidence": 0.5069031540637009,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2144,7 +2269,7 @@
       "predicted_winner": "MIN",
       "winner_confidence": 0.5942036437523314,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2165,7 +2290,7 @@
       "predicted_winner": "MIA",
       "winner_confidence": 0.5144771200201413,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2186,7 +2311,7 @@
       "predicted_winner": "CLE",
       "winner_confidence": 0.535979646320143,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2207,7 +2332,7 @@
       "predicted_winner": "DEN",
       "winner_confidence": 0.549075936321888,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2228,7 +2353,7 @@
       "predicted_winner": "GB",
       "winner_confidence": 0.5259962647138899,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2249,7 +2374,7 @@
       "predicted_winner": "LA",
       "winner_confidence": 0.5097155443515229,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2270,7 +2395,7 @@
       "predicted_winner": "SEA",
       "winner_confidence": 0.574634241918115,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2291,7 +2416,7 @@
       "predicted_winner": "PHI",
       "winner_confidence": 0.5114579191549277,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2312,7 +2437,7 @@
       "predicted_winner": "CAR",
       "winner_confidence": 0.5201951298823888,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2333,7 +2458,7 @@
       "predicted_winner": "TB",
       "winner_confidence": 0.5408704046395684,
       "data_reliability": 0.724421052631579,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2354,7 +2479,7 @@
       "predicted_winner": "PIT",
       "winner_confidence": 0.5599836823446067,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2375,7 +2500,7 @@
       "predicted_winner": "LV",
       "winner_confidence": 0.5265933198739079,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2396,7 +2521,7 @@
       "predicted_winner": "JAX",
       "winner_confidence": 0.6265213073292788,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2417,7 +2542,7 @@
       "predicted_winner": "CIN",
       "winner_confidence": 0.5785806948147489,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2438,7 +2563,7 @@
       "predicted_winner": "DAL",
       "winner_confidence": 0.6159730101203688,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2459,7 +2584,7 @@
       "predicted_winner": "BUF",
       "winner_confidence": 0.5456688014561861,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2480,7 +2605,7 @@
       "predicted_winner": "MIN",
       "winner_confidence": 0.5635032667165911,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2501,7 +2626,7 @@
       "predicted_winner": "LA",
       "winner_confidence": 0.6335653833271464,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2522,7 +2647,7 @@
       "predicted_winner": "KC",
       "winner_confidence": 0.5129489017728012,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2543,7 +2668,7 @@
       "predicted_winner": "NE",
       "winner_confidence": 0.5741815539315528,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2564,7 +2689,7 @@
       "predicted_winner": "PHI",
       "winner_confidence": 0.5377492844475206,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2585,7 +2710,7 @@
       "predicted_winner": "SEA",
       "winner_confidence": 0.6006201124030678,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2606,7 +2731,7 @@
       "predicted_winner": "BAL",
       "winner_confidence": 0.5390076897664714,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2627,7 +2752,7 @@
       "predicted_winner": "CIN",
       "winner_confidence": 0.5347508033616051,
       "data_reliability": 0.724421052631579,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2648,7 +2773,7 @@
       "predicted_winner": "PHI",
       "winner_confidence": 0.545430043332078,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2669,7 +2794,7 @@
       "predicted_winner": "LA",
       "winner_confidence": 0.5568978769253502,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2690,7 +2815,7 @@
       "predicted_winner": "NO",
       "winner_confidence": 0.5227820034073397,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2711,7 +2836,7 @@
       "predicted_winner": "DEN",
       "winner_confidence": 0.513051852574035,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2732,7 +2857,7 @@
       "predicted_winner": "KC",
       "winner_confidence": 0.6317897363537366,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2753,7 +2878,7 @@
       "predicted_winner": "DAL",
       "winner_confidence": 0.5541538846941862,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2774,7 +2899,7 @@
       "predicted_winner": "DET",
       "winner_confidence": 0.5560729203848873,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2795,7 +2920,7 @@
       "predicted_winner": "HOU",
       "winner_confidence": 0.5429348368267269,
       "data_reliability": 0.6932631578947368,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2816,7 +2941,7 @@
       "predicted_winner": "SF",
       "winner_confidence": 0.6179945250132087,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2837,7 +2962,7 @@
       "predicted_winner": "NE",
       "winner_confidence": 0.5746620360923198,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2858,7 +2983,7 @@
       "predicted_winner": "SEA",
       "winner_confidence": 0.6415209814656734,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2879,7 +3004,7 @@
       "predicted_winner": "CHI",
       "winner_confidence": 0.5505834711747432,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2900,7 +3025,7 @@
       "predicted_winner": "MIN",
       "winner_confidence": 0.5035980737409834,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2921,7 +3046,7 @@
       "predicted_winner": "NYG",
       "winner_confidence": 0.5560264937355576,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -2942,58 +3067,10 @@
       "predicted_winner": "NE",
       "winner_confidence": 0.5635531264479319,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": -6.5,
-          "home_moneyline": -304.9,
-          "away_moneyline": 245.0,
-          "total": 47.5,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Away",
-              "line": null,
-              "odds": 245.0,
-              "model_probability": 0.585882603308016,
-              "market_probability": 0.2779369922535961,
-              "edge": 0.3079456110544199,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Away",
-              "line": 6.5,
-              "odds": -110.0,
-              "model_probability": 0.7952087411646807,
-              "market_probability": 0.5,
-              "edge": 0.29520874116468065,
-              "raw_point_edge": 11.2,
-              "qualified": true,
-              "gate_reasons": []
-            },
-            {
-              "market": "Total",
-              "side": "Under",
-              "line": 47.5,
-              "odds": -105.0,
-              "model_probability": 0.6037102478737753,
-              "market_probability": 0.5,
-              "edge": 0.10371024787377525,
-              "raw_point_edge": 3.799999999999997,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
         {
           "sportsbook": "bovada",
           "home_spread": -6.5,
@@ -3041,6 +3118,41 @@
               ]
             }
           ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": -6.5,
+          "home_moneyline": null,
+          "away_moneyline": null,
+          "total": 47.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": 6.5,
+              "odds": -110.0,
+              "model_probability": 0.7952087411646807,
+              "market_probability": 0.5,
+              "edge": 0.29520874116468065,
+              "raw_point_edge": 11.2,
+              "qualified": true,
+              "gate_reasons": []
+            },
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 47.5,
+              "odds": -105.0,
+              "model_probability": 0.6037102478737753,
+              "market_probability": 0.5,
+              "edge": 0.10371024787377525,
+              "raw_point_edge": 3.799999999999997,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -3060,7 +3172,7 @@
       "predicted_winner": "JAX",
       "winner_confidence": 0.5454344142495676,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3081,7 +3193,7 @@
       "predicted_winner": "BUF",
       "winner_confidence": 0.5637126050250031,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3102,7 +3214,7 @@
       "predicted_winner": "NO",
       "winner_confidence": 0.5456911698655357,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3123,7 +3235,7 @@
       "predicted_winner": "MIN",
       "winner_confidence": 0.5351695804832047,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3144,7 +3256,7 @@
       "predicted_winner": "HOU",
       "winner_confidence": 0.5217494903695763,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3165,7 +3277,7 @@
       "predicted_winner": "KC",
       "winner_confidence": 0.5977031281349898,
       "data_reliability": 0.724421052631579,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3186,7 +3298,7 @@
       "predicted_winner": "MIA",
       "winner_confidence": 0.5624943589699286,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3207,7 +3319,7 @@
       "predicted_winner": "LA",
       "winner_confidence": 0.5931288686094223,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3228,7 +3340,7 @@
       "predicted_winner": "SEA",
       "winner_confidence": 0.5378856085002771,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3249,7 +3361,7 @@
       "predicted_winner": "SF",
       "winner_confidence": 0.512831356944315,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3270,7 +3382,7 @@
       "predicted_winner": "CIN",
       "winner_confidence": 0.5519711694129987,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3291,7 +3403,7 @@
       "predicted_winner": "BAL",
       "winner_confidence": 0.6390201962803141,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3312,7 +3424,7 @@
       "predicted_winner": "IND",
       "winner_confidence": 0.5212579994279046,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3333,7 +3445,7 @@
       "predicted_winner": "KC",
       "winner_confidence": 0.634945702618612,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3354,7 +3466,7 @@
       "predicted_winner": "JAX",
       "winner_confidence": 0.5249808777764219,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3375,7 +3487,7 @@
       "predicted_winner": "DET",
       "winner_confidence": 0.5208074630907356,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3396,7 +3508,7 @@
       "predicted_winner": "BUF",
       "winner_confidence": 0.6540103318124116,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3417,7 +3529,7 @@
       "predicted_winner": "CHI",
       "winner_confidence": 0.5682311520666661,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3438,7 +3550,7 @@
       "predicted_winner": "BAL",
       "winner_confidence": 0.5919480298695037,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3455,11 +3567,11 @@
       "projected_away": 17.3,
       "projected_margin_home": 12.1,
       "projected_total": 46.6,
-      "home_win_probability": 0.7082397375310211,
+      "home_win_probability": 0.7082397375310212,
       "predicted_winner": "DAL",
-      "winner_confidence": 0.6540974057729556,
+      "winner_confidence": 0.6540974057729557,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3480,7 +3592,7 @@
       "predicted_winner": "LAC",
       "winner_confidence": 0.535797131407501,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3501,7 +3613,7 @@
       "predicted_winner": "DEN",
       "winner_confidence": 0.5184899282440865,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3522,7 +3634,7 @@
       "predicted_winner": "PHI",
       "winner_confidence": 0.5621702803358319,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3543,7 +3655,7 @@
       "predicted_winner": "SF",
       "winner_confidence": 0.6108458093337118,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3564,7 +3676,7 @@
       "predicted_winner": "WAS",
       "winner_confidence": 0.5225950561063001,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3585,7 +3697,7 @@
       "predicted_winner": "LA",
       "winner_confidence": 0.5977288257514826,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3606,7 +3718,7 @@
       "predicted_winner": "CHI",
       "winner_confidence": 0.5440184682754816,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3627,7 +3739,7 @@
       "predicted_winner": "DAL",
       "winner_confidence": 0.5190268519137285,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3648,7 +3760,7 @@
       "predicted_winner": "BUF",
       "winner_confidence": 0.5536026628772099,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3669,7 +3781,7 @@
       "predicted_winner": "PIT",
       "winner_confidence": 0.5137154348643672,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3690,7 +3802,7 @@
       "predicted_winner": "MIN",
       "winner_confidence": 0.6626452795287024,
       "data_reliability": 0.724421052631579,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3711,7 +3823,7 @@
       "predicted_winner": "MIA",
       "winner_confidence": 0.5210877041035257,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3732,7 +3844,7 @@
       "predicted_winner": "NYG",
       "winner_confidence": 0.5640340717811438,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3753,7 +3865,7 @@
       "predicted_winner": "CIN",
       "winner_confidence": 0.5141319202831447,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3774,7 +3886,7 @@
       "predicted_winner": "LV",
       "winner_confidence": 0.5373443183841247,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3795,7 +3907,7 @@
       "predicted_winner": "BAL",
       "winner_confidence": 0.5650025452951792,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3816,7 +3928,7 @@
       "predicted_winner": "JAX",
       "winner_confidence": 0.6491803821240437,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3837,7 +3949,7 @@
       "predicted_winner": "WAS",
       "winner_confidence": 0.522495960139459,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3858,7 +3970,7 @@
       "predicted_winner": "SF",
       "winner_confidence": 0.5844187538336103,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3879,7 +3991,7 @@
       "predicted_winner": "NE",
       "winner_confidence": 0.570577970737127,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3900,7 +4012,7 @@
       "predicted_winner": "CAR",
       "winner_confidence": 0.5099773807585585,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3921,7 +4033,7 @@
       "predicted_winner": "KC",
       "winner_confidence": 0.5198210762571938,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3942,7 +4054,7 @@
       "predicted_winner": "WAS",
       "winner_confidence": 0.5443686644659447,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3963,7 +4075,7 @@
       "predicted_winner": "TB",
       "winner_confidence": 0.5287886645766235,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -3984,7 +4096,7 @@
       "predicted_winner": "NO",
       "winner_confidence": 0.5317442538171989,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4005,7 +4117,7 @@
       "predicted_winner": "SF",
       "winner_confidence": 0.5796900852335245,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4026,7 +4138,7 @@
       "predicted_winner": "JAX",
       "winner_confidence": 0.5209551807433158,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4047,7 +4159,7 @@
       "predicted_winner": "DET",
       "winner_confidence": 0.5659621762416146,
       "data_reliability": 0.724421052631579,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4068,7 +4180,7 @@
       "predicted_winner": "CIN",
       "winner_confidence": 0.5233361468640422,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4089,7 +4201,7 @@
       "predicted_winner": "PHI",
       "winner_confidence": 0.5538925686118716,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4110,7 +4222,7 @@
       "predicted_winner": "DEN",
       "winner_confidence": 0.5884088739385185,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4131,7 +4243,7 @@
       "predicted_winner": "MIN",
       "winner_confidence": 0.5956753395194315,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4152,7 +4264,7 @@
       "predicted_winner": "BUF",
       "winner_confidence": 0.5111642615670086,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4173,7 +4285,7 @@
       "predicted_winner": "HOU",
       "winner_confidence": 0.5078014677506202,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4194,7 +4306,7 @@
       "predicted_winner": "SEA",
       "winner_confidence": 0.542707938645027,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4215,61 +4327,10 @@
       "predicted_winner": "NE",
       "winner_confidence": 0.5499772886284716,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": 1.5,
-          "home_moneyline": 100.0,
-          "away_moneyline": -120.0,
-          "total": 42.5,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Home",
-              "line": null,
-              "odds": 100.0,
-              "model_probability": 0.5675368765249617,
-              "market_probability": 0.4782608695652174,
-              "edge": 0.08927600695974425,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Home",
-              "line": 1.5,
-              "odds": -110.0,
-              "model_probability": 0.6490894182908526,
-              "market_probability": 0.5,
-              "edge": 0.14908941829085265,
-              "raw_point_edge": 5.2,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 42.5,
-              "odds": -112.0,
-              "model_probability": 0.5,
-              "market_probability": 0.5,
-              "edge": 0.0,
-              "raw_point_edge": 0.0,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
         {
           "sportsbook": "bovada",
           "home_spread": 1.5,
@@ -4320,6 +4381,57 @@
               ]
             }
           ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 1.5,
+          "home_moneyline": 100.0,
+          "away_moneyline": -120.0,
+          "total": 42.5,
+          "evaluations": [
+            {
+              "market": "Moneyline",
+              "side": "Home",
+              "line": null,
+              "odds": 100.0,
+              "model_probability": 0.5675368765249617,
+              "market_probability": 0.4782608695652174,
+              "edge": 0.08927600695974425,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": 1.5,
+              "odds": -110.0,
+              "model_probability": 0.6490894182908526,
+              "market_probability": 0.5,
+              "edge": 0.14908941829085265,
+              "raw_point_edge": 5.2,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 42.5,
+              "odds": -112.0,
+              "model_probability": 0.5,
+              "market_probability": 0.5,
+              "edge": 0.0,
+              "raw_point_edge": 0.0,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -4339,7 +4451,7 @@
       "predicted_winner": "WAS",
       "winner_confidence": 0.5158363351688653,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4360,7 +4472,7 @@
       "predicted_winner": "PHI",
       "winner_confidence": 0.5416763311224354,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4381,58 +4493,10 @@
       "predicted_winner": "CHI",
       "winner_confidence": 0.5249552487506247,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": 11.5,
-          "home_moneyline": 575.0,
-          "away_moneyline": -847.5,
-          "total": 46.5,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Home",
-              "line": null,
-              "odds": 575.0,
-              "model_probability": 0.46627669087753415,
-              "market_probability": 0.14209391695566592,
-              "edge": 0.32418277392186823,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Home",
-              "line": 11.5,
-              "odds": -112.0,
-              "model_probability": 0.7624442879502051,
-              "market_probability": 0.5,
-              "edge": 0.26244428795020514,
-              "raw_point_edge": 9.7,
-              "qualified": true,
-              "gate_reasons": []
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 46.5,
-              "odds": -105.0,
-              "model_probability": 0.5577714270061677,
-              "market_probability": 0.5,
-              "edge": 0.057771427006167664,
-              "raw_point_edge": 2.1000000000000014,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
         {
           "sportsbook": "bovada",
           "home_spread": 11.5,
@@ -4480,6 +4544,41 @@
               ]
             }
           ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 11.5,
+          "home_moneyline": null,
+          "away_moneyline": null,
+          "total": 46.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": 11.5,
+              "odds": -112.0,
+              "model_probability": 0.7624442879502051,
+              "market_probability": 0.5,
+              "edge": 0.26244428795020514,
+              "raw_point_edge": 9.7,
+              "qualified": true,
+              "gate_reasons": []
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 46.5,
+              "odds": -105.0,
+              "model_probability": 0.5577714270061677,
+              "market_probability": 0.5,
+              "edge": 0.057771427006167664,
+              "raw_point_edge": 2.1000000000000014,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -4499,7 +4598,7 @@
       "predicted_winner": "DEN",
       "winner_confidence": 0.5700780143512386,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4520,7 +4619,7 @@
       "predicted_winner": "CLE",
       "winner_confidence": 0.5235628616760329,
       "data_reliability": 0.724421052631579,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4541,7 +4640,7 @@
       "predicted_winner": "CAR",
       "winner_confidence": 0.5282263619019509,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4562,7 +4661,7 @@
       "predicted_winner": "BAL",
       "winner_confidence": 0.6422205415465747,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4583,7 +4682,7 @@
       "predicted_winner": "DET",
       "winner_confidence": 0.5845610673689337,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4604,7 +4703,7 @@
       "predicted_winner": "LV",
       "winner_confidence": 0.6052879867798311,
       "data_reliability": 0.6932631578947368,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4625,7 +4724,7 @@
       "predicted_winner": "KC",
       "winner_confidence": 0.5511781871952028,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4646,7 +4745,7 @@
       "predicted_winner": "SEA",
       "winner_confidence": 0.6417519442419435,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4667,7 +4766,7 @@
       "predicted_winner": "SF",
       "winner_confidence": 0.6239384288830083,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4688,7 +4787,7 @@
       "predicted_winner": "BUF",
       "winner_confidence": 0.5664120583600121,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4709,7 +4808,7 @@
       "predicted_winner": "JAX",
       "winner_confidence": 0.6184722849879564,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4730,7 +4829,7 @@
       "predicted_winner": "SF",
       "winner_confidence": 0.5906797767004552,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4751,7 +4850,7 @@
       "predicted_winner": "SEA",
       "winner_confidence": 0.5522194217809575,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4772,7 +4871,7 @@
       "predicted_winner": "BUF",
       "winner_confidence": 0.5940580045231244,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4793,7 +4892,7 @@
       "predicted_winner": "IND",
       "winner_confidence": 0.5100171508991947,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4814,7 +4913,7 @@
       "predicted_winner": "NO",
       "winner_confidence": 0.5025758885729722,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4835,7 +4934,7 @@
       "predicted_winner": "WAS",
       "winner_confidence": 0.5492224281742575,
       "data_reliability": 0.724421052631579,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4856,7 +4955,7 @@
       "predicted_winner": "BAL",
       "winner_confidence": 0.5736367702003125,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4877,7 +4976,7 @@
       "predicted_winner": "JAX",
       "winner_confidence": 0.538411144439303,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4898,7 +4997,7 @@
       "predicted_winner": "GB",
       "winner_confidence": 0.519257502721254,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4919,7 +5018,7 @@
       "predicted_winner": "CIN",
       "winner_confidence": 0.5151789675076827,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4940,7 +5039,7 @@
       "predicted_winner": "NYG",
       "winner_confidence": 0.5466107780286361,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4961,7 +5060,7 @@
       "predicted_winner": "ARI",
       "winner_confidence": 0.5145890935719392,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -4982,7 +5081,7 @@
       "predicted_winner": "LA",
       "winner_confidence": 0.5613331528441875,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5003,7 +5102,7 @@
       "predicted_winner": "LV",
       "winner_confidence": 0.5791141368440015,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5024,7 +5123,7 @@
       "predicted_winner": "MIN",
       "winner_confidence": 0.577038324881944,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5045,7 +5144,7 @@
       "predicted_winner": "KC",
       "winner_confidence": 0.5696329917939589,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5066,7 +5165,7 @@
       "predicted_winner": "PHI",
       "winner_confidence": 0.5582391369741154,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5087,7 +5186,7 @@
       "predicted_winner": "CHI",
       "winner_confidence": 0.5294373359132809,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5108,7 +5207,7 @@
       "predicted_winner": "DEN",
       "winner_confidence": 0.5004404647315456,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5129,7 +5228,7 @@
       "predicted_winner": "SEA",
       "winner_confidence": 0.540843269255191,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5150,7 +5249,7 @@
       "predicted_winner": "PIT",
       "winner_confidence": 0.5071005708656035,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5171,7 +5270,7 @@
       "predicted_winner": "NE",
       "winner_confidence": 0.5565944566360581,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5192,7 +5291,7 @@
       "predicted_winner": "NO",
       "winner_confidence": 0.5729317711532884,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5213,7 +5312,7 @@
       "predicted_winner": "MIN",
       "winner_confidence": 0.594441354395968,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5234,7 +5333,7 @@
       "predicted_winner": "CIN",
       "winner_confidence": 0.5593088600624159,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5255,7 +5354,7 @@
       "predicted_winner": "BAL",
       "winner_confidence": 0.6090038878630207,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5276,7 +5375,7 @@
       "predicted_winner": "TB",
       "winner_confidence": 0.5773336639546265,
       "data_reliability": 0.724421052631579,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5297,7 +5396,7 @@
       "predicted_winner": "LAC",
       "winner_confidence": 0.5372349931157532,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5318,7 +5417,7 @@
       "predicted_winner": "LV",
       "winner_confidence": 0.6074151267184336,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5339,7 +5438,7 @@
       "predicted_winner": "SF",
       "winner_confidence": 0.5021185913630996,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5360,7 +5459,7 @@
       "predicted_winner": "DAL",
       "winner_confidence": 0.5491744760241202,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5381,7 +5480,7 @@
       "predicted_winner": "NYG",
       "winner_confidence": 0.5089165047235733,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5402,7 +5501,7 @@
       "predicted_winner": "BAL",
       "winner_confidence": 0.5777375344968612,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5423,7 +5522,7 @@
       "predicted_winner": "NE",
       "winner_confidence": 0.5854096716485894,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5444,7 +5543,7 @@
       "predicted_winner": "LA",
       "winner_confidence": 0.5870827939006892,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5465,7 +5564,7 @@
       "predicted_winner": "MIN",
       "winner_confidence": 0.585780923101602,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5486,7 +5585,7 @@
       "predicted_winner": "PIT",
       "winner_confidence": 0.5379236197298092,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5507,7 +5606,7 @@
       "predicted_winner": "BUF",
       "winner_confidence": 0.5807714110236915,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5528,7 +5627,7 @@
       "predicted_winner": "IND",
       "winner_confidence": 0.5299537136556959,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5549,7 +5648,7 @@
       "predicted_winner": "JAX",
       "winner_confidence": 0.5922793147385296,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5570,7 +5669,7 @@
       "predicted_winner": "DAL",
       "winner_confidence": 0.568512256053073,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5591,7 +5690,7 @@
       "predicted_winner": "SEA",
       "winner_confidence": 0.6194982966417683,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5612,7 +5711,7 @@
       "predicted_winner": "NO",
       "winner_confidence": 0.5300578230341877,
       "data_reliability": 0.724421052631579,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5633,7 +5732,7 @@
       "predicted_winner": "KC",
       "winner_confidence": 0.5829740864814575,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5654,7 +5753,7 @@
       "predicted_winner": "LV",
       "winner_confidence": 0.5260523921486944,
       "data_reliability": 0.6932631578947368,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5675,7 +5774,7 @@
       "predicted_winner": "CHI",
       "winner_confidence": 0.5237603986306475,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5696,7 +5795,7 @@
       "predicted_winner": "SF",
       "winner_confidence": 0.6284910105662315,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5717,7 +5816,7 @@
       "predicted_winner": "HOU",
       "winner_confidence": 0.5167687727839038,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5738,7 +5837,7 @@
       "predicted_winner": "NO",
       "winner_confidence": 0.5377272197750144,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5759,30 +5858,17 @@
       "predicted_winner": "NE",
       "winner_confidence": 0.6289695762107242,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": [
         {
           "sportsbook": "draftkings",
           "home_spread": -10.5,
-          "home_moneyline": -751.9,
-          "away_moneyline": 525.0,
+          "home_moneyline": null,
+          "away_moneyline": null,
           "total": 42.5,
           "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Away",
-              "line": null,
-              "odds": 525.0,
-              "model_probability": 0.3257167889044267,
-              "market_probability": 0.15346024111577972,
-              "edge": 0.17225654778864696,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
             {
               "market": "Spread",
               "side": "Away",
@@ -5832,7 +5918,7 @@
       "predicted_winner": "MIN",
       "winner_confidence": 0.5602011577667304,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5853,7 +5939,7 @@
       "predicted_winner": "LA",
       "winner_confidence": 0.532951020760093,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5874,7 +5960,7 @@
       "predicted_winner": "KC",
       "winner_confidence": 0.5718346320236963,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5895,7 +5981,7 @@
       "predicted_winner": "JAX",
       "winner_confidence": 0.5770746720056794,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5916,7 +6002,7 @@
       "predicted_winner": "HOU",
       "winner_confidence": 0.5447916885915727,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5937,7 +6023,7 @@
       "predicted_winner": "CAR",
       "winner_confidence": 0.6015729438863571,
       "data_reliability": 0.724421052631579,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5958,7 +6044,7 @@
       "predicted_winner": "DEN",
       "winner_confidence": 0.5740707204295681,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -5979,7 +6065,7 @@
       "predicted_winner": "CIN",
       "winner_confidence": 0.5444533962519046,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -6000,7 +6086,7 @@
       "predicted_winner": "BUF",
       "winner_confidence": 0.6136571086253174,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -6021,7 +6107,7 @@
       "predicted_winner": "BAL",
       "winner_confidence": 0.6107681259072181,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -6042,7 +6128,7 @@
       "predicted_winner": "SF",
       "winner_confidence": 0.5897132428854301,
       "data_reliability": 0.7088421052631578,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -6063,7 +6149,7 @@
       "predicted_winner": "PHI",
       "winner_confidence": 0.5016974304983954,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -6084,7 +6170,7 @@
       "predicted_winner": "DET",
       "winner_confidence": 0.5156662490741065,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
@@ -6105,7 +6191,7 @@
       "predicted_winner": "WAS",
       "winner_confidence": 0.5180862823970709,
       "data_reliability": 0.74,
-      "margin_uncertainty": 13.581873006948578,
+      "margin_uncertainty": 13.58187300694858,
       "total_uncertainty": 14.450731194392162,
       "current_season_games_min": 2,
       "sportsbooks": []
