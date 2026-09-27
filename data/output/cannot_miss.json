@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-27T13:24:16.475618+00:00",
+  "generated_at": "2026-09-27T19:23:18.674614+00:00",
   "current": [
     {
       "league": "nfl",
       "season": 2026,
-      "generated_at": "2026-09-27T13:24:16.475618+00:00",
+      "generated_at": "2026-09-27T19:23:18.674614+00:00",
       "status": "PASS",
       "policy": {
         "min_probability": 0.7,
@@ -28,8 +28,8 @@
     {
       "league": "cfb",
       "season": 2026,
-      "generated_at": "2026-09-27T13:24:16.475618+00:00",
-      "status": "PASS",
+      "generated_at": "2026-09-27T19:23:18.674614+00:00",
+      "status": "QUALIFIED",
       "policy": {
         "min_probability": 0.75,
         "min_reliability": 0.72,
@@ -43,10 +43,70 @@
         "preferred_max_odds": 350.0
       },
       "week": 5,
-      "candidate_counts": {
-        "draftkings": 2
-      },
-      "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
+      "sportsbook": "draftkings",
+      "legs": [
+        {
+          "game_id": "401858472",
+          "kickoff": "2026-10-03T20:15:00+00:00",
+          "away": "Purdue",
+          "home": "Illinois",
+          "team": "Illinois",
+          "side": "Home",
+          "moneyline": -409.8,
+          "model_probability": 0.9459524423273084,
+          "market_probability": 0.77148850718973,
+          "probability_edge": 0.1744639351375783,
+          "reliability": 0.8999999999999999,
+          "safety_score": 0.8908483479610867
+        },
+        {
+          "game_id": "401856710",
+          "kickoff": "2026-10-03T19:30:00+00:00",
+          "away": "Auburn",
+          "home": "Tennessee",
+          "team": "Tennessee",
+          "side": "Home",
+          "moneyline": -309.6,
+          "model_probability": 0.883620828965405,
+          "market_probability": 0.7256897937315833,
+          "probability_edge": 0.15793103523382168,
+          "reliability": 0.8999999999999999,
+          "safety_score": 0.8482328629155983
+        },
+        {
+          "game_id": "401862792",
+          "kickoff": "2026-10-03T23:30:00+00:00",
+          "away": "Temple",
+          "home": "South Florida",
+          "team": "South Florida",
+          "side": "Home",
+          "moneyline": -204.9,
+          "model_probability": 0.8065163773240109,
+          "market_probability": 0.644692529103982,
+          "probability_edge": 0.16182384822002893,
+          "reliability": 0.8999999999999999,
+          "safety_score": 0.789431320938001
+        },
+        {
+          "game_id": "401866434",
+          "kickoff": "2026-10-03T19:30:00+00:00",
+          "away": "Ohio",
+          "home": "Kent State",
+          "team": "Ohio",
+          "side": "Away",
+          "moneyline": -204.9,
+          "model_probability": 0.7741879277714441,
+          "market_probability": 0.644692529103982,
+          "probability_edge": 0.12949539866746207,
+          "reliability": 0.8999999999999999,
+          "safety_score": 0.7732670961617175
+        }
+      ],
+      "leg_count": 4,
+      "parlay_odds": 264.4,
+      "model_combined_probability": 0.5219090565064167,
+      "sportsbook_implied_probability": 0.27442371020856204,
+      "probability_edge": 0.24748534629785468
     }
   ],
   "history": [
@@ -165,7 +225,7 @@
     {
       "league": "nfl",
       "season": 2026,
-      "generated_at": "2026-09-27T13:24:16.475618+00:00",
+      "generated_at": "2026-09-27T19:23:18.674614+00:00",
       "status": "PASS",
       "policy": {
         "min_probability": 0.7,
@@ -295,8 +355,8 @@
     {
       "league": "cfb",
       "season": 2026,
-      "generated_at": "2026-09-27T13:24:16.475618+00:00",
-      "status": "PASS",
+      "generated_at": "2026-09-27T19:23:18.674614+00:00",
+      "status": "QUALIFIED",
       "policy": {
         "min_probability": 0.75,
         "min_reliability": 0.72,
@@ -310,10 +370,78 @@
         "preferred_max_odds": 350.0
       },
       "week": 5,
-      "candidate_counts": {
-        "draftkings": 2
-      },
-      "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
+      "sportsbook": "draftkings",
+      "legs": [
+        {
+          "game_id": "401858472",
+          "kickoff": "2026-10-03T20:15:00+00:00",
+          "away": "Purdue",
+          "home": "Illinois",
+          "team": "Illinois",
+          "side": "Home",
+          "moneyline": -409.8,
+          "model_probability": 0.9459524423273084,
+          "market_probability": 0.77148850718973,
+          "probability_edge": 0.1744639351375783,
+          "reliability": 0.8999999999999999,
+          "safety_score": 0.8908483479610867
+        },
+        {
+          "game_id": "401856710",
+          "kickoff": "2026-10-03T19:30:00+00:00",
+          "away": "Auburn",
+          "home": "Tennessee",
+          "team": "Tennessee",
+          "side": "Home",
+          "moneyline": -309.6,
+          "model_probability": 0.883620828965405,
+          "market_probability": 0.7256897937315833,
+          "probability_edge": 0.15793103523382168,
+          "reliability": 0.8999999999999999,
+          "safety_score": 0.8482328629155983
+        },
+        {
+          "game_id": "401862792",
+          "kickoff": "2026-10-03T23:30:00+00:00",
+          "away": "Temple",
+          "home": "South Florida",
+          "team": "South Florida",
+          "side": "Home",
+          "moneyline": -204.9,
+          "model_probability": 0.8065163773240109,
+          "market_probability": 0.644692529103982,
+          "probability_edge": 0.16182384822002893,
+          "reliability": 0.8999999999999999,
+          "safety_score": 0.789431320938001
+        },
+        {
+          "game_id": "401866434",
+          "kickoff": "2026-10-03T19:30:00+00:00",
+          "away": "Ohio",
+          "home": "Kent State",
+          "team": "Ohio",
+          "side": "Away",
+          "moneyline": -204.9,
+          "model_probability": 0.7741879277714441,
+          "market_probability": 0.644692529103982,
+          "probability_edge": 0.12949539866746207,
+          "reliability": 0.8999999999999999,
+          "safety_score": 0.7732670961617175
+        }
+      ],
+      "leg_count": 4,
+      "parlay_odds": 264.4,
+      "model_combined_probability": 0.5219090565064167,
+      "sportsbook_implied_probability": 0.27442371020856204,
+      "probability_edge": 0.24748534629785468,
+      "leg_results": [
+        "PENDING",
+        "PENDING",
+        "PENDING",
+        "PENDING"
+      ],
+      "result": "PENDING",
+      "units_profit": null
     }
   ],
   "disclaimer": "Cannot Miss is a feature name, not a guarantee. A PASS is expected when strict gates are not met."
