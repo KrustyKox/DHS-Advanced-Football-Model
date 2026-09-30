@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T01:27:21.120541+00:00",
+  "generated_at": "2026-09-30T07:30:12.766375+00:00",
   "league": "cfb",
   "season": 2026,
   "validation": {
@@ -970,10 +970,10 @@
       "sportsbooks": [
         {
           "sportsbook": "draftkings",
-          "home_spread": 6.0,
+          "home_spread": null,
           "home_moneyline": 185.0,
           "away_moneyline": -225.2,
-          "total": 59.5,
+          "total": 60.5,
           "evaluations": [
             {
               "market": "Moneyline",
@@ -987,30 +987,17 @@
               "gate_reasons": []
             },
             {
-              "market": "Spread",
-              "side": "Away",
-              "line": -6.0,
-              "odds": -108.0,
-              "model_probability": 0.6278695434595942,
-              "market_probability": 0.5,
-              "edge": 0.12786954345959423,
-              "raw_point_edge": 5.699999999999999,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
               "market": "Total",
               "side": "Over",
-              "line": 59.5,
-              "odds": -112.0,
-              "model_probability": 0.5534810852468822,
+              "line": 60.5,
+              "odds": -108.0,
+              "model_probability": 0.5292332195263556,
               "market_probability": 0.5,
-              "edge": 0.05348108524688222,
-              "raw_point_edge": 2.200000000000003,
+              "edge": 0.029233219526355603,
+              "raw_point_edge": 1.2000000000000028,
               "qualified": false,
               "gate_reasons": [
+                "market edge below threshold",
                 "probability below threshold"
               ]
             }
@@ -1324,7 +1311,7 @@
       "sportsbooks": [
         {
           "sportsbook": "draftkings",
-          "home_spread": 19.5,
+          "home_spread": null,
           "home_moneyline": 800.0,
           "away_moneyline": -1351.4,
           "total": 52.5,
@@ -1337,20 +1324,6 @@
               "model_probability": 0.19661101147348353,
               "market_probability": 0.10661084178052004,
               "edge": 0.0900001696929635,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Home",
-              "line": 19.5,
-              "odds": -112.0,
-              "model_probability": 0.6016186328650187,
-              "market_probability": 0.5,
-              "edge": 0.10161863286501871,
-              "raw_point_edge": 4.5,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -1537,21 +1510,10 @@
         {
           "sportsbook": "draftkings",
           "home_spread": -13.5,
-          "home_moneyline": -549.5,
-          "away_moneyline": 410.0,
+          "home_moneyline": null,
+          "away_moneyline": null,
           "total": 42.5,
           "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Home",
-              "line": null,
-              "odds": -549.5,
-              "model_probability": 0.8603354570138153,
-              "market_probability": 0.8118454786425064,
-              "edge": 0.04848997837130886,
-              "qualified": true,
-              "gate_reasons": []
-            },
             {
               "market": "Spread",
               "side": "Home",
@@ -1929,24 +1891,10 @@
         {
           "sportsbook": "draftkings",
           "home_spread": 2.5,
-          "home_moneyline": 124.0,
-          "away_moneyline": -147.9,
+          "home_moneyline": null,
+          "away_moneyline": null,
           "total": 51.5,
           "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Away",
-              "line": null,
-              "odds": -147.9,
-              "model_probability": 0.5926914158442824,
-              "market_probability": 0.5719929005034565,
-              "edge": 0.020698515340825896,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            },
             {
               "market": "Spread",
               "side": "Away",
@@ -2025,21 +1973,10 @@
         {
           "sportsbook": "draftkings",
           "home_spread": -2.5,
-          "home_moneyline": -142.0,
-          "away_moneyline": 120.0,
+          "home_moneyline": null,
+          "away_moneyline": null,
           "total": 53.5,
           "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Home",
-              "line": null,
-              "odds": -142.0,
-              "model_probability": 0.7237757569198099,
-              "market_probability": 0.5634920634920635,
-              "edge": 0.1602836934277464,
-              "qualified": true,
-              "gate_reasons": []
-            },
             {
               "market": "Spread",
               "side": "Home",
@@ -2243,7 +2180,7 @@
           "home_spread": -18.5,
           "home_moneyline": -1052.6,
           "away_moneyline": 675.0,
-          "total": 55.5,
+          "total": null,
           "evaluations": [
             {
               "market": "Moneyline",
@@ -2267,20 +2204,6 @@
               "market_probability": 0.5,
               "edge": 0.12135702379961733,
               "raw_point_edge": 5.399999999999999,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 55.5,
-              "odds": -112.0,
-              "model_probability": 0.587075148378831,
-              "market_probability": 0.5,
-              "edge": 0.08707514837883101,
-              "raw_point_edge": 3.6000000000000014,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -2981,7 +2904,7 @@
           "home_spread": 6.5,
           "home_moneyline": 205.0,
           "away_moneyline": -250.0,
-          "total": 47.5,
+          "total": null,
           "evaluations": [
             {
               "market": "Moneyline",
@@ -3005,20 +2928,6 @@
               "market_probability": 0.5,
               "edge": 0.11262007136475005,
               "raw_point_edge": 5.0,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 47.5,
-              "odds": -114.9,
-              "model_probability": 0.5965685380857024,
-              "market_probability": 0.5,
-              "edge": 0.09656853808570243,
-              "raw_point_edge": 4.0,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -3050,7 +2959,7 @@
       "sportsbooks": [
         {
           "sportsbook": "draftkings",
-          "home_spread": 12.5,
+          "home_spread": null,
           "home_moneyline": 370.0,
           "away_moneyline": -485.4,
           "total": 50.5,
@@ -3066,20 +2975,6 @@
               "qualified": false,
               "gate_reasons": [
                 "market edge below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Away",
-              "line": -12.5,
-              "odds": -112.0,
-              "model_probability": 0.5636565382979649,
-              "market_probability": 0.5,
-              "edge": 0.06365653829796492,
-              "raw_point_edge": 2.8000000000000007,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
               ]
             },
             {
@@ -3434,7 +3329,7 @@
               "market": "Spread",
               "side": "Home",
               "line": 2.5,
-              "odds": -114.9,
+              "odds": -110.0,
               "model_probability": 0.5,
               "market_probability": 0.5,
               "edge": 0.0,
@@ -3582,7 +3477,7 @@
           "home_spread": 24.5,
           "home_moneyline": 1200.0,
           "away_moneyline": -2381.0,
-          "total": 55.5,
+          "total": null,
           "evaluations": [
             {
               "market": "Moneyline",
@@ -3608,21 +3503,6 @@
               "raw_point_edge": 8.2,
               "qualified": false,
               "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Under",
-              "line": 55.5,
-              "odds": -105.0,
-              "model_probability": 0.507314447665667,
-              "market_probability": 0.5,
-              "edge": 0.007314447665667023,
-              "raw_point_edge": 0.29999999999999716,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
                 "probability below threshold"
               ]
             }
@@ -3652,10 +3532,10 @@
       "sportsbooks": [
         {
           "sportsbook": "draftkings",
-          "home_spread": -2.5,
+          "home_spread": null,
           "home_moneyline": -125.0,
           "away_moneyline": 105.0,
-          "total": 45.5,
+          "total": null,
           "evaluations": [
             {
               "market": "Moneyline",
@@ -3668,35 +3548,6 @@
               "qualified": false,
               "gate_reasons": [
                 "market edge below threshold",
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Away",
-              "line": 2.5,
-              "odds": -110.0,
-              "model_probability": 0.504566264060362,
-              "market_probability": 0.5,
-              "edge": 0.00456626406036198,
-              "raw_point_edge": 0.20000000000000018,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 45.5,
-              "odds": -114.9,
-              "model_probability": 0.6961633889514712,
-              "market_probability": 0.5,
-              "edge": 0.19616338895147123,
-              "raw_point_edge": 8.399999999999999,
-              "qualified": false,
-              "gate_reasons": [
                 "probability below threshold"
               ]
             }
@@ -3727,18 +3578,18 @@
         {
           "sportsbook": "draftkings",
           "home_spread": -4.0,
-          "home_moneyline": -191.9,
-          "away_moneyline": 160.0,
-          "total": 49.5,
+          "home_moneyline": -184.8,
+          "away_moneyline": 154.0,
+          "total": null,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": -191.9,
+              "odds": -184.8,
               "model_probability": 0.7435649497857927,
-              "market_probability": 0.6308987911587679,
-              "edge": 0.11266615862702478,
+              "market_probability": 0.6223773256677345,
+              "edge": 0.12118762411805817,
               "qualified": true,
               "gate_reasons": []
             },
@@ -3746,25 +3597,11 @@
               "market": "Spread",
               "side": "Home",
               "line": -4.0,
-              "odds": -112.0,
+              "odds": -110.0,
               "model_probability": 0.6619480026980831,
               "market_probability": 0.5,
               "edge": 0.16194800269808307,
               "raw_point_edge": 7.300000000000001,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 49.5,
-              "odds": -108.0,
-              "model_probability": 0.5558964208605623,
-              "market_probability": 0.5,
-              "edge": 0.055896420860562346,
-              "raw_point_edge": 2.299999999999997,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -3888,7 +3725,7 @@
               "market": "Spread",
               "side": "Home",
               "line": -7.0,
-              "odds": -114.9,
+              "odds": -112.0,
               "model_probability": 0.5410247006534891,
               "market_probability": 0.5,
               "edge": 0.041024700653489066,
@@ -4075,9 +3912,9 @@
       "projected_away": 22.6,
       "projected_margin_home": 10.0,
       "projected_total": 55.3,
-      "home_win_probability": 0.7187091491903138,
+      "home_win_probability": 0.7187091491903137,
       "predicted_winner": "UTSA",
-      "winner_confidence": 0.6968382342712824,
+      "winner_confidence": 0.6968382342712823,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -4306,9 +4143,9 @@
       "projected_away": 14.7,
       "projected_margin_home": 22.2,
       "projected_total": 51.6,
-      "home_win_probability": 0.8896492027058737,
+      "home_win_probability": 0.8896492027058738,
       "predicted_winner": "East Carolina",
-      "winner_confidence": 0.8506842824352863,
+      "winner_confidence": 0.8506842824352864,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -4348,7 +4185,7 @@
       "projected_away": 27.5,
       "projected_margin_home": -1.2,
       "projected_total": 53.8,
-      "home_win_probability": 0.47261549091328986,
+      "home_win_probability": 0.47261549091328975,
       "predicted_winner": "Nevada",
       "winner_confidence": 0.5246460581780392,
       "data_reliability": 0.8999999999999999,
@@ -4600,7 +4437,7 @@
       "projected_away": 29.6,
       "projected_margin_home": -9.0,
       "projected_total": 50.1,
-      "home_win_probability": 0.300008239566951,
+      "home_win_probability": 0.30000823956695094,
       "predicted_winner": "Indiana",
       "winner_confidence": 0.6799925843897441,
       "data_reliability": 0.8999999999999999,
@@ -4873,9 +4710,9 @@
       "projected_away": 24.8,
       "projected_margin_home": 8.0,
       "projected_total": 57.7,
-      "home_win_probability": 0.6790773277767541,
+      "home_win_probability": 0.6790773277767542,
       "predicted_winner": "Kansas State",
-      "winner_confidence": 0.6611695949990787,
+      "winner_confidence": 0.6611695949990788,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -5083,9 +4920,9 @@
       "projected_away": 21.2,
       "projected_margin_home": 8.7,
       "projected_total": 51.0,
-      "home_win_probability": 0.6938383671188592,
+      "home_win_probability": 0.6938383671188593,
       "predicted_winner": "Oregon State",
-      "winner_confidence": 0.6744545304069732,
+      "winner_confidence": 0.6744545304069733,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -5251,9 +5088,9 @@
       "projected_away": 29.5,
       "projected_margin_home": -8.8,
       "projected_total": 50.2,
-      "home_win_probability": 0.3052503021213836,
+      "home_win_probability": 0.3052503021213835,
       "predicted_winner": "East Carolina",
-      "winner_confidence": 0.6752747280907547,
+      "winner_confidence": 0.6752747280907548,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -5356,9 +5193,9 @@
       "projected_away": 24.9,
       "projected_margin_home": 4.5,
       "projected_total": 54.3,
-      "home_win_probability": 0.6045682017897662,
+      "home_win_probability": 0.6045682017897661,
       "predicted_winner": "Coastal Carolina",
-      "winner_confidence": 0.5941113816107896,
+      "winner_confidence": 0.5941113816107895,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -6553,7 +6390,7 @@
       "projected_away": 37.9,
       "projected_margin_home": -18.8,
       "projected_total": 57.0,
-      "home_win_probability": 0.1456509506607597,
+      "home_win_probability": 0.14565095066075964,
       "predicted_winner": "James Madison",
       "winner_confidence": 0.8189141444053163,
       "data_reliability": 0.8999999999999999,
@@ -6721,7 +6558,7 @@
       "projected_away": 28.0,
       "projected_margin_home": -6.9,
       "projected_total": 49.2,
-      "home_win_probability": 0.3441983633521036,
+      "home_win_probability": 0.3441983633521035,
       "predicted_winner": "Iowa",
       "winner_confidence": 0.6402214729831068,
       "data_reliability": 0.8999999999999999,
@@ -7288,9 +7125,9 @@
       "projected_away": 35.2,
       "projected_margin_home": -15.6,
       "projected_total": 54.8,
-      "home_win_probability": 0.18811127481969722,
+      "home_win_probability": 0.1881112748196972,
       "predicted_winner": "Tennessee",
-      "winner_confidence": 0.7806998526622724,
+      "winner_confidence": 0.7806998526622726,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -7435,9 +7272,9 @@
       "projected_away": 19.8,
       "projected_margin_home": 13.0,
       "projected_total": 52.6,
-      "home_win_probability": 0.7715610785905382,
+      "home_win_probability": 0.7715610785905381,
       "predicted_winner": "Miami",
-      "winner_confidence": 0.7444049707314844,
+      "winner_confidence": 0.7444049707314843,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -7981,9 +7818,9 @@
       "projected_away": 21.7,
       "projected_margin_home": 9.1,
       "projected_total": 52.5,
-      "home_win_probability": 0.7024685251790305,
+      "home_win_probability": 0.7024685251790306,
       "predicted_winner": "Fresno State",
-      "winner_confidence": 0.6822216726611274,
+      "winner_confidence": 0.6822216726611275,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -8464,9 +8301,9 @@
       "projected_away": 20.4,
       "projected_margin_home": 12.9,
       "projected_total": 53.8,
-      "home_win_probability": 0.7700591613337519,
+      "home_win_probability": 0.770059161333752,
       "predicted_winner": "NC State",
-      "winner_confidence": 0.7430532452003766,
+      "winner_confidence": 0.7430532452003767,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -8506,9 +8343,9 @@
       "projected_away": 7.0,
       "projected_margin_home": 37.2,
       "projected_total": 51.2,
-      "home_win_probability": 0.9705026790711493,
+      "home_win_probability": 0.9705026790711495,
       "predicted_winner": "Duke",
-      "winner_confidence": 0.9234524111640343,
+      "winner_confidence": 0.9234524111640345,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -9325,9 +9162,9 @@
       "projected_away": 23.3,
       "projected_margin_home": 11.4,
       "projected_total": 58.1,
-      "home_win_probability": 0.7450833043351285,
+      "home_win_probability": 0.7450833043351286,
       "predicted_winner": "App State",
-      "winner_confidence": 0.7205749739016156,
+      "winner_confidence": 0.7205749739016157,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -9367,9 +9204,9 @@
       "projected_away": 22.0,
       "projected_margin_home": 9.1,
       "projected_total": 53.1,
-      "home_win_probability": 0.7020985697397776,
+      "home_win_probability": 0.7020985697397777,
       "predicted_winner": "Louisiana",
-      "winner_confidence": 0.6818887127657998,
+      "winner_confidence": 0.6818887127657999,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -9409,9 +9246,9 @@
       "projected_away": 19.5,
       "projected_margin_home": 20.6,
       "projected_total": 59.6,
-      "home_win_probability": 0.8737802214203264,
+      "home_win_probability": 0.8737802214203263,
       "predicted_winner": "North Texas",
-      "winner_confidence": 0.8364021992782937,
+      "winner_confidence": 0.8364021992782936,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -9430,7 +9267,7 @@
       "projected_away": 27.6,
       "projected_margin_home": -8.1,
       "projected_total": 47.1,
-      "home_win_probability": 0.3188504658995475,
+      "home_win_probability": 0.31885046589954746,
       "predicted_winner": "Florida State",
       "winner_confidence": 0.6630345806904072,
       "data_reliability": 0.8999999999999999,
@@ -9556,7 +9393,7 @@
       "projected_away": 32.6,
       "projected_margin_home": -8.0,
       "projected_total": 57.2,
-      "home_win_probability": 0.3211083372722346,
+      "home_win_probability": 0.32110833727223453,
       "predicted_winner": "Louisville",
       "winner_confidence": 0.6610024964549889,
       "data_reliability": 0.8999999999999999,
@@ -9745,9 +9582,9 @@
       "projected_away": 16.8,
       "projected_margin_home": 17.0,
       "projected_total": 50.7,
-      "home_win_probability": 0.8320159651322284,
+      "home_win_probability": 0.8320159651322286,
       "predicted_winner": "Arizona State",
-      "winner_confidence": 0.7722530914084274,
+      "winner_confidence": 0.7722530914084275,
       "data_reliability": 0.82,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -10018,9 +9855,9 @@
       "projected_away": 19.0,
       "projected_margin_home": 16.7,
       "projected_total": 54.7,
-      "home_win_probability": 0.8277541752374581,
+      "home_win_probability": 0.8277541752374579,
       "predicted_winner": "Jacksonville State",
-      "winner_confidence": 0.7949787577137122,
+      "winner_confidence": 0.7949787577137121,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -10900,9 +10737,9 @@
       "projected_away": 25.3,
       "projected_margin_home": 3.4,
       "projected_total": 53.9,
-      "home_win_probability": 0.5782727535409182,
+      "home_win_probability": 0.5782727535409183,
       "predicted_winner": "West Virginia",
-      "winner_confidence": 0.564183657903553,
+      "winner_confidence": 0.5641836579035531,
       "data_reliability": 0.82,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -10942,9 +10779,9 @@
       "projected_away": 33.6,
       "projected_margin_home": -12.3,
       "projected_total": 54.9,
-      "home_win_probability": 0.23929949807863307,
+      "home_win_probability": 0.23929949807863296,
       "predicted_winner": "Texas Tech",
-      "winner_confidence": 0.7346304517292302,
+      "winner_confidence": 0.7346304517292304,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -11288,9 +11125,9 @@
       "projected_away": 25.7,
       "projected_margin_home": -0.6,
       "projected_total": 50.9,
-      "home_win_probability": 0.4869686863872188,
+      "home_win_probability": 0.4869686863872189,
       "predicted_winner": "Arizona State",
-      "winner_confidence": 0.5106856771624806,
+      "winner_confidence": 0.5106856771624805,
       "data_reliability": 0.82,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -12555,9 +12392,9 @@
       "projected_away": 31.1,
       "projected_margin_home": -11.6,
       "projected_total": 50.7,
-      "home_win_probability": 0.2519523470010675,
+      "home_win_probability": 0.25195234700106744,
       "predicted_winner": "Texas Tech",
-      "winner_confidence": 0.7232428876990392,
+      "winner_confidence": 0.7232428876990393,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -12660,9 +12497,9 @@
       "projected_away": 20.7,
       "projected_margin_home": 11.8,
       "projected_total": 53.2,
-      "home_win_probability": 0.7517902827581189,
+      "home_win_probability": 0.7517902827581187,
       "predicted_winner": "California",
-      "winner_confidence": 0.7266112544823069,
+      "winner_confidence": 0.7266112544823068,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 17.47308364408092,
       "total_uncertainty": 16.361587887870645,
@@ -12828,7 +12665,7 @@
       "projected_away": 20.4,
       "projected_margin_home": 11.2,
       "projected_total": 51.9,
-      "home_win_probability": 0.7405080295160336,
+      "home_win_probability": 0.7405080295160337,
       "predicted_winner": "Jacksonville State",
       "winner_confidence": 0.7164572265644302,
       "data_reliability": 0.8999999999999999,
