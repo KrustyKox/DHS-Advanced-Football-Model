@@ -244,7 +244,7 @@
   {
     "league": "nfl",
     "season": 2026,
-    "generated_at": "2026-10-04T13:11:01.656802+00:00",
+    "generated_at": "2026-10-04T17:34:06.908468+00:00",
     "status": "PASS",
     "policy": {
       "min_probability": 0.7,
@@ -260,8 +260,8 @@
     },
     "week": 4,
     "candidate_counts": {
-      "bovada": 1,
-      "draftkings": 1
+      "bovada": 0,
+      "draftkings": 0
     },
     "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
   },
@@ -291,8 +291,8 @@
   {
     "league": "cfb",
     "season": 2026,
-    "generated_at": "2026-10-04T13:11:01.656802+00:00",
-    "status": "PASS",
+    "generated_at": "2026-10-04T17:34:06.908468+00:00",
+    "status": "QUALIFIED",
     "policy": {
       "min_probability": 0.75,
       "min_reliability": 0.72,
@@ -306,9 +306,107 @@
       "preferred_max_odds": 350.0
     },
     "week": 6,
-    "candidate_counts": {
-      "draftkings": 2
-    },
-    "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
+    "sportsbook": "draftkings",
+    "legs": [
+      {
+        "game_id": "401870766",
+        "kickoff": "2026-10-08T23:00:00+00:00",
+        "away": "Sam Houston",
+        "home": "Liberty",
+        "team": "Liberty",
+        "side": "Home",
+        "moneyline": -598.8,
+        "model_probability": 0.866132125053754,
+        "market_probability": 0.8222932009602474,
+        "probability_edge": 0.04383892409350665,
+        "reliability": 0.8999999999999999,
+        "safety_score": 0.8636393627669389
+      },
+      {
+        "game_id": "401866439",
+        "kickoff": "2026-10-10T19:30:00+00:00",
+        "away": "Kent State",
+        "home": "Western Michigan",
+        "team": "Western Michigan",
+        "side": "Home",
+        "moneyline": -549.5,
+        "model_probability": 0.8188899150184248,
+        "market_probability": 0.8118454786425064,
+        "probability_edge": 0.007044436375918339,
+        "reliability": 0.98,
+        "safety_score": 0.857406327169839
+      },
+      {
+        "game_id": "401858484",
+        "kickoff": "2026-10-10T19:30:00+00:00",
+        "away": "UCLA",
+        "home": "Oregon",
+        "team": "Oregon",
+        "side": "Home",
+        "moneyline": -440.5,
+        "model_probability": 0.8668383979940488,
+        "market_probability": 0.7819421470932344,
+        "probability_edge": 0.08489625090081443,
+        "reliability": 0.8999999999999999,
+        "safety_score": 0.853904735770333
+      },
+      {
+        "game_id": "401869949",
+        "kickoff": "2026-10-10T23:30:00+00:00",
+        "away": "James Madison",
+        "home": "Georgia Southern",
+        "team": "James Madison",
+        "side": "Away",
+        "moneyline": -359.7,
+        "model_probability": 0.8420634379205634,
+        "market_probability": 0.7507786473086858,
+        "probability_edge": 0.09128479061187755,
+        "reliability": 0.98,
+        "safety_score": 0.8537263807874531
+      },
+      {
+        "game_id": "401862797",
+        "kickoff": "2026-10-10T20:00:00+00:00",
+        "away": "Rice",
+        "home": "East Carolina",
+        "team": "East Carolina",
+        "side": "Home",
+        "moneyline": -425.5,
+        "model_probability": 0.8389494607996226,
+        "market_probability": 0.7768719614461923,
+        "probability_edge": 0.06207749935343032,
+        "reliability": 0.8999999999999999,
+        "safety_score": 0.8386927207613594
+      },
+      {
+        "game_id": "401858255",
+        "kickoff": "2026-10-10T19:30:00+00:00",
+        "away": "Duke",
+        "home": "Georgia Tech",
+        "team": "Duke",
+        "side": "Away",
+        "moneyline": -289.9,
+        "model_probability": 0.8230483020245327,
+        "market_probability": 0.7135331523476101,
+        "probability_edge": 0.10951514967692266,
+        "reliability": 0.8999999999999999,
+        "safety_score": 0.8149074390991689
+      }
+    ],
+    "leg_count": 6,
+    "parlay_odds": 259.3,
+    "model_combined_probability": 0.357481641814615,
+    "sportsbook_implied_probability": 0.27831895352073477,
+    "probability_edge": 0.07916268829388023,
+    "leg_results": [
+      "PENDING",
+      "PENDING",
+      "PENDING",
+      "PENDING",
+      "PENDING",
+      "PENDING"
+    ],
+    "result": "PENDING",
+    "units_profit": null
   }
 ]
