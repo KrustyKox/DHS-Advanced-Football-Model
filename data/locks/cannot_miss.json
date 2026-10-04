@@ -244,7 +244,7 @@
   {
     "league": "nfl",
     "season": 2026,
-    "generated_at": "2026-10-03T22:07:39.186949+00:00",
+    "generated_at": "2026-10-04T06:49:16.951877+00:00",
     "status": "PASS",
     "policy": {
       "min_probability": 0.7,
@@ -286,6 +286,27 @@
     "candidate_counts": {
       "draftkings": 5
     },
+    "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
+  },
+  {
+    "league": "cfb",
+    "season": 2026,
+    "generated_at": "2026-10-04T06:49:16.951877+00:00",
+    "status": "PASS",
+    "policy": {
+      "min_probability": 0.75,
+      "min_reliability": 0.72,
+      "min_legs": 3,
+      "max_legs": 7,
+      "preferred_odds": [
+        -700,
+        -175
+      ],
+      "minimum_parlay_odds": 250.0,
+      "preferred_max_odds": 350.0
+    },
+    "week": 6,
+    "candidate_counts": {},
     "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
   }
 ]
