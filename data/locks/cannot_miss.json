@@ -286,9 +286,33 @@
     "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
   },
   {
+    "league": "nfl",
+    "season": 2026,
+    "generated_at": "2026-10-06T00:47:48.765306+00:00",
+    "status": "PASS",
+    "policy": {
+      "min_probability": 0.7,
+      "min_reliability": 0.64,
+      "min_legs": 3,
+      "max_legs": 6,
+      "preferred_odds": [
+        -500,
+        -150
+      ],
+      "minimum_parlay_odds": 250.0,
+      "preferred_max_odds": 350.0
+    },
+    "week": 5,
+    "candidate_counts": {
+      "bovada": 0,
+      "draftkings": 0
+    },
+    "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
+  },
+  {
     "league": "cfb",
     "season": 2026,
-    "generated_at": "2026-10-05T15:59:00.846961+00:00",
+    "generated_at": "2026-10-06T00:47:48.765306+00:00",
     "status": "QUALIFIED",
     "policy": {
       "min_probability": 0.75,
@@ -368,12 +392,12 @@
         "home": "East Carolina",
         "team": "East Carolina",
         "side": "Home",
-        "moneyline": -395.3,
+        "moneyline": -380.2,
         "model_probability": 0.8389494607996226,
-        "market_probability": 0.7659295945709654,
-        "probability_edge": 0.0730198662286572,
+        "market_probability": 0.7600199900049974,
+        "probability_edge": 0.0789294707946252,
         "reliability": 0.8999999999999999,
-        "safety_score": 0.8359571290425526
+        "safety_score": 0.8344797279010606
       },
       {
         "game_id": "401858255",
@@ -382,19 +406,19 @@
         "home": "Georgia Tech",
         "team": "Duke",
         "side": "Away",
-        "moneyline": -289.9,
+        "moneyline": -270.3,
         "model_probability": 0.8230483020245327,
-        "market_probability": 0.7135331523476101,
-        "probability_edge": 0.10951514967692266,
+        "market_probability": 0.7002250538348203,
+        "probability_edge": 0.12282324818971246,
         "reliability": 0.8999999999999999,
-        "safety_score": 0.8149074390991689
+        "safety_score": 0.8115804144709714
       }
     ],
     "leg_count": 6,
-    "parlay_odds": 261.2,
+    "parlay_odds": 270.9,
     "model_combined_probability": 0.3927921124866515,
-    "sportsbook_implied_probability": 0.2768549280177187,
-    "probability_edge": 0.11593718446893281,
+    "sportsbook_implied_probability": 0.26961445133459155,
+    "probability_edge": 0.12317766115205997,
     "leg_results": [
       "PENDING",
       "PENDING",
