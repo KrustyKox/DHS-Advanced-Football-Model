@@ -288,7 +288,7 @@
   {
     "league": "nfl",
     "season": 2026,
-    "generated_at": "2026-10-07T14:28:51.811348+00:00",
+    "generated_at": "2026-10-07T23:35:04.513919+00:00",
     "status": "PASS",
     "policy": {
       "min_probability": 0.7,
@@ -312,8 +312,8 @@
   {
     "league": "cfb",
     "season": 2026,
-    "generated_at": "2026-10-07T14:28:51.811348+00:00",
-    "status": "QUALIFIED",
+    "generated_at": "2026-10-07T23:35:04.513919+00:00",
+    "status": "PASS",
     "policy": {
       "min_probability": 0.75,
       "min_reliability": 0.72,
@@ -327,107 +327,7 @@
       "preferred_max_odds": 350.0
     },
     "week": 6,
-    "sportsbook": "draftkings",
-    "legs": [
-      {
-        "game_id": "401862798",
-        "kickoff": "2026-10-10T23:00:00+00:00",
-        "away": "UAB",
-        "home": "Memphis",
-        "team": "Memphis",
-        "side": "Home",
-        "moneyline": -598.8,
-        "model_probability": 0.899776273772701,
-        "market_probability": 0.8222932009602474,
-        "probability_edge": 0.07748307281245359,
-        "reliability": 0.98,
-        "safety_score": 0.9004614371264124
-      },
-      {
-        "game_id": "401870766",
-        "kickoff": "2026-10-08T23:00:00+00:00",
-        "away": "Sam Houston",
-        "home": "Liberty",
-        "team": "Liberty",
-        "side": "Home",
-        "moneyline": -549.5,
-        "model_probability": 0.866132125053754,
-        "market_probability": 0.8118454786425064,
-        "probability_edge": 0.054286646411247585,
-        "reliability": 0.8999999999999999,
-        "safety_score": 0.8610274321875037
-      },
-      {
-        "game_id": "401858484",
-        "kickoff": "2026-10-10T19:30:00+00:00",
-        "away": "UCLA",
-        "home": "Oregon",
-        "team": "Oregon",
-        "side": "Home",
-        "moneyline": -454.5,
-        "model_probability": 0.8668383979940488,
-        "market_probability": 0.786710260601981,
-        "probability_edge": 0.08012813739206781,
-        "reliability": 0.8999999999999999,
-        "safety_score": 0.8550967641475197
-      },
-      {
-        "game_id": "401869949",
-        "kickoff": "2026-10-10T23:30:00+00:00",
-        "away": "James Madison",
-        "home": "Georgia Southern",
-        "team": "James Madison",
-        "side": "Away",
-        "moneyline": -340.1,
-        "model_probability": 0.8420634379205634,
-        "market_probability": 0.7408844430575754,
-        "probability_edge": 0.10117899486298798,
-        "reliability": 0.98,
-        "safety_score": 0.8512528297246755
-      },
-      {
-        "game_id": "401862797",
-        "kickoff": "2026-10-10T20:00:00+00:00",
-        "away": "Rice",
-        "home": "East Carolina",
-        "team": "East Carolina",
-        "side": "Home",
-        "moneyline": -380.2,
-        "model_probability": 0.8389494607996226,
-        "market_probability": 0.7600199900049974,
-        "probability_edge": 0.0789294707946252,
-        "reliability": 0.8999999999999999,
-        "safety_score": 0.8344797279010606
-      },
-      {
-        "game_id": "401858255",
-        "kickoff": "2026-10-10T19:30:00+00:00",
-        "away": "Duke",
-        "home": "Georgia Tech",
-        "team": "Duke",
-        "side": "Away",
-        "moneyline": -257.7,
-        "model_probability": 0.8230483020245327,
-        "market_probability": 0.6907234322176781,
-        "probability_edge": 0.13232486980685465,
-        "reliability": 0.8999999999999999,
-        "safety_score": 0.8092050090666859
-      }
-    ],
-    "leg_count": 6,
-    "parlay_odds": 281.8,
-    "model_combined_probability": 0.3927921124866515,
-    "sportsbook_implied_probability": 0.2619172341540073,
-    "probability_edge": 0.13087487833264422,
-    "leg_results": [
-      "PENDING",
-      "PENDING",
-      "PENDING",
-      "PENDING",
-      "PENDING",
-      "PENDING"
-    ],
-    "result": "PENDING",
-    "units_profit": null
+    "candidate_counts": {},
+    "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
   }
 ]
