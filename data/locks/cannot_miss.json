@@ -288,7 +288,7 @@
   {
     "league": "nfl",
     "season": 2026,
-    "generated_at": "2026-10-08T23:45:49.417425+00:00",
+    "generated_at": "2026-10-09T07:22:12.907161+00:00",
     "status": "PASS",
     "policy": {
       "min_probability": 0.7,
@@ -309,8 +309,8 @@
   {
     "league": "cfb",
     "season": 2026,
-    "generated_at": "2026-10-08T23:45:49.417425+00:00",
-    "status": "QUALIFIED",
+    "generated_at": "2026-10-09T07:22:12.907161+00:00",
+    "status": "PASS",
     "policy": {
       "min_probability": 0.75,
       "min_reliability": 0.72,
@@ -324,92 +324,7 @@
       "preferred_max_odds": 350.0
     },
     "week": 6,
-    "sportsbook": "draftkings",
-    "legs": [
-      {
-        "game_id": "401862798",
-        "kickoff": "2026-10-10T23:00:00+00:00",
-        "away": "UAB",
-        "home": "Memphis",
-        "team": "Memphis",
-        "side": "Home",
-        "moneyline": -598.8,
-        "model_probability": 0.899776273772701,
-        "market_probability": 0.8222932009602474,
-        "probability_edge": 0.07748307281245359,
-        "reliability": 0.98,
-        "safety_score": 0.9004614371264124
-      },
-      {
-        "game_id": "401858484",
-        "kickoff": "2026-10-10T19:30:00+00:00",
-        "away": "UCLA",
-        "home": "Oregon",
-        "team": "Oregon",
-        "side": "Home",
-        "moneyline": -454.5,
-        "model_probability": 0.8668383979940488,
-        "market_probability": 0.786710260601981,
-        "probability_edge": 0.08012813739206781,
-        "reliability": 0.8999999999999999,
-        "safety_score": 0.8550967641475197
-      },
-      {
-        "game_id": "401869949",
-        "kickoff": "2026-10-10T23:30:00+00:00",
-        "away": "James Madison",
-        "home": "Georgia Southern",
-        "team": "James Madison",
-        "side": "Away",
-        "moneyline": -309.6,
-        "model_probability": 0.8420634379205634,
-        "market_probability": 0.7256897937315833,
-        "probability_edge": 0.11637364418898011,
-        "reliability": 0.98,
-        "safety_score": 0.8474541673931775
-      },
-      {
-        "game_id": "401858255",
-        "kickoff": "2026-10-10T19:30:00+00:00",
-        "away": "Duke",
-        "home": "Georgia Tech",
-        "team": "Duke",
-        "side": "Away",
-        "moneyline": -245.1,
-        "model_probability": 0.8230483020245327,
-        "market_probability": 0.6805812661977046,
-        "probability_edge": 0.14246703582682807,
-        "reliability": 0.8999999999999999,
-        "safety_score": 0.8066694675616924
-      },
-      {
-        "game_id": "401864516",
-        "kickoff": "2026-10-10T23:30:00+00:00",
-        "away": "Air Force",
-        "home": "Northern Illinois",
-        "team": "Air Force",
-        "side": "Away",
-        "moneyline": -309.6,
-        "model_probability": 0.7651772263384087,
-        "market_probability": 0.7256897937315833,
-        "probability_edge": 0.03948743260682541,
-        "reliability": 0.8999999999999999,
-        "safety_score": 0.7890110616021001
-      }
-    ],
-    "leg_count": 5,
-    "parlay_odds": 250.9,
-    "model_combined_probability": 0.41362315966462043,
-    "sportsbook_implied_probability": 0.28498147620404674,
-    "probability_edge": 0.1286416834605737,
-    "leg_results": [
-      "PENDING",
-      "PENDING",
-      "PENDING",
-      "PENDING",
-      "PENDING"
-    ],
-    "result": "PENDING",
-    "units_profit": null
+    "candidate_counts": {},
+    "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
   }
 ]
