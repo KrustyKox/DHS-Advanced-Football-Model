@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T23:15:14.987594+00:00",
+  "generated_at": "2026-10-10T07:04:01.157888+00:00",
   "league": "nfl",
   "season": 2026,
   "validation": {
@@ -236,7 +236,7 @@
           "home_spread": null,
           "home_moneyline": -147.9,
           "away_moneyline": 124.0,
-          "total": 43.5,
+          "total": null,
           "evaluations": [
             {
               "market": "Moneyline",
@@ -248,21 +248,6 @@
               "edge": 0.12635776610991245,
               "qualified": false,
               "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 43.5,
-              "odds": -110.0,
-              "model_probability": 0.5305544218776437,
-              "market_probability": 0.5,
-              "edge": 0.030554421877643678,
-              "raw_point_edge": 1.1000000000000014,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
                 "probability below threshold"
               ]
             }
@@ -293,18 +278,18 @@
         {
           "sportsbook": "bovada",
           "home_spread": null,
-          "home_moneyline": 280.0,
-          "away_moneyline": -359.7,
+          "home_moneyline": 285.0,
+          "away_moneyline": -370.4,
           "total": null,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": 280.0,
+              "odds": 285.0,
               "model_probability": 0.5085588818813535,
-              "market_probability": 0.2516752803083392,
-              "edge": 0.25688360157301426,
+              "market_probability": 0.24804370293813668,
+              "edge": 0.26051517894321674,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -315,18 +300,18 @@
         {
           "sportsbook": "draftkings",
           "home_spread": null,
-          "home_moneyline": 295.0,
-          "away_moneyline": -374.5,
+          "home_moneyline": 285.0,
+          "away_moneyline": -359.7,
           "total": null,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": 295.0,
+              "odds": 285.0,
               "model_probability": 0.5085588818813535,
-              "market_probability": 0.242863175135315,
-              "edge": 0.2656957067460385,
+              "market_probability": 0.24922135269131407,
+              "edge": 0.2593375291900394,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -401,18 +386,18 @@
         {
           "sportsbook": "bovada",
           "home_spread": null,
-          "home_moneyline": 210.0,
-          "away_moneyline": -250.0,
+          "home_moneyline": 200.0,
+          "away_moneyline": -239.8,
           "total": null,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": 210.0,
+              "odds": 200.0,
               "model_probability": 0.425053736088137,
-              "market_probability": 0.31111111111111106,
-              "edge": 0.11394262497702595,
+              "market_probability": 0.3208081570996979,
+              "edge": 0.10424557898843911,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -423,18 +408,18 @@
         {
           "sportsbook": "draftkings",
           "home_spread": null,
-          "home_moneyline": 210.0,
-          "away_moneyline": -257.7,
+          "home_moneyline": 205.0,
+          "away_moneyline": -250.0,
           "total": null,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": 210.0,
+              "odds": 205.0,
               "model_probability": 0.425053736088137,
-              "market_probability": 0.3092765677823219,
-              "edge": 0.11577716830581514,
+              "market_probability": 0.31460674157303364,
+              "edge": 0.11044699451510337,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -1614,9 +1599,9 @@
       "projected_away": 17.5,
       "projected_margin_home": 10.2,
       "projected_total": 45.1,
-      "home_win_probability": 0.6478399135034325,
+      "home_win_probability": 0.6478399135034324,
       "predicted_winner": "KC",
-      "winner_confidence": 0.6330559221530893,
+      "winner_confidence": 0.6330559221530891,
       "data_reliability": 0.8999999999999999,
       "margin_uncertainty": 13.34637861664955,
       "total_uncertainty": 14.348398603566608,
@@ -2971,7 +2956,7 @@
           "home_spread": null,
           "home_moneyline": 120.0,
           "away_moneyline": -140.1,
-          "total": 41.5,
+          "total": null,
           "evaluations": [
             {
               "market": "Moneyline",
@@ -2985,30 +2970,15 @@
               "gate_reasons": [
                 "probability below threshold"
               ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 41.5,
-              "odds": -110.0,
-              "model_probability": 0.5305544218776437,
-              "market_probability": 0.5,
-              "edge": 0.030554421877643678,
-              "raw_point_edge": 1.1000000000000014,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
             }
           ]
         },
         {
           "sportsbook": "draftkings",
-          "home_spread": 2.5,
+          "home_spread": null,
           "home_moneyline": 120.0,
           "away_moneyline": -142.0,
-          "total": 41.5,
+          "total": null,
           "evaluations": [
             {
               "market": "Moneyline",
@@ -3020,33 +2990,6 @@
               "edge": 0.13264181258675506,
               "qualified": false,
               "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Home",
-              "line": 2.5,
-              "odds": -110.0,
-              "model_probability": 0.7026299076492644,
-              "market_probability": 0.5,
-              "edge": 0.20262990764926436,
-              "raw_point_edge": 7.1,
-              "qualified": true,
-              "gate_reasons": []
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 41.5,
-              "odds": -112.0,
-              "model_probability": 0.5305544218776437,
-              "market_probability": 0.5,
-              "edge": 0.030554421877643678,
-              "raw_point_edge": 1.1000000000000014,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
                 "probability below threshold"
               ]
             }
@@ -3066,7 +3009,7 @@
       "projected_away": 23.3,
       "projected_margin_home": -2.3,
       "projected_total": 44.4,
-      "home_win_probability": 0.4660329064141602,
+      "home_win_probability": 0.4660329064141601,
       "predicted_winner": "DEN",
       "winner_confidence": 0.5305703842272559,
       "data_reliability": 0.8999999999999999,
@@ -4578,7 +4521,7 @@
       "projected_away": 29.1,
       "projected_margin_home": -9.4,
       "projected_total": 48.8,
-      "home_win_probability": 0.3624255957329126,
+      "home_win_probability": 0.36242559573291255,
       "predicted_winner": "ATL",
       "winner_confidence": 0.6238169638403787,
       "data_reliability": 0.8999999999999999,
