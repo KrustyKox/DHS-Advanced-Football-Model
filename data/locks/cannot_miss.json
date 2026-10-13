@@ -415,9 +415,32 @@
     "units_profit": -1.0
   },
   {
+    "league": "nfl",
+    "season": 2026,
+    "generated_at": "2026-10-13T07:41:18.034583+00:00",
+    "status": "PASS",
+    "policy": {
+      "min_probability": 0.7,
+      "min_reliability": 0.64,
+      "min_legs": 3,
+      "max_legs": 6,
+      "preferred_odds": [
+        -500,
+        -150
+      ],
+      "minimum_parlay_odds": 250.0,
+      "preferred_max_odds": 350.0
+    },
+    "week": 6,
+    "candidate_counts": {
+      "bovada": 0
+    },
+    "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
+  },
+  {
     "league": "cfb",
     "season": 2026,
-    "generated_at": "2026-10-12T21:43:35.918370+00:00",
+    "generated_at": "2026-10-13T07:41:18.034583+00:00",
     "status": "QUALIFIED",
     "policy": {
       "min_probability": 0.75,
@@ -449,20 +472,6 @@
         "safety_score": 0.9321735069732501
       },
       {
-        "game_id": "401860923",
-        "kickoff": "2026-10-16T00:00:00+00:00",
-        "away": "Colorado State",
-        "home": "Texas State",
-        "team": "Texas State",
-        "side": "Home",
-        "moneyline": -574.7,
-        "model_probability": 0.9014896767504854,
-        "market_probability": 0.8172473336719146,
-        "probability_edge": 0.08424234307857081,
-        "reliability": 0.98,
-        "safety_score": 0.9000566717932214
-      },
-      {
         "game_id": "401856724",
         "kickoff": "2026-10-17T16:00:00+00:00",
         "away": "Florida",
@@ -484,11 +493,25 @@
         "team": "Bowling Green",
         "side": "Home",
         "moneyline": -257.7,
-        "model_probability": 0.8896070490805333,
+        "model_probability": 0.8896070490805332,
         "market_probability": 0.6907234322176781,
-        "probability_edge": 0.19888361686285527,
+        "probability_edge": 0.19888361686285516,
         "reliability": 1.0,
-        "safety_score": 0.8674843825946862
+        "safety_score": 0.8674843825946861
+      },
+      {
+        "game_id": "401864522",
+        "kickoff": "2026-10-17T19:30:00+00:00",
+        "away": "Northern Illinois",
+        "home": "Wyoming",
+        "team": "Wyoming",
+        "side": "Home",
+        "moneyline": -304.9,
+        "model_probability": 0.8531291699344747,
+        "market_probability": 0.7220630077464039,
+        "probability_edge": 0.13106616218807088,
+        "reliability": 0.98,
+        "safety_score": 0.8520803369038383
       },
       {
         "game_id": "401856831",
@@ -497,19 +520,19 @@
         "home": "Houston",
         "team": "Houston",
         "side": "Home",
-        "moneyline": -184.8,
-        "model_probability": 0.8034979229104676,
-        "market_probability": 0.6223773256677345,
-        "probability_edge": 0.1811205972427331,
+        "moneyline": -191.9,
+        "model_probability": 0.8034979229104677,
+        "market_probability": 0.6308987911587679,
+        "probability_edge": 0.17259913175169983,
         "reliability": 0.98,
-        "safety_score": 0.8023432928721674
+        "safety_score": 0.8044736592449259
       }
     ],
     "leg_count": 5,
-    "parlay_odds": 254.5,
-    "model_combined_probability": 0.5597668052097325,
-    "sportsbook_implied_probability": 0.2820874471086037,
-    "probability_edge": 0.27767935810112887,
+    "parlay_odds": 295.8,
+    "model_combined_probability": 0.5297380571309963,
+    "sportsbook_implied_probability": 0.25265285497726125,
+    "probability_edge": 0.27708520215373506,
     "leg_results": [
       "PENDING",
       "PENDING",
