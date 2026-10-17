@@ -417,7 +417,7 @@
   {
     "league": "nfl",
     "season": 2026,
-    "generated_at": "2026-10-17T11:35:24.135198+00:00",
+    "generated_at": "2026-10-17T16:23:42.634308+00:00",
     "status": "PASS",
     "policy": {
       "min_probability": 0.7,
@@ -441,8 +441,8 @@
   {
     "league": "cfb",
     "season": 2026,
-    "generated_at": "2026-10-17T11:35:24.135198+00:00",
-    "status": "PASS",
+    "generated_at": "2026-10-17T16:23:42.634308+00:00",
+    "status": "QUALIFIED",
     "policy": {
       "min_probability": 0.75,
       "min_reliability": 0.72,
@@ -456,7 +456,92 @@
       "preferred_max_odds": 350.0
     },
     "week": 7,
-    "candidate_counts": {},
-    "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
+    "sportsbook": "draftkings",
+    "legs": [
+      {
+        "game_id": "401864520",
+        "kickoff": "2026-10-17T23:00:00+00:00",
+        "away": "Nevada",
+        "home": "North Dakota State",
+        "team": "North Dakota State",
+        "side": "Home",
+        "moneyline": -699.3,
+        "model_probability": 0.9543554221865753,
+        "market_probability": 0.8399831835198495,
+        "probability_edge": 0.11437223866672586,
+        "reliability": 0.98,
+        "safety_score": 0.9321735069732501
+      },
+      {
+        "game_id": "401866478",
+        "kickoff": "2026-10-17T19:30:00+00:00",
+        "away": "Akron",
+        "home": "Miami (OH)",
+        "team": "Miami (OH)",
+        "side": "Home",
+        "moneyline": -359.7,
+        "model_probability": 0.833362290826914,
+        "market_probability": 0.7507786473086858,
+        "probability_edge": 0.08258364351822822,
+        "reliability": 1.0,
+        "safety_score": 0.8543758072406284
+      },
+      {
+        "game_id": "401864522",
+        "kickoff": "2026-10-17T19:30:00+00:00",
+        "away": "Northern Illinois",
+        "home": "Wyoming",
+        "team": "Wyoming",
+        "side": "Home",
+        "moneyline": -304.9,
+        "model_probability": 0.8531291699344751,
+        "market_probability": 0.7220630077464039,
+        "probability_edge": 0.1310661621880712,
+        "reliability": 0.98,
+        "safety_score": 0.8520803369038384
+      },
+      {
+        "game_id": "401860904",
+        "kickoff": "2026-10-18T02:30:00+00:00",
+        "away": "Fresno State",
+        "home": "San Diego State",
+        "team": "Fresno State",
+        "side": "Away",
+        "moneyline": -304.9,
+        "model_probability": 0.8361230285326302,
+        "market_probability": 0.7220630077464039,
+        "probability_edge": 0.11406002078622635,
+        "reliability": 1.0,
+        "safety_score": 0.8485772662029161
+      },
+      {
+        "game_id": "401856831",
+        "kickoff": "2026-10-17T23:30:00+00:00",
+        "away": "Oklahoma State",
+        "home": "Houston",
+        "team": "Houston",
+        "side": "Home",
+        "moneyline": -191.9,
+        "model_probability": 0.8034979229104676,
+        "market_probability": 0.6308987911587679,
+        "probability_edge": 0.17259913175169972,
+        "reliability": 0.98,
+        "safety_score": 0.8044736592449258
+      }
+    ],
+    "leg_count": 5,
+    "parlay_odds": 291.9,
+    "model_combined_probability": 0.4558413574023844,
+    "sportsbook_implied_probability": 0.25516713447307987,
+    "probability_edge": 0.20067422292930454,
+    "leg_results": [
+      "PENDING",
+      "PENDING",
+      "PENDING",
+      "PENDING",
+      "PENDING"
+    ],
+    "result": "PENDING",
+    "units_profit": null
   }
 ]
