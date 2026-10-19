@@ -417,7 +417,7 @@
   {
     "league": "nfl",
     "season": 2026,
-    "generated_at": "2026-10-18T21:30:16.466768+00:00",
+    "generated_at": "2026-10-19T06:10:48.297561+00:00",
     "status": "PASS",
     "policy": {
       "min_probability": 0.7,
@@ -544,8 +544,8 @@
   {
     "league": "cfb",
     "season": 2026,
-    "generated_at": "2026-10-18T21:30:16.466768+00:00",
-    "status": "PASS",
+    "generated_at": "2026-10-19T06:10:48.297561+00:00",
+    "status": "QUALIFIED",
     "policy": {
       "min_probability": 0.75,
       "min_reliability": 0.72,
@@ -559,7 +559,92 @@
       "preferred_max_odds": 350.0
     },
     "week": 8,
-    "candidate_counts": {},
-    "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
+    "sportsbook": "draftkings",
+    "legs": [
+      {
+        "game_id": "401866449",
+        "kickoff": "2026-10-24T20:00:00+00:00",
+        "away": "Eastern Michigan",
+        "home": "Ohio",
+        "team": "Ohio",
+        "side": "Home",
+        "moneyline": -440.5,
+        "model_probability": 0.9121247973132485,
+        "market_probability": 0.7819421470932344,
+        "probability_edge": 0.13018265022001407,
+        "reliability": 1.0,
+        "safety_score": 0.9015479354299328
+      },
+      {
+        "game_id": "401860906",
+        "kickoff": "2026-10-24T23:30:00+00:00",
+        "away": "Utah State",
+        "home": "Texas State",
+        "team": "Texas State",
+        "side": "Home",
+        "moneyline": -454.5,
+        "model_probability": 0.8507268015676637,
+        "market_probability": 0.786710260601981,
+        "probability_edge": 0.06401654096568266,
+        "reliability": 1.0,
+        "safety_score": 0.8720409659343271
+      },
+      {
+        "game_id": "401856835",
+        "kickoff": "2026-10-24T04:00:00+00:00",
+        "away": "BYU",
+        "home": "UCF",
+        "team": "BYU",
+        "side": "Away",
+        "moneyline": -265.3,
+        "model_probability": 0.8631089138000742,
+        "market_probability": 0.6958355363677617,
+        "probability_edge": 0.1672733774323124,
+        "reliability": 1.0,
+        "safety_score": 0.8555133409919775
+      },
+      {
+        "game_id": "401871055",
+        "kickoff": "2026-10-20T23:00:00+00:00",
+        "away": "Middle Tennessee",
+        "home": "Florida International",
+        "team": "Florida International",
+        "side": "Home",
+        "moneyline": -425.5,
+        "model_probability": 0.8089173891924379,
+        "market_probability": 0.7768719614461923,
+        "probability_edge": 0.032045427746245636,
+        "reliability": 1.0,
+        "safety_score": 0.848676684957767
+      },
+      {
+        "game_id": "401858497",
+        "kickoff": "2026-10-24T04:00:00+00:00",
+        "away": "Iowa",
+        "home": "Minnesota",
+        "team": "Iowa",
+        "side": "Away",
+        "moneyline": -257.7,
+        "model_probability": 0.7816200446541799,
+        "market_probability": 0.6907234322176781,
+        "probability_edge": 0.09089661243650182,
+        "reliability": 1.0,
+        "safety_score": 0.8134908803815095
+      }
+    ],
+    "leg_count": 5,
+    "parlay_odds": 253.4,
+    "model_combined_probability": 0.4234575101190896,
+    "sportsbook_implied_probability": 0.2829654782116582,
+    "probability_edge": 0.14049203190743142,
+    "leg_results": [
+      "PENDING",
+      "PENDING",
+      "PENDING",
+      "PENDING",
+      "PENDING"
+    ],
+    "result": "PENDING",
+    "units_profit": null
   }
 ]
