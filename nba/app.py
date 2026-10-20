@@ -101,6 +101,42 @@ else:
     st.info("Load a roster from a scheduled game above to inspect real player game logs.")
 
 st.divider()
+st.subheader("Step 4 — Real-data player projection baseline")
+st.caption("Weighted recent-game estimates. Probability thresholds are preliminary and NOT backtested or betting-ready.")
+from projections import project_player
+
+if "roster_result" in locals() and roster_result.get("players"):
+    if st.button("Generate baseline projections for selected team", type="primary"):
+        results, skipped = [], []
+        with st.spinner("Retrieving historical games and building player estimates..."):
+            for athlete in roster_result["players"]:
+                try:
+                    history = cached_game_log(athlete["player_id"], 2026)
+                    estimate = project_player(history["games"])
+                    row = {"Player": athlete["player"], "Team": athlete["team"],
+                           "Availability": athlete["availability"], "Games": estimate["games_used"]}
+                    row.update(estimate["projections"])
+                    results.append(row)
+                except Exception as exc:
+                    skipped.append(f'{athlete["player"]}: {str(exc)[:90]}')
+        if results:
+            st.session_state["nba_baseline_rows"] = results
+            st.session_state["nba_baseline_skipped"] = skipped
+            st.session_state["nba_baseline_team"] = roster_team
+        else:
+            st.error("No verified player game logs could be projected. No placeholder results were substituted.")
+            st.caption("First error: " + (skipped[0] if skipped else "Unknown"))
+    if st.session_state.get("nba_baseline_rows") and st.session_state.get("nba_baseline_team") == roster_team:
+        frame = pd.DataFrame(st.session_state["nba_baseline_rows"])
+        st.dataframe(frame, hide_index=True, use_container_width=True)
+        st.caption(f'{len(frame)} players estimated; {len(st.session_state.get("nba_baseline_skipped", []))} skipped for missing/insufficient data.')
+        with st.expander("Skipped players and data issues"):
+            st.write(st.session_state.get("nba_baseline_skipped", []))
+        st.warning("Injury availability is unverified. These are descriptive baseline projections, not qualified player props.")
+else:
+    st.info("Choose a scheduled game and load a team roster before generating baseline projections.")
+
+st.divider()
 st.subheader("Player projection prototype")
 st.caption("Player data below remains synthetic until roster, injury, and statistics ingestion is validated.")
 game = "Synthetic demonstration matchup"
