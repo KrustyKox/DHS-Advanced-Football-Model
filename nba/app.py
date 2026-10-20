@@ -110,6 +110,11 @@ if "roster_result" in locals() and roster_result.get("players"):
         results, skipped = [], []
         with st.spinner("Retrieving historical games and building player estimates..."):
             for athlete in roster_result["players"]:
+                status = str(athlete.get("availability") or "Unverified").strip().lower()
+                # Explicitly excluded statuses must never produce active-player projections.
+                if any(term in status for term in ("out", "inactive", "suspended", "doubtful", "injured reserve")):
+                    skipped.append(f'{athlete["player"]}: excluded due to availability status ({athlete.get("availability")})')
+                    continue
                 try:
                     history = cached_game_log(athlete["player_id"], 2026)
                     estimate = project_player(history["games"])
@@ -132,7 +137,7 @@ if "roster_result" in locals() and roster_result.get("players"):
         st.caption(f'{len(frame)} players estimated; {len(st.session_state.get("nba_baseline_skipped", []))} skipped for missing/insufficient data.')
         with st.expander("Skipped players and data issues"):
             st.write(st.session_state.get("nba_baseline_skipped", []))
-        st.warning("Injury availability is unverified. These are descriptive baseline projections, not qualified player props.")
+        st.warning("Players explicitly marked OUT, inactive, doubtful, or suspended are excluded. Unverified/questionable players may remain visible for research only; NO projections are qualified betting plays until availability is confirmed.")
 else:
     st.info("Choose a scheduled game and load a team roster before generating baseline projections.")
 
