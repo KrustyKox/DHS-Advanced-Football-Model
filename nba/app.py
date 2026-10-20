@@ -1,4 +1,4 @@
-"""Independent NBA mobile-first dashboard prototype. Synthetic data only."""
+"""Independent NBA research dashboard. Real data; unvalidated estimates."""
 import pandas as pd
 import streamlit as st
 
@@ -14,7 +14,7 @@ h1 {font-size: 1.8rem !important; letter-spacing: -.035em}
 
 st.title("🏀 DHS NBA")
 st.caption("Player projections • Mobile-first research dashboard")
-st.warning("DEMO ONLY — synthetic players and invented values. No live odds or validated NBA predictions.", icon="⚠️")
+st.warning("RESEARCH ONLY — estimates are not calibrated or validated. Injury availability may be incomplete; no live odds.", icon="⚠️")
 
 from schedule import load_schedule, games_for_date, eastern_today
 
@@ -107,7 +107,9 @@ from projections import project_player
 
 if "roster_result" in locals() and roster_result.get("players"):
     if st.button("Generate baseline projections for selected team", type="primary"):
-        results, skipped = [], []
+        st.session_state.pop("nba_baseline_rows", None)
+        st.session_state.pop("nba_baseline_thresholds", None)
+        results, skipped, threshold_rows = [], [], []
         with st.spinner("Retrieving historical games and building player estimates..."):
             for athlete in roster_result["players"]:
                 status = str(athlete.get("availability") or "Unverified").strip().lower()
@@ -122,16 +124,21 @@ if "roster_result" in locals() and roster_result.get("players"):
                            "Availability": athlete["availability"], "Games": estimate["games_used"]}
                     row.update(estimate["projections"])
                     results.append(row)
+                    threshold_rows.append({"Player": athlete["player"], "Team": athlete["team"],
+                                           "thresholds": estimate["thresholds"],
+                                           "projections": estimate["projections"]})
                 except Exception as exc:
                     skipped.append(f'{athlete["player"]}: {str(exc)[:90]}')
         if results:
             st.session_state["nba_baseline_rows"] = results
+            st.session_state["nba_baseline_thresholds"] = threshold_rows
             st.session_state["nba_baseline_skipped"] = skipped
             st.session_state["nba_baseline_team"] = roster_team
+            st.session_state["nba_baseline_game"] = (str(selected_date), selected_game)
         else:
             st.error("No verified player game logs could be projected. No placeholder results were substituted.")
             st.caption("First error: " + (skipped[0] if skipped else "Unknown"))
-    if st.session_state.get("nba_baseline_rows") and st.session_state.get("nba_baseline_team") == roster_team:
+    if st.session_state.get("nba_baseline_rows") and st.session_state.get("nba_baseline_team") == roster_team and st.session_state.get("nba_baseline_game") == (str(selected_date), selected_game):
         frame = pd.DataFrame(st.session_state["nba_baseline_rows"])
         st.dataframe(frame, hide_index=True, use_container_width=True)
         st.caption(f'{len(frame)} players estimated; {len(st.session_state.get("nba_baseline_skipped", []))} skipped for missing/insufficient data.')
@@ -142,59 +149,32 @@ else:
     st.info("Choose a scheduled game and load a team roster before generating baseline projections.")
 
 st.divider()
-st.subheader("Player projection prototype")
-st.caption("Player data below remains synthetic until roster, injury, and statistics ingestion is validated.")
-game = "Synthetic demonstration matchup"
-view = st.segmented_control("View", ["Box Score", "Probability Tables", "Game Outlook"], default="Probability Tables")
-players = [
-    ("Player A", "HOME", "Starter", 35, 26.4, 8.1, 5.8, 2.9, 1.1, .6, 2.7),
-    ("Player B", "HOME", "Starter", 32, 19.1, 6.9, 4.3, 2.1, .8, .4, 1.8),
-    ("Player C", "HOME", "Bench", 23, 11.6, 5.4, 2.8, 1.3, .7, .5, 1.2),
-    ("Player D", "AWAY", "Starter", 36, 28.2, 6.3, 8.2, 3.2, 1.4, .3, 3.1),
-    ("Player E", "AWAY", "Starter", 33, 21.7, 9.5, 3.6, 1.8, .9, .8, 2.4),
-    ("Player F", "AWAY", "Bench", 25, 12.3, 4.6, 5.2, 1.6, .7, .2, 1.5),
-]
-cols = ["Player", "Team", "Role", "MIN", "PTS", "REB", "AST", "3PM", "STL", "BLK", "TOV"]
-df = pd.DataFrame(players, columns=cols)
-df["PRA"] = df["PTS"] + df["REB"] + df["AST"]
-df["PR"] = df["PTS"] + df["REB"]
-df["PA"] = df["PTS"] + df["AST"]
-df["RA"] = df["REB"] + df["AST"]
-team = st.segmented_control("Lineup", ["Both", "HOME", "AWAY"], default="Both")
-role = st.selectbox("Players", ["All rotation players", "Starters", "Bench"], index=0)
-shown = df.copy()
-if team != "Both":
-    shown = shown[shown["Team"] == team]
-if role != "All rotation players":
-    shown = shown[shown["Role"] == ("Starter" if role == "Starters" else "Bench")]
-
-if view == "Box Score":
-    st.subheader("Projected box score")
-    st.dataframe(shown[cols + ["PRA"]], hide_index=True, use_container_width=True)
-elif view == "Probability Tables":
+st.subheader("Step 5 — Real-data probability threshold explorer")
+st.caption("Thresholds are illustrative statistical estimates based on recent performances, not calibrated hit probabilities or betting recommendations.")
+threshold_data = st.session_state.get("nba_baseline_thresholds", [])
+same_matchup = ("real_games" in locals() and real_games and
+                st.session_state.get("nba_baseline_team") == roster_team and
+                st.session_state.get("nba_baseline_game") == (str(selected_date), selected_game))
+if same_matchup and threshold_data:
     stat = st.selectbox("Statistic", ["PTS", "REB", "AST", "3PM", "STL", "BLK", "TOV", "PRA", "PR", "PA", "RA"])
-    focus = st.select_slider("Highlight confidence", options=[50, 60, 70, 80, 90, 95], value=80)
-    st.caption("Threshold = estimated minimum whole-number result reached with at least the stated probability. Placeholder distributions only.")
-    # Illustrative monotonically decreasing thresholds; replace with calibrated empirical predictive CDFs.
-    spreads = {"PTS": 7, "REB": 3, "AST": 3, "3PM": 1.5, "STL": 1, "BLK": 1, "TOV": 1.5, "PRA": 10, "PR": 8, "PA": 8, "RA": 5}
-    offsets = {50: 0, 60: .25, 70: .5, 80: .85, 90: 1.3, 95: 1.65}
+    confidence = st.select_slider("Illustrative confidence threshold", options=[50, 60, 70, 80, 90, 95], value=80)
     rows = []
-    for _, p in shown.iterrows():
-        item = {"Player": p["Player"], "Team": p["Team"], "Mean": round(float(p[stat]), 1)}
-        for pct in [50, 60, 70, 80, 90, 95]:
-            item[f"{pct}%"] = f"{max(0, int(p[stat] - spreads[stat] * offsets[pct]))}+"
+    for athlete in threshold_data:
+        levels = athlete["thresholds"].get(stat)
+        if not levels:
+            continue
+        item = {"Player": athlete["Player"], "Team": athlete["Team"],
+                "Projected": athlete["projections"].get(stat)}
+        for pct in (50, 60, 70, 80, 90, 95):
+            item[f"{pct}%"] = f'{levels[str(pct)]}+'
         rows.append(item)
-    st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True,
-                 column_config={f"{focus}%": st.column_config.TextColumn(f"★ {focus}%")})
-    st.info("For real predictions, thresholds must come from simulated distributions, not the demonstration calculation.")
+    if rows:
+        st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True,
+                     column_config={f"{confidence}%": st.column_config.TextColumn(f"★ {confidence}%")})
+        st.caption("Read 80% / 15+ as an uncalibrated estimate of reaching at least 15. No out-of-sample accuracy has been established.")
+    else:
+        st.info("No usable thresholds for this statistic. Try another category.")
 else:
-    a, b = st.columns(2)
-    a.metric("Home score", "118.4")
-    b.metric("Away score", "111.7")
-    c, d = st.columns(2)
-    c.metric("Projected spread", "HOME -6.7")
-    d.metric("Projected total", "230.1")
-    st.caption("Illustrative game figures; not derived from the sample player data.")
-
+    st.info("Generate a new baseline projection for the selected matchup and team to display thresholds.")
 st.divider()
-st.caption("NBA development module • No football model files or live production workflows modified.")
+st.caption("NBA development branch only • Football production files unchanged.")
