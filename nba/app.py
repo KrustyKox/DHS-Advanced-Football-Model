@@ -16,8 +16,30 @@ st.title("🏀 DHS NBA")
 st.caption("Player projections • Mobile-first research dashboard")
 st.warning("DEMO ONLY — synthetic players and invented values. No live odds or validated NBA predictions.", icon="⚠️")
 
-games = ["Home vs Away — Sample Game"]
-game = st.selectbox("Matchup", games)
+from schedule import load_schedule, games_for_date, eastern_today
+
+@st.cache_data(ttl=1800, show_spinner=False)
+def cached_schedule():
+    return load_schedule()
+
+st.subheader("NBA Schedule — Live data")
+selected_date = st.date_input("Game date (Eastern)", value=eastern_today())
+try:
+    real_games = games_for_date(cached_schedule(), selected_date)
+    if real_games:
+        labels = [f'{g["away"]} @ {g["home"]} · {g["status"]}' for g in real_games]
+        selected_game = st.selectbox("Today's games", labels)
+        st.caption("Source: NBA public CDN schedule · refreshed every 30 minutes")
+    else:
+        st.info("No NBA games listed for this date.")
+except Exception as exc:
+    st.error(f"NBA schedule unavailable: {exc}")
+    st.caption("No games will be invented if the live feed fails.")
+
+st.divider()
+st.subheader("Player projection prototype")
+st.caption("Player data below remains synthetic until roster, injury, and statistics ingestion is validated.")
+game = "Synthetic demonstration matchup"
 view = st.segmented_control("View", ["Box Score", "Probability Tables", "Game Outlook"], default="Probability Tables")
 players = [
     ("Player A", "HOME", "Starter", 35, 26.4, 8.1, 5.8, 2.9, 1.1, .6, 2.7),
