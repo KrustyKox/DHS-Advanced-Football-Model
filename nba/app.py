@@ -114,6 +114,7 @@ if "roster_result" in locals() and roster_result.get("players"):
         st.session_state.pop("nba_team_diagnostics", None)
         results, skipped, threshold_rows = [], [], []
         player_histories = {}
+        histories_by_name = {}
         with st.spinner("Retrieving historical games and building player estimates..."):
             for athlete in roster_result["players"]:
                 status = str(athlete.get("availability") or "Unverified").strip().lower()
@@ -125,6 +126,7 @@ if "roster_result" in locals() and roster_result.get("players"):
                     history = cached_game_log(athlete["player_id"], 2026)
                     estimate = project_player(history["games"])
                     player_histories[athlete["player_id"]] = history["games"]
+                    histories_by_name[athlete["player"]] = history["games"]
                     row = {"Player": athlete["player"], "Team": athlete["team"],
                            "Availability": athlete["availability"], "Games": estimate["games_used"]}
                     row.update(estimate["projections"])
@@ -141,8 +143,9 @@ if "roster_result" in locals() and roster_result.get("players"):
                 if len(scores) < 5:
                     raise ValueError(f"Only {len(scores)} completed team games; need 5")
                 target = sum(scores) / len(scores)
-                results, diagnostics = allocate(results, target)
+                results, diagnostics = allocate(results, target, histories=histories_by_name)
                 by_name = {r["Player"]: r for r in results}
+                threshold_rows = [item for item in threshold_rows if item["Player"] in by_name]
                 for item in threshold_rows:
                     adjusted = by_name.get(item["Player"])
                     if adjusted:
@@ -175,6 +178,14 @@ if "roster_result" in locals() and roster_result.get("players"):
             c3.metric("Historical team PTS", diag["target"])
             st.caption(f'Original independent totals: {diag["raw_points"]} PTS, {diag["raw_minutes"]} MIN. Historical sample: {diag["games"]} games.')
         frame = pd.DataFrame(st.session_state["nba_baseline_rows"])
+        if diag:
+            st.caption("Rotation players: " + str(diag["rotation_count"]))
+            with st.expander("Players omitted from estimated rotation"):
+                st.write(diag.get("omitted_players", []))
+        preferred = ["Player", "Availability", "Games", "Historical MIN", "Recent MIN",
+                     "Projected MIN", "Historical PTS", "PTS", "Historical REB", "REB",
+                     "Historical AST", "AST", "3PM", "STL", "BLK", "TOV", "PRA", "PR", "PA", "RA"]
+        frame = frame[[c for c in preferred if c in frame.columns]]
         st.dataframe(frame, hide_index=True, use_container_width=True)
         st.caption(f'{len(frame)} players estimated; {len(st.session_state.get("nba_baseline_skipped", []))} skipped for missing/insufficient data.')
         with st.expander("Skipped players and data issues"):
