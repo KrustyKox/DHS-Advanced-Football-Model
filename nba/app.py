@@ -1,0 +1,73 @@
+"""Independent NBA mobile-first dashboard prototype. Synthetic data only."""
+import pandas as pd
+import streamlit as st
+
+st.set_page_config(page_title="DHS NBA", page_icon="🏀", layout="wide", initial_sidebar_state="collapsed")
+st.markdown("""
+<style>
+.block-container {max-width: 1120px; padding-top: 1.2rem; padding-left: 1rem; padding-right: 1rem}
+h1 {font-size: 1.8rem !important; letter-spacing: -.035em}
+[data-testid="stMetric"] {border: 1px solid rgba(128,128,128,.18); border-radius: 14px; padding: .7rem}
+[data-testid="stDataFrame"] {border-radius: 12px; overflow: hidden}
+</style>
+""", unsafe_allow_html=True)
+
+st.title("🏀 DHS NBA")
+st.caption("Player projections • Mobile-first research dashboard")
+st.warning("DEMO ONLY — synthetic players and invented values. No live odds or validated NBA predictions.", icon="⚠️")
+
+games = ["Home vs Away — Sample Game"]
+game = st.selectbox("Matchup", games)
+view = st.segmented_control("View", ["Box Score", "Probability Tables", "Game Outlook"], default="Probability Tables")
+players = [
+    ("Player A", "HOME", "Starter", 35, 26.4, 8.1, 5.8, 2.9, 1.1, .6, 2.7),
+    ("Player B", "HOME", "Starter", 32, 19.1, 6.9, 4.3, 2.1, .8, .4, 1.8),
+    ("Player C", "HOME", "Bench", 23, 11.6, 5.4, 2.8, 1.3, .7, .5, 1.2),
+    ("Player D", "AWAY", "Starter", 36, 28.2, 6.3, 8.2, 3.2, 1.4, .3, 3.1),
+    ("Player E", "AWAY", "Starter", 33, 21.7, 9.5, 3.6, 1.8, .9, .8, 2.4),
+    ("Player F", "AWAY", "Bench", 25, 12.3, 4.6, 5.2, 1.6, .7, .2, 1.5),
+]
+cols = ["Player", "Team", "Role", "MIN", "PTS", "REB", "AST", "3PM", "STL", "BLK", "TOV"]
+df = pd.DataFrame(players, columns=cols)
+df["PRA"] = df["PTS"] + df["REB"] + df["AST"]
+df["PR"] = df["PTS"] + df["REB"]
+df["PA"] = df["PTS"] + df["AST"]
+df["RA"] = df["REB"] + df["AST"]
+team = st.segmented_control("Lineup", ["Both", "HOME", "AWAY"], default="Both")
+role = st.selectbox("Players", ["All rotation players", "Starters", "Bench"], index=0)
+shown = df.copy()
+if team != "Both":
+    shown = shown[shown["Team"] == team]
+if role != "All rotation players":
+    shown = shown[shown["Role"] == ("Starter" if role == "Starters" else "Bench")]
+
+if view == "Box Score":
+    st.subheader("Projected box score")
+    st.dataframe(shown[cols + ["PRA"]], hide_index=True, use_container_width=True)
+elif view == "Probability Tables":
+    stat = st.selectbox("Statistic", ["PTS", "REB", "AST", "3PM", "STL", "BLK", "TOV", "PRA", "PR", "PA", "RA"])
+    focus = st.select_slider("Highlight confidence", options=[50, 60, 70, 80, 90, 95], value=80)
+    st.caption("Threshold = estimated minimum whole-number result reached with at least the stated probability. Placeholder distributions only.")
+    # Illustrative monotonically decreasing thresholds; replace with calibrated empirical predictive CDFs.
+    spreads = {"PTS": 7, "REB": 3, "AST": 3, "3PM": 1.5, "STL": 1, "BLK": 1, "TOV": 1.5, "PRA": 10, "PR": 8, "PA": 8, "RA": 5}
+    offsets = {50: 0, 60: .25, 70: .5, 80: .85, 90: 1.3, 95: 1.65}
+    rows = []
+    for _, p in shown.iterrows():
+        item = {"Player": p["Player"], "Team": p["Team"], "Mean": round(float(p[stat]), 1)}
+        for pct in [50, 60, 70, 80, 90, 95]:
+            item[f"{pct}%"] = f"{max(0, int(p[stat] - spreads[stat] * offsets[pct]))}+"
+        rows.append(item)
+    st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True,
+                 column_config={f"{focus}%": st.column_config.TextColumn(f"★ {focus}%")})
+    st.info("For real predictions, thresholds must come from simulated distributions, not the demonstration calculation.")
+else:
+    a, b = st.columns(2)
+    a.metric("Home score", "118.4")
+    b.metric("Away score", "111.7")
+    c, d = st.columns(2)
+    c.metric("Projected spread", "HOME -6.7")
+    d.metric("Projected total", "230.1")
+    st.caption("Illustrative game figures; not derived from the sample player data.")
+
+st.divider()
+st.caption("NBA development module • No football model files or live production workflows modified.")
