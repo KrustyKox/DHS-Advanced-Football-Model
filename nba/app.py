@@ -19,17 +19,17 @@ st.warning("DEMO ONLY — synthetic players and invented values. No live odds or
 from schedule import load_schedule, games_for_date, eastern_today
 
 @st.cache_data(ttl=1800, show_spinner=False)
-def cached_schedule():
-    return load_schedule()
+def cached_schedule(day):
+    return load_schedule(day)
 
 st.subheader("NBA Schedule — Live data")
 selected_date = st.date_input("Game date (Eastern)", value=eastern_today())
 try:
-    real_games = games_for_date(cached_schedule(), selected_date)
+    real_games = games_for_date(cached_schedule(selected_date), selected_date)
     if real_games:
         labels = [f'{g["away"]} @ {g["home"]} · {g["status"]}' for g in real_games]
         selected_game = st.selectbox("Today's games", labels)
-        st.caption("Source: NBA public CDN schedule · refreshed every 30 minutes")
+        st.caption("Source: ESPN public scoreboard · refreshed every 30 minutes")
     else:
         st.info("No NBA games listed for this date.")
 except Exception as exc:
