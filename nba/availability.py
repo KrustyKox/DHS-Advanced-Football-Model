@@ -52,39 +52,82 @@ def roster(team_code):
     return players
 
 
-def injuries():
-    """Best-effort injuries feed; absence of entries never means healthy."""
-    payload = _json(f"{BASE}/injuries")
-    results = {}
-    # ESPN may return team groups or direct injury entries depending on API version.
-    groups = payload.get("injuries") or payload.get("items") or []
+def _name_key(name):
+    return "".join(ch for ch in str(name).casefold() if ch.isalnum())
+
+
+def _injury_records(payload):
+    """ESPN groups injuries by team; each entry may nest an injury object."""
+    groups = payload.get("injuries")
     if not isinstance(groups, list):
-        raise ValueError("Unexpected injury feed structure")
+        raise ValueError("Injury feed has no recognizable injuries list")
     for group in groups:
-        entries = group.get("injuries") or group.get("items") or [group]
-        for item in entries:
-            athlete = item.get("athlete") or {}
-            pid = str(athlete.get("id") or item.get("athleteId") or "")
-            status_obj = item.get("status") or item.get("type") or ""
-            status = status_obj.get("description", "") if isinstance(status_obj, dict) else str(status_obj)
-            detail = item.get("shortComment") or item.get("longComment") or item.get("details") or ""
-            if pid and status:
-                results[pid] = {"availability": status, "injury_detail": str(detail)}
-    return results
+        if not isinstance(group, dict):
+            continue
+        entries = group.get("injuries") or group.get("items")
+        if isinstance(entries, list):
+            for item in entries:
+                if isinstance(item, dict):
+                    yield item
+        elif "athlete" in group or "injury" in group:
+            yield group
+
+
+def _text(value):
+    if isinstance(value, dict):
+        return str(value.get("description") or value.get("name") or value.get("displayName") or value.get("abbreviation") or "")
+    return str(value or "")
+
+
+def injuries(team_code):
+    """Fetch team-scoped injury listings; retain IDs and normalized names."""
+    code = str(team_code).upper()
+    response = requests.get(f"{BASE}/injuries", params={"team": code},
+                            headers=HEADERS, timeout=18)
+    response.raise_for_status()
+    payload = response.json()
+    records = list(_injury_records(payload))
+    results_id, results_name = {}, {}
+    for item in records:
+        injury = item.get("injury") or item
+        if not isinstance(injury, dict):
+            injury = item
+        athlete = item.get("athlete") or injury.get("athlete") or {}
+        if not isinstance(athlete, dict):
+            athlete = {}
+        player_id = str(athlete.get("id") or item.get("athleteId") or "")
+        name = athlete.get("displayName") or athlete.get("fullName") or item.get("displayName") or ""
+        status = _text(injury.get("status") or item.get("status") or injury.get("type"))
+        detail = _text(injury.get("shortComment") or injury.get("longComment") or
+                       item.get("shortComment") or item.get("longComment") or injury.get("details"))
+        if not status:
+            continue
+        record = {"availability": status, "injury_detail": detail}
+        if player_id:
+            results_id[player_id] = record
+        if name:
+            results_name[_name_key(name)] = record
+    return results_id, results_name, len(records)
 
 
 def get_team_availability(team_code):
     players = roster(team_code)
     checked = datetime.now(timezone.utc).isoformat()
+    injury_feed = "Not checked"
+    matched = 0
+    count = 0
     try:
-        injury_map = injuries()
-        injury_feed = "Connected (unofficial; completeness not guaranteed)"
+        by_id, by_name, count = injuries(team_code)
+        injury_feed = "Connected (ESPN unofficial; NOT a complete official game-day report)"
         for player in players:
-            if player["player_id"] in injury_map:
-                player.update(injury_map[player["player_id"]])
+            found = by_id.get(player["player_id"]) or by_name.get(_name_key(player["player"]))
+            if found:
+                player.update(found)
+                matched += 1
             else:
-                player["availability"] = "Not listed — NOT confirmed active"
+                player["availability"] = "Not listed / Unverified"
     except (requests.RequestException, ValueError, TypeError, KeyError) as exc:
         injury_feed = f"Unavailable: {exc}"
     return {"players": players, "checked_utc": checked, "injury_feed": injury_feed,
+            "injury_records": count, "matched_injuries": matched,
             "availability_verified": False}
