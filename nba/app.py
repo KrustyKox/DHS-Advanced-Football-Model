@@ -105,6 +105,7 @@ st.subheader("Step 4 — Real-data player projection baseline")
 st.caption("Weighted recent-game estimates. Probability thresholds are preliminary and NOT backtested or betting-ready.")
 from projections import project_player
 from team_model import allocate, recent_team_scores
+from thresholds import adjusted_thresholds
 
 if "roster_result" in locals() and roster_result.get("players"):
     if st.button("Generate baseline projections for selected team", type="primary"):
@@ -112,6 +113,7 @@ if "roster_result" in locals() and roster_result.get("players"):
         st.session_state.pop("nba_baseline_thresholds", None)
         st.session_state.pop("nba_team_diagnostics", None)
         results, skipped, threshold_rows = [], [], []
+        player_histories = {}
         with st.spinner("Retrieving historical games and building player estimates..."):
             for athlete in roster_result["players"]:
                 status = str(athlete.get("availability") or "Unverified").strip().lower()
@@ -122,11 +124,13 @@ if "roster_result" in locals() and roster_result.get("players"):
                 try:
                     history = cached_game_log(athlete["player_id"], 2026)
                     estimate = project_player(history["games"])
+                    player_histories[athlete["player_id"]] = history["games"]
                     row = {"Player": athlete["player"], "Team": athlete["team"],
                            "Availability": athlete["availability"], "Games": estimate["games_used"]}
                     row.update(estimate["projections"])
                     results.append(row)
                     threshold_rows.append({"Player": athlete["player"], "Team": athlete["team"],
+                                           "player_id": athlete["player_id"],
                                            "thresholds": estimate["thresholds"],
                                            "projections": estimate["projections"]})
                 except Exception as exc:
@@ -138,6 +142,14 @@ if "roster_result" in locals() and roster_result.get("players"):
                     raise ValueError(f"Only {len(scores)} completed team games; need 5")
                 target = sum(scores) / len(scores)
                 results, diagnostics = allocate(results, target)
+                by_name = {r["Player"]: r for r in results}
+                for item in threshold_rows:
+                    adjusted = by_name.get(item["Player"])
+                    if adjusted:
+                        item["thresholds"] = adjusted_thresholds(
+                            player_histories[item["player_id"]],
+                            item["projections"], adjusted)
+                        item["projections"] = {k: adjusted[k] for k in item["projections"] if k in adjusted}
                 diagnostics["target"] = round(target, 1)
                 diagnostics["games"] = len(scores)
                 st.session_state["nba_team_diagnostics"] = diagnostics
@@ -172,6 +184,32 @@ else:
     st.info("Choose a scheduled game and load a team roster before generating baseline projections.")
 
 st.divider()
-st.subheader("Step 5 — Probability calibration pending")
-st.info("Probability thresholds are paused: the old distributions were calculated before team-level minute and scoring adjustments. They must be rebuilt and backtested.")
+st.subheader("Step 5 — Adjusted player probability thresholds")
+st.caption("Preliminary modeled thresholds from team-adjusted means and historical game variability. NOT backtested or betting-ready.")
+threshold_data = st.session_state.get("nba_baseline_thresholds", [])
+same_matchup = ("real_games" in locals() and real_games and
+                st.session_state.get("nba_baseline_team") == roster_team and
+                st.session_state.get("nba_baseline_game") == (str(selected_date), selected_game))
+if same_matchup and threshold_data:
+    stat = st.selectbox("Statistic", ["PTS", "REB", "AST", "3PM", "STL", "BLK", "TOV", "PRA", "PR", "PA", "RA"])
+    confidence = st.select_slider("Modeled confidence", options=[50, 60, 70, 80, 90, 95], value=80)
+    rows = []
+    for athlete in threshold_data:
+        levels = athlete["thresholds"].get(stat)
+        if not levels:
+            continue
+        item = {"Player": athlete["Player"], "Team": athlete["Team"],
+                "Projected": athlete["projections"].get(stat)}
+        for pct in (50, 60, 70, 80, 90, 95):
+            item[f"{pct}%"] = f'{levels[str(pct)]}+'
+        rows.append(item)
+    if rows:
+        st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True,
+                     column_config={f"{confidence}%": st.column_config.TextColumn(f"★ {confidence}%")})
+        st.warning("These are statistical estimates, not verified 50–95% success probabilities. Injury status may be unverified; do not treat thresholds as betting edges.")
+    else:
+        st.info("No usable historical distribution for this statistic.")
+else:
+    st.info("Generate team-constrained projections above to populate adjusted probability thresholds.")
+st.divider()
 st.caption("NBA development branch only • Football production files unchanged.")
