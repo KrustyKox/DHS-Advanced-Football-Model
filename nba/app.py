@@ -37,6 +37,35 @@ except Exception as exc:
     st.caption("No games will be invented if the live feed fails.")
 
 st.divider()
+st.subheader("Step 2 — Current team rosters & injury watch")
+st.caption("Live roster source: ESPN (unofficial). Injury listings are incomplete and do not confirm game-day availability.")
+from availability import get_team_availability
+
+@st.cache_data(ttl=900, show_spinner=False)
+def cached_availability(team_code):
+    return get_team_availability(team_code)
+
+if "real_games" in locals() and real_games:
+    selected = real_games[labels.index(selected_game)]
+    selected_teams = [selected["away"], selected["home"]]
+    roster_team = st.selectbox("Roster team", selected_teams)
+    if st.button("Refresh roster / injuries"):
+        cached_availability.clear()
+        st.rerun()
+    try:
+        roster_result = cached_availability(roster_team)
+        st.caption(f'Checked (UTC): {roster_result["checked_utc"]} · Injury feed: {roster_result["injury_feed"]}')
+        roster_frame = pd.DataFrame(roster_result["players"])
+        st.dataframe(roster_frame[["player", "position", "jersey", "availability", "injury_detail"]],
+                     hide_index=True, use_container_width=True)
+        st.warning("Player availability is NOT verified. Players missing from injury listings are not confirmed active. Do not use these statuses for betting yet.")
+    except Exception as exc:
+        st.error(f"Roster feed unavailable: {exc}")
+        st.caption("No roster is fabricated when a feed fails.")
+else:
+    st.info("Choose a date with an NBA matchup to inspect the teams' rosters.")
+
+st.divider()
 st.subheader("Player projection prototype")
 st.caption("Player data below remains synthetic until roster, injury, and statistics ingestion is validated.")
 game = "Synthetic demonstration matchup"
