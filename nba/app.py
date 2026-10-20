@@ -66,6 +66,39 @@ else:
     st.info("Choose a date with an NBA matchup to inspect the teams' rosters.")
 
 st.divider()
+st.subheader("Step 3 — Real player game logs")
+st.caption("Historical game statistics from ESPN's unofficial player feed. These are past results, not projections.")
+from stats import game_log
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def cached_game_log(player_id, season):
+    return game_log(player_id, season)
+
+if "roster_result" in locals() and roster_result.get("players"):
+    roster_players = roster_result["players"]
+    player_names = [p["player"] for p in roster_players]
+    player_choice = st.selectbox("Player for historical stats", player_names)
+    selected_player = roster_players[player_names.index(player_choice)]
+    season_choice = st.number_input("Season ending year", min_value=2020, max_value=2030,
+                                    value=2026, step=1)
+    if st.button("Load player game log"):
+        try:
+            log = cached_game_log(selected_player["player_id"], int(season_choice))
+            log_df = pd.DataFrame(log["games"])
+            st.success(f'Loaded {len(log_df)} recorded games · retrieved {log["checked_utc"]}')
+            st.dataframe(log_df, hide_index=True, use_container_width=True)
+            summary_cols = [c for c in ["MIN", "PTS", "REB", "AST", "3PM", "STL", "BLK", "TOV"] if c in log_df]
+            if summary_cols:
+                st.caption("Observed per-game averages (not injury-adjusted)")
+                st.dataframe(log_df[summary_cols].mean(numeric_only=True).round(1).to_frame("Average").T,
+                             hide_index=True, use_container_width=True)
+        except Exception as exc:
+            st.error(f"Player statistics unavailable: {exc}")
+            st.caption("No historical results are fabricated when the provider blocks requests or changes its format.")
+else:
+    st.info("Load a roster from a scheduled game above to inspect real player game logs.")
+
+st.divider()
 st.subheader("Player projection prototype")
 st.caption("Player data below remains synthetic until roster, injury, and statistics ingestion is validated.")
 game = "Synthetic demonstration matchup"
