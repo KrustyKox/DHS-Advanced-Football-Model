@@ -34,50 +34,83 @@ def recent_team_scores(team, season, before_date, limit=12):
     return [value for _, value in games[:limit]]
 
 
-def allocate(rows, target):
-    """Enforce a 240-minute regulation budget and distribute scoring shares."""
-    if len(rows) < 5:
-        raise ValueError("At least five players with complete logs are needed")
+def allocate(rows, target, histories=None, rotation_size=10):
+    """Select likely rotation from observed recent minutes; conserve 240 minutes.
+
+    History includes only completed games prior to tipoff, supplied by caller.
+    Rotation is an estimate, NOT verified starters or confirmed active players.
+    """
+    if len(rows) < 8:
+        raise ValueError("Need at least eight eligible players for rotation allocation")
     if not 70 <= target <= 160:
-        raise ValueError("Historical scoring target outside supported range (70–160)")
-    data = [dict(r) for r in rows]
-    if any(not isinstance(r.get("MIN"), (int, float)) or
-           not isinstance(r.get("PTS"), (int, float)) or
-           not math.isfinite(r["MIN"]) or not math.isfinite(r["PTS"]) or
-           r["MIN"] <= 0 or r["PTS"] < 0 for r in data):
-        raise ValueError("Missing/invalid minutes or points")
-    raw_minutes = sum(r["MIN"] for r in data)
-    raw_points = sum(r["PTS"] for r in data)
-    remaining = list(range(len(data)))
-    minutes = [0.0] * len(data)
+        raise ValueError("Team target outside supported 70–160 point range")
+    histories = histories or {}
+    data = [dict(row) for row in rows]
+    for row in data:
+        m = row.get("MIN")
+        if not isinstance(m, (int, float)) or not math.isfinite(m) or m <= 0:
+            raise ValueError("Missing valid historical minutes")
+        games = histories.get(row["Player"], [])
+        recent = [float(g["MIN"]) for g in games[:10]
+                  if isinstance(g.get("MIN"), (int, float)) and
+                  math.isfinite(g["MIN"]) and g["MIN"] >= 0]
+        recent_five = recent[:5]
+        # Recent rotation usage is a better signal than career averages.
+        row["Recent MIN"] = round(sum(recent_five)/len(recent_five), 1) if recent_five else round(m, 1)
+        row["Historical MIN"] = round(m, 1)
+        row["_minutes_weight"] = (0.7 * row["Recent MIN"] + 0.3 * m)
+    data.sort(key=lambda r: r["_minutes_weight"], reverse=True)
+    rotation = data[:min(rotation_size, len(data))]
+    # If no dependable rotation exists, fail rather than invent active players.
+    if len(rotation) < 8:
+        raise ValueError("Insufficient rotation")
+    original_points = sum(r.get("PTS", 0) for r in data)
+    original_minutes = sum(r["MIN"] for r in data)
+    remaining = list(range(len(rotation)))
+    minutes = [0.0] * len(rotation)
     budget = 240.0
     while remaining:
-        denominator = sum(data[i]["MIN"] for i in remaining)
-        capped = [i for i in remaining if budget * data[i]["MIN"] / denominator > 40]
+        denom = sum(rotation[i]["_minutes_weight"] for i in remaining)
+        if denom <= 0:
+            raise ValueError("No usable rotation minutes")
+        capped = [i for i in remaining if budget * rotation[i]["_minutes_weight"] / denom > 40]
         if not capped:
             for i in remaining:
-                minutes[i] = budget * data[i]["MIN"] / denominator
+                minutes[i] = budget * rotation[i]["_minutes_weight"] / denom
             break
         for i in capped:
             minutes[i] = 40.0
             budget -= 40.0
         remaining = [i for i in remaining if i not in capped]
-    scoring = []
-    for row, minutes_new in zip(data, minutes):
-        factor = minutes_new / row["MIN"]
-        scoring.append(row["PTS"] * factor)
-        row["MIN"] = round(minutes_new, 2)
+    scoring_weights = []
+    for row, new_minutes in zip(rotation, minutes):
+        historical_minutes = row["Historical MIN"]
+        row["Projected MIN"] = round(new_minutes, 2)
+        row["MIN"] = round(new_minutes, 2)
+        # Non-scoring stats preserve individual per-minute rates, without
+        # being forced to match team scoring (REB/AST aren't conserved like PTS).
+        ratio = new_minutes / historical_minutes
         for stat in ("REB", "AST", "3PM", "STL", "BLK", "TOV"):
             if isinstance(row.get(stat), (int, float)):
-                row[stat] = round(row[stat] * factor, 2)
-    if sum(scoring) <= 0:
-        raise ValueError("No usable scoring rates")
-    for row, weight in zip(data, scoring):
-        row["PTS"] = round(target * weight / sum(scoring), 2)
-        for name, parts in {"PRA": ("PTS","REB","AST"), "PR": ("PTS","REB"),
-                            "PA": ("PTS","AST"), "RA": ("REB","AST")}.items():
-            if all(isinstance(row.get(k), (int,float)) for k in parts):
-                row[name] = round(sum(row[k] for k in parts), 2)
-    return data, {"raw_points": round(raw_points, 1), "raw_minutes": round(raw_minutes, 1),
-                  "team_points": round(sum(r["PTS"] for r in data), 1),
-                  "team_minutes": round(sum(r["MIN"] for r in data), 1)}
+                row["Historical " + stat] = row[stat]
+                row[stat] = round(row[stat] * ratio, 2)
+        scoring_weights.append(max(0, row.get("PTS", 0) * ratio))
+    denom = sum(scoring_weights)
+    if denom <= 0:
+        raise ValueError("No usable scoring opportunities")
+    for row, weight in zip(rotation, scoring_weights):
+        row["Historical PTS"] = row.get("PTS")
+        row["PTS"] = round(target * weight / denom, 2)
+        for name, parts in {"PRA": ("PTS", "REB", "AST"), "PR": ("PTS", "REB"),
+                            "PA": ("PTS", "AST"), "RA": ("REB", "AST")}.items():
+            if all(isinstance(row.get(part), (int, float)) for part in parts):
+                row[name] = round(sum(row[part] for part in parts), 2)
+        row.pop("_minutes_weight", None)
+    return rotation, {
+        "raw_points": round(original_points, 1),
+        "raw_minutes": round(original_minutes, 1),
+        "team_points": round(sum(r["PTS"] for r in rotation), 1),
+        "team_minutes": round(sum(r["MIN"] for r in rotation), 1),
+        "rotation_count": len(rotation),
+        "omitted_players": [r["Player"] for r in data[len(rotation):]],
+    }
