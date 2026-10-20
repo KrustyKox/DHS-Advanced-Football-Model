@@ -1,55 +1,67 @@
-"""NBA public schedule ingestion. No credentials required.
+"""Fetch real NBA games from ESPN's public date-scoped scoreboard feed.
 
-The NBA CDN can be unavailable or change its schema; errors are surfaced instead
-of silently displaying invented games.
+This feed is unofficial and may change or block hosted requests. The UI displays
+an explicit error instead of substituting fabricated matchups.
 """
 from datetime import date, datetime
 from zoneinfo import ZoneInfo
+
 import requests
 
-SCHEDULE_URL = "https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_1.json"
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; DHS-NBA/1.0)", "Accept": "application/json"}
 EASTERN = ZoneInfo("America/New_York")
-
-
-def load_schedule(timeout=18):
-    response = requests.get(SCHEDULE_URL, headers=HEADERS, timeout=timeout)
-    response.raise_for_status()
-    payload = response.json()
-    league = payload.get("leagueSchedule", {})
-    dates = league.get("gameDates")
-    if not isinstance(dates, list):
-        raise ValueError("NBA schedule response is missing leagueSchedule.gameDates")
-    games = []
-    for day in dates:
-        for game in day.get("games", []):
-            home, away = game.get("homeTeam") or {}, game.get("awayTeam") or {}
-            if not home or not away:
-                continue
-            stamp = game.get("gameDateTimeEst") or game.get("gameDateTimeUTC") or ""
-            date_str = str(stamp)[:10] or str(day.get("gameDate", ""))[:10]
-            try:
-                game_date = date.fromisoformat(date_str)
-            except ValueError:
-                continue
-            games.append({
-                "date": game_date.isoformat(),
-                "game_id": str(game.get("gameId", "")),
-                "away": away.get("teamTricode") or away.get("teamName") or "Away",
-                "home": home.get("teamTricode") or home.get("teamName") or "Home",
-                "tipoff_et": str(stamp),
-                "status": game.get("gameStatusText") or str(game.get("gameStatus", "")),
-            })
-    if not games:
-        raise ValueError("NBA schedule returned no parseable games")
-    return games
-
-
-def games_for_date(games, target_date):
-    target = target_date.isoformat() if hasattr(target_date, "isoformat") else str(target_date)
-    return sorted((g for g in games if g["date"] == target),
-                  key=lambda g: g["tipoff_et"])
+SCOREBOARD_URL = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (compatible; DHS-NBA/1.0)",
+    "Accept": "application/json",
+}
 
 
 def eastern_today():
     return datetime.now(EASTERN).date()
+
+
+def load_schedule(target_date=None, timeout=18):
+    """Retrieve games for a single Eastern-calendar date, including postseason."""
+    if target_date is None:
+        target_date = eastern_today()
+    if isinstance(target_date, str):
+        target_date = date.fromisoformat(target_date)
+    response = requests.get(
+        SCOREBOARD_URL,
+        params={"dates": target_date.strftime("%Y%m%d"), "limit": 100},
+        headers=HEADERS,
+        timeout=timeout,
+    )
+    response.raise_for_status()
+    payload = response.json()
+    events = payload.get("events")
+    if not isinstance(events, list):
+        raise ValueError("ESPN schedule response has no events list")
+
+    games = []
+    for event in events:
+        competitions = event.get("competitions") or []
+        competition = competitions[0] if competitions else {}
+        competitors = competition.get("competitors") or []
+        home = next((c for c in competitors if c.get("homeAway") == "home"), None)
+        away = next((c for c in competitors if c.get("homeAway") == "away"), None)
+        if not home or not away:
+            continue
+        home_team, away_team = home.get("team") or {}, away.get("team") or {}
+        stamp = event.get("date") or competition.get("date") or ""
+        status = (event.get("status") or {}).get("type") or {}
+        games.append({
+            "date": target_date.isoformat(),
+            "game_id": str(event.get("id", "")),
+            "away": away_team.get("abbreviation") or away_team.get("displayName") or "Away",
+            "home": home_team.get("abbreviation") or home_team.get("displayName") or "Home",
+            "tipoff_et": str(stamp),
+            "status": status.get("shortDetail") or status.get("description") or "Scheduled",
+        })
+    return sorted(games, key=lambda g: g["tipoff_et"])
+
+
+def games_for_date(games, target_date):
+    """Compatibility helper for the Streamlit app."""
+    target = target_date.isoformat() if hasattr(target_date, "isoformat") else str(target_date)
+    return [g for g in games if g["date"] == target]
