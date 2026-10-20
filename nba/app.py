@@ -108,6 +108,30 @@ from team_model import allocate, recent_team_scores
 from thresholds import adjusted_thresholds
 
 if "roster_result" in locals() and roster_result.get("players"):
+    st.markdown("#### Expected rotation / depth-chart roles")
+    st.caption("Assign five confirmed or expected starters, then Sixth, Seventh, Eighth and optional Deep bench players. All others remain Unverified and are excluded when roles are assigned. ESPN roster does not establish confirmed starters.")
+    rotation_frame = pd.DataFrame([{"Player": p["player"], "Role": "Unverified", "Override MIN": None}
+                                   for p in roster_result["players"]])
+    edited_rotation = st.data_editor(
+        rotation_frame, key=f"nba_rotation_{roster_team}_{selected_date}",
+        hide_index=True, use_container_width=True, num_rows="fixed",
+        disabled=["Player"],
+        column_config={
+            "Role": st.column_config.SelectboxColumn(
+                "Expected role", options=["Unverified", "Starter", "Sixth",
+                                          "Seventh", "Eighth", "Deep bench", "Out"]),
+            "Override MIN": st.column_config.NumberColumn(
+                "Manual MIN (optional)", min_value=0, max_value=45, step=1.0)
+        })
+    chosen_roles = {str(r["Player"]): str(r["Role"]) for _, r in edited_rotation.iterrows()}
+    minute_overrides = {str(r["Player"]): float(r["Override MIN"])
+                        for _, r in edited_rotation.iterrows()
+                        if pd.notna(r["Override MIN"])}
+    if all(role == "Unverified" for role in chosen_roles.values()):
+        st.warning("No depth-chart roles assigned. The model will use its historical-minutes fallback; it cannot claim to know the starters.")
+    else:
+        st.caption("Starter count: " + str(sum(role == "Starter" for role in chosen_roles.values())) +
+                   " / 5. Set five starters and at least three reserves before generating.")
     if st.button("Generate baseline projections for selected team", type="primary"):
         st.session_state.pop("nba_baseline_rows", None)
         st.session_state.pop("nba_baseline_thresholds", None)
@@ -155,7 +179,8 @@ if "roster_result" in locals() and roster_result.get("players"):
                 if len(scores) < 5:
                     raise ValueError(f"Only {len(scores)} completed team games; need 5")
                 target = sum(scores) / len(scores)
-                results, diagnostics = allocate(results, target, histories=histories_by_name)
+                results, diagnostics = allocate(results, target, histories=histories_by_name,
+                                                roles=chosen_roles, overrides=minute_overrides)
                 by_name = {r["Player"]: r for r in results}
                 threshold_rows = [item for item in threshold_rows if item["Player"] in by_name]
                 for item in threshold_rows:
@@ -191,10 +216,10 @@ if "roster_result" in locals() and roster_result.get("players"):
             st.caption(f'Original independent totals: {diag["raw_points"]} PTS, {diag["raw_minutes"]} MIN. Historical sample: {diag["games"]} games.')
         frame = pd.DataFrame(st.session_state["nba_baseline_rows"])
         if diag:
-            st.caption("Rotation players: " + str(diag["rotation_count"]))
+            st.caption("Rotation players: " + str(diag["rotation_count"]) + (" · Roles manually assigned" if diag.get("roles_verified") else " · Historical-minutes fallback"))
             with st.expander("Players omitted from estimated rotation"):
                 st.write(diag.get("omitted_players", []))
-        preferred = ["Player", "Availability", "Games", "Historical MIN", "Recent MIN",
+        preferred = ["Player", "Role", "Availability", "Games", "Historical MIN", "Recent MIN", "Last 10 MIN",
                      "Projected MIN", "Historical PTS", "PTS", "Historical REB", "REB",
                      "Historical AST", "AST", "3PM", "STL", "BLK", "TOV", "PRA", "PR", "PA", "RA"]
         frame = frame[[c for c in preferred if c in frame.columns]]
