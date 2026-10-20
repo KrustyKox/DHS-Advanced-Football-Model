@@ -55,6 +55,8 @@ if "real_games" in locals() and real_games:
     try:
         roster_result = cached_availability(roster_team)
         st.caption(f'Checked (UTC): {roster_result["checked_utc"]} · Injury feed: {roster_result["injury_feed"]}')
+        st.caption(f'Injury records returned: {roster_result.get("injury_records", 0)} · Matched to roster: {roster_result.get("matched_injuries", 0)}')
+        st.markdown("[Cross-check official NBA injury reports](https://official.nba.com/nba-injury-report-2026-27-season/)")
         roster_frame = pd.DataFrame(roster_result["players"])
         st.dataframe(roster_frame[["player", "position", "jersey", "availability", "injury_detail"]],
                      hide_index=True, use_container_width=True)
