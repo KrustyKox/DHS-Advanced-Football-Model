@@ -123,7 +123,16 @@ if "roster_result" in locals() and roster_result.get("players"):
                     skipped.append(f'{athlete["player"]}: excluded due to availability status ({athlete.get("availability")})')
                     continue
                 try:
-                    history = cached_game_log(athlete["player_id"], 2026)
+                    season_year = selected_date.year + 1 if selected_date.month >= 7 else selected_date.year
+                    games = []
+                    for year in (season_year, season_year - 1):
+                        try:
+                            log = cached_game_log(athlete["player_id"], year)
+                            games.extend(g for g in log["games"]
+                                         if str(g.get("date", ""))[:10] < str(selected_date))
+                        except Exception:
+                            pass
+                    history = {"games": sorted(games, key=lambda g: str(g.get("date", "")), reverse=True)}
                     estimate = project_player(history["games"])
                     player_histories[athlete["player_id"]] = history["games"]
                     histories_by_name[athlete["player"]] = history["games"]
@@ -139,7 +148,10 @@ if "roster_result" in locals() and roster_result.get("players"):
                     skipped.append(f'{athlete["player"]}: {str(exc)[:90]}')
         if results:
             try:
-                scores = recent_team_scores(roster_team, selected_date.year, selected_date)
+                season_year = selected_date.year + 1 if selected_date.month >= 7 else selected_date.year
+                scores = recent_team_scores(roster_team, season_year, selected_date)
+                if len(scores) < 5:
+                    scores += recent_team_scores(roster_team, season_year - 1, selected_date)[:12-len(scores)]
                 if len(scores) < 5:
                     raise ValueError(f"Only {len(scores)} completed team games; need 5")
                 target = sum(scores) / len(scores)
