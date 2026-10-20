@@ -34,7 +34,7 @@ def recent_team_scores(team, season, before_date, limit=12):
     return [value for _, value in games[:limit]]
 
 
-def allocate(rows, target, histories=None, rotation_size=10):
+def allocate(rows, target, histories=None, rotation_size=10, roles=None, overrides=None):
     """Select likely rotation from observed recent minutes; conserve 240 minutes.
 
     History includes only completed games prior to tipoff, supplied by caller.
@@ -45,6 +45,8 @@ def allocate(rows, target, histories=None, rotation_size=10):
     if not 70 <= target <= 160:
         raise ValueError("Team target outside supported 70–160 point range")
     histories = histories or {}
+    roles = roles or {}
+    overrides = overrides or {}
     data = [dict(row) for row in rows]
     for row in data:
         m = row.get("MIN")
@@ -58,9 +60,28 @@ def allocate(rows, target, histories=None, rotation_size=10):
         # Recent rotation usage is a better signal than career averages.
         row["Recent MIN"] = round(sum(recent_five)/len(recent_five), 1) if recent_five else round(m, 1)
         row["Historical MIN"] = round(m, 1)
-        row["_minutes_weight"] = (0.7 * row["Recent MIN"] + 0.3 * m)
-    data.sort(key=lambda r: r["_minutes_weight"], reverse=True)
-    rotation = data[:min(rotation_size, len(data))]
+        row["Last 10 MIN"] = round(sum(recent)/len(recent), 1) if recent else round(m, 1)
+        row["Role"] = roles.get(row["Player"], "Unverified")
+        # Depth-chart roles take precedence over historical minutes.
+        role_factor = {"Starter": 1.35, "Sixth": 1.1, "Seventh": 0.95,
+                       "Eighth": 0.8, "Deep bench": 0.35, "Unverified": 1.0}
+        row["_minutes_weight"] = (0.25 * row["Recent MIN"] +
+                                  0.15 * row["Last 10 MIN"] + 0.10 * m +
+                                  0.50 * m * role_factor.get(row["Role"], 1.0))
+        row["_minutes_weight"] *= role_factor.get(row["Role"], 1.0)
+    data = [r for r in data if r["Role"] != "Out"]
+    has_roles = any(r["Role"] != "Unverified" for r in data)
+    if has_roles:
+        if sum(r["Role"] == "Starter" for r in data) != 5:
+            raise ValueError("Assign exactly five starters in the rotation editor")
+        # Only assigned rotation members get minutes; unknowns are not presumed active.
+        order = {"Starter": 0, "Sixth": 1, "Seventh": 2, "Eighth": 3, "Deep bench": 4}
+        assigned = [r for r in data if r["Role"] in order]
+        assigned.sort(key=lambda r: (order[r["Role"]], -r["_minutes_weight"]))
+        rotation = assigned[:11]
+    else:
+        data.sort(key=lambda r: r["_minutes_weight"], reverse=True)
+        rotation = data[:min(rotation_size, len(data))]
     # If no dependable rotation exists, fail rather than invent active players.
     if len(rotation) < 8:
         raise ValueError("Insufficient rotation")
@@ -69,18 +90,33 @@ def allocate(rows, target, histories=None, rotation_size=10):
     remaining = list(range(len(rotation)))
     minutes = [0.0] * len(rotation)
     budget = 240.0
+    caps = {"Starter": 40.0, "Sixth": 34.0, "Seventh": 28.0,
+            "Eighth": 24.0, "Deep bench": 14.0, "Unverified": 40.0}
+    for i, row in enumerate(rotation):
+        value = overrides.get(row["Player"])
+        if value is not None:
+            fixed = float(value)
+            if not math.isfinite(fixed) or fixed < 0 or fixed > 45:
+                raise ValueError("Minutes override must be between 0 and 45")
+            minutes[i] = fixed
+            budget -= fixed
+            remaining.remove(i)
+    if budget < -0.01:
+        raise ValueError("Manual minute overrides exceed 240")
+    if sum(caps.get(rotation[i]["Role"], 40) for i in remaining) + 0.01 < budget:
+        raise ValueError("Rotation too short for 240 minutes with role caps; assign more bench players")
     while remaining:
         denom = sum(rotation[i]["_minutes_weight"] for i in remaining)
         if denom <= 0:
             raise ValueError("No usable rotation minutes")
-        capped = [i for i in remaining if budget * rotation[i]["_minutes_weight"] / denom > 40]
+        capped = [i for i in remaining if budget * rotation[i]["_minutes_weight"] / denom > caps.get(rotation[i]["Role"], 40)]
         if not capped:
             for i in remaining:
                 minutes[i] = budget * rotation[i]["_minutes_weight"] / denom
             break
         for i in capped:
-            minutes[i] = 40.0
-            budget -= 40.0
+            minutes[i] = caps.get(rotation[i]["Role"], 40)
+            budget -= minutes[i]
         remaining = [i for i in remaining if i not in capped]
     scoring_weights = []
     for row, new_minutes in zip(rotation, minutes):
@@ -112,5 +148,6 @@ def allocate(rows, target, histories=None, rotation_size=10):
         "team_points": round(sum(r["PTS"] for r in rotation), 1),
         "team_minutes": round(sum(r["MIN"] for r in rotation), 1),
         "rotation_count": len(rotation),
-        "omitted_players": [r["Player"] for r in data[len(rotation):]],
+        "omitted_players": [r["Player"] for r in data if r["Player"] not in {p["Player"] for p in rotation}],
+        "roles_verified": has_roles,
     }
