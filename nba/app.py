@@ -36,7 +36,7 @@ else:
     st.info("No NBA games available for this date.")
 
 st.subheader("Top 25 Historical Prop Trends")
-st.caption("Precomputed daily on GitHub; no browser-side league scan required.")
+st.caption("Precomputed daily on GitHub. Only exact sportsbook-quoted thresholds priced -500 or better qualify.")
 import requests
 
 @st.cache_data(ttl=600, show_spinner=False)
@@ -54,6 +54,7 @@ def load_snapshot(day):
 try:
     snapshot = load_snapshot(date)
     st.success(f'Precomputed {snapshot["generated_utc"]} UTC · {snapshot["teams"]} teams scanned')
+    st.caption(snapshot.get("market_status", "Market verification unavailable for this snapshot"))
     st.session_state["nba_trends"] = snapshot["trends"]
     st.session_state["nba_trend_diagnostics"] = {
         "players": snapshot["players_analyzed"], "qualified": snapshot["qualified"],
@@ -72,9 +73,9 @@ if diag and diag.get("date") == str(date):
     c.metric("Top trends", len(st.session_state.get("nba_trends", [])))
     results = st.session_state.get("nba_trends", [])
     if results:
-        cols = ["Player", "Team", "Prop", "Last 5", "Last 10", "Last 20",
+        cols = ["Player", "Team", "Prop", "American Odds", "Sportsbook", "Last 5", "Last 10", "Last 20",
                 "Streak", "Trend Score", "Sample Hit Rate", "Avg MIN (10)", "Availability"]
-        st.dataframe(pd.DataFrame(results)[cols], hide_index=True,
+        st.dataframe(pd.DataFrame(results)[[c for c in cols if c in pd.DataFrame(results).columns]], hide_index=True,
                      use_container_width=True)
         st.caption("Trend Score (0–100) combines historical hit rates, streak recency, sample size and minutes stability. It is NOT a calibrated hit probability.")
         labels = [f'{i+1}. {r["Player"]} — {r["Prop"]}' for i, r in enumerate(results)]
@@ -86,7 +87,7 @@ if diag and diag.get("date") == str(date):
                      use_container_width=True)
         st.caption("The evidence table shows only completed games prior to the selected date.")
     else:
-        st.info("No trends met the selected criteria. Try lowering the minimum score.")
+        st.info("No sportsbook-verified trends qualified. No odds feed may be configured, exact offers may be missing, or prices may be worse than -500.")
     if diag["errors"]:
         with st.expander("Data-source errors"):
             st.write(diag["errors"])
