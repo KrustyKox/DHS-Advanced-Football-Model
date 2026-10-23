@@ -70,12 +70,20 @@ def main():
         market_status = f"ParlayAPI verified: {len(payload['offers'])} sportsbook offers inspected"
     except Exception as exc:
         market_status = f"ParlayAPI feed unavailable: {str(exc)[:160]}"
+    historical_top = rank_trends(historical_qualified, top_n=25, max_per_player=2)
+    quoted = {(x["Player"], x["Team"], x["Stat"], x["Threshold"]): x for x in qualified}
+    displayed = []
+    for row in historical_top:
+        quote = quoted.get((row["Player"], row["Team"], row["Stat"], row["Threshold"]))
+        displayed.append({**row, "American Odds": quote.get("American Odds") if quote else None,
+                          "Sportsbook": quote.get("Sportsbook") if quote else None,
+                          "Market Status": "Verified" if quote else "Unverified"})
     snapshot = {"date": day.isoformat(), "generated_utc": datetime.now(timezone.utc).isoformat(),
                 "matchups": games, "teams": len(teams), "players_analyzed": processed,
                 "candidates": len(candidates), "qualified": len(qualified),
                 "errors": errors[:100], "market_status": market_status,
                 "historical_qualified": len(historical_qualified),
-                "trends": rank_trends(qualified, top_n=25, max_per_player=2)}
+                "trends": displayed}
     if games and processed < max(8, len(teams) * 3):
         raise RuntimeError(f"Insufficient player coverage: {processed} across {len(teams)} teams; refusing incomplete snapshot")
     target = Path(__file__).resolve().parent / "data" / (day.isoformat() + ".json")
