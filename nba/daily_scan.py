@@ -14,6 +14,7 @@ from availability import get_team_availability
 from stats import game_log
 from trends import eligible_games, scan_player, rank_trends
 from market_filter import qualify_market_trends
+from parlay_props import fetch_nba_offers
 
 
 def season_year(day):
@@ -60,18 +61,15 @@ def main():
             except Exception as exc:
                 errors.append(f'{futures[future].get("player")}: {exc}')
     historical_qualified = [x for x in candidates if x["Trend Score"] >= 75]
-    feed_url = os.environ.get("NBA_ODDS_FEED_URL", "").strip()
-    market_status = "No sportsbook odds feed configured; no market-qualified props."
+    market_status = "ParlayAPI sportsbook odds unavailable"
     qualified = []
-    if feed_url:
-        try:
-            response = requests.get(feed_url, timeout=25)
-            response.raise_for_status()
-            qualified = qualify_market_trends(historical_qualified, response.json(), day,
-                                              minimum_odds=-500)
-            market_status = "Verified exact-threshold offers from supplied odds feed"
-        except Exception as exc:
-            market_status = f"Sportsbook feed unavailable/invalid: {str(exc)[:160]}"
+    try:
+        payload = fetch_nba_offers(day)
+        qualified = qualify_market_trends(historical_qualified, payload, day,
+                                          minimum_odds=-500)
+        market_status = f"ParlayAPI verified: {len(payload['offers'])} sportsbook offers inspected"
+    except Exception as exc:
+        market_status = f"ParlayAPI feed unavailable: {str(exc)[:160]}"
     snapshot = {"date": day.isoformat(), "generated_utc": datetime.now(timezone.utc).isoformat(),
                 "matchups": games, "teams": len(teams), "players_analyzed": processed,
                 "candidates": len(candidates), "qualified": len(qualified),
