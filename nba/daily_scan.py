@@ -1,5 +1,6 @@
 """Precompute NBA trends for a selected Eastern date and write an atomic JSON snapshot."""
 import json
+import requests
 import os
 import sys
 from datetime import datetime, timezone
@@ -12,6 +13,7 @@ from schedule import load_schedule, games_for_date
 from availability import get_team_availability
 from stats import game_log
 from trends import eligible_games, scan_player, rank_trends
+from market_filter import qualify_market_trends
 
 
 def season_year(day):
@@ -32,7 +34,7 @@ def fetch_player(athlete, team, day):
     clean = eligible_games(games, day)
     if len(clean) < 15:
         return [], False
-    return scan_player(athlete["player"], team, status, clean, min_games=15), True
+    return scan_player(athlete["player"], team, status, clean, min_games=15, all_thresholds=True), True
 
 
 def main():
@@ -57,11 +59,23 @@ def main():
                 processed += int(usable)
             except Exception as exc:
                 errors.append(f'{futures[future].get("player")}: {exc}')
-    qualified = [x for x in candidates if x["Trend Score"] >= 75]
+    historical_qualified = [x for x in candidates if x["Trend Score"] >= 75]
+    feed_url = os.environ.get("NBA_ODDS_FEED_URL", "").strip()
+    market_status = "No sportsbook odds feed configured; no market-qualified props."
+    qualified = []
+    if feed_url:
+        try:
+            response = requests.get(feed_url, timeout=25)
+            response.raise_for_status()
+            qualified = qualify_market_trends(historical_qualified, response.json(), day,
+                                              minimum_odds=-500)
+            market_status = "Verified exact-threshold offers from supplied odds feed"
+        except Exception as exc:
+            market_status = f"Sportsbook feed unavailable/invalid: {str(exc)[:160]}"
     snapshot = {"date": day.isoformat(), "generated_utc": datetime.now(timezone.utc).isoformat(),
                 "matchups": games, "teams": len(teams), "players_analyzed": processed,
                 "candidates": len(candidates), "qualified": len(qualified),
-                "errors": errors[:100], "trends": rank_trends(qualified, top_n=25, max_per_player=2)}
+                "errors": errors[:100], "market_status": market_status,\n                "historical_qualified": len(historical_qualified),\n                "trends": rank_trends(qualified, top_n=25, max_per_player=2)}
     if games and processed < max(8, len(teams) * 3):
         raise RuntimeError(f"Insufficient player coverage: {processed} across {len(teams)} teams; refusing incomplete snapshot")
     target = Path(__file__).resolve().parent / "data" / (day.isoformat() + ".json")
