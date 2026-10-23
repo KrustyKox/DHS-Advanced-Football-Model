@@ -55,7 +55,9 @@ try:
     snapshot = load_snapshot(date)
     st.success(f'Precomputed {snapshot["generated_utc"]} UTC · {snapshot["teams"]} teams scanned')
     st.caption(snapshot.get("market_status", "Market verification unavailable for this snapshot"))
-    st.session_state["nba_trends"] = snapshot["trends"]
+    st.session_state["nba_trends"] = [row for row in snapshot["trends"]
+        if isinstance(row.get("American Odds"), int) and row["American Odds"] >= -500
+        and row.get("Sportsbook")]
     st.session_state["nba_trend_diagnostics"] = {
         "players": snapshot["players_analyzed"], "qualified": snapshot["qualified"],
         "errors": snapshot.get("errors", []), "date": str(date)}
