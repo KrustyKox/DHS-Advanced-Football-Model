@@ -69,9 +69,10 @@ def scan_player(player, team, availability, games, min_games=15):
             minutes = [g["MIN"] for g, _ in observed[:10]]
             stable = 1 - min(1, (max(minutes) - min(minutes)) / 35)
             sample_factor = min(1, len(last20) / 20)
-            score = 100 * (0.35 * rate20 + 0.25 * rate10 +
+            streak_strength = min(streak, 20) / 20
+            score = 100 * (0.30 * rate20 + 0.20 * rate10 +
                            0.15 * rate5 + 0.15 * season_rate +
-                           0.10 * stable) * sample_factor
+                           0.10 * streak_strength + 0.10 * stable) * sample_factor
             # Prioritize reliability, then nontrivial threshold relative to recent average.
             utility = score + 5 * min(1, threshold / max(mean(last20), 1))
             candidate = {"Player": player, "Team": team, "Stat": stat,
