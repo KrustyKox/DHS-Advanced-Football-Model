@@ -28,6 +28,8 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: pip install requests
+      - name: Check NBA Python syntax
+        run: python -m compileall -q nba
       - name: Validate NBA market matching
         run: python nba/test_market_filter.py
       - name: Generate NBA snapshot
