@@ -10,7 +10,7 @@ st.set_page_config(page_title="DHS NBA Trends", page_icon="🏀", layout="wide",
                    initial_sidebar_state="collapsed")
 st.title("🏀 DHS NBA Trend Finder")
 st.caption("Historical player-prop consistency across today's NBA matchups")
-st.warning("RESEARCH ONLY — trend scores are NOT win probabilities. No sportsbook odds or verified game-day availability.")
+st.warning("RESEARCH ONLY — trend scores are NOT win probabilities. Unverified trends are not confirmed sportsbook offers; game-day availability is not verified.")
 
 @st.cache_data(ttl=1800, show_spinner=False)
 def schedule(day):
@@ -36,7 +36,7 @@ else:
     st.info("No NBA games available for this date.")
 
 st.subheader("Top 25 Historical Prop Trends")
-st.caption("Precomputed daily on GitHub. Only exact sportsbook-quoted thresholds priced -500 or better qualify.")
+st.caption("Top 25 historical trends are shown regardless of sportsbook availability. Odds verification is displayed separately.")
 import requests
 
 @st.cache_data(ttl=600, show_spinner=False)
@@ -55,9 +55,7 @@ try:
     snapshot = load_snapshot(date)
     st.success(f'Precomputed {snapshot["generated_utc"]} UTC · {snapshot["teams"]} teams scanned')
     st.caption(snapshot.get("market_status", "Market verification unavailable for this snapshot"))
-    st.session_state["nba_trends"] = [row for row in snapshot["trends"]
-        if isinstance(row.get("American Odds"), int) and row["American Odds"] >= -500
-        and row.get("Sportsbook")]
+    st.session_state["nba_trends"] = snapshot["trends"]
     st.session_state["nba_trend_diagnostics"] = {
         "players": snapshot["players_analyzed"], "qualified": snapshot["qualified"],
         "errors": snapshot.get("errors", []), "date": str(date)}
@@ -71,11 +69,11 @@ diag = st.session_state.get("nba_trend_diagnostics", {})
 if diag and diag.get("date") == str(date):
     a, b, c = st.columns(3)
     a.metric("Players analyzed", diag["players"])
-    b.metric("Trends qualified", diag["qualified"])
+    b.metric("Odds-verified trends", diag["qualified"])
     c.metric("Top trends", len(st.session_state.get("nba_trends", [])))
     results = st.session_state.get("nba_trends", [])
     if results:
-        cols = ["Player", "Team", "Prop", "American Odds", "Sportsbook", "Last 5", "Last 10", "Last 20",
+        cols = ["Player", "Team", "Prop", "American Odds", "Sportsbook", "Market Status", "Last 5", "Last 10", "Last 20",
                 "Streak", "Trend Score", "Sample Hit Rate", "Avg MIN (10)", "Availability"]
         st.dataframe(pd.DataFrame(results)[[c for c in cols if c in pd.DataFrame(results).columns]], hide_index=True,
                      use_container_width=True)
@@ -89,7 +87,7 @@ if diag and diag.get("date") == str(date):
                      use_container_width=True)
         st.caption("The evidence table shows only completed games prior to the selected date.")
     else:
-        st.info("No sportsbook-verified trends qualified. No odds feed may be configured, exact offers may be missing, or prices may be worse than -500.")
+        st.info("No historical trends met the scanner criteria for this slate.")
     if diag["errors"]:
         with st.expander("Data-source errors"):
             st.write(diag["errors"])
