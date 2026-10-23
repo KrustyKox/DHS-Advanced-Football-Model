@@ -35,7 +35,7 @@ def eligible_games(games, before_date):
     return sorted(unique.values(), key=lambda g: str(g["date"]), reverse=True)
 
 
-def scan_player(player, team, availability, games, min_games=15):
+def scan_player(player, team, availability, games, min_games=15, all_thresholds=False):
     """Return one strongest threshold per stat for a player."""
     if len(games) < min_games:
         return []
@@ -90,9 +90,11 @@ def scan_player(player, team, availability, games, min_games=15):
                                        "MIN": g["MIN"], stat: v,
                                        "Hit": v >= threshold}
                                       for g, v in observed[:20]]}
+            if all_thresholds:
+                output.append(candidate)
             if best is None or candidate["_utility"] > best["_utility"]:
                 best = candidate
-        if best:
+        if best and not all_thresholds:
             output.append(best)
     return output
 
