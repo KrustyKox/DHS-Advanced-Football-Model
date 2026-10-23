@@ -36,50 +36,33 @@ else:
     st.info("No NBA games available for this date.")
 
 st.subheader("Top 25 Historical Prop Trends")
-st.caption("Scans every scheduled team's roster and uses completed historical games only. Current season first, then prior season.")
-c1, c2, c3 = st.columns(3)
-with c1:
-    minimum_games = st.selectbox("Minimum game sample", [10, 15, 20], index=1)
-with c2:
-    minimum_score = st.slider("Minimum trend score", 0, 100, 75)
-with c3:
-    max_player = st.selectbox("Maximum trends per player", [1, 2, 3], index=1)
+st.caption("Precomputed daily on GitHub; no browser-side league scan required.")
+import requests
 
-if st.button("Scan today's NBA prop trends", type="primary", disabled=not bool(matchups)):
-    teams = list(dict.fromkeys(code for g in matchups for code in (g["away"], g["home"])))
-    season = date.year + (1 if date.month >= 7 else 0)
-    candidates, errors, processed = [], [], 0
-    progress = st.progress(0, text="Loading player histories...")
-    total = len(teams)
-    for i, team in enumerate(teams):
-        try:
-            athletes = roster(team)["players"]
-            for athlete in athletes:
-                status = str(athlete.get("availability") or "Unverified")
-                if any(term in status.lower() for term in
-                       ("out", "inactive", "suspended", "doubtful", "injured reserve")):
-                    continue
-                games = []
-                for year in (season, season - 1):
-                    try:
-                        games.extend(history(athlete["player_id"], year))
-                    except Exception:
-                        pass
-                clean = eligible_games(games, date)
-                if len(clean) < minimum_games:
-                    continue
-                processed += 1
-                candidates.extend(scan_player(athlete["player"], team, status,
-                                              clean, min_games=minimum_games))
-        except Exception as exc:
-            errors.append(f"{team}: {str(exc)[:110]}")
-        progress.progress((i + 1) / total, text=f"Scanned {i + 1} of {total} teams")
-    qualified = [row for row in candidates if row["Trend Score"] >= minimum_score]
-    st.session_state["nba_trends"] = rank_trends(qualified, max_per_player=max_player)
+@st.cache_data(ttl=600, show_spinner=False)
+def load_snapshot(day):
+    url = ("https://raw.githubusercontent.com/KrustyKox/"
+           "DHS-Advanced-Football-Model/feature/nba-player-projections/nba/data/"
+           + str(day) + ".json")
+    response = requests.get(url, timeout=12, headers={"Cache-Control": "no-cache"})
+    response.raise_for_status()
+    payload = response.json()
+    if payload.get("date") != str(day):
+        raise ValueError("Snapshot date mismatch")
+    return payload
+
+try:
+    snapshot = load_snapshot(date)
+    st.success(f'Precomputed {snapshot["generated_utc"]} UTC · {snapshot["teams"]} teams scanned')
+    st.session_state["nba_trends"] = snapshot["trends"]
     st.session_state["nba_trend_diagnostics"] = {
-        "players": processed, "candidates": len(candidates),
-        "qualified": len(qualified), "errors": errors, "date": str(date)}
-    progress.empty()
+        "players": snapshot["players_analyzed"], "qualified": snapshot["qualified"],
+        "errors": snapshot.get("errors", []), "date": str(date)}
+except Exception as exc:
+    st.info("No precomputed snapshot is available for this date yet. The scheduled GitHub scan must run and commit a snapshot first.")
+    st.caption(f"Snapshot retrieval: {str(exc)[:140]}")
+    st.session_state.pop("nba_trends", None)
+    st.session_state.pop("nba_trend_diagnostics", None)
 
 diag = st.session_state.get("nba_trend_diagnostics", {})
 if diag and diag.get("date") == str(date):
