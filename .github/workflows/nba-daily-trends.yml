@@ -1,0 +1,42 @@
+name: NBA daily trends snapshot
+on:
+  workflow_dispatch:
+    inputs:
+      scan_date:
+        description: "Optional Eastern YYYY-MM-DD (blank = today)"
+        required: false
+        type: string
+  schedule:
+    - cron: '15 11 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: nba-trends-snapshot
+  cancel-in-progress: false
+jobs:
+  scan:
+    if: github.ref_name == 'feature/nba-player-projections'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/nba-player-projections
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Generate NBA snapshot
+        env:
+          NBA_SCAN_DATE: ${{ inputs.scan_date }}
+        run: python nba/daily_scan.py
+      - name: Commit generated snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add nba/data/*.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Update NBA daily trends snapshot"
+          git push origin HEAD:feature/nba-player-projections
