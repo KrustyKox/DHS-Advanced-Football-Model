@@ -73,7 +73,9 @@ def main():
     snapshot = {"date": day.isoformat(), "generated_utc": datetime.now(timezone.utc).isoformat(),
                 "matchups": games, "teams": len(teams), "players_analyzed": processed,
                 "candidates": len(candidates), "qualified": len(qualified),
-                "errors": errors[:100], "market_status": market_status,\n                "historical_qualified": len(historical_qualified),\n                "trends": rank_trends(qualified, top_n=25, max_per_player=2)}
+                "errors": errors[:100], "market_status": market_status,
+                "historical_qualified": len(historical_qualified),
+                "trends": rank_trends(qualified, top_n=25, max_per_player=2)}
     if games and processed < max(8, len(teams) * 3):
         raise RuntimeError(f"Insufficient player coverage: {processed} across {len(teams)} teams; refusing incomplete snapshot")
     target = Path(__file__).resolve().parent / "data" / (day.isoformat() + ".json")
