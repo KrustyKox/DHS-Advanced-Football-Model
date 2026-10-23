@@ -17,7 +17,7 @@ def fetch_nba_offers(day):
     if not token:
         raise RuntimeError("PARLAY_API_KEY not available to NBA workflow")
     params = {"markets": ",".join(MARKETS), "bookmakers": BOOKS,
-              "limit": 10000, "offset": 0}
+              "limit": 10000, "offset": 0, "maxAgeSec": 1800}
     response = requests.get("https://parlay-api.com/v1/sports/basketball_nba/props",
                             params=params, headers={"X-API-Key": token}, timeout=40)
     response.raise_for_status()
@@ -42,6 +42,8 @@ def fetch_nba_offers(day):
             line = float(row["line"])
             threshold = int(line + 0.5)
             if abs(line - (threshold - 0.5)) > 0.00001:
+                continue
+            if float(row.get("age_seconds", 999999)) > 1800:
                 continue
             price = int(row["over_price"])
             name = str(row["player"]).strip()
