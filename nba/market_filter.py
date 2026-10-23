@@ -25,6 +25,11 @@ def qualify_market_trends(trends, market_payload, scan_date, minimum_odds=-500):
     if not isinstance(offers, list):
         raise ValueError("Sportsbook feed has no offers list")
     lookup = {}
+    # Teamless sportsbook rows are accepted only when the player name maps to
+    # exactly one scheduled roster team; ambiguous identities are excluded.
+    teams_by_player = {}
+    for trend in trends:
+        teams_by_player.setdefault(_key(trend["Player"]), set()).add(_key(trend["Team"]))
     for offer in offers:
         try:
             price = int(offer["american_odds"])
@@ -34,7 +39,14 @@ def qualify_market_trends(trends, market_payload, scan_date, minimum_odds=-500):
                 continue
             if float(offer["threshold"]) != threshold:
                 continue
-            key = (_key(offer["player"]), _key(offer["team"]),
+            player_key = _key(offer["player"])
+            team_key = _key(offer.get("team") or "")
+            if not team_key:
+                matched_teams = teams_by_player.get(player_key, set())
+                if len(matched_teams) != 1:
+                    continue
+                team_key = next(iter(matched_teams))
+            key = (player_key, team_key,
                    str(offer["stat"]).upper(), threshold)
             current = lookup.get(key)
             if current is None or price > current["american_odds"]:
