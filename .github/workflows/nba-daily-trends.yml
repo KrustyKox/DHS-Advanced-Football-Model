@@ -28,6 +28,8 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: pip install requests
+      - name: Validate NBA market matching
+        run: python nba/test_market_filter.py
       - name: Generate NBA snapshot
         env:
           NBA_SCAN_DATE: ${{ inputs.scan_date }}
