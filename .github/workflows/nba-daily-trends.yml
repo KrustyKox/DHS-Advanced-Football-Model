@@ -31,7 +31,7 @@ jobs:
       - name: Generate NBA snapshot
         env:
           NBA_SCAN_DATE: ${{ inputs.scan_date }}
-          NBA_ODDS_FEED_URL: ${{ secrets.NBA_ODDS_FEED_URL }}
+          PARLAY_API_KEY: ${{ secrets.PARLAY_API_KEY }}
         run: python nba/daily_scan.py
       - name: Commit generated snapshot
         run: |
