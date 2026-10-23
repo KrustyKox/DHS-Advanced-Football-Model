@@ -1,263 +1,113 @@
-"""Independent NBA research dashboard. Real data; unvalidated estimates."""
+"""DHS NBA historical player-prop trend finder. Descriptive research only."""
 import pandas as pd
 import streamlit as st
-
-st.set_page_config(page_title="DHS NBA", page_icon="🏀", layout="wide", initial_sidebar_state="collapsed")
-st.markdown("""
-<style>
-.block-container {max-width: 1120px; padding-top: 1.2rem; padding-left: 1rem; padding-right: 1rem}
-h1 {font-size: 1.8rem !important; letter-spacing: -.035em}
-[data-testid="stMetric"] {border: 1px solid rgba(128,128,128,.18); border-radius: 14px; padding: .7rem}
-[data-testid="stDataFrame"] {border-radius: 12px; overflow: hidden}
-</style>
-""", unsafe_allow_html=True)
-
-st.title("🏀 DHS NBA")
-st.caption("Player projections • Mobile-first research dashboard")
-st.warning("RESEARCH ONLY — estimates are not calibrated or validated. Injury availability may be incomplete; no live odds.", icon="⚠️")
-
 from schedule import load_schedule, games_for_date, eastern_today
+from availability import get_team_availability
+from stats import game_log
+from trends import eligible_games, scan_player, rank_trends
+
+st.set_page_config(page_title="DHS NBA Trends", page_icon="🏀", layout="wide",
+                   initial_sidebar_state="collapsed")
+st.title("🏀 DHS NBA Trend Finder")
+st.caption("Historical player-prop consistency across today's NBA matchups")
+st.warning("RESEARCH ONLY — trend scores are NOT win probabilities. No sportsbook odds or verified game-day availability.")
 
 @st.cache_data(ttl=1800, show_spinner=False)
-def cached_schedule(day):
-    return load_schedule(day)
+def schedule(day):
+    return games_for_date(load_schedule(day), day)
 
-st.subheader("NBA Schedule — Live data")
-selected_date = st.date_input("Game date (Eastern)", value=eastern_today())
-try:
-    real_games = games_for_date(cached_schedule(selected_date), selected_date)
-    if real_games:
-        labels = [f'{g["away"]} @ {g["home"]} · {g["status"]}' for g in real_games]
-        selected_game = st.selectbox("Today's games", labels)
-        st.caption("Source: ESPN public scoreboard · refreshed every 30 minutes")
-    else:
-        st.info("No NBA games listed for this date.")
-except Exception as exc:
-    st.error(f"NBA schedule unavailable: {exc}")
-    st.caption("No games will be invented if the live feed fails.")
-
-st.divider()
-st.subheader("Step 2 — Current team rosters & injury watch")
-st.caption("Live roster source: ESPN (unofficial). Injury listings are incomplete and do not confirm game-day availability.")
-from availability import get_team_availability
-
-@st.cache_data(ttl=900, show_spinner=False)
-def cached_availability(team_code):
-    return get_team_availability(team_code)
-
-if "real_games" in locals() and real_games:
-    selected = real_games[labels.index(selected_game)]
-    selected_teams = [selected["away"], selected["home"]]
-    roster_team = st.selectbox("Roster team", selected_teams)
-    if st.button("Refresh roster / injuries"):
-        cached_availability.clear()
-        st.rerun()
-    try:
-        roster_result = cached_availability(roster_team)
-        st.caption(f'Checked (UTC): {roster_result["checked_utc"]} · Injury feed: {roster_result["injury_feed"]}')
-        st.caption(f'Injury records returned: {roster_result.get("injury_records", 0)} · Matched to roster: {roster_result.get("matched_injuries", 0)}')
-        st.markdown("[Cross-check official NBA injury reports](https://official.nba.com/nba-injury-report-2026-27-season/)")
-        roster_frame = pd.DataFrame(roster_result["players"])
-        st.dataframe(roster_frame[["player", "position", "jersey", "availability", "injury_detail"]],
-                     hide_index=True, use_container_width=True)
-        st.warning("Player availability is NOT verified. Players missing from injury listings are not confirmed active. Do not use these statuses for betting yet.")
-    except Exception as exc:
-        st.error(f"Roster feed unavailable: {exc}")
-        st.caption("No roster is fabricated when a feed fails.")
-else:
-    st.info("Choose a date with an NBA matchup to inspect the teams' rosters.")
-
-st.divider()
-st.subheader("Step 3 — Real player game logs")
-st.caption("Historical game statistics from ESPN's unofficial player feed. These are past results, not projections.")
-from stats import game_log
+@st.cache_data(ttl=1800, show_spinner=False)
+def roster(team):
+    return get_team_availability(team)
 
 @st.cache_data(ttl=3600, show_spinner=False)
-def cached_game_log(player_id, season):
-    return game_log(player_id, season)
+def history(player_id, season):
+    return game_log(player_id, season)["games"]
 
-if "roster_result" in locals() and roster_result.get("players"):
-    roster_players = roster_result["players"]
-    player_names = [p["player"] for p in roster_players]
-    player_choice = st.selectbox("Player for historical stats", player_names)
-    selected_player = roster_players[player_names.index(player_choice)]
-    season_choice = st.number_input("Season ending year", min_value=2020, max_value=2030,
-                                    value=2026, step=1)
-    if st.button("Load player game log"):
+date = st.date_input("NBA game date (Eastern)", value=eastern_today())
+try:
+    matchups = schedule(date)
+except Exception as exc:
+    matchups = []
+    st.error(f"Schedule unavailable: {exc}")
+if matchups:
+    st.write("Matchups: " + " · ".join(g["away"] + " @ " + g["home"] for g in matchups))
+else:
+    st.info("No NBA games available for this date.")
+
+st.subheader("Top 25 Historical Prop Trends")
+st.caption("Scans every scheduled team's roster and uses completed historical games only. Current season first, then prior season.")
+c1, c2, c3 = st.columns(3)
+with c1:
+    minimum_games = st.selectbox("Minimum game sample", [10, 15, 20], index=1)
+with c2:
+    minimum_score = st.slider("Minimum trend score", 0, 100, 75)
+with c3:
+    max_player = st.selectbox("Maximum trends per player", [1, 2, 3], index=1)
+
+if st.button("Scan today's NBA prop trends", type="primary", disabled=not bool(matchups)):
+    teams = list(dict.fromkeys(code for g in matchups for code in (g["away"], g["home"])))
+    season = date.year + (1 if date.month >= 7 else 0)
+    candidates, errors, processed = [], [], 0
+    progress = st.progress(0, text="Loading player histories...")
+    total = len(teams)
+    for i, team in enumerate(teams):
         try:
-            log = cached_game_log(selected_player["player_id"], int(season_choice))
-            log_df = pd.DataFrame(log["games"])
-            st.success(f'Loaded {len(log_df)} recorded games · retrieved {log["checked_utc"]}')
-            st.dataframe(log_df, hide_index=True, use_container_width=True)
-            summary_cols = [c for c in ["MIN", "PTS", "REB", "AST", "3PM", "STL", "BLK", "TOV"] if c in log_df]
-            if summary_cols:
-                st.caption("Observed per-game averages (not injury-adjusted)")
-                st.dataframe(log_df[summary_cols].mean(numeric_only=True).round(1).to_frame("Average").T,
-                             hide_index=True, use_container_width=True)
-        except Exception as exc:
-            st.error(f"Player statistics unavailable: {exc}")
-            st.caption("No historical results are fabricated when the provider blocks requests or changes its format.")
-else:
-    st.info("Load a roster from a scheduled game above to inspect real player game logs.")
-
-st.divider()
-st.subheader("Step 4 — Real-data player projection baseline")
-st.caption("Weighted recent-game estimates. Probability thresholds are preliminary and NOT backtested or betting-ready.")
-from projections import project_player
-from team_model import allocate, recent_team_scores
-from thresholds import adjusted_thresholds
-
-if "roster_result" in locals() and roster_result.get("players"):
-    st.markdown("#### Expected rotation / depth-chart roles")
-    st.caption("Assign five confirmed or expected starters, then Sixth, Seventh, Eighth and optional Deep bench players. All others remain Unverified and are excluded when roles are assigned. ESPN roster does not establish confirmed starters.")
-    rotation_frame = pd.DataFrame([{"Player": p["player"], "Role": "Unverified", "Override MIN": None}
-                                   for p in roster_result["players"]])
-    edited_rotation = st.data_editor(
-        rotation_frame, key=f"nba_rotation_{roster_team}_{selected_date}",
-        hide_index=True, use_container_width=True, num_rows="fixed",
-        disabled=["Player"],
-        column_config={
-            "Role": st.column_config.SelectboxColumn(
-                "Expected role", options=["Unverified", "Starter", "Sixth",
-                                          "Seventh", "Eighth", "Deep bench", "Out"]),
-            "Override MIN": st.column_config.NumberColumn(
-                "Manual MIN (optional)", min_value=0, max_value=45, step=1.0)
-        })
-    chosen_roles = {str(r["Player"]): str(r["Role"]) for _, r in edited_rotation.iterrows()}
-    minute_overrides = {str(r["Player"]): float(r["Override MIN"])
-                        for _, r in edited_rotation.iterrows()
-                        if pd.notna(r["Override MIN"])}
-    if all(role == "Unverified" for role in chosen_roles.values()):
-        st.warning("No depth-chart roles assigned. The model will use its historical-minutes fallback; it cannot claim to know the starters.")
-    else:
-        st.caption("Starter count: " + str(sum(role == "Starter" for role in chosen_roles.values())) +
-                   " / 5. Set five starters and at least three reserves before generating.")
-    if st.button("Generate baseline projections for selected team", type="primary"):
-        st.session_state.pop("nba_baseline_rows", None)
-        st.session_state.pop("nba_baseline_thresholds", None)
-        st.session_state.pop("nba_team_diagnostics", None)
-        results, skipped, threshold_rows = [], [], []
-        player_histories = {}
-        histories_by_name = {}
-        with st.spinner("Retrieving historical games and building player estimates..."):
-            for athlete in roster_result["players"]:
-                status = str(athlete.get("availability") or "Unverified").strip().lower()
-                # Explicitly excluded statuses must never produce active-player projections.
-                if any(term in status for term in ("out", "inactive", "suspended", "doubtful", "injured reserve")):
-                    skipped.append(f'{athlete["player"]}: excluded due to availability status ({athlete.get("availability")})')
+            athletes = roster(team)["players"]
+            for athlete in athletes:
+                status = str(athlete.get("availability") or "Unverified")
+                if any(term in status.lower() for term in
+                       ("out", "inactive", "suspended", "doubtful", "injured reserve")):
                     continue
-                try:
-                    season_year = selected_date.year + 1 if selected_date.month >= 7 else selected_date.year
-                    games = []
-                    for year in (season_year, season_year - 1):
-                        try:
-                            log = cached_game_log(athlete["player_id"], year)
-                            games.extend(g for g in log["games"]
-                                         if str(g.get("date", ""))[:10] < str(selected_date))
-                        except Exception:
-                            pass
-                    history = {"games": sorted(games, key=lambda g: str(g.get("date", "")), reverse=True)}
-                    estimate = project_player(history["games"])
-                    player_histories[athlete["player_id"]] = history["games"]
-                    histories_by_name[athlete["player"]] = history["games"]
-                    row = {"Player": athlete["player"], "Team": athlete["team"],
-                           "Availability": athlete["availability"], "Games": estimate["games_used"]}
-                    row.update(estimate["projections"])
-                    results.append(row)
-                    threshold_rows.append({"Player": athlete["player"], "Team": athlete["team"],
-                                           "player_id": athlete["player_id"],
-                                           "thresholds": estimate["thresholds"],
-                                           "projections": estimate["projections"]})
-                except Exception as exc:
-                    skipped.append(f'{athlete["player"]}: {str(exc)[:90]}')
-        if results:
-            try:
-                season_year = selected_date.year + 1 if selected_date.month >= 7 else selected_date.year
-                scores = recent_team_scores(roster_team, season_year, selected_date)
-                if len(scores) < 5:
-                    scores += recent_team_scores(roster_team, season_year - 1, selected_date)[:12-len(scores)]
-                if len(scores) < 5:
-                    raise ValueError(f"Only {len(scores)} completed team games; need 5")
-                target = sum(scores) / len(scores)
-                results, diagnostics = allocate(results, target, histories=histories_by_name,
-                                                roles=chosen_roles, overrides=minute_overrides)
-                by_name = {r["Player"]: r for r in results}
-                threshold_rows = [item for item in threshold_rows if item["Player"] in by_name]
-                for item in threshold_rows:
-                    adjusted = by_name.get(item["Player"])
-                    if adjusted:
-                        item["thresholds"] = adjusted_thresholds(
-                            player_histories[item["player_id"]],
-                            item["projections"], adjusted)
-                        item["projections"] = {k: adjusted[k] for k in item["projections"] if k in adjusted}
-                diagnostics["target"] = round(target, 1)
-                diagnostics["games"] = len(scores)
-                st.session_state["nba_team_diagnostics"] = diagnostics
-            except Exception as exc:
-                st.error(f"Team allocation unavailable: {exc}")
-                st.warning("Unconstrained projections withheld rather than displayed.")
-                results = []
-        if results:
-            st.session_state["nba_baseline_rows"] = results
-            st.session_state["nba_baseline_thresholds"] = threshold_rows
-            st.session_state["nba_baseline_skipped"] = skipped
-            st.session_state["nba_baseline_team"] = roster_team
-            st.session_state["nba_baseline_game"] = (str(selected_date), selected_game)
-        else:
-            st.error("No verified player game logs could be projected. No placeholder results were substituted.")
-            st.caption("First error: " + (skipped[0] if skipped else "Unknown"))
-    if st.session_state.get("nba_baseline_rows") and st.session_state.get("nba_baseline_team") == roster_team and st.session_state.get("nba_baseline_game") == (str(selected_date), selected_game):
-        diag = st.session_state.get("nba_team_diagnostics", {})
-        if diag:
-            c1, c2, c3 = st.columns(3)
-            c1.metric("Projected team PTS", diag["team_points"])
-            c2.metric("Allocated team MIN", diag["team_minutes"])
-            c3.metric("Historical team PTS", diag["target"])
-            st.caption(f'Original independent totals: {diag["raw_points"]} PTS, {diag["raw_minutes"]} MIN. Historical sample: {diag["games"]} games.')
-        frame = pd.DataFrame(st.session_state["nba_baseline_rows"])
-        if diag:
-            st.caption("Rotation players: " + str(diag["rotation_count"]) + (" · Roles manually assigned" if diag.get("roles_verified") else " · Historical-minutes fallback"))
-            with st.expander("Players omitted from estimated rotation"):
-                st.write(diag.get("omitted_players", []))
-        preferred = ["Player", "Role", "Availability", "Games", "Historical MIN", "Recent MIN", "Last 10 MIN",
-                     "Projected MIN", "Historical PTS", "PTS", "Historical REB", "REB",
-                     "Historical AST", "AST", "3PM", "STL", "BLK", "TOV", "PRA", "PR", "PA", "RA"]
-        frame = frame[[c for c in preferred if c in frame.columns]]
-        st.dataframe(frame, hide_index=True, use_container_width=True)
-        st.caption(f'{len(frame)} players estimated; {len(st.session_state.get("nba_baseline_skipped", []))} skipped for missing/insufficient data.')
-        with st.expander("Skipped players and data issues"):
-            st.write(st.session_state.get("nba_baseline_skipped", []))
-        st.warning("Players explicitly marked OUT, inactive, doubtful, or suspended are excluded. Unverified/questionable players may remain visible for research only; NO projections are qualified betting plays until availability is confirmed.")
-else:
-    st.info("Choose a scheduled game and load a team roster before generating baseline projections.")
+                games = []
+                for year in (season, season - 1):
+                    try:
+                        games.extend(history(athlete["player_id"], year))
+                    except Exception:
+                        pass
+                clean = eligible_games(games, date)
+                if len(clean) < minimum_games:
+                    continue
+                processed += 1
+                candidates.extend(scan_player(athlete["player"], team, status,
+                                              clean, min_games=minimum_games))
+        except Exception as exc:
+            errors.append(f"{team}: {str(exc)[:110]}")
+        progress.progress((i + 1) / total, text=f"Scanned {i + 1} of {total} teams")
+    qualified = [row for row in candidates if row["Trend Score"] >= minimum_score]
+    st.session_state["nba_trends"] = rank_trends(qualified, max_per_player=max_player)
+    st.session_state["nba_trend_diagnostics"] = {
+        "players": processed, "candidates": len(candidates),
+        "qualified": len(qualified), "errors": errors, "date": str(date)}
+    progress.empty()
+
+diag = st.session_state.get("nba_trend_diagnostics", {})
+if diag and diag.get("date") == str(date):
+    a, b, c = st.columns(3)
+    a.metric("Players analyzed", diag["players"])
+    b.metric("Trends qualified", diag["qualified"])
+    c.metric("Top trends", len(st.session_state.get("nba_trends", [])))
+    results = st.session_state.get("nba_trends", [])
+    if results:
+        cols = ["Player", "Team", "Prop", "Last 5", "Last 10", "Last 20",
+                "Streak", "Trend Score", "Sample Hit Rate", "Avg MIN (10)", "Availability"]
+        st.dataframe(pd.DataFrame(results)[cols], hide_index=True,
+                     use_container_width=True)
+        st.caption("Trend Score (0–100) combines historical hit rates, streak recency, sample size and minutes stability. It is NOT a calibrated hit probability.")
+        labels = [f'{i+1}. {r["Player"]} — {r["Prop"]}' for i, r in enumerate(results)]
+        chosen = st.selectbox("Inspect game-by-game evidence", range(len(results)),
+                              format_func=lambda i: labels[i])
+        selected = results[chosen]
+        st.write(f'**{selected["Player"]}: {selected["Prop"]}** — {selected["Last 20"]} in last 20 available games; current streak {selected["Streak"]}')
+        st.dataframe(pd.DataFrame(selected["Evidence"]), hide_index=True,
+                     use_container_width=True)
+        st.caption("The evidence table shows only completed games prior to the selected date.")
+    else:
+        st.info("No trends met the selected criteria. Try lowering the minimum score.")
+    if diag["errors"]:
+        with st.expander("Data-source errors"):
+            st.write(diag["errors"])
 
 st.divider()
-st.subheader("Step 5 — Adjusted player probability thresholds")
-st.caption("Preliminary modeled thresholds from team-adjusted means and historical game variability. NOT backtested or betting-ready.")
-threshold_data = st.session_state.get("nba_baseline_thresholds", [])
-same_matchup = ("real_games" in locals() and real_games and
-                st.session_state.get("nba_baseline_team") == roster_team and
-                st.session_state.get("nba_baseline_game") == (str(selected_date), selected_game))
-if same_matchup and threshold_data:
-    stat = st.selectbox("Statistic", ["PTS", "REB", "AST", "3PM", "STL", "BLK", "TOV", "PRA", "PR", "PA", "RA"])
-    confidence = st.select_slider("Modeled confidence", options=[50, 60, 70, 80, 90, 95], value=80)
-    rows = []
-    for athlete in threshold_data:
-        levels = athlete["thresholds"].get(stat)
-        if not levels:
-            continue
-        item = {"Player": athlete["Player"], "Team": athlete["Team"],
-                "Projected": athlete["projections"].get(stat)}
-        for pct in (50, 60, 70, 80, 90, 95):
-            item[f"{pct}%"] = f'{levels[str(pct)]}+'
-        rows.append(item)
-    if rows:
-        st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True,
-                     column_config={f"{confidence}%": st.column_config.TextColumn(f"★ {confidence}%")})
-        st.warning("These are statistical estimates, not verified 50–95% success probabilities. Injury status may be unverified; do not treat thresholds as betting edges.")
-    else:
-        st.info("No usable historical distribution for this statistic.")
-else:
-    st.info("Generate team-constrained projections above to populate adjusted probability thresholds.")
-st.divider()
-st.caption("NBA development branch only • Football production files unchanged.")
+st.markdown("[Official NBA injury reports](https://official.nba.com/nba-injury-report-2026-27-season/)")
+st.caption("No verified lineups, live sportsbook markets, implied odds, or out-of-sample backtest. A historical streak does not guarantee the next game.")
