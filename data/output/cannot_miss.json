@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-24T16:34:38.721456+00:00",
+  "generated_at": "2026-10-24T21:35:57.309935+00:00",
   "current": [
     {
       "league": "nfl",
       "season": 2026,
-      "generated_at": "2026-10-24T16:34:38.721456+00:00",
+      "generated_at": "2026-10-24T21:35:57.309935+00:00",
       "status": "PASS",
       "policy": {
         "min_probability": 0.7,
@@ -28,8 +28,8 @@
     {
       "league": "cfb",
       "season": 2026,
-      "generated_at": "2026-10-24T16:34:38.721456+00:00",
-      "status": "QUALIFIED",
+      "generated_at": "2026-10-24T21:35:57.309935+00:00",
+      "status": "PASS",
       "policy": {
         "min_probability": 0.75,
         "min_reliability": 0.72,
@@ -43,98 +43,10 @@
         "preferred_max_odds": 350.0
       },
       "week": 8,
-      "sportsbook": "draftkings",
-      "legs": [
-        {
-          "game_id": "401871094",
-          "kickoff": "2026-10-24T20:00:00+00:00",
-          "away": "UL Monroe",
-          "home": "Troy",
-          "team": "Troy",
-          "side": "Home",
-          "moneyline": -625.0,
-          "model_probability": 0.8941219793113464,
-          "market_probability": 0.827123695976155,
-          "probability_edge": 0.06699828333519142,
-          "reliability": 1.0,
-          "safety_score": 0.903841913649712
-        },
-        {
-          "game_id": "401866449",
-          "kickoff": "2026-10-24T20:00:00+00:00",
-          "away": "Eastern Michigan",
-          "home": "Ohio",
-          "team": "Ohio",
-          "side": "Home",
-          "moneyline": -395.3,
-          "model_probability": 0.912124797313249,
-          "market_probability": 0.7659295945709654,
-          "probability_edge": 0.1461952027422836,
-          "reliability": 1.0,
-          "safety_score": 0.8975447972993659
-        },
-        {
-          "game_id": "401860906",
-          "kickoff": "2026-10-24T23:30:00+00:00",
-          "away": "Utah State",
-          "home": "Texas State",
-          "team": "Texas State",
-          "side": "Home",
-          "moneyline": -534.8,
-          "model_probability": 0.8507268015676633,
-          "market_probability": 0.8081479690522244,
-          "probability_edge": 0.042578832515438925,
-          "reliability": 1.0,
-          "safety_score": 0.8774003930468878
-        },
-        {
-          "game_id": "401856835",
-          "kickoff": "2026-10-24T19:30:00+00:00",
-          "away": "BYU",
-          "home": "UCF",
-          "team": "BYU",
-          "side": "Away",
-          "moneyline": -289.9,
-          "model_probability": 0.8631089138000754,
-          "market_probability": 0.7135331523476101,
-          "probability_edge": 0.14957576145246532,
-          "reliability": 1.0,
-          "safety_score": 0.8599377449869402
-        },
-        {
-          "game_id": "401860907",
-          "kickoff": "2026-10-24T22:00:00+00:00",
-          "away": "Boise State",
-          "home": "Washington State",
-          "team": "Boise State",
-          "side": "Away",
-          "moneyline": -625.0,
-          "model_probability": 0.7866756109681603,
-          "market_probability": 0.827123695976155,
-          "probability_edge": -0.04044808500799468,
-          "reliability": 1.0,
-          "safety_score": 0.850118729478119
-        },
-        {
-          "game_id": "401858497",
-          "kickoff": "2026-10-24T19:30:00+00:00",
-          "away": "Iowa",
-          "home": "Minnesota",
-          "team": "Iowa",
-          "side": "Away",
-          "moneyline": -289.9,
-          "model_probability": 0.7816200446541817,
-          "market_probability": 0.7135331523476101,
-          "probability_edge": 0.06808689230657161,
-          "reliability": 1.0,
-          "safety_score": 0.8191933104139933
-        }
-      ],
-      "leg_count": 6,
-      "parlay_odds": 262.0,
-      "model_combined_probability": 0.3682121585569626,
-      "sportsbook_implied_probability": 0.27624309392265195,
-      "probability_edge": 0.09196906463431065
+      "candidate_counts": {
+        "draftkings": 3
+      },
+      "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
     }
   ],
   "history": [
@@ -683,7 +595,7 @@
     {
       "league": "nfl",
       "season": 2026,
-      "generated_at": "2026-10-24T16:34:38.721456+00:00",
+      "generated_at": "2026-10-24T21:35:57.309935+00:00",
       "status": "PASS",
       "policy": {
         "min_probability": 0.7,
