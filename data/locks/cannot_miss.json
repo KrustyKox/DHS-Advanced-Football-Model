@@ -544,7 +544,7 @@
   {
     "league": "nfl",
     "season": 2026,
-    "generated_at": "2026-10-24T21:35:57.309935+00:00",
+    "generated_at": "2026-10-25T06:05:03.834318+00:00",
     "status": "PASS",
     "policy": {
       "min_probability": 0.7,
@@ -681,9 +681,30 @@
       "PENDING",
       "PENDING",
       "PENDING",
-      "PENDING"
+      "LOSS"
     ],
-    "result": "PENDING",
-    "units_profit": null
+    "result": "LOSS",
+    "units_profit": -1.0
+  },
+  {
+    "league": "cfb",
+    "season": 2026,
+    "generated_at": "2026-10-25T06:05:03.834318+00:00",
+    "status": "PASS",
+    "policy": {
+      "min_probability": 0.75,
+      "min_reliability": 0.72,
+      "min_legs": 3,
+      "max_legs": 7,
+      "preferred_odds": [
+        -700,
+        -175
+      ],
+      "minimum_parlay_odds": 250.0,
+      "preferred_max_odds": 350.0
+    },
+    "week": 9,
+    "candidate_counts": {},
+    "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
   }
 ]
