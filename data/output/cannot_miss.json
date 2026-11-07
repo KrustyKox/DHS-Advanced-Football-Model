@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-07T13:58:19.559666+00:00",
+  "generated_at": "2026-11-07T22:42:51.960366+00:00",
   "current": [
     {
       "league": "nfl",
       "season": 2026,
-      "generated_at": "2026-11-07T13:58:19.559666+00:00",
+      "generated_at": "2026-11-07T22:42:51.960366+00:00",
       "status": "PASS",
       "policy": {
         "min_probability": 0.7,
@@ -27,7 +27,7 @@
     {
       "league": "cfb",
       "season": 2026,
-      "generated_at": "2026-11-07T13:58:19.559666+00:00",
+      "generated_at": "2026-11-07T22:42:51.960366+00:00",
       "status": "PASS",
       "policy": {
         "min_probability": 0.75,
@@ -43,7 +43,7 @@
       },
       "week": 10,
       "candidate_counts": {
-        "bovada": 6
+        "bovada": 4
       },
       "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
     }
@@ -146,14 +146,14 @@
       "sportsbook_implied_probability": 0.2741228070175438,
       "probability_edge": 0.13045133291773153,
       "leg_results": [
+        "WIN",
+        "WIN",
         "PENDING",
-        "PENDING",
-        "PENDING",
-        "PENDING",
-        "PENDING"
+        "LOSS",
+        "WIN"
       ],
-      "result": "PENDING",
-      "units_profit": null
+      "result": "LOSS",
+      "units_profit": -1.0
     },
     {
       "league": "nfl",
@@ -975,7 +975,7 @@
     {
       "league": "nfl",
       "season": 2026,
-      "generated_at": "2026-11-07T13:58:19.559666+00:00",
+      "generated_at": "2026-11-07T22:42:51.960366+00:00",
       "status": "PASS",
       "policy": {
         "min_probability": 0.7,
