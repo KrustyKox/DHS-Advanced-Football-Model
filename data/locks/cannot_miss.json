@@ -108,7 +108,7 @@
   {
     "league": "nfl",
     "season": 2026,
-    "generated_at": "2026-11-16T07:57:30.537533+00:00",
+    "generated_at": "2026-11-16T22:52:33.553587+00:00",
     "status": "PASS",
     "policy": {
       "min_probability": 0.7,
@@ -150,7 +150,7 @@
   {
     "league": "cfb",
     "season": 2026,
-    "generated_at": "2026-11-16T07:57:30.537533+00:00",
+    "generated_at": "2026-11-16T22:52:33.553587+00:00",
     "status": "QUALIFIED",
     "policy": {
       "min_probability": 0.75,
@@ -168,18 +168,46 @@
     "sportsbook": "draftkings",
     "legs": [
       {
+        "game_id": "401866465",
+        "kickoff": "2026-11-17T23:00:00+00:00",
+        "away": "Eastern Michigan",
+        "home": "Western Michigan",
+        "team": "Western Michigan",
+        "side": "Home",
+        "moneyline": -675.7,
+        "model_probability": 0.8506687877206126,
+        "market_probability": 0.8371175454031954,
+        "probability_edge": 0.013551242317417223,
+        "reliability": 1.0,
+        "safety_score": 0.8846137802111051
+      },
+      {
+        "game_id": "401869938",
+        "kickoff": "2026-11-22T00:00:00+00:00",
+        "away": "Arkansas State",
+        "home": "Louisiana Tech",
+        "team": "Louisiana Tech",
+        "side": "Home",
+        "moneyline": -574.7,
+        "model_probability": 0.8393290561085414,
+        "market_probability": 0.8172473336719146,
+        "probability_edge": 0.02208172243662676,
+        "reliability": 1.0,
+        "safety_score": 0.8739763614722493
+      },
+      {
         "game_id": "401866464",
         "kickoff": "2026-11-18T00:00:00+00:00",
         "away": "Ball State",
         "home": "Ohio",
         "team": "Ohio",
         "side": "Home",
-        "moneyline": -425.5,
-        "model_probability": 0.8184894697473124,
-        "market_probability": 0.7768719614461923,
-        "probability_edge": 0.0416175083011201,
+        "moneyline": -454.5,
+        "model_probability": 0.8068530463380915,
+        "market_probability": 0.786710260601981,
+        "probability_edge": 0.020142785736110502,
         "reliability": 1.0,
-        "safety_score": 0.8534627252352043
+        "safety_score": 0.850104088319541
       },
       {
         "game_id": "401866466",
@@ -188,12 +216,12 @@
         "home": "Kent State",
         "team": "Miami (OH)",
         "side": "Away",
-        "moneyline": -324.7,
-        "model_probability": 0.8155034938155179,
-        "market_probability": 0.7334998305744155,
-        "probability_edge": 0.08200366324110242,
+        "moneyline": -354.6,
+        "model_probability": 0.8167956250207538,
+        "market_probability": 0.7477359495693866,
+        "probability_edge": 0.06905967545136715,
         "reliability": 1.0,
-        "safety_score": 0.8411267045513628
+        "safety_score": 0.8453317999027236
       },
       {
         "game_id": "401858303",
@@ -202,48 +230,35 @@
         "home": "Duke",
         "team": "Duke",
         "side": "Home",
-        "moneyline": -500.0,
-        "model_probability": 0.771446187372563,
-        "market_probability": 0.7999999999999999,
-        "probability_edge": -0.028553812627436947,
+        "moneyline": -485.4,
+        "model_probability": 0.775658341101784,
+        "market_probability": 0.7957987707462728,
+        "probability_edge": -0.02014042964448881,
         "reliability": 1.0,
-        "safety_score": 0.8357230936862815
-      },
-      {
-        "game_id": "401871079",
-        "kickoff": "2026-11-21T19:00:00+00:00",
-        "away": "Missouri State",
-        "home": "Jacksonville State",
-        "team": "Jacksonville State",
-        "side": "Home",
-        "moneyline": -395.3,
-        "model_probability": 0.7686816520314971,
-        "market_probability": 0.7659295945709654,
-        "probability_edge": 0.002752057460531643,
-        "reliability": 1.0,
-        "safety_score": 0.8258232246584899
+        "safety_score": 0.8367788632374602
       },
       {
         "game_id": "401862836",
-        "kickoff": "2026-11-21T05:00:00+00:00",
+        "kickoff": "2026-11-22T01:00:00+00:00",
         "away": "UTSA",
         "home": "UAB",
         "team": "UTSA",
         "side": "Away",
-        "moneyline": -225.2,
-        "model_probability": 0.7535654527041544,
-        "market_probability": 0.6637091270087485,
-        "probability_edge": 0.08985632569540591,
+        "moneyline": -238.1,
+        "model_probability": 0.7521489007361226,
+        "market_probability": 0.6750585058073322,
+        "probability_edge": 0.07709039492879044,
         "reliability": 1.0,
-        "safety_score": 0.7927100081042644
+        "safety_score": 0.7948390768198943
       }
     ],
-    "leg_count": 5,
-    "parlay_odds": 250.7,
-    "model_combined_probability": 0.29827170324540164,
-    "sportsbook_implied_probability": 0.285143997718848,
-    "probability_edge": 0.013127705526553624,
+    "leg_count": 6,
+    "parlay_odds": 261.0,
+    "model_combined_probability": 0.2745205714273656,
+    "sportsbook_implied_probability": 0.2770083102493075,
+    "probability_edge": -0.0024877388219419205,
     "leg_results": [
+      "PENDING",
       "PENDING",
       "PENDING",
       "PENDING",
