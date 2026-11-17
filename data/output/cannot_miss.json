@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-16T22:52:33.553587+00:00",
+  "generated_at": "2026-11-17T09:11:14.969745+00:00",
   "current": [
     {
       "league": "nfl",
       "season": 2026,
-      "generated_at": "2026-11-16T22:52:33.553587+00:00",
+      "generated_at": "2026-11-17T09:11:14.969745+00:00",
       "status": "PASS",
       "policy": {
         "min_probability": 0.7,
@@ -18,14 +18,17 @@
         "minimum_parlay_odds": 250.0,
         "preferred_max_odds": 350.0
       },
-      "week": 10,
-      "candidate_counts": {},
+      "week": 11,
+      "candidate_counts": {
+        "bovada": 0,
+        "draftkings": 0
+      },
       "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
     },
     {
       "league": "cfb",
       "season": 2026,
-      "generated_at": "2026-11-16T22:52:33.553587+00:00",
+      "generated_at": "2026-11-17T09:11:14.969745+00:00",
       "status": "QUALIFIED",
       "policy": {
         "min_probability": 0.75,
@@ -50,11 +53,11 @@
           "team": "Western Michigan",
           "side": "Home",
           "moneyline": -675.7,
-          "model_probability": 0.8506687877206126,
+          "model_probability": 0.8506687877206122,
           "market_probability": 0.8371175454031954,
-          "probability_edge": 0.013551242317417223,
+          "probability_edge": 0.013551242317416778,
           "reliability": 1.0,
-          "safety_score": 0.8846137802111051
+          "safety_score": 0.8846137802111049
         },
         {
           "game_id": "401869938",
@@ -64,11 +67,11 @@
           "team": "Louisiana Tech",
           "side": "Home",
           "moneyline": -574.7,
-          "model_probability": 0.8393290561085414,
+          "model_probability": 0.8393290561085406,
           "market_probability": 0.8172473336719146,
-          "probability_edge": 0.02208172243662676,
+          "probability_edge": 0.022081722436625983,
           "reliability": 1.0,
-          "safety_score": 0.8739763614722493
+          "safety_score": 0.8739763614722489
         },
         {
           "game_id": "401866464",
@@ -78,11 +81,11 @@
           "team": "Ohio",
           "side": "Home",
           "moneyline": -454.5,
-          "model_probability": 0.8068530463380915,
+          "model_probability": 0.8068530463380906,
           "market_probability": 0.786710260601981,
-          "probability_edge": 0.020142785736110502,
+          "probability_edge": 0.020142785736109614,
           "reliability": 1.0,
-          "safety_score": 0.850104088319541
+          "safety_score": 0.8501040883195405
         },
         {
           "game_id": "401866466",
@@ -92,11 +95,11 @@
           "team": "Miami (OH)",
           "side": "Away",
           "moneyline": -354.6,
-          "model_probability": 0.8167956250207538,
+          "model_probability": 0.816795625020753,
           "market_probability": 0.7477359495693866,
-          "probability_edge": 0.06905967545136715,
+          "probability_edge": 0.06905967545136638,
           "reliability": 1.0,
-          "safety_score": 0.8453317999027236
+          "safety_score": 0.8453317999027231
         },
         {
           "game_id": "401858303",
@@ -105,12 +108,12 @@
           "home": "Duke",
           "team": "Duke",
           "side": "Home",
-          "moneyline": -485.4,
-          "model_probability": 0.775658341101784,
-          "market_probability": 0.7957987707462728,
-          "probability_edge": -0.02014042964448881,
+          "moneyline": -520.8,
+          "model_probability": 0.7756583411017828,
+          "market_probability": 0.8043319297006986,
+          "probability_edge": -0.028673588598915778,
           "reliability": 1.0,
-          "safety_score": 0.8367788632374602
+          "safety_score": 0.838912152976066
         },
         {
           "game_id": "401862836",
@@ -120,18 +123,18 @@
           "team": "UTSA",
           "side": "Away",
           "moneyline": -238.1,
-          "model_probability": 0.7521489007361226,
+          "model_probability": 0.7521489007361216,
           "market_probability": 0.6750585058073322,
-          "probability_edge": 0.07709039492879044,
+          "probability_edge": 0.07709039492878944,
           "reliability": 1.0,
-          "safety_score": 0.7948390768198943
+          "safety_score": 0.7948390768198939
         }
       ],
       "leg_count": 6,
-      "parlay_odds": 261.0,
-      "model_combined_probability": 0.2745205714273656,
-      "sportsbook_implied_probability": 0.2770083102493075,
-      "probability_edge": -0.0024877388219419205
+      "parlay_odds": 256.8,
+      "model_combined_probability": 0.2745205714273638,
+      "sportsbook_implied_probability": 0.2802690582959641,
+      "probability_edge": -0.0057484868686003
     }
   ],
   "history": [
@@ -284,9 +287,33 @@
       "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
     },
     {
+      "league": "nfl",
+      "season": 2026,
+      "generated_at": "2026-11-17T09:11:14.969745+00:00",
+      "status": "PASS",
+      "policy": {
+        "min_probability": 0.7,
+        "min_reliability": 0.64,
+        "min_legs": 3,
+        "max_legs": 6,
+        "preferred_odds": [
+          -500,
+          -150
+        ],
+        "minimum_parlay_odds": 250.0,
+        "preferred_max_odds": 350.0
+      },
+      "week": 11,
+      "candidate_counts": {
+        "bovada": 0,
+        "draftkings": 0
+      },
+      "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
+    },
+    {
       "league": "cfb",
       "season": 2026,
-      "generated_at": "2026-11-16T22:52:33.553587+00:00",
+      "generated_at": "2026-11-17T09:11:14.969745+00:00",
       "status": "QUALIFIED",
       "policy": {
         "min_probability": 0.75,
@@ -311,11 +338,11 @@
           "team": "Western Michigan",
           "side": "Home",
           "moneyline": -675.7,
-          "model_probability": 0.8506687877206126,
+          "model_probability": 0.8506687877206122,
           "market_probability": 0.8371175454031954,
-          "probability_edge": 0.013551242317417223,
+          "probability_edge": 0.013551242317416778,
           "reliability": 1.0,
-          "safety_score": 0.8846137802111051
+          "safety_score": 0.8846137802111049
         },
         {
           "game_id": "401869938",
@@ -325,11 +352,11 @@
           "team": "Louisiana Tech",
           "side": "Home",
           "moneyline": -574.7,
-          "model_probability": 0.8393290561085414,
+          "model_probability": 0.8393290561085406,
           "market_probability": 0.8172473336719146,
-          "probability_edge": 0.02208172243662676,
+          "probability_edge": 0.022081722436625983,
           "reliability": 1.0,
-          "safety_score": 0.8739763614722493
+          "safety_score": 0.8739763614722489
         },
         {
           "game_id": "401866464",
@@ -339,11 +366,11 @@
           "team": "Ohio",
           "side": "Home",
           "moneyline": -454.5,
-          "model_probability": 0.8068530463380915,
+          "model_probability": 0.8068530463380906,
           "market_probability": 0.786710260601981,
-          "probability_edge": 0.020142785736110502,
+          "probability_edge": 0.020142785736109614,
           "reliability": 1.0,
-          "safety_score": 0.850104088319541
+          "safety_score": 0.8501040883195405
         },
         {
           "game_id": "401866466",
@@ -353,11 +380,11 @@
           "team": "Miami (OH)",
           "side": "Away",
           "moneyline": -354.6,
-          "model_probability": 0.8167956250207538,
+          "model_probability": 0.816795625020753,
           "market_probability": 0.7477359495693866,
-          "probability_edge": 0.06905967545136715,
+          "probability_edge": 0.06905967545136638,
           "reliability": 1.0,
-          "safety_score": 0.8453317999027236
+          "safety_score": 0.8453317999027231
         },
         {
           "game_id": "401858303",
@@ -366,12 +393,12 @@
           "home": "Duke",
           "team": "Duke",
           "side": "Home",
-          "moneyline": -485.4,
-          "model_probability": 0.775658341101784,
-          "market_probability": 0.7957987707462728,
-          "probability_edge": -0.02014042964448881,
+          "moneyline": -520.8,
+          "model_probability": 0.7756583411017828,
+          "market_probability": 0.8043319297006986,
+          "probability_edge": -0.028673588598915778,
           "reliability": 1.0,
-          "safety_score": 0.8367788632374602
+          "safety_score": 0.838912152976066
         },
         {
           "game_id": "401862836",
@@ -381,18 +408,18 @@
           "team": "UTSA",
           "side": "Away",
           "moneyline": -238.1,
-          "model_probability": 0.7521489007361226,
+          "model_probability": 0.7521489007361216,
           "market_probability": 0.6750585058073322,
-          "probability_edge": 0.07709039492879044,
+          "probability_edge": 0.07709039492878944,
           "reliability": 1.0,
-          "safety_score": 0.7948390768198943
+          "safety_score": 0.7948390768198939
         }
       ],
       "leg_count": 6,
-      "parlay_odds": 261.0,
-      "model_combined_probability": 0.2745205714273656,
-      "sportsbook_implied_probability": 0.2770083102493075,
-      "probability_edge": -0.0024877388219419205,
+      "parlay_odds": 256.8,
+      "model_combined_probability": 0.2745205714273638,
+      "sportsbook_implied_probability": 0.2802690582959641,
+      "probability_edge": -0.0057484868686003,
       "leg_results": [
         "PENDING",
         "PENDING",
