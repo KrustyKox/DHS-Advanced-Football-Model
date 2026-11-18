@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-17T21:45:08.839294+00:00",
+  "generated_at": "2026-11-18T08:30:23.983303+00:00",
   "current": [
     {
       "league": "nfl",
       "season": 2026,
-      "generated_at": "2026-11-17T21:45:08.839294+00:00",
+      "generated_at": "2026-11-18T08:30:23.983303+00:00",
       "status": "PASS",
       "policy": {
         "min_probability": 0.7,
@@ -28,8 +28,8 @@
     {
       "league": "cfb",
       "season": 2026,
-      "generated_at": "2026-11-17T21:45:08.839294+00:00",
-      "status": "QUALIFIED",
+      "generated_at": "2026-11-18T08:30:23.983303+00:00",
+      "status": "PASS",
       "policy": {
         "min_probability": 0.75,
         "min_reliability": 0.72,
@@ -43,98 +43,11 @@
         "preferred_max_odds": 350.0
       },
       "week": 12,
-      "sportsbook": "draftkings",
-      "legs": [
-        {
-          "game_id": "401869938",
-          "kickoff": "2026-11-22T00:00:00+00:00",
-          "away": "Arkansas State",
-          "home": "Louisiana Tech",
-          "team": "Louisiana Tech",
-          "side": "Home",
-          "moneyline": -574.7,
-          "model_probability": 0.8393290561085414,
-          "market_probability": 0.8172473336719146,
-          "probability_edge": 0.02208172243662676,
-          "reliability": 1.0,
-          "safety_score": 0.8739763614722493
-        },
-        {
-          "game_id": "401866464",
-          "kickoff": "2026-11-18T00:00:00+00:00",
-          "away": "Ball State",
-          "home": "Ohio",
-          "team": "Ohio",
-          "side": "Home",
-          "moneyline": -409.8,
-          "model_probability": 0.8068530463380915,
-          "market_probability": 0.77148850718973,
-          "probability_edge": 0.03536453914836146,
-          "reliability": 1.0,
-          "safety_score": 0.8462986499664783
-        },
-        {
-          "game_id": "401866466",
-          "kickoff": "2026-11-18T00:00:00+00:00",
-          "away": "Miami (OH)",
-          "home": "Kent State",
-          "team": "Miami (OH)",
-          "side": "Away",
-          "moneyline": -354.6,
-          "model_probability": 0.8167956250207538,
-          "market_probability": 0.7477359495693866,
-          "probability_edge": 0.06905967545136715,
-          "reliability": 1.0,
-          "safety_score": 0.8453317999027236
-        },
-        {
-          "game_id": "401858303",
-          "kickoff": "2026-11-21T00:30:00+00:00",
-          "away": "Clemson",
-          "home": "Duke",
-          "team": "Duke",
-          "side": "Home",
-          "moneyline": -534.8,
-          "model_probability": 0.775658341101784,
-          "market_probability": 0.8081479690522244,
-          "probability_edge": -0.032489627950440414,
-          "reliability": 1.0,
-          "safety_score": 0.8398661628139481
-        },
-        {
-          "game_id": "401871079",
-          "kickoff": "2026-11-21T19:00:00+00:00",
-          "away": "Missouri State",
-          "home": "Jacksonville State",
-          "team": "Jacksonville State",
-          "side": "Home",
-          "moneyline": -409.8,
-          "model_probability": 0.7650643429474253,
-          "market_probability": 0.77148850718973,
-          "probability_edge": -0.006424164242304742,
-          "reliability": 1.0,
-          "safety_score": 0.8254042982711451
-        },
-        {
-          "game_id": "401862836",
-          "kickoff": "2026-11-22T01:00:00+00:00",
-          "away": "UTSA",
-          "home": "UAB",
-          "team": "UTSA",
-          "side": "Away",
-          "moneyline": -238.1,
-          "model_probability": 0.7521489007361226,
-          "market_probability": 0.6750585058073322,
-          "probability_edge": 0.07709039492879044,
-          "reliability": 1.0,
-          "safety_score": 0.7948390768198943
-        }
-      ],
-      "leg_count": 6,
-      "parlay_odds": 292.6,
-      "model_combined_probability": 0.24689503557242132,
-      "sportsbook_implied_probability": 0.25471217524197654,
-      "probability_edge": -0.007817139669555218
+      "candidate_counts": {
+        "bovada": 0,
+        "draftkings": 4
+      },
+      "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
     }
   ],
   "history": [
@@ -289,7 +202,7 @@
     {
       "league": "nfl",
       "season": 2026,
-      "generated_at": "2026-11-17T21:45:08.839294+00:00",
+      "generated_at": "2026-11-18T08:30:23.983303+00:00",
       "status": "PASS",
       "policy": {
         "min_probability": 0.7,
