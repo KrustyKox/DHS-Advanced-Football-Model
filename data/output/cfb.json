@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-19T21:29:08.585032+00:00",
+  "generated_at": "2026-11-20T08:30:28.979315+00:00",
   "league": "cfb",
   "season": 2026,
   "validation": {
     "games": 3154,
-    "margin_mae": 13.988595940133822,
+    "margin_mae": 13.988595940133823,
     "total_mae": 13.109327271372344,
     "winner_accuracy": 0.7637920101458465,
     "brier_score": 0.1640929196598168,
-    "log_loss": 0.49546038834291684,
+    "log_loss": 0.4954603883429169,
     "method": "chronological holdout; recency-weighted training; market-free features"
   },
   "targets": {
@@ -18,103 +18,6 @@
   "feature_count": 41,
   "current_season_weight": 4.0,
   "games": [
-    {
-      "game_id": "401862830",
-      "league": "cfb",
-      "season": 2026,
-      "week": 12,
-      "kickoff": "2026-11-20T00:30:00+00:00",
-      "home": "Temple",
-      "away": "Rice",
-      "projected_home": 23.4,
-      "projected_away": 28.6,
-      "projected_margin_home": -5.3,
-      "projected_total": 52.0,
-      "home_win_probability": 0.3794746546064665,
-      "predicted_winner": "Rice",
-      "winner_confidence": 0.6205253453935335,
-      "data_reliability": 1.0,
-      "margin_uncertainty": 17.59229368491784,
-      "total_uncertainty": 16.390934940443874,
-      "current_season_games_min": 10,
-      "sportsbooks": [
-        {
-          "sportsbook": "bovada",
-          "home_spread": null,
-          "home_moneyline": null,
-          "away_moneyline": null,
-          "total": 51.5,
-          "evaluations": [
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 51.5,
-              "odds": -110.0,
-              "model_probability": 0.5121677140102872,
-              "market_probability": 0.5,
-              "edge": 0.012167714010287156,
-              "raw_point_edge": 0.5,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
-        {
-          "sportsbook": "draftkings",
-          "home_spread": -2.5,
-          "home_moneyline": -142.0,
-          "away_moneyline": 120.0,
-          "total": 51.5,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Away",
-              "line": null,
-              "odds": 120.0,
-              "model_probability": 0.6205253453935335,
-              "market_probability": 0.43650793650793646,
-              "edge": 0.1840174088855971,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Away",
-              "line": 2.5,
-              "odds": -102.0,
-              "model_probability": 0.6712530872639693,
-              "market_probability": 0.5,
-              "edge": 0.17125308726396926,
-              "raw_point_edge": 7.8,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 51.5,
-              "odds": -112.0,
-              "model_probability": 0.5121677140102872,
-              "market_probability": 0.5,
-              "edge": 0.012167714010287156,
-              "raw_point_edge": 0.5,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            }
-          ]
-        }
-      ]
-    },
     {
       "game_id": "401856869",
       "league": "cfb",
@@ -127,9 +30,9 @@
       "projected_away": 29.4,
       "projected_margin_home": -6.5,
       "projected_total": 52.3,
-      "home_win_probability": 0.35204796702878355,
+      "home_win_probability": 0.35204796702878366,
       "predicted_winner": "Iowa State",
-      "winner_confidence": 0.6479520329712165,
+      "winner_confidence": 0.6479520329712163,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -138,18 +41,18 @@
         {
           "sportsbook": "draftkings",
           "home_spread": -1.5,
-          "home_moneyline": -122.0,
-          "away_moneyline": 102.0,
-          "total": 48.5,
+          "home_moneyline": -125.0,
+          "away_moneyline": 105.0,
+          "total": 47.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Away",
               "line": null,
-              "odds": 102.0,
-              "model_probability": 0.6479520329712165,
-              "market_probability": 0.4739134147382802,
-              "edge": 0.17403861823293632,
+              "odds": 105.0,
+              "model_probability": 0.6479520329712163,
+              "market_probability": 0.4675324675324675,
+              "edge": 0.18041956543874876,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -159,7 +62,7 @@
               "market": "Spread",
               "side": "Away",
               "line": 1.5,
-              "odds": -112.0,
+              "odds": -108.0,
               "model_probability": 0.6753534934049277,
               "market_probability": 0.5,
               "edge": 0.17535349340492767,
@@ -172,12 +75,12 @@
             {
               "market": "Total",
               "side": "Over",
-              "line": 48.5,
-              "odds": -110.0,
-              "model_probability": 0.5916670942946166,
+              "line": 47.5,
+              "odds": -114.9,
+              "model_probability": 0.6151796069344683,
               "market_probability": 0.5,
-              "edge": 0.09166709429461661,
-              "raw_point_edge": 3.799999999999997,
+              "edge": 0.11517960693446827,
+              "raw_point_edge": 4.799999999999997,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -190,17 +93,17 @@
           "home_spread": null,
           "home_moneyline": null,
           "away_moneyline": null,
-          "total": 48.5,
+          "total": 48.0,
           "evaluations": [
             {
               "market": "Total",
               "side": "Over",
-              "line": 48.5,
-              "odds": -110.0,
-              "model_probability": 0.5916670942946166,
+              "line": 48.0,
+              "odds": -112.0,
+              "model_probability": 0.6034703870132341,
               "market_probability": 0.5,
-              "edge": 0.09166709429461661,
-              "raw_point_edge": 3.799999999999997,
+              "edge": 0.10347038701323408,
+              "raw_point_edge": 4.299999999999997,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -222,9 +125,9 @@
       "projected_away": 16.3,
       "projected_margin_home": 13.3,
       "projected_total": 45.9,
-      "home_win_probability": 0.775658341101784,
+      "home_win_probability": 0.7756583411017838,
       "predicted_winner": "Duke",
-      "winner_confidence": 0.775658341101784,
+      "winner_confidence": 0.7756583411017838,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -233,21 +136,20 @@
         {
           "sportsbook": "draftkings",
           "home_spread": -13.5,
-          "home_moneyline": -534.8,
-          "away_moneyline": 400.0,
-          "total": 40.5,
+          "home_moneyline": -574.7,
+          "away_moneyline": 425.0,
+          "total": 41.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Away",
               "line": null,
-              "odds": 400.0,
-              "model_probability": 0.224341658898216,
-              "market_probability": 0.19185203094777564,
-              "edge": 0.03248962795044036,
+              "odds": 425.0,
+              "model_probability": 0.22434165889821622,
+              "market_probability": 0.1827526663280853,
+              "edge": 0.041588992570130934,
               "qualified": false,
               "gate_reasons": [
-                "market edge below threshold",
                 "probability below threshold"
               ]
             },
@@ -255,7 +157,7 @@
               "market": "Spread",
               "side": "Away",
               "line": 13.5,
-              "odds": -110.0,
+              "odds": -105.0,
               "model_probability": 0.5045353231834119,
               "market_probability": 0.5,
               "edge": 0.004535323183411877,
@@ -269,12 +171,12 @@
             {
               "market": "Total",
               "side": "Over",
-              "line": 40.5,
-              "odds": -108.0,
-              "model_probability": 0.6290923591971345,
+              "line": 41.5,
+              "odds": -102.0,
+              "model_probability": 0.6058200823887467,
               "market_probability": 0.5,
-              "edge": 0.12909235919713447,
-              "raw_point_edge": 5.399999999999999,
+              "edge": 0.10582008238874674,
+              "raw_point_edge": 4.399999999999999,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -287,17 +189,17 @@
           "home_spread": null,
           "home_moneyline": null,
           "away_moneyline": null,
-          "total": 40.5,
+          "total": 41.0,
           "evaluations": [
             {
               "market": "Total",
               "side": "Over",
-              "line": 40.5,
+              "line": 41.0,
               "odds": -112.0,
-              "model_probability": 0.6290923591971345,
+              "model_probability": 0.6175092726789031,
               "market_probability": 0.5,
-              "edge": 0.12909235919713447,
-              "raw_point_edge": 5.399999999999999,
+              "edge": 0.1175092726789031,
+              "raw_point_edge": 4.899999999999999,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -319,9 +221,9 @@
       "projected_away": 17.5,
       "projected_margin_home": 13.7,
       "projected_total": 48.7,
-      "home_win_probability": 0.7835166988922491,
+      "home_win_probability": 0.7835166988922492,
       "predicted_winner": "Toledo",
-      "winner_confidence": 0.7835166988922491,
+      "winner_confidence": 0.7835166988922492,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -332,20 +234,19 @@
           "home_spread": null,
           "home_moneyline": null,
           "away_moneyline": null,
-          "total": 48.5,
+          "total": 47.0,
           "evaluations": [
             {
               "market": "Total",
               "side": "Over",
-              "line": 48.5,
-              "odds": -108.0,
-              "model_probability": 0.5048677196586464,
+              "line": 47.0,
+              "odds": -112.0,
+              "model_probability": 0.5413025820549489,
               "market_probability": 0.5,
-              "edge": 0.004867719658646408,
-              "raw_point_edge": 0.20000000000000284,
+              "edge": 0.041302582054948855,
+              "raw_point_edge": 1.7000000000000028,
               "qualified": false,
               "gate_reasons": [
-                "market edge below threshold",
                 "probability below threshold"
               ]
             }
@@ -356,16 +257,16 @@
           "home_spread": -16.5,
           "home_moneyline": -751.9,
           "away_moneyline": 525.0,
-          "total": 48.5,
+          "total": 47.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Away",
               "line": null,
               "odds": 525.0,
-              "model_probability": 0.21648330110775094,
+              "model_probability": 0.21648330110775083,
               "market_probability": 0.15346024111577972,
-              "edge": 0.06302305999197122,
+              "edge": 0.06302305999197111,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -388,12 +289,12 @@
             {
               "market": "Total",
               "side": "Over",
-              "line": 48.5,
-              "odds": -105.0,
-              "model_probability": 0.5048677196586464,
+              "line": 47.5,
+              "odds": -110.0,
+              "model_probability": 0.5291809726111114,
               "market_probability": 0.5,
-              "edge": 0.004867719658646408,
-              "raw_point_edge": 0.20000000000000284,
+              "edge": 0.02918097261111141,
+              "raw_point_edge": 1.2000000000000028,
               "qualified": false,
               "gate_reasons": [
                 "market edge below threshold",
@@ -416,9 +317,9 @@
       "projected_away": 32.6,
       "projected_margin_home": -19.9,
       "projected_total": 45.2,
-      "home_win_probability": 0.13388830312339683,
+      "home_win_probability": 0.13388830312339675,
       "predicted_winner": "Oregon",
-      "winner_confidence": 0.8661116968766032,
+      "winner_confidence": 0.8661116968766033,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -428,14 +329,52 @@
           "sportsbook": "bovada",
           "home_spread": null,
           "home_moneyline": null,
-          "away_moneyline": -900.9,
-          "total": 44.5,
+          "away_moneyline": -952.4,
+          "total": 45.0,
           "evaluations": [
             {
               "market": "Total",
               "side": "Over",
+              "line": 45.0,
+              "odds": -108.0,
+              "model_probability": 0.5048677196586464,
+              "market_probability": 0.5,
+              "edge": 0.004867719658646408,
+              "raw_point_edge": 0.20000000000000284,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            }
+          ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 17.5,
+          "home_moneyline": 625.0,
+          "away_moneyline": null,
+          "total": 44.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": -17.5,
+              "odds": null,
+              "model_probability": 0.5542567003125577,
+              "market_probability": 0.5,
+              "edge": 0.05425670031255769,
+              "raw_point_edge": 2.3999999999999986,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Over",
               "line": 44.5,
-              "odds": -112.0,
+              "odds": -110.0,
               "model_probability": 0.5170322640333695,
               "market_probability": 0.5,
               "edge": 0.01703226403336955,
@@ -518,7 +457,7 @@
               "market": "Spread",
               "side": "Home",
               "line": -21.5,
-              "odds": -110.0,
+              "odds": -108.0,
               "model_probability": 0.5475090640122109,
               "market_probability": 0.5,
               "edge": 0.04750906401221089,
@@ -532,7 +471,7 @@
               "market": "Total",
               "side": "Under",
               "line": 47.5,
-              "odds": -110.0,
+              "odds": -105.0,
               "model_probability": 0.5533859045019498,
               "market_probability": 0.5,
               "edge": 0.0533859045019498,
@@ -558,9 +497,9 @@
       "projected_away": 26.0,
       "projected_margin_home": -6.5,
       "projected_total": 45.5,
-      "home_win_probability": 0.3531129240612747,
+      "home_win_probability": 0.3531129240612748,
       "predicted_winner": "New Mexico",
-      "winner_confidence": 0.6468870759387253,
+      "winner_confidence": 0.6468870759387252,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -578,9 +517,9 @@
               "side": "Home",
               "line": null,
               "odds": 235.0,
-              "model_probability": 0.3531129240612747,
+              "model_probability": 0.3531129240612748,
               "market_probability": 0.2864668476523898,
-              "edge": 0.06664607640888492,
+              "edge": 0.06664607640888504,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -643,79 +582,6 @@
       ]
     },
     {
-      "game_id": "401862835",
-      "league": "cfb",
-      "season": 2026,
-      "week": 12,
-      "kickoff": "2026-11-21T17:00:00+00:00",
-      "home": "Tulane",
-      "away": "North Texas",
-      "projected_home": 25.3,
-      "projected_away": 29.6,
-      "projected_margin_home": -4.2,
-      "projected_total": 54.9,
-      "home_win_probability": 0.4021546844820018,
-      "predicted_winner": "North Texas",
-      "winner_confidence": 0.5978453155179981,
-      "data_reliability": 1.0,
-      "margin_uncertainty": 17.59229368491784,
-      "total_uncertainty": 16.390934940443874,
-      "current_season_games_min": 10,
-      "sportsbooks": [
-        {
-          "sportsbook": "bovada",
-          "home_spread": 6.5,
-          "home_moneyline": 205.0,
-          "away_moneyline": -245.1,
-          "total": 56.0,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Home",
-              "line": null,
-              "odds": 205.0,
-              "model_probability": 0.4021546844820018,
-              "market_probability": 0.3158361971528067,
-              "edge": 0.08631848732919511,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Home",
-              "line": 6.5,
-              "odds": -108.0,
-              "model_probability": 0.552009135302618,
-              "market_probability": 0.5,
-              "edge": 0.05200913530261797,
-              "raw_point_edge": 2.3,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Under",
-              "line": 56.0,
-              "odds": -108.0,
-              "model_probability": 0.5267530392887319,
-              "market_probability": 0.5,
-              "edge": 0.02675303928873185,
-              "raw_point_edge": 1.1000000000000014,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "game_id": "401862834",
       "league": "cfb",
       "season": 2026,
@@ -727,9 +593,9 @@
       "projected_away": 35.7,
       "projected_margin_home": -8.9,
       "projected_total": 62.5,
-      "home_win_probability": 0.3035910663185848,
+      "home_win_probability": 0.30359106631858523,
       "predicted_winner": "Memphis",
-      "winner_confidence": 0.6964089336814152,
+      "winner_confidence": 0.6964089336814148,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -757,43 +623,6 @@
               ]
             }
           ]
-        },
-        {
-          "sportsbook": "draftkings",
-          "home_spread": 3.0,
-          "home_moneyline": 124.0,
-          "away_moneyline": null,
-          "total": 67.5,
-          "evaluations": [
-            {
-              "market": "Spread",
-              "side": "Away",
-              "line": -3.0,
-              "odds": null,
-              "model_probability": 0.6313285557612665,
-              "market_probability": 0.5,
-              "edge": 0.13132855576126645,
-              "raw_point_edge": 5.9,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Under",
-              "line": 67.5,
-              "odds": -112.0,
-              "model_probability": 0.6198346933527938,
-              "market_probability": 0.5,
-              "edge": 0.11983469335279384,
-              "raw_point_edge": 5.0,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
         }
       ]
     },
@@ -809,9 +638,9 @@
       "projected_away": 20.9,
       "projected_margin_home": 6.9,
       "projected_total": 48.7,
-      "home_win_probability": 0.6570406774740599,
+      "home_win_probability": 0.6570406774740595,
       "predicted_winner": "Army",
-      "winner_confidence": 0.6570406774740599,
+      "winner_confidence": 0.6570406774740595,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -820,18 +649,18 @@
         {
           "sportsbook": "draftkings",
           "home_spread": -6.0,
-          "home_moneyline": -229.9,
-          "away_moneyline": 190.0,
-          "total": 45.5,
+          "home_moneyline": -238.1,
+          "away_moneyline": 195.0,
+          "total": 46.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Away",
               "line": null,
-              "odds": 190.0,
-              "model_probability": 0.3429593225259401,
-              "market_probability": 0.33102216513982397,
-              "edge": 0.011937157386116115,
+              "odds": 195.0,
+              "model_probability": 0.3429593225259405,
+              "market_probability": 0.32494149419266793,
+              "edge": 0.01801782833327259,
               "qualified": false,
               "gate_reasons": [
                 "market edge below threshold",
@@ -842,7 +671,7 @@
               "market": "Spread",
               "side": "Home",
               "line": -6.0,
-              "odds": -108.0,
+              "odds": -112.0,
               "model_probability": 0.5204004948047324,
               "market_probability": 0.5,
               "edge": 0.020400494804732383,
@@ -856,12 +685,12 @@
             {
               "market": "Total",
               "side": "Over",
-              "line": 45.5,
-              "odds": -110.0,
-              "model_probability": 0.5773934996345542,
+              "line": 46.5,
+              "odds": -108.0,
+              "model_probability": 0.5533859045019498,
               "market_probability": 0.5,
-              "edge": 0.07739349963455422,
-              "raw_point_edge": 3.200000000000003,
+              "edge": 0.0533859045019498,
+              "raw_point_edge": 2.200000000000003,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -874,17 +703,113 @@
           "home_spread": null,
           "home_moneyline": null,
           "away_moneyline": null,
-          "total": 46.0,
+          "total": 46.5,
           "evaluations": [
             {
               "market": "Total",
               "side": "Over",
-              "line": 46.0,
-              "odds": -110.0,
-              "model_probability": 0.5654198585304939,
+              "line": 46.5,
+              "odds": -108.0,
+              "model_probability": 0.5533859045019498,
               "market_probability": 0.5,
-              "edge": 0.06541985853049392,
-              "raw_point_edge": 2.700000000000003,
+              "edge": 0.0533859045019498,
+              "raw_point_edge": 2.200000000000003,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": "401858533",
+      "league": "cfb",
+      "season": 2026,
+      "week": 12,
+      "kickoff": "2026-11-21T17:00:00+00:00",
+      "home": "Purdue",
+      "away": "Wisconsin",
+      "projected_home": 21.7,
+      "projected_away": 27.3,
+      "projected_margin_home": -5.6,
+      "projected_total": 49.0,
+      "home_win_probability": 0.3714265391719594,
+      "predicted_winner": "Wisconsin",
+      "winner_confidence": 0.6285734608280407,
+      "data_reliability": 1.0,
+      "margin_uncertainty": 17.59229368491784,
+      "total_uncertainty": 16.390934940443874,
+      "current_season_games_min": 10,
+      "sportsbooks": [
+        {
+          "sportsbook": "bovada",
+          "home_spread": null,
+          "home_moneyline": null,
+          "away_moneyline": null,
+          "total": 46.5,
+          "evaluations": [
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 46.5,
+              "odds": -110.0,
+              "model_probability": 0.5606129049954582,
+              "market_probability": 0.5,
+              "edge": 0.06061290499545824,
+              "raw_point_edge": 2.5,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 6.0,
+          "home_moneyline": 190.0,
+          "away_moneyline": -229.9,
+          "total": 46.5,
+          "evaluations": [
+            {
+              "market": "Moneyline",
+              "side": "Home",
+              "line": null,
+              "odds": 190.0,
+              "model_probability": 0.3714265391719594,
+              "market_probability": 0.33102216513982397,
+              "edge": 0.040404374032135426,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": 6.0,
+              "odds": -110.0,
+              "model_probability": 0.5090700602414049,
+              "market_probability": 0.5,
+              "edge": 0.009070060241404887,
+              "raw_point_edge": 0.40000000000000036,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 46.5,
+              "odds": -108.0,
+              "model_probability": 0.5606129049954582,
+              "market_probability": 0.5,
+              "edge": 0.06061290499545824,
+              "raw_point_edge": 2.5,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -906,9 +831,9 @@
       "projected_away": 27.2,
       "projected_margin_home": -9.8,
       "projected_total": 44.5,
-      "home_win_probability": 0.28494754773392394,
+      "home_win_probability": 0.2849475477339241,
       "predicted_winner": "Ohio State",
-      "winner_confidence": 0.715052452266076,
+      "winner_confidence": 0.7150524522660759,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -936,6 +861,43 @@
               ]
             }
           ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 3.5,
+          "home_moneyline": 140.0,
+          "away_moneyline": null,
+          "total": 41.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": -3.5,
+              "odds": null,
+              "model_probability": 0.6398700063716194,
+              "market_probability": 0.5,
+              "edge": 0.1398700063716194,
+              "raw_point_edge": 6.300000000000001,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 41.5,
+              "odds": -110.0,
+              "model_probability": 0.5726119745976984,
+              "market_probability": 0.5,
+              "edge": 0.07261197459769841,
+              "raw_point_edge": 3.0,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -951,9 +913,9 @@
       "projected_away": 28.0,
       "projected_margin_home": -5.7,
       "projected_total": 50.2,
-      "home_win_probability": 0.36877461513325543,
+      "home_win_probability": 0.3687746151332551,
       "predicted_winner": "Northwestern",
-      "winner_confidence": 0.6312253848667446,
+      "winner_confidence": 0.6312253848667448,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -971,9 +933,9 @@
               "side": "Away",
               "line": null,
               "odds": -135.0,
-              "model_probability": 0.6312253848667446,
+              "model_probability": 0.6312253848667448,
               "market_probability": 0.551441114716549,
-              "edge": 0.07978427015019562,
+              "edge": 0.07978427015019585,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -1031,20 +993,20 @@
       ]
     },
     {
-      "game_id": "401858533",
+      "game_id": "401862835",
       "league": "cfb",
       "season": 2026,
       "week": 12,
       "kickoff": "2026-11-21T17:00:00+00:00",
-      "home": "Purdue",
-      "away": "Wisconsin",
-      "projected_home": 21.7,
-      "projected_away": 27.3,
-      "projected_margin_home": -5.6,
-      "projected_total": 49.0,
-      "home_win_probability": 0.3714265391719595,
-      "predicted_winner": "Wisconsin",
-      "winner_confidence": 0.6285734608280404,
+      "home": "Tulane",
+      "away": "North Texas",
+      "projected_home": 25.3,
+      "projected_away": 29.6,
+      "projected_margin_home": -4.2,
+      "projected_total": 54.9,
+      "home_win_probability": 0.40215468448200187,
+      "predicted_winner": "North Texas",
+      "winner_confidence": 0.5978453155179981,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -1052,42 +1014,19 @@
       "sportsbooks": [
         {
           "sportsbook": "bovada",
-          "home_spread": null,
-          "home_moneyline": null,
-          "away_moneyline": null,
-          "total": 46.5,
-          "evaluations": [
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 46.5,
-              "odds": -110.0,
-              "model_probability": 0.5606129049954582,
-              "market_probability": 0.5,
-              "edge": 0.06061290499545824,
-              "raw_point_edge": 2.5,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
-        {
-          "sportsbook": "draftkings",
-          "home_spread": 6.0,
-          "home_moneyline": 190.0,
-          "away_moneyline": -229.9,
-          "total": 46.5,
+          "home_spread": 6.5,
+          "home_moneyline": 210.0,
+          "away_moneyline": -250.0,
+          "total": 56.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": 190.0,
-              "model_probability": 0.3714265391719595,
-              "market_probability": 0.33102216513982397,
-              "edge": 0.04040437403213554,
+              "odds": 210.0,
+              "model_probability": 0.40215468448200187,
+              "market_probability": 0.31111111111111106,
+              "edge": 0.0910435733708908,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -1096,27 +1035,26 @@
             {
               "market": "Spread",
               "side": "Home",
-              "line": 6.0,
-              "odds": -110.0,
-              "model_probability": 0.5090700602414049,
+              "line": 6.5,
+              "odds": -103.0,
+              "model_probability": 0.552009135302618,
               "market_probability": 0.5,
-              "edge": 0.009070060241404887,
-              "raw_point_edge": 0.40000000000000036,
+              "edge": 0.05200913530261797,
+              "raw_point_edge": 2.3,
               "qualified": false,
               "gate_reasons": [
-                "market edge below threshold",
                 "probability below threshold"
               ]
             },
             {
               "market": "Total",
-              "side": "Over",
-              "line": 46.5,
-              "odds": -108.0,
-              "model_probability": 0.5606129049954582,
+              "side": "Under",
+              "line": 56.5,
+              "odds": -112.0,
+              "model_probability": 0.5388809664521269,
               "market_probability": 0.5,
-              "edge": 0.06061290499545824,
-              "raw_point_edge": 2.5,
+              "edge": 0.03888096645212691,
+              "raw_point_edge": 1.6000000000000014,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -1138,9 +1076,9 @@
       "projected_away": 28.1,
       "projected_margin_home": -5.5,
       "projected_total": 50.8,
-      "home_win_probability": 0.37499891963572324,
+      "home_win_probability": 0.374998919635723,
       "predicted_winner": "Syracuse",
-      "winner_confidence": 0.6250010803642767,
+      "winner_confidence": 0.6250010803642769,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -1151,17 +1089,17 @@
           "home_spread": null,
           "home_moneyline": null,
           "away_moneyline": null,
-          "total": 51.0,
+          "total": 51.5,
           "evaluations": [
             {
               "market": "Total",
               "side": "Under",
-              "line": 51.0,
-              "odds": -112.0,
-              "model_probability": 0.5048677196586464,
+              "line": 51.5,
+              "odds": -110.0,
+              "model_probability": 0.5170322640333694,
               "market_probability": 0.5,
-              "edge": 0.004867719658646408,
-              "raw_point_edge": 0.20000000000000284,
+              "edge": 0.017032264033369438,
+              "raw_point_edge": 0.7000000000000028,
               "qualified": false,
               "gate_reasons": [
                 "market edge below threshold",
@@ -1175,16 +1113,16 @@
           "home_spread": 2.5,
           "home_moneyline": 114.0,
           "away_moneyline": -135.0,
-          "total": 50.5,
+          "total": 51.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Away",
               "line": null,
               "odds": -135.0,
-              "model_probability": 0.6250010803642767,
+              "model_probability": 0.6250010803642769,
               "market_probability": 0.551441114716549,
-              "edge": 0.07355996564772771,
+              "edge": 0.07355996564772793,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -1206,13 +1144,13 @@
             },
             {
               "market": "Total",
-              "side": "Over",
-              "line": 50.5,
-              "odds": -114.9,
-              "model_probability": 0.5073013530196937,
+              "side": "Under",
+              "line": 51.5,
+              "odds": -110.0,
+              "model_probability": 0.5170322640333694,
               "market_probability": 0.5,
-              "edge": 0.0073013530196937015,
-              "raw_point_edge": 0.29999999999999716,
+              "edge": 0.017032264033369438,
+              "raw_point_edge": 0.7000000000000028,
               "qualified": false,
               "gate_reasons": [
                 "market edge below threshold",
@@ -1235,9 +1173,9 @@
       "projected_away": 25.7,
       "projected_margin_home": 1.0,
       "projected_total": 52.3,
-      "home_win_probability": 0.5229859796635292,
+      "home_win_probability": 0.522985979663529,
       "predicted_winner": "Cincinnati",
-      "winner_confidence": 0.5229859796635292,
+      "winner_confidence": 0.522985979663529,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -1248,17 +1186,17 @@
           "home_spread": null,
           "home_moneyline": null,
           "away_moneyline": null,
-          "total": 58.0,
+          "total": 57.5,
           "evaluations": [
             {
               "market": "Total",
               "side": "Under",
-              "line": 58.0,
+              "line": 57.5,
               "odds": -112.0,
-              "model_probability": 0.6359872285390327,
+              "model_probability": 0.6244724853147499,
               "market_probability": 0.5,
-              "edge": 0.13598722853903267,
-              "raw_point_edge": 5.700000000000003,
+              "edge": 0.12447248531474986,
+              "raw_point_edge": 5.200000000000003,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -1269,18 +1207,18 @@
         {
           "sportsbook": "draftkings",
           "home_spread": -3.0,
-          "home_moneyline": -162.1,
-          "away_moneyline": 136.0,
+          "home_moneyline": -155.0,
+          "away_moneyline": 130.0,
           "total": 57.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Away",
               "line": null,
-              "odds": 136.0,
-              "model_probability": 0.4770140203364708,
-              "market_probability": 0.40657342830905163,
-              "edge": 0.07044059202741915,
+              "odds": 130.0,
+              "model_probability": 0.477014020336471,
+              "market_probability": 0.4170073589533933,
+              "edge": 0.0600066613830777,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -1290,7 +1228,7 @@
               "market": "Spread",
               "side": "Away",
               "line": 3.0,
-              "odds": -105.0,
+              "odds": -108.0,
               "model_probability": 0.5452567008585364,
               "market_probability": 0.5,
               "edge": 0.04525670085853639,
@@ -1304,7 +1242,7 @@
               "market": "Total",
               "side": "Under",
               "line": 57.5,
-              "odds": -105.0,
+              "odds": -110.0,
               "model_probability": 0.6244724853147499,
               "market_probability": 0.5,
               "edge": 0.12447248531474986,
@@ -1330,9 +1268,9 @@
       "projected_away": 28.4,
       "projected_margin_home": -9.6,
       "projected_total": 47.2,
-      "home_win_probability": 0.2901689242262464,
+      "home_win_probability": 0.29016892422624685,
       "predicted_winner": "BYU",
-      "winner_confidence": 0.7098310757737536,
+      "winner_confidence": 0.7098310757737532,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -1350,9 +1288,9 @@
               "side": "Away",
               "line": null,
               "odds": -229.9,
-              "model_probability": 0.7098310757737536,
+              "model_probability": 0.7098310757737532,
               "market_probability": 0.668977834860176,
-              "edge": 0.04085324091357756,
+              "edge": 0.040853240913577116,
               "qualified": true,
               "gate_reasons": []
             },
@@ -1374,7 +1312,7 @@
               "market": "Total",
               "side": "Over",
               "line": 47.0,
-              "odds": -108.0,
+              "odds": -110.0,
               "model_probability": 0.5048677196586464,
               "market_probability": 0.5,
               "edge": 0.004867719658646408,
@@ -1401,14 +1339,53 @@
       "projected_away": 6.4,
       "projected_margin_home": 40.1,
       "projected_total": 52.8,
-      "home_win_probability": 0.9770609225943433,
+      "home_win_probability": 0.9770609225943431,
       "predicted_winner": "Ole Miss",
-      "winner_confidence": 0.8148602089122665,
+      "winner_confidence": 0.8148602089122664,
       "data_reliability": 0.6599999999999999,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
       "current_season_games_min": 1,
-      "sportsbooks": []
+      "sportsbooks": [
+        {
+          "sportsbook": "draftkings",
+          "home_spread": -49.5,
+          "home_moneyline": null,
+          "away_moneyline": null,
+          "total": 60.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": 49.5,
+              "odds": -110.0,
+              "model_probability": 0.7034416050424104,
+              "market_probability": 0.5,
+              "edge": 0.20344160504241038,
+              "raw_point_edge": 9.399999999999999,
+              "qualified": false,
+              "gate_reasons": [
+                "input reliability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 60.5,
+              "odds": -110.0,
+              "model_probability": 0.6807409895913392,
+              "market_probability": 0.5,
+              "edge": 0.18074098959133922,
+              "raw_point_edge": 7.700000000000003,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold",
+                "input reliability below threshold"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "game_id": "401856748",
@@ -1422,22 +1399,14 @@
       "projected_away": 18.0,
       "projected_margin_home": 4.5,
       "projected_total": 40.5,
-      "home_win_probability": 0.6030271131507585,
+      "home_win_probability": 0.6030271131507582,
       "predicted_winner": "Florida",
-      "winner_confidence": 0.6030271131507585,
+      "winner_confidence": 0.6030271131507582,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
       "current_season_games_min": 10,
       "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": null,
-          "home_moneyline": -534.8,
-          "away_moneyline": null,
-          "total": null,
-          "evaluations": []
-        },
         {
           "sportsbook": "bovada",
           "home_spread": -13.5,
@@ -1474,6 +1443,29 @@
               ]
             }
           ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": null,
+          "home_moneyline": null,
+          "away_moneyline": 400.0,
+          "total": 45.5,
+          "evaluations": [
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 45.5,
+              "odds": -108.0,
+              "model_probability": 0.6198346933527938,
+              "market_probability": 0.5,
+              "edge": 0.11983469335279384,
+              "raw_point_edge": 5.0,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1489,50 +1481,39 @@
       "projected_away": 39.5,
       "projected_margin_home": -24.0,
       "projected_total": 55.0,
-      "home_win_probability": 0.09556826484066025,
+      "home_win_probability": 0.09556826484066006,
       "predicted_winner": "Wake Forest",
-      "winner_confidence": 0.9044317351593397,
+      "winner_confidence": 0.90443173515934,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
       "current_season_games_min": 10,
       "sportsbooks": [
         {
-          "sportsbook": "bovada",
-          "home_spread": null,
-          "home_moneyline": null,
-          "away_moneyline": -1408.5,
-          "total": 56.0,
-          "evaluations": [
-            {
-              "market": "Total",
-              "side": "Under",
-              "line": 56.0,
-              "odds": -110.0,
-              "model_probability": 0.5243241116844118,
-              "market_probability": 0.5,
-              "edge": 0.024324111684411842,
-              "raw_point_edge": 1.0,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
-        {
           "sportsbook": "draftkings",
           "home_spread": 20.5,
-          "home_moneyline": 900.0,
-          "away_moneyline": null,
+          "home_moneyline": 850.0,
+          "away_moneyline": -1449.3,
           "total": 56.5,
           "evaluations": [
+            {
+              "market": "Moneyline",
+              "side": "Away",
+              "line": null,
+              "odds": -1449.3,
+              "model_probability": 0.90443173515934,
+              "market_probability": 0.8988552421552913,
+              "edge": 0.0055764930040486105,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold"
+              ]
+            },
             {
               "market": "Spread",
               "side": "Away",
               "line": -20.5,
-              "odds": null,
+              "odds": -110.0,
               "model_probability": 0.5788493644061682,
               "market_probability": 0.5,
               "edge": 0.07884936440616819,
@@ -1546,13 +1527,64 @@
               "market": "Total",
               "side": "Under",
               "line": 56.5,
-              "odds": -114.9,
+              "odds": -112.0,
               "model_probability": 0.5364579082500115,
               "market_probability": 0.5,
               "edge": 0.036457908250011495,
               "raw_point_edge": 1.5,
               "qualified": false,
               "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        },
+        {
+          "sportsbook": "bovada",
+          "home_spread": 20.5,
+          "home_moneyline": 800.0,
+          "away_moneyline": -1408.5,
+          "total": 56.0,
+          "evaluations": [
+            {
+              "market": "Moneyline",
+              "side": "Away",
+              "line": null,
+              "odds": -1408.5,
+              "model_probability": 0.90443173515934,
+              "market_probability": 0.8936552696510398,
+              "edge": 0.010776465508300137,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold"
+              ]
+            },
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": -20.5,
+              "odds": -112.0,
+              "model_probability": 0.5788493644061682,
+              "market_probability": 0.5,
+              "edge": 0.07884936440616819,
+              "raw_point_edge": 3.5,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 56.0,
+              "odds": -108.0,
+              "model_probability": 0.5243241116844118,
+              "market_probability": 0.5,
+              "edge": 0.024324111684411842,
+              "raw_point_edge": 1.0,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
                 "probability below threshold"
               ]
             }
@@ -1572,9 +1604,9 @@
       "projected_away": 24.2,
       "projected_margin_home": -2.0,
       "projected_total": 46.4,
-      "home_win_probability": 0.4543365486344153,
+      "home_win_probability": 0.4543365486344157,
       "predicted_winner": "North Carolina",
-      "winner_confidence": 0.5456634513655847,
+      "winner_confidence": 0.5456634513655843,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -1585,17 +1617,17 @@
           "home_spread": null,
           "home_moneyline": null,
           "away_moneyline": null,
-          "total": 43.5,
+          "total": 42.5,
           "evaluations": [
             {
               "market": "Total",
               "side": "Over",
-              "line": 43.5,
-              "odds": -110.0,
-              "model_probability": 0.5702171601288286,
+              "line": 42.5,
+              "odds": -112.0,
+              "model_probability": 0.5940347872698458,
               "market_probability": 0.5,
-              "edge": 0.07021716012882862,
-              "raw_point_edge": 2.8999999999999986,
+              "edge": 0.09403478726984582,
+              "raw_point_edge": 3.8999999999999986,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -1608,16 +1640,16 @@
           "home_spread": -1.5,
           "home_moneyline": -118.1,
           "away_moneyline": -102.0,
-          "total": 43.5,
+          "total": 42.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Away",
               "line": null,
               "odds": -102.0,
-              "model_probability": 0.5456634513655847,
+              "model_probability": 0.5456634513655843,
               "market_probability": 0.48253886999375306,
-              "edge": 0.06312458137183163,
+              "edge": 0.06312458137183119,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -1640,15 +1672,158 @@
             {
               "market": "Total",
               "side": "Over",
-              "line": 43.5,
-              "odds": -110.0,
-              "model_probability": 0.5702171601288286,
+              "line": 42.5,
+              "odds": -105.0,
+              "model_probability": 0.5940347872698458,
               "market_probability": 0.5,
-              "edge": 0.07021716012882862,
-              "raw_point_edge": 2.8999999999999986,
+              "edge": 0.09403478726984582,
+              "raw_point_edge": 3.8999999999999986,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": "401856750",
+      "league": "cfb",
+      "season": 2026,
+      "week": 12,
+      "kickoff": "2026-11-21T18:00:00+00:00",
+      "home": "Mississippi State",
+      "away": "Tennessee Tech",
+      "projected_home": 32.9,
+      "projected_away": 20.5,
+      "projected_margin_home": 12.4,
+      "projected_total": 53.4,
+      "home_win_probability": 0.7607338470250404,
+      "predicted_winner": "Mississippi State",
+      "winner_confidence": 0.6512256312745235,
+      "data_reliability": 0.58,
+      "margin_uncertainty": 17.59229368491784,
+      "total_uncertainty": 16.390934940443874,
+      "current_season_games_min": 0,
+      "sportsbooks": [
+        {
+          "sportsbook": "draftkings",
+          "home_spread": -35.5,
+          "home_moneyline": null,
+          "away_moneyline": null,
+          "total": 59.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": 35.5,
+              "odds": -110.0,
+              "model_probability": 0.9054211516167009,
+              "market_probability": 0.5,
+              "edge": 0.4054211516167009,
+              "raw_point_edge": 23.1,
+              "qualified": false,
+              "gate_reasons": [
+                "input reliability below threshold",
+                "spread edge requires review"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 59.5,
+              "odds": -110.0,
+              "model_probability": 0.6451119936439114,
+              "market_probability": 0.5,
+              "edge": 0.14511199364391136,
+              "raw_point_edge": 6.100000000000001,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold",
+                "input reliability below threshold"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": "401856868",
+      "league": "cfb",
+      "season": 2026,
+      "week": 12,
+      "kickoff": "2026-11-21T18:00:00+00:00",
+      "home": "West Virginia",
+      "away": "Houston",
+      "projected_home": 26.0,
+      "projected_away": 29.3,
+      "projected_margin_home": -3.3,
+      "projected_total": 55.4,
+      "home_win_probability": 0.4236085360390768,
+      "predicted_winner": "Houston",
+      "winner_confidence": 0.5763914639609232,
+      "data_reliability": 1.0,
+      "margin_uncertainty": 17.59229368491784,
+      "total_uncertainty": 16.390934940443874,
+      "current_season_games_min": 10,
+      "sportsbooks": [
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 7.5,
+          "home_moneyline": 240.0,
+          "away_moneyline": null,
+          "total": 70.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": 7.5,
+              "odds": -118.1,
+              "model_probability": 0.5943467493951553,
+              "market_probability": 0.5,
+              "edge": 0.0943467493951553,
+              "raw_point_edge": 4.2,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 70.5,
+              "odds": -108.0,
+              "model_probability": 0.8215376709404212,
+              "market_probability": 0.5,
+              "edge": 0.3215376709404212,
+              "raw_point_edge": 15.100000000000001,
+              "qualified": false,
+              "gate_reasons": [
+                "total edge requires review"
+              ]
+            }
+          ]
+        },
+        {
+          "sportsbook": "bovada",
+          "home_spread": null,
+          "home_moneyline": null,
+          "away_moneyline": -295.0,
+          "total": 70.5,
+          "evaluations": [
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 70.5,
+              "odds": -110.0,
+              "model_probability": 0.8215376709404212,
+              "market_probability": 0.5,
+              "edge": 0.3215376709404212,
+              "raw_point_edge": 15.100000000000001,
+              "qualified": false,
+              "gate_reasons": [
+                "total edge requires review"
               ]
             }
           ]
@@ -1667,9 +1842,9 @@
       "projected_away": 24.0,
       "projected_margin_home": 4.4,
       "projected_total": 52.4,
-      "home_win_probability": 0.6010809632462105,
+      "home_win_probability": 0.601080963246211,
       "predicted_winner": "Liberty",
-      "winner_confidence": 0.6010809632462105,
+      "winner_confidence": 0.601080963246211,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -1740,20 +1915,104 @@
       ]
     },
     {
-      "game_id": "401856868",
+      "game_id": "401871081",
       "league": "cfb",
       "season": 2026,
       "week": 12,
-      "kickoff": "2026-11-21T18:00:00+00:00",
-      "home": "West Virginia",
-      "away": "Houston",
-      "projected_home": 26.0,
-      "projected_away": 29.3,
-      "projected_margin_home": -3.3,
-      "projected_total": 55.4,
-      "home_win_probability": 0.42360853603907733,
-      "predicted_winner": "Houston",
-      "winner_confidence": 0.5763914639609227,
+      "kickoff": "2026-11-21T19:00:00+00:00",
+      "home": "Sam Houston",
+      "away": "Middle Tennessee",
+      "projected_home": 19.0,
+      "projected_away": 30.0,
+      "projected_margin_home": -11.0,
+      "projected_total": 48.9,
+      "home_win_probability": 0.26304816891884053,
+      "predicted_winner": "Middle Tennessee",
+      "winner_confidence": 0.7369518310811595,
+      "data_reliability": 1.0,
+      "margin_uncertainty": 17.59229368491784,
+      "total_uncertainty": 16.390934940443874,
+      "current_season_games_min": 10,
+      "sportsbooks": [
+        {
+          "sportsbook": "draftkings",
+          "home_spread": null,
+          "home_moneyline": null,
+          "away_moneyline": -229.9,
+          "total": 48.5,
+          "evaluations": [
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 48.5,
+              "odds": -105.0,
+              "model_probability": 0.5097347146471317,
+              "market_probability": 0.5,
+              "edge": 0.009734714647131715,
+              "raw_point_edge": 0.3999999999999986,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            }
+          ]
+        },
+        {
+          "sportsbook": "bovada",
+          "home_spread": 6.0,
+          "home_moneyline": 185.0,
+          "away_moneyline": null,
+          "total": 48.0,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": -6.0,
+              "odds": null,
+              "model_probability": 0.6118773256649809,
+              "market_probability": 0.5,
+              "edge": 0.11187732566498088,
+              "raw_point_edge": 5.0,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 48.0,
+              "odds": -112.0,
+              "model_probability": 0.5218942798340882,
+              "market_probability": 0.5,
+              "edge": 0.021894279834088204,
+              "raw_point_edge": 0.8999999999999986,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": "401871079",
+      "league": "cfb",
+      "season": 2026,
+      "week": 12,
+      "kickoff": "2026-11-21T19:00:00+00:00",
+      "home": "Jacksonville State",
+      "away": "Missouri State",
+      "projected_home": 33.1,
+      "projected_away": 20.5,
+      "projected_margin_home": 12.6,
+      "projected_total": 53.5,
+      "home_win_probability": 0.7650643429474252,
+      "predicted_winner": "Jacksonville State",
+      "winner_confidence": 0.7650643429474252,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -1763,143 +2022,74 @@
           "sportsbook": "bovada",
           "home_spread": null,
           "home_moneyline": null,
-          "away_moneyline": -320.5,
-          "total": 70.5,
+          "away_moneyline": null,
+          "total": 52.5,
           "evaluations": [
             {
               "market": "Total",
-              "side": "Under",
-              "line": 70.5,
-              "odds": -110.0,
-              "model_probability": 0.8215376709404212,
+              "side": "Over",
+              "line": 52.5,
+              "odds": -114.9,
+              "model_probability": 0.5243241116844117,
               "market_probability": 0.5,
-              "edge": 0.3215376709404212,
-              "raw_point_edge": 15.100000000000001,
+              "edge": 0.02432411168441173,
+              "raw_point_edge": 1.0,
               "qualified": false,
               "gate_reasons": [
-                "total edge requires review"
+                "market edge below threshold",
+                "probability below threshold"
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "game_id": "401856750",
-      "league": "cfb",
-      "season": 2026,
-      "week": 12,
-      "kickoff": "2026-11-21T18:00:00+00:00",
-      "home": "Mississippi State",
-      "away": "Tennessee Tech",
-      "projected_home": 32.9,
-      "projected_away": 20.5,
-      "projected_margin_home": 12.4,
-      "projected_total": 53.4,
-      "home_win_probability": 0.7607338470250413,
-      "predicted_winner": "Mississippi State",
-      "winner_confidence": 0.6512256312745239,
-      "data_reliability": 0.58,
-      "margin_uncertainty": 17.59229368491784,
-      "total_uncertainty": 16.390934940443874,
-      "current_season_games_min": 0,
-      "sportsbooks": [
+        },
         {
           "sportsbook": "draftkings",
-          "home_spread": -35.5,
-          "home_moneyline": null,
-          "away_moneyline": null,
-          "total": 59.5,
+          "home_spread": -10.5,
+          "home_moneyline": -409.8,
+          "away_moneyline": 320.0,
+          "total": 52.5,
           "evaluations": [
             {
-              "market": "Spread",
+              "market": "Moneyline",
               "side": "Away",
-              "line": 35.5,
-              "odds": -110.0,
-              "model_probability": 0.9054211516167009,
-              "market_probability": 0.5,
-              "edge": 0.4054211516167009,
-              "raw_point_edge": 23.1,
+              "line": null,
+              "odds": 320.0,
+              "model_probability": 0.2349356570525748,
+              "market_probability": 0.22851149281027003,
+              "edge": 0.00642416424230477,
               "qualified": false,
               "gate_reasons": [
-                "input reliability below threshold",
-                "spread edge requires review"
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": -10.5,
+              "odds": -110.0,
+              "model_probability": 0.5475090640122109,
+              "market_probability": 0.5,
+              "edge": 0.04750906401221089,
+              "raw_point_edge": 2.0999999999999996,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
               ]
             },
             {
               "market": "Total",
-              "side": "Under",
-              "line": 59.5,
-              "odds": -110.0,
-              "model_probability": 0.6451119936439114,
+              "side": "Over",
+              "line": 52.5,
+              "odds": -112.0,
+              "model_probability": 0.5243241116844117,
               "market_probability": 0.5,
-              "edge": 0.14511199364391136,
-              "raw_point_edge": 6.100000000000001,
+              "edge": 0.02432411168441173,
+              "raw_point_edge": 1.0,
               "qualified": false,
               "gate_reasons": [
-                "probability below threshold",
-                "input reliability below threshold"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "game_id": "401856746",
-      "league": "cfb",
-      "season": 2026,
-      "week": 12,
-      "kickoff": "2026-11-21T19:00:00+00:00",
-      "home": "Alabama",
-      "away": "Chattanooga",
-      "projected_home": 46.2,
-      "projected_away": 9.4,
-      "projected_margin_home": 36.8,
-      "projected_total": 55.6,
-      "home_win_probability": 0.9691787149209925,
-      "predicted_winner": "Alabama",
-      "winner_confidence": 0.7721236546541757,
-      "data_reliability": 0.58,
-      "margin_uncertainty": 17.59229368491784,
-      "total_uncertainty": 16.390934940443874,
-      "current_season_games_min": 0,
-      "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": -49.5,
-          "home_moneyline": null,
-          "away_moneyline": null,
-          "total": 58.5,
-          "evaluations": [
-            {
-              "market": "Spread",
-              "side": "Away",
-              "line": 49.5,
-              "odds": -110.0,
-              "model_probability": 0.7648241721144607,
-              "market_probability": 0.5,
-              "edge": 0.26482417211446074,
-              "raw_point_edge": 12.700000000000003,
-              "qualified": false,
-              "gate_reasons": [
-                "input reliability below threshold",
-                "spread edge requires review"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Under",
-              "line": 58.5,
-              "odds": -110.0,
-              "model_probability": 0.5702171601288286,
-              "market_probability": 0.5,
-              "edge": 0.07021716012882862,
-              "raw_point_edge": 2.8999999999999986,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold",
-                "input reliability below threshold"
+                "market edge below threshold",
+                "probability below threshold"
               ]
             }
           ]
@@ -1918,9 +2108,9 @@
       "projected_away": 18.6,
       "projected_margin_home": 17.0,
       "projected_total": 54.3,
-      "home_win_probability": 0.8311907613180446,
+      "home_win_probability": 0.8311907613180449,
       "predicted_winner": "Tulsa",
-      "winner_confidence": 0.8311907613180446,
+      "winner_confidence": 0.8311907613180449,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -1938,9 +2128,9 @@
               "side": "Away",
               "line": null,
               "odds": 1100.0,
-              "model_probability": 0.1688092386819554,
+              "model_probability": 0.16880923868195508,
               "market_probability": 0.08031887694101807,
-              "edge": 0.08849036174093734,
+              "edge": 0.08849036174093701,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -2002,207 +2192,65 @@
       ]
     },
     {
-      "game_id": "401871079",
+      "game_id": "401856746",
       "league": "cfb",
       "season": 2026,
       "week": 12,
       "kickoff": "2026-11-21T19:00:00+00:00",
-      "home": "Jacksonville State",
-      "away": "Missouri State",
-      "projected_home": 33.1,
-      "projected_away": 20.5,
-      "projected_margin_home": 12.6,
-      "projected_total": 53.5,
-      "home_win_probability": 0.7650643429474253,
-      "predicted_winner": "Jacksonville State",
-      "winner_confidence": 0.7650643429474253,
-      "data_reliability": 1.0,
+      "home": "Alabama",
+      "away": "Chattanooga",
+      "projected_home": 46.2,
+      "projected_away": 9.4,
+      "projected_margin_home": 36.8,
+      "projected_total": 55.6,
+      "home_win_probability": 0.9691787149209924,
+      "predicted_winner": "Alabama",
+      "winner_confidence": 0.7721236546541757,
+      "data_reliability": 0.58,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
-      "current_season_games_min": 10,
+      "current_season_games_min": 0,
       "sportsbooks": [
         {
-          "sportsbook": "bovada",
-          "home_spread": null,
+          "sportsbook": "draftkings",
+          "home_spread": -49.5,
           "home_moneyline": null,
           "away_moneyline": null,
-          "total": 52.5,
+          "total": 58.5,
           "evaluations": [
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 52.5,
-              "odds": -112.0,
-              "model_probability": 0.5243241116844117,
-              "market_probability": 0.5,
-              "edge": 0.02432411168441173,
-              "raw_point_edge": 1.0,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
-        {
-          "sportsbook": "draftkings",
-          "home_spread": -10.5,
-          "home_moneyline": -409.8,
-          "away_moneyline": 320.0,
-          "total": 52.5,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Away",
-              "line": null,
-              "odds": 320.0,
-              "model_probability": 0.2349356570525747,
-              "market_probability": 0.22851149281027003,
-              "edge": 0.0064241642423046585,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            },
             {
               "market": "Spread",
-              "side": "Home",
-              "line": -10.5,
+              "side": "Away",
+              "line": 49.5,
               "odds": -110.0,
-              "model_probability": 0.5475090640122109,
+              "model_probability": 0.7648241721144607,
               "market_probability": 0.5,
-              "edge": 0.04750906401221089,
-              "raw_point_edge": 2.0999999999999996,
+              "edge": 0.26482417211446074,
+              "raw_point_edge": 12.700000000000003,
               "qualified": false,
               "gate_reasons": [
-                "probability below threshold"
+                "input reliability below threshold",
+                "spread edge requires review"
               ]
             },
             {
               "market": "Total",
-              "side": "Over",
-              "line": 52.5,
-              "odds": -112.0,
-              "model_probability": 0.5243241116844117,
+              "side": "Under",
+              "line": 58.5,
+              "odds": -110.0,
+              "model_probability": 0.5702171601288286,
               "market_probability": 0.5,
-              "edge": 0.02432411168441173,
-              "raw_point_edge": 1.0,
+              "edge": 0.07021716012882862,
+              "raw_point_edge": 2.8999999999999986,
               "qualified": false,
               "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
+                "probability below threshold",
+                "input reliability below threshold"
               ]
             }
           ]
         }
       ]
-    },
-    {
-      "game_id": "401871081",
-      "league": "cfb",
-      "season": 2026,
-      "week": 12,
-      "kickoff": "2026-11-21T19:00:00+00:00",
-      "home": "Sam Houston",
-      "away": "Middle Tennessee",
-      "projected_home": 19.0,
-      "projected_away": 30.0,
-      "projected_margin_home": -11.0,
-      "projected_total": 48.9,
-      "home_win_probability": 0.2630481689188407,
-      "predicted_winner": "Middle Tennessee",
-      "winner_confidence": 0.7369518310811594,
-      "data_reliability": 1.0,
-      "margin_uncertainty": 17.59229368491784,
-      "total_uncertainty": 16.390934940443874,
-      "current_season_games_min": 10,
-      "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": null,
-          "home_moneyline": null,
-          "away_moneyline": -217.9,
-          "total": 48.5,
-          "evaluations": [
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 48.5,
-              "odds": -105.0,
-              "model_probability": 0.5097347146471317,
-              "market_probability": 0.5,
-              "edge": 0.009734714647131715,
-              "raw_point_edge": 0.3999999999999986,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
-        {
-          "sportsbook": "bovada",
-          "home_spread": 6.0,
-          "home_moneyline": 185.0,
-          "away_moneyline": null,
-          "total": 48.0,
-          "evaluations": [
-            {
-              "market": "Spread",
-              "side": "Away",
-              "line": -6.0,
-              "odds": null,
-              "model_probability": 0.6118773256649809,
-              "market_probability": 0.5,
-              "edge": 0.11187732566498088,
-              "raw_point_edge": 5.0,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 48.0,
-              "odds": -112.0,
-              "model_probability": 0.5218942798340882,
-              "market_probability": 0.5,
-              "edge": 0.021894279834088204,
-              "raw_point_edge": 0.8999999999999986,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "game_id": "401869929",
-      "league": "cfb",
-      "season": 2026,
-      "week": 12,
-      "kickoff": "2026-11-21T19:30:00+00:00",
-      "home": "App State",
-      "away": "UL Monroe",
-      "projected_home": 31.6,
-      "projected_away": 19.1,
-      "projected_margin_home": 12.5,
-      "projected_total": 50.6,
-      "home_win_probability": 0.7636693343965487,
-      "predicted_winner": "App State",
-      "winner_confidence": 0.7636693343965487,
-      "data_reliability": 1.0,
-      "margin_uncertainty": 17.59229368491784,
-      "total_uncertainty": 16.390934940443874,
-      "current_season_games_min": 10,
-      "sportsbooks": []
     },
     {
       "game_id": "401858527",
@@ -2216,26 +2264,63 @@
       "projected_away": 23.2,
       "projected_margin_home": -4.0,
       "projected_total": 42.3,
-      "home_win_probability": 0.40789725750522265,
+      "home_win_probability": 0.4078972575052225,
       "predicted_winner": "Iowa",
-      "winner_confidence": 0.5921027424947773,
+      "winner_confidence": 0.5921027424947776,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
       "current_season_games_min": 10,
       "sportsbooks": [
         {
+          "sportsbook": "draftkings",
+          "home_spread": 8.5,
+          "home_moneyline": 260.0,
+          "away_moneyline": null,
+          "total": 40.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": 8.5,
+              "odds": -110.0,
+              "model_probability": 0.6009449768452708,
+              "market_probability": 0.5,
+              "edge": 0.10094497684527082,
+              "raw_point_edge": 4.5,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 40.5,
+              "odds": -118.1,
+              "model_probability": 0.5437226658370764,
+              "market_probability": 0.5,
+              "edge": 0.0437226658370764,
+              "raw_point_edge": 1.7999999999999972,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        },
+        {
           "sportsbook": "bovada",
           "home_spread": null,
           "home_moneyline": null,
-          "away_moneyline": -330.0,
+          "away_moneyline": -359.7,
           "total": 40.5,
           "evaluations": [
             {
               "market": "Total",
               "side": "Over",
               "line": 40.5,
-              "odds": -110.0,
+              "odds": -108.0,
               "model_probability": 0.5437226658370764,
               "market_probability": 0.5,
               "edge": 0.0437226658370764,
@@ -2261,7 +2346,7 @@
       "projected_away": 34.6,
       "projected_margin_home": -9.4,
       "projected_total": 59.7,
-      "home_win_probability": 0.29354618063865207,
+      "home_win_probability": 0.2935461806386521,
       "predicted_winner": "South Florida",
       "winner_confidence": 0.7064538193613479,
       "data_reliability": 1.0,
@@ -2343,254 +2428,25 @@
       ]
     },
     {
-      "game_id": "401871077",
+      "game_id": "401869929",
       "league": "cfb",
       "season": 2026,
       "week": 12,
-      "kickoff": "2026-11-21T20:00:00+00:00",
-      "home": "New Mexico State",
-      "away": "Delaware",
-      "projected_home": 22.7,
-      "projected_away": 26.7,
-      "projected_margin_home": -4.0,
-      "projected_total": 49.4,
-      "home_win_probability": 0.40678950431260386,
-      "predicted_winner": "Delaware",
-      "winner_confidence": 0.5932104956873961,
+      "kickoff": "2026-11-21T19:30:00+00:00",
+      "home": "App State",
+      "away": "UL Monroe",
+      "projected_home": 31.6,
+      "projected_away": 19.1,
+      "projected_margin_home": 12.5,
+      "projected_total": 50.6,
+      "home_win_probability": 0.7636693343965486,
+      "predicted_winner": "App State",
+      "winner_confidence": 0.7636693343965486,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
       "current_season_games_min": 10,
-      "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": 3.0,
-          "home_moneyline": 140.0,
-          "away_moneyline": -166.1,
-          "total": 54.5,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Home",
-              "line": null,
-              "odds": 140.0,
-              "model_probability": 0.40678950431260386,
-              "market_probability": 0.40030688690315014,
-              "edge": 0.006482617409453717,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Away",
-              "line": -3.0,
-              "odds": -114.9,
-              "model_probability": 0.522664898179446,
-              "market_probability": 0.5,
-              "edge": 0.022664898179445947,
-              "raw_point_edge": 1.0,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Under",
-              "line": 54.5,
-              "odds": -110.0,
-              "model_probability": 0.6221557902956371,
-              "market_probability": 0.5,
-              "edge": 0.12215579029563706,
-              "raw_point_edge": 5.100000000000001,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
-        {
-          "sportsbook": "bovada",
-          "home_spread": 3.0,
-          "home_moneyline": 138.0,
-          "away_moneyline": -163.1,
-          "total": 54.0,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Home",
-              "line": null,
-              "odds": 138.0,
-              "model_probability": 0.40678950431260386,
-              "market_probability": 0.4039749538599492,
-              "edge": 0.0028145504526546627,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Away",
-              "line": -3.0,
-              "odds": -117.0,
-              "model_probability": 0.522664898179446,
-              "market_probability": 0.5,
-              "edge": 0.022664898179445947,
-              "raw_point_edge": 1.0,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Under",
-              "line": 54.0,
-              "odds": -108.0,
-              "model_probability": 0.6105078571674264,
-              "market_probability": 0.5,
-              "edge": 0.1105078571674264,
-              "raw_point_edge": 4.600000000000001,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "game_id": "401871078",
-      "league": "cfb",
-      "season": 2026,
-      "week": 12,
-      "kickoff": "2026-11-21T20:00:00+00:00",
-      "home": "Kennesaw State",
-      "away": "Florida International",
-      "projected_home": 26.1,
-      "projected_away": 19.5,
-      "projected_margin_home": 6.6,
-      "projected_total": 45.6,
-      "home_win_probability": 0.6507480668600972,
-      "predicted_winner": "Kennesaw State",
-      "winner_confidence": 0.6507480668600972,
-      "data_reliability": 1.0,
-      "margin_uncertainty": 17.59229368491784,
-      "total_uncertainty": 16.390934940443874,
-      "current_season_games_min": 10,
-      "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": -3.5,
-          "home_moneyline": -162.1,
-          "away_moneyline": 136.0,
-          "total": 44.5,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Home",
-              "line": null,
-              "odds": -162.1,
-              "model_probability": 0.6507480668600972,
-              "market_probability": 0.5934265716909483,
-              "edge": 0.05732149516914897,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Home",
-              "line": -3.5,
-              "odds": -108.0,
-              "model_probability": 0.5699369003282524,
-              "market_probability": 0.5,
-              "edge": 0.0699369003282524,
-              "raw_point_edge": 3.0999999999999996,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 44.5,
-              "odds": -110.0,
-              "model_probability": 0.5267530392887319,
-              "market_probability": 0.5,
-              "edge": 0.02675303928873185,
-              "raw_point_edge": 1.1000000000000014,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
-        {
-          "sportsbook": "bovada",
-          "home_spread": -3.5,
-          "home_moneyline": -168.1,
-          "away_moneyline": 143.0,
-          "total": 44.5,
-          "evaluations": [
-            {
-              "market": "Moneyline",
-              "side": "Home",
-              "line": null,
-              "odds": -168.1,
-              "model_probability": 0.6507480668600972,
-              "market_probability": 0.6037441082616619,
-              "edge": 0.047003958598435314,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Spread",
-              "side": "Home",
-              "line": -3.5,
-              "odds": -105.0,
-              "model_probability": 0.5699369003282524,
-              "market_probability": 0.5,
-              "edge": 0.0699369003282524,
-              "raw_point_edge": 3.0999999999999996,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 44.5,
-              "odds": -110.0,
-              "model_probability": 0.5267530392887319,
-              "market_probability": 0.5,
-              "edge": 0.02675303928873185,
-              "raw_point_edge": 1.1000000000000014,
-              "qualified": false,
-              "gate_reasons": [
-                "market edge below threshold",
-                "probability below threshold"
-              ]
-            }
-          ]
-        }
-      ]
+      "sportsbooks": []
     },
     {
       "game_id": "401869946",
@@ -2604,9 +2460,9 @@
       "projected_away": 22.2,
       "projected_margin_home": 7.7,
       "projected_total": 52.0,
-      "home_win_probability": 0.6717254587174016,
+      "home_win_probability": 0.671725458717402,
       "predicted_winner": "Louisiana",
-      "winner_confidence": 0.6717254587174016,
+      "winner_confidence": 0.671725458717402,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -2624,9 +2480,9 @@
               "side": "Away",
               "line": null,
               "odds": 310.0,
-              "model_probability": 0.32827454128259836,
+              "model_probability": 0.32827454128259803,
               "market_probability": 0.23407040542903454,
-              "edge": 0.09420413585356383,
+              "edge": 0.09420413585356349,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -2665,116 +2521,70 @@
       ]
     },
     {
-      "game_id": "401856747",
+      "game_id": "401871077",
       "league": "cfb",
       "season": 2026,
       "week": 12,
-      "kickoff": "2026-11-21T20:30:00+00:00",
-      "home": "Auburn",
-      "away": "Samford",
-      "projected_home": 45.9,
-      "projected_away": 10.2,
-      "projected_margin_home": 35.6,
-      "projected_total": 56.1,
-      "home_win_probability": 0.9655671775797863,
-      "predicted_winner": "Auburn",
-      "winner_confidence": 0.807274337202659,
-      "data_reliability": 0.6599999999999999,
-      "margin_uncertainty": 17.59229368491784,
-      "total_uncertainty": 16.390934940443874,
-      "current_season_games_min": 1,
-      "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": -48.5,
-          "home_moneyline": null,
-          "away_moneyline": null,
-          "total": 59.5,
-          "evaluations": [
-            {
-              "market": "Spread",
-              "side": "Away",
-              "line": 48.5,
-              "odds": -110.0,
-              "model_probability": 0.7683048281597948,
-              "market_probability": 0.5,
-              "edge": 0.26830482815979484,
-              "raw_point_edge": 12.899999999999999,
-              "qualified": false,
-              "gate_reasons": [
-                "input reliability below threshold",
-                "spread edge requires review"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Under",
-              "line": 59.5,
-              "odds": -110.0,
-              "model_probability": 0.5821636479690906,
-              "market_probability": 0.5,
-              "edge": 0.08216364796909059,
-              "raw_point_edge": 3.3999999999999986,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold",
-                "input reliability below threshold"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "game_id": "401856754",
-      "league": "cfb",
-      "season": 2026,
-      "week": 12,
-      "kickoff": "2026-11-21T20:30:00+00:00",
-      "home": "Tennessee",
-      "away": "LSU",
-      "projected_home": 24.7,
-      "projected_away": 19.0,
-      "projected_margin_home": 5.8,
-      "projected_total": 43.7,
-      "home_win_probability": 0.6316240234947781,
-      "predicted_winner": "Tennessee",
-      "winner_confidence": 0.6316240234947781,
+      "kickoff": "2026-11-21T20:00:00+00:00",
+      "home": "New Mexico State",
+      "away": "Delaware",
+      "projected_home": 22.7,
+      "projected_away": 26.7,
+      "projected_margin_home": -4.0,
+      "projected_total": 49.4,
+      "home_win_probability": 0.40678950431260386,
+      "predicted_winner": "Delaware",
+      "winner_confidence": 0.5932104956873961,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
       "current_season_games_min": 10,
       "sportsbooks": [
         {
-          "sportsbook": "bovada",
-          "home_spread": -1.0,
-          "home_moneyline": -110.0,
-          "away_moneyline": null,
-          "total": 46.0,
+          "sportsbook": "draftkings",
+          "home_spread": 3.0,
+          "home_moneyline": 140.0,
+          "away_moneyline": -166.1,
+          "total": 53.5,
           "evaluations": [
             {
-              "market": "Spread",
+              "market": "Moneyline",
               "side": "Home",
-              "line": -1.0,
+              "line": null,
+              "odds": 140.0,
+              "model_probability": 0.40678950431260386,
+              "market_probability": 0.40030688690315014,
+              "edge": 0.006482617409453717,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": -3.0,
+              "odds": -112.0,
+              "model_probability": 0.522664898179446,
+              "market_probability": 0.5,
+              "edge": 0.022664898179445947,
+              "raw_point_edge": 1.0,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 53.5,
               "odds": -105.0,
-              "model_probability": 0.6075144859934498,
+              "model_probability": 0.5987597867717817,
               "market_probability": 0.5,
-              "edge": 0.10751448599344982,
-              "raw_point_edge": 4.8,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Under",
-              "line": 46.0,
-              "odds": -110.0,
-              "model_probability": 0.5557969971680456,
-              "market_probability": 0.5,
-              "edge": 0.05579699716804565,
-              "raw_point_edge": 2.299999999999997,
+              "edge": 0.09875978677178165,
+              "raw_point_edge": 4.100000000000001,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -2783,21 +2593,50 @@
           ]
         },
         {
-          "sportsbook": "draftkings",
-          "home_spread": null,
-          "home_moneyline": null,
-          "away_moneyline": -114.9,
-          "total": 45.5,
+          "sportsbook": "bovada",
+          "home_spread": 3.0,
+          "home_moneyline": 138.0,
+          "away_moneyline": -163.1,
+          "total": 53.5,
           "evaluations": [
+            {
+              "market": "Moneyline",
+              "side": "Home",
+              "line": null,
+              "odds": 138.0,
+              "model_probability": 0.40678950431260386,
+              "market_probability": 0.4039749538599492,
+              "edge": 0.0028145504526546627,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": -3.0,
+              "odds": -117.0,
+              "model_probability": 0.522664898179446,
+              "market_probability": 0.5,
+              "edge": 0.022664898179445947,
+              "raw_point_edge": 1.0,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            },
             {
               "market": "Total",
               "side": "Under",
-              "line": 45.5,
+              "line": 53.5,
               "odds": -108.0,
-              "model_probability": 0.5437226658370764,
+              "model_probability": 0.5987597867717817,
               "market_probability": 0.5,
-              "edge": 0.0437226658370764,
-              "raw_point_edge": 1.7999999999999972,
+              "edge": 0.09875978677178165,
+              "raw_point_edge": 4.100000000000001,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -2808,247 +2647,54 @@
       ]
     },
     {
-      "game_id": "401856755",
+      "game_id": "401871078",
       "league": "cfb",
       "season": 2026,
       "week": 12,
-      "kickoff": "2026-11-21T20:30:00+00:00",
-      "home": "Texas",
-      "away": "Arkansas",
-      "projected_home": 33.7,
-      "projected_away": 16.1,
-      "projected_margin_home": 17.6,
-      "projected_total": 49.7,
-      "home_win_probability": 0.8385353666623816,
-      "predicted_winner": "Texas",
-      "winner_confidence": 0.8385353666623816,
-      "data_reliability": 1.0,
-      "margin_uncertainty": 17.59229368491784,
-      "total_uncertainty": 16.390934940443874,
-      "current_season_games_min": 10,
-      "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": null,
-          "home_moneyline": null,
-          "away_moneyline": 950.0,
-          "total": 47.5,
-          "evaluations": [
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 47.5,
-              "odds": -118.1,
-              "model_probability": 0.5533859045019498,
-              "market_probability": 0.5,
-              "edge": 0.0533859045019498,
-              "raw_point_edge": 2.200000000000003,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
-        {
-          "sportsbook": "bovada",
-          "home_spread": -20.5,
-          "home_moneyline": -1492.5,
-          "away_moneyline": null,
-          "total": 47.5,
-          "evaluations": [
-            {
-              "market": "Spread",
-              "side": "Away",
-              "line": 20.5,
-              "odds": null,
-              "model_probability": 0.5654669712107576,
-              "market_probability": 0.5,
-              "edge": 0.06546697121075762,
-              "raw_point_edge": 2.8999999999999986,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 47.5,
-              "odds": -112.0,
-              "model_probability": 0.5533859045019498,
-              "market_probability": 0.5,
-              "edge": 0.0533859045019498,
-              "raw_point_edge": 2.200000000000003,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "game_id": "401856871",
-      "league": "cfb",
-      "season": 2026,
-      "week": 12,
-      "kickoff": "2026-11-21T20:30:00+00:00",
-      "home": "Baylor",
-      "away": "Texas Tech",
-      "projected_home": 26.3,
-      "projected_away": 33.2,
-      "projected_margin_home": -6.9,
-      "projected_total": 59.5,
-      "home_win_probability": 0.34435358345318556,
-      "predicted_winner": "Texas Tech",
-      "winner_confidence": 0.6556464165468144,
-      "data_reliability": 1.0,
-      "margin_uncertainty": 17.59229368491784,
-      "total_uncertainty": 16.390934940443874,
-      "current_season_games_min": 10,
-      "sportsbooks": [
-        {
-          "sportsbook": "bovada",
-          "home_spread": null,
-          "home_moneyline": null,
-          "away_moneyline": -200.0,
-          "total": 55.5,
-          "evaluations": [
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 55.5,
-              "odds": -112.0,
-              "model_probability": 0.5963990457253623,
-              "market_probability": 0.5,
-              "edge": 0.09639904572536229,
-              "raw_point_edge": 4.0,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
-        {
-          "sportsbook": "draftkings",
-          "home_spread": 4.5,
-          "home_moneyline": 160.0,
-          "away_moneyline": null,
-          "total": 55.5,
-          "evaluations": [
-            {
-              "market": "Spread",
-              "side": "Away",
-              "line": -4.5,
-              "odds": null,
-              "model_probability": 0.5542567003125577,
-              "market_probability": 0.5,
-              "edge": 0.05425670031255769,
-              "raw_point_edge": 2.4000000000000004,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 55.5,
-              "odds": -112.0,
-              "model_probability": 0.5963990457253623,
-              "market_probability": 0.5,
-              "edge": 0.09639904572536229,
-              "raw_point_edge": 4.0,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "game_id": "401858304",
-      "league": "cfb",
-      "season": 2026,
-      "week": 12,
-      "kickoff": "2026-11-21T20:30:00+00:00",
-      "home": "Florida State",
-      "away": "NC State",
+      "kickoff": "2026-11-21T20:00:00+00:00",
+      "home": "Kennesaw State",
+      "away": "Florida International",
       "projected_home": 26.1,
-      "projected_away": 20.8,
-      "projected_margin_home": 5.3,
-      "projected_total": 46.9,
-      "home_win_probability": 0.6221875184720627,
-      "predicted_winner": "Florida State",
-      "winner_confidence": 0.6221875184720627,
-      "data_reliability": 1.0,
-      "margin_uncertainty": 17.59229368491784,
-      "total_uncertainty": 16.390934940443874,
-      "current_season_games_min": 10,
-      "sportsbooks": []
-    },
-    {
-      "game_id": "401858528",
-      "league": "cfb",
-      "season": 2026,
-      "week": 12,
-      "kickoff": "2026-11-21T20:30:00+00:00",
-      "home": "Michigan",
-      "away": "UCLA",
-      "projected_home": 24.5,
-      "projected_away": 21.8,
-      "projected_margin_home": 2.7,
-      "projected_total": 46.3,
-      "home_win_probability": 0.5637844947777371,
-      "predicted_winner": "Michigan",
-      "winner_confidence": 0.5637844947777371,
+      "projected_away": 19.5,
+      "projected_margin_home": 6.6,
+      "projected_total": 45.6,
+      "home_win_probability": 0.6507480668600972,
+      "predicted_winner": "Kennesaw State",
+      "winner_confidence": 0.6507480668600972,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
       "current_season_games_min": 10,
       "sportsbooks": [
         {
-          "sportsbook": "bovada",
-          "home_spread": null,
-          "home_moneyline": null,
-          "away_moneyline": -179.9,
-          "total": 37.5,
+          "sportsbook": "draftkings",
+          "home_spread": -3.0,
+          "home_moneyline": -162.1,
+          "away_moneyline": 136.0,
+          "total": 44.5,
           "evaluations": [
             {
-              "market": "Total",
-              "side": "Over",
-              "line": 37.5,
-              "odds": -108.0,
-              "model_probability": 0.7043254809355971,
-              "market_probability": 0.5,
-              "edge": 0.2043254809355971,
-              "raw_point_edge": 8.799999999999997,
-              "qualified": true,
-              "gate_reasons": []
-            }
-          ]
-        },
-        {
-          "sportsbook": "draftkings",
-          "home_spread": 3.5,
-          "home_moneyline": 150.0,
-          "away_moneyline": null,
-          "total": 37.5,
-          "evaluations": [
+              "market": "Moneyline",
+              "side": "Home",
+              "line": null,
+              "odds": -162.1,
+              "model_probability": 0.6507480668600972,
+              "market_probability": 0.5934265716909483,
+              "edge": 0.05732149516914897,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
             {
               "market": "Spread",
               "side": "Home",
-              "line": 3.5,
-              "odds": -112.0,
-              "model_probability": 0.6377409871189734,
+              "line": -3.0,
+              "odds": -114.9,
+              "model_probability": 0.5810713678170251,
               "market_probability": 0.5,
-              "edge": 0.13774098711897342,
-              "raw_point_edge": 6.2,
+              "edge": 0.08107136781702506,
+              "raw_point_edge": 3.5999999999999996,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -3057,14 +2703,68 @@
             {
               "market": "Total",
               "side": "Over",
-              "line": 37.5,
-              "odds": -105.0,
-              "model_probability": 0.7043254809355971,
+              "line": 44.5,
+              "odds": -110.0,
+              "model_probability": 0.5267530392887319,
               "market_probability": 0.5,
-              "edge": 0.2043254809355971,
-              "raw_point_edge": 8.799999999999997,
-              "qualified": true,
-              "gate_reasons": []
+              "edge": 0.02675303928873185,
+              "raw_point_edge": 1.1000000000000014,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            }
+          ]
+        },
+        {
+          "sportsbook": "bovada",
+          "home_spread": -3.5,
+          "home_moneyline": -163.1,
+          "away_moneyline": 138.0,
+          "total": 44.5,
+          "evaluations": [
+            {
+              "market": "Moneyline",
+              "side": "Home",
+              "line": null,
+              "odds": -163.1,
+              "model_probability": 0.6507480668600972,
+              "market_probability": 0.5960250461400507,
+              "edge": 0.054723020720046534,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": -3.5,
+              "odds": 100.0,
+              "model_probability": 0.5699369003282524,
+              "market_probability": 0.5,
+              "edge": 0.0699369003282524,
+              "raw_point_edge": 3.0999999999999996,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 44.5,
+              "odds": -110.0,
+              "model_probability": 0.5267530392887319,
+              "market_probability": 0.5,
+              "edge": 0.02675303928873185,
+              "raw_point_edge": 1.1000000000000014,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
             }
           ]
         }
@@ -3166,6 +2866,27 @@
       ]
     },
     {
+      "game_id": "401861968",
+      "league": "cfb",
+      "season": 2026,
+      "week": 12,
+      "kickoff": "2026-11-21T20:30:00+00:00",
+      "home": "UConn",
+      "away": "Old Dominion",
+      "projected_home": 30.6,
+      "projected_away": 19.7,
+      "projected_margin_home": 10.9,
+      "projected_total": 50.4,
+      "home_win_probability": 0.7349597428857451,
+      "predicted_winner": "UConn",
+      "winner_confidence": 0.7349597428857451,
+      "data_reliability": 1.0,
+      "margin_uncertainty": 17.59229368491784,
+      "total_uncertainty": 16.390934940443874,
+      "current_season_games_min": 10,
+      "sportsbooks": []
+    },
+    {
       "game_id": "401858535",
       "league": "cfb",
       "season": 2026,
@@ -3177,9 +2898,9 @@
       "projected_away": 25.5,
       "projected_margin_home": -8.1,
       "projected_total": 42.9,
-      "home_win_probability": 0.31961125172020866,
+      "home_win_probability": 0.3196112517202087,
       "predicted_winner": "Indiana",
-      "winner_confidence": 0.6803887482797913,
+      "winner_confidence": 0.6803887482797912,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -3208,24 +2929,407 @@
               ]
             }
           ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 7.5,
+          "home_moneyline": 250.0,
+          "away_moneyline": null,
+          "total": 44.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": -7.5,
+              "odds": null,
+              "model_probability": 0.5136036252757955,
+              "market_probability": 0.5,
+              "edge": 0.013603625275795506,
+              "raw_point_edge": 0.5999999999999996,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 44.5,
+              "odds": -118.1,
+              "model_probability": 0.5388809664521269,
+              "market_probability": 0.5,
+              "edge": 0.03888096645212691,
+              "raw_point_edge": 1.6000000000000014,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
         }
       ]
     },
     {
-      "game_id": "401861968",
+      "game_id": "401858528",
       "league": "cfb",
       "season": 2026,
       "week": 12,
       "kickoff": "2026-11-21T20:30:00+00:00",
-      "home": "UConn",
-      "away": "Old Dominion",
-      "projected_home": 30.6,
-      "projected_away": 19.7,
-      "projected_margin_home": 10.9,
-      "projected_total": 50.4,
-      "home_win_probability": 0.7349597428857446,
-      "predicted_winner": "UConn",
-      "winner_confidence": 0.7349597428857446,
+      "home": "Michigan",
+      "away": "UCLA",
+      "projected_home": 24.5,
+      "projected_away": 21.8,
+      "projected_margin_home": 2.7,
+      "projected_total": 46.3,
+      "home_win_probability": 0.5637844947777367,
+      "predicted_winner": "Michigan",
+      "winner_confidence": 0.5637844947777367,
+      "data_reliability": 1.0,
+      "margin_uncertainty": 17.59229368491784,
+      "total_uncertainty": 16.390934940443874,
+      "current_season_games_min": 10,
+      "sportsbooks": [
+        {
+          "sportsbook": "bovada",
+          "home_spread": null,
+          "home_moneyline": null,
+          "away_moneyline": -179.9,
+          "total": 37.5,
+          "evaluations": [
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 37.5,
+              "odds": -108.0,
+              "model_probability": 0.7043254809355971,
+              "market_probability": 0.5,
+              "edge": 0.2043254809355971,
+              "raw_point_edge": 8.799999999999997,
+              "qualified": true,
+              "gate_reasons": []
+            }
+          ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 3.5,
+          "home_moneyline": 150.0,
+          "away_moneyline": null,
+          "total": 37.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": 3.5,
+              "odds": -112.0,
+              "model_probability": 0.6377409871189734,
+              "market_probability": 0.5,
+              "edge": 0.13774098711897342,
+              "raw_point_edge": 6.2,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 37.5,
+              "odds": -105.0,
+              "model_probability": 0.7043254809355971,
+              "market_probability": 0.5,
+              "edge": 0.2043254809355971,
+              "raw_point_edge": 8.799999999999997,
+              "qualified": true,
+              "gate_reasons": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": "401856747",
+      "league": "cfb",
+      "season": 2026,
+      "week": 12,
+      "kickoff": "2026-11-21T20:30:00+00:00",
+      "home": "Auburn",
+      "away": "Samford",
+      "projected_home": 45.9,
+      "projected_away": 10.2,
+      "projected_margin_home": 35.6,
+      "projected_total": 56.1,
+      "home_win_probability": 0.9655671775797863,
+      "predicted_winner": "Auburn",
+      "winner_confidence": 0.807274337202659,
+      "data_reliability": 0.6599999999999999,
+      "margin_uncertainty": 17.59229368491784,
+      "total_uncertainty": 16.390934940443874,
+      "current_season_games_min": 1,
+      "sportsbooks": []
+    },
+    {
+      "game_id": "401856871",
+      "league": "cfb",
+      "season": 2026,
+      "week": 12,
+      "kickoff": "2026-11-21T20:30:00+00:00",
+      "home": "Baylor",
+      "away": "Texas Tech",
+      "projected_home": 26.3,
+      "projected_away": 33.2,
+      "projected_margin_home": -6.9,
+      "projected_total": 59.5,
+      "home_win_probability": 0.34435358345318556,
+      "predicted_winner": "Texas Tech",
+      "winner_confidence": 0.6556464165468144,
+      "data_reliability": 1.0,
+      "margin_uncertainty": 17.59229368491784,
+      "total_uncertainty": 16.390934940443874,
+      "current_season_games_min": 10,
+      "sportsbooks": [
+        {
+          "sportsbook": "bovada",
+          "home_spread": null,
+          "home_moneyline": null,
+          "away_moneyline": -200.0,
+          "total": 56.0,
+          "evaluations": [
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 56.0,
+              "odds": -112.0,
+              "model_probability": 0.5845442427358511,
+              "market_probability": 0.5,
+              "edge": 0.08454424273585115,
+              "raw_point_edge": 3.5,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 4.5,
+          "home_moneyline": 170.0,
+          "away_moneyline": null,
+          "total": 56.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": -4.5,
+              "odds": null,
+              "model_probability": 0.5542567003125577,
+              "market_probability": 0.5,
+              "edge": 0.05425670031255769,
+              "raw_point_edge": 2.4000000000000004,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 56.5,
+              "odds": -108.0,
+              "model_probability": 0.5726119745976984,
+              "market_probability": 0.5,
+              "edge": 0.07261197459769841,
+              "raw_point_edge": 3.0,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": "401856755",
+      "league": "cfb",
+      "season": 2026,
+      "week": 12,
+      "kickoff": "2026-11-21T20:30:00+00:00",
+      "home": "Texas",
+      "away": "Arkansas",
+      "projected_home": 33.7,
+      "projected_away": 16.1,
+      "projected_margin_home": 17.6,
+      "projected_total": 49.7,
+      "home_win_probability": 0.8385353666623817,
+      "predicted_winner": "Texas",
+      "winner_confidence": 0.8385353666623817,
+      "data_reliability": 1.0,
+      "margin_uncertainty": 17.59229368491784,
+      "total_uncertainty": 16.390934940443874,
+      "current_season_games_min": 10,
+      "sportsbooks": [
+        {
+          "sportsbook": "draftkings",
+          "home_spread": null,
+          "home_moneyline": null,
+          "away_moneyline": 950.0,
+          "total": 47.5,
+          "evaluations": [
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 47.5,
+              "odds": -118.1,
+              "model_probability": 0.5533859045019498,
+              "market_probability": 0.5,
+              "edge": 0.0533859045019498,
+              "raw_point_edge": 2.200000000000003,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        },
+        {
+          "sportsbook": "bovada",
+          "home_spread": -20.5,
+          "home_moneyline": -1408.5,
+          "away_moneyline": null,
+          "total": 47.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": 20.5,
+              "odds": null,
+              "model_probability": 0.5654669712107576,
+              "market_probability": 0.5,
+              "edge": 0.06546697121075762,
+              "raw_point_edge": 2.8999999999999986,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 47.5,
+              "odds": -112.0,
+              "model_probability": 0.5533859045019498,
+              "market_probability": 0.5,
+              "edge": 0.0533859045019498,
+              "raw_point_edge": 2.200000000000003,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": "401856754",
+      "league": "cfb",
+      "season": 2026,
+      "week": 12,
+      "kickoff": "2026-11-21T20:30:00+00:00",
+      "home": "Tennessee",
+      "away": "LSU",
+      "projected_home": 24.7,
+      "projected_away": 19.0,
+      "projected_margin_home": 5.8,
+      "projected_total": 43.7,
+      "home_win_probability": 0.6316240234947783,
+      "predicted_winner": "Tennessee",
+      "winner_confidence": 0.6316240234947783,
+      "data_reliability": 1.0,
+      "margin_uncertainty": 17.59229368491784,
+      "total_uncertainty": 16.390934940443874,
+      "current_season_games_min": 10,
+      "sportsbooks": [
+        {
+          "sportsbook": "bovada",
+          "home_spread": 1.0,
+          "home_moneyline": -108.0,
+          "away_moneyline": null,
+          "total": 46.0,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": 1.0,
+              "odds": -112.0,
+              "model_probability": 0.6504489729787428,
+              "market_probability": 0.5,
+              "edge": 0.15044897297874282,
+              "raw_point_edge": 6.8,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 46.0,
+              "odds": -110.0,
+              "model_probability": 0.5557969971680456,
+              "market_probability": 0.5,
+              "edge": 0.05579699716804565,
+              "raw_point_edge": 2.299999999999997,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        },
+        {
+          "sportsbook": "draftkings",
+          "home_spread": null,
+          "home_moneyline": null,
+          "away_moneyline": -114.9,
+          "total": 45.5,
+          "evaluations": [
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 45.5,
+              "odds": -108.0,
+              "model_probability": 0.5437226658370764,
+              "market_probability": 0.5,
+              "edge": 0.0437226658370764,
+              "raw_point_edge": 1.7999999999999972,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": "401858304",
+      "league": "cfb",
+      "season": 2026,
+      "week": 12,
+      "kickoff": "2026-11-21T20:30:00+00:00",
+      "home": "Florida State",
+      "away": "NC State",
+      "projected_home": 26.1,
+      "projected_away": 20.8,
+      "projected_margin_home": 5.3,
+      "projected_total": 46.9,
+      "home_win_probability": 0.6221875184720627,
+      "predicted_winner": "Florida State",
+      "winner_confidence": 0.6221875184720627,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -3255,18 +3359,18 @@
         {
           "sportsbook": "draftkings",
           "home_spread": -7.5,
-          "home_moneyline": -304.9,
-          "away_moneyline": 245.0,
+          "home_moneyline": -289.9,
+          "away_moneyline": 235.0,
           "total": 38.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": -304.9,
+              "odds": -289.9,
               "model_probability": 0.7393886394204996,
-              "market_probability": 0.7220630077464039,
-              "edge": 0.01732563167409573,
+              "market_probability": 0.7135331523476101,
+              "edge": 0.025855487072889538,
               "qualified": false,
               "gate_reasons": [
                 "market edge below threshold"
@@ -3276,7 +3380,7 @@
               "market": "Spread",
               "side": "Home",
               "line": -7.5,
-              "odds": -105.0,
+              "odds": 102.0,
               "model_probability": 0.5810713678170251,
               "market_probability": 0.5,
               "edge": 0.08107136781702506,
@@ -3290,7 +3394,7 @@
               "market": "Total",
               "side": "Over",
               "line": 38.5,
-              "odds": -110.0,
+              "odds": -105.0,
               "model_probability": 0.5892960500653264,
               "market_probability": 0.5,
               "edge": 0.08929605006532637,
@@ -3307,17 +3411,17 @@
           "home_spread": null,
           "home_moneyline": null,
           "away_moneyline": null,
-          "total": 38.5,
+          "total": 38.0,
           "evaluations": [
             {
               "market": "Total",
               "side": "Over",
-              "line": 38.5,
-              "odds": -105.0,
-              "model_probability": 0.5892960500653264,
+              "line": 38.0,
+              "odds": -110.0,
+              "model_probability": 0.601116927904683,
               "market_probability": 0.5,
-              "edge": 0.08929605006532637,
-              "raw_point_edge": 3.700000000000003,
+              "edge": 0.10111692790468296,
+              "raw_point_edge": 4.200000000000003,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -3348,44 +3452,21 @@
       "current_season_games_min": 10,
       "sportsbooks": [
         {
-          "sportsbook": "draftkings",
-          "home_spread": null,
-          "home_moneyline": null,
-          "away_moneyline": null,
-          "total": 43.5,
-          "evaluations": [
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 43.5,
-              "odds": -114.9,
-              "model_probability": 0.5437226658370764,
-              "market_probability": 0.5,
-              "edge": 0.0437226658370764,
-              "raw_point_edge": 1.7999999999999972,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
-        {
           "sportsbook": "bovada",
           "home_spread": null,
           "home_moneyline": null,
           "away_moneyline": null,
-          "total": 44.0,
+          "total": 44.5,
           "evaluations": [
             {
               "market": "Total",
               "side": "Over",
-              "line": 44.0,
-              "odds": -108.0,
-              "model_probability": 0.5316078217264697,
+              "line": 44.5,
+              "odds": -112.0,
+              "model_probability": 0.5194636338745423,
               "market_probability": 0.5,
-              "edge": 0.0316078217264697,
-              "raw_point_edge": 1.2999999999999972,
+              "edge": 0.019463633874542308,
+              "raw_point_edge": 0.7999999999999972,
               "qualified": false,
               "gate_reasons": [
                 "market edge below threshold",
@@ -3455,7 +3536,7 @@
               "market": "Total",
               "side": "Over",
               "line": 48.5,
-              "odds": -110.0,
+              "odds": -105.0,
               "model_probability": 0.5243241116844117,
               "market_probability": 0.5,
               "edge": 0.02432411168441173,
@@ -3506,9 +3587,9 @@
       "projected_away": 23.4,
       "projected_margin_home": 6.3,
       "projected_total": 53.1,
-      "home_win_probability": 0.6431450200221445,
+      "home_win_probability": 0.6431450200221441,
       "predicted_winner": "Marshall",
-      "winner_confidence": 0.6431450200221445,
+      "winner_confidence": 0.6431450200221441,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -3517,18 +3598,18 @@
         {
           "sportsbook": "draftkings",
           "home_spread": -2.5,
-          "home_moneyline": -130.0,
-          "away_moneyline": 110.0,
+          "home_moneyline": -142.0,
+          "away_moneyline": 120.0,
           "total": 55.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Home",
               "line": null,
-              "odds": -130.0,
-              "model_probability": 0.6431450200221445,
-              "market_probability": 0.5427435387673957,
-              "edge": 0.10040148125474879,
+              "odds": -142.0,
+              "model_probability": 0.6431450200221441,
+              "market_probability": 0.5634920634920635,
+              "edge": 0.07965295653008064,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -3538,7 +3619,7 @@
               "market": "Spread",
               "side": "Home",
               "line": -2.5,
-              "odds": -102.0,
+              "odds": -114.9,
               "model_probability": 0.5855075565830437,
               "market_probability": 0.5,
               "edge": 0.08550755658304365,
@@ -3601,9 +3682,9 @@
       "projected_away": 34.5,
       "projected_margin_home": -9.7,
       "projected_total": 59.3,
-      "home_win_probability": 0.28708159376889847,
+      "home_win_probability": 0.28708159376889775,
       "predicted_winner": "South Alabama",
-      "winner_confidence": 0.7129184062311016,
+      "winner_confidence": 0.7129184062311023,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -3644,9 +3725,9 @@
               "side": "Away",
               "line": null,
               "odds": -184.8,
-              "model_probability": 0.7129184062311016,
+              "model_probability": 0.7129184062311023,
               "market_probability": 0.6223773256677345,
-              "edge": 0.09054108056336707,
+              "edge": 0.09054108056336774,
               "qualified": true,
               "gate_reasons": []
             },
@@ -3694,9 +3775,9 @@
       "projected_away": 28.9,
       "projected_margin_home": 3.9,
       "projected_total": 61.7,
-      "home_win_probability": 0.5897353137197747,
+      "home_win_probability": 0.589735313719774,
       "predicted_winner": "Texas State",
-      "winner_confidence": 0.5897353137197747,
+      "winner_confidence": 0.589735313719774,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -3728,7 +3809,7 @@
         },
         {
           "sportsbook": "draftkings",
-          "home_spread": -12.5,
+          "home_spread": -13.5,
           "home_moneyline": -520.8,
           "away_moneyline": 390.0,
           "total": 62.5,
@@ -3738,9 +3819,9 @@
               "side": "Away",
               "line": null,
               "odds": 390.0,
-              "model_probability": 0.4102646862802253,
+              "model_probability": 0.41026468628022605,
               "market_probability": 0.19566807029930156,
-              "edge": 0.21459661598092372,
+              "edge": 0.2145966159809245,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -3749,16 +3830,14 @@
             {
               "market": "Spread",
               "side": "Away",
-              "line": 12.5,
+              "line": 13.5,
               "odds": -108.0,
-              "model_probability": 0.6875261973179438,
+              "model_probability": 0.7073616734971566,
               "market_probability": 0.5,
-              "edge": 0.18752619731794384,
-              "raw_point_edge": 8.6,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
+              "edge": 0.20736167349715662,
+              "raw_point_edge": 9.6,
+              "qualified": true,
+              "gate_reasons": []
             },
             {
               "market": "Total",
@@ -3791,9 +3870,9 @@
       "projected_away": 15.9,
       "projected_margin_home": 18.0,
       "projected_total": 49.7,
-      "home_win_probability": 0.8433222844713479,
+      "home_win_probability": 0.8433222844713477,
       "predicted_winner": "USC",
-      "winner_confidence": 0.8433222844713479,
+      "winner_confidence": 0.8433222844713477,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -3810,7 +3889,7 @@
               "market": "Spread",
               "side": "Home",
               "line": -17.5,
-              "odds": -105.0,
+              "odds": -110.0,
               "model_probability": 0.5113370258650995,
               "market_probability": 0.5,
               "edge": 0.011337025865099548,
@@ -3861,191 +3940,6 @@
           ]
         }
       ]
-    },
-    {
-      "game_id": "401856865",
-      "league": "cfb",
-      "season": 2026,
-      "week": 12,
-      "kickoff": "2026-11-22T00:00:00+00:00",
-      "home": "Kansas State",
-      "away": "Arizona",
-      "projected_home": 21.3,
-      "projected_away": 33.3,
-      "projected_margin_home": -12.0,
-      "projected_total": 54.6,
-      "home_win_probability": 0.24607787588979313,
-      "predicted_winner": "Arizona",
-      "winner_confidence": 0.7539221241102069,
-      "data_reliability": 1.0,
-      "margin_uncertainty": 17.59229368491784,
-      "total_uncertainty": 16.390934940443874,
-      "current_season_games_min": 10,
-      "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": 7.0,
-          "home_moneyline": 235.0,
-          "away_moneyline": null,
-          "total": 52.5,
-          "evaluations": [
-            {
-              "market": "Spread",
-              "side": "Away",
-              "line": -7.0,
-              "odds": null,
-              "model_probability": 0.6118773256649809,
-              "market_probability": 0.5,
-              "edge": 0.11187732566498088,
-              "raw_point_edge": 5.0,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 52.5,
-              "odds": -105.0,
-              "model_probability": 0.5509728366607181,
-              "market_probability": 0.5,
-              "edge": 0.05097283666071806,
-              "raw_point_edge": 2.1000000000000014,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
-        {
-          "sportsbook": "bovada",
-          "home_spread": null,
-          "home_moneyline": null,
-          "away_moneyline": -289.9,
-          "total": 52.5,
-          "evaluations": [
-            {
-              "market": "Total",
-              "side": "Over",
-              "line": 52.5,
-              "odds": -110.0,
-              "model_probability": 0.5509728366607181,
-              "market_probability": 0.5,
-              "edge": 0.05097283666071806,
-              "raw_point_edge": 2.1000000000000014,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "game_id": "401858302",
-      "league": "cfb",
-      "season": 2026,
-      "week": 12,
-      "kickoff": "2026-11-22T00:00:00+00:00",
-      "home": "Miami",
-      "away": "Virginia Tech",
-      "projected_home": 40.7,
-      "projected_away": 16.4,
-      "projected_margin_home": 24.3,
-      "projected_total": 57.0,
-      "home_win_probability": 0.9066203996531956,
-      "predicted_winner": "Miami",
-      "winner_confidence": 0.9066203996531956,
-      "data_reliability": 1.0,
-      "margin_uncertainty": 17.59229368491784,
-      "total_uncertainty": 16.390934940443874,
-      "current_season_games_min": 10,
-      "sportsbooks": [
-        {
-          "sportsbook": "draftkings",
-          "home_spread": null,
-          "home_moneyline": null,
-          "away_moneyline": 900.0,
-          "total": 60.5,
-          "evaluations": [
-            {
-              "market": "Total",
-              "side": "Under",
-              "line": 60.5,
-              "odds": -105.0,
-              "model_probability": 0.5845442427358511,
-              "market_probability": 0.5,
-              "edge": 0.08454424273585115,
-              "raw_point_edge": 3.5,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        },
-        {
-          "sportsbook": "bovada",
-          "home_spread": -20.5,
-          "home_moneyline": -1408.5,
-          "away_moneyline": null,
-          "total": 61.0,
-          "evaluations": [
-            {
-              "market": "Spread",
-              "side": "Home",
-              "line": -20.5,
-              "odds": -112.0,
-              "model_probability": 0.5855075565830437,
-              "market_probability": 0.5,
-              "edge": 0.08550755658304365,
-              "raw_point_edge": 3.8000000000000007,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            },
-            {
-              "market": "Total",
-              "side": "Under",
-              "line": 61.0,
-              "odds": -112.0,
-              "model_probability": 0.5963990457253623,
-              "market_probability": 0.5,
-              "edge": 0.09639904572536229,
-              "raw_point_edge": 4.0,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "game_id": "401864544",
-      "league": "cfb",
-      "season": 2026,
-      "week": 12,
-      "kickoff": "2026-11-22T00:00:00+00:00",
-      "home": "San Jos\u00e9 State",
-      "away": "UNLV",
-      "projected_home": 19.3,
-      "projected_away": 25.7,
-      "projected_margin_home": -6.4,
-      "projected_total": 44.9,
-      "home_win_probability": 0.3549350664297739,
-      "predicted_winner": "UNLV",
-      "winner_confidence": 0.6450649335702261,
-      "data_reliability": 1.0,
-      "margin_uncertainty": 17.59229368491784,
-      "total_uncertainty": 16.390934940443874,
-      "current_season_games_min": 10,
-      "sportsbooks": []
     },
     {
       "game_id": "401869938",
@@ -4143,6 +4037,191 @@
       ]
     },
     {
+      "game_id": "401864544",
+      "league": "cfb",
+      "season": 2026,
+      "week": 12,
+      "kickoff": "2026-11-22T00:00:00+00:00",
+      "home": "San Jos\u00e9 State",
+      "away": "UNLV",
+      "projected_home": 19.3,
+      "projected_away": 25.7,
+      "projected_margin_home": -6.4,
+      "projected_total": 44.9,
+      "home_win_probability": 0.3549350664297737,
+      "predicted_winner": "UNLV",
+      "winner_confidence": 0.6450649335702263,
+      "data_reliability": 1.0,
+      "margin_uncertainty": 17.59229368491784,
+      "total_uncertainty": 16.390934940443874,
+      "current_season_games_min": 10,
+      "sportsbooks": []
+    },
+    {
+      "game_id": "401856865",
+      "league": "cfb",
+      "season": 2026,
+      "week": 12,
+      "kickoff": "2026-11-22T00:00:00+00:00",
+      "home": "Kansas State",
+      "away": "Arizona",
+      "projected_home": 21.3,
+      "projected_away": 33.3,
+      "projected_margin_home": -12.0,
+      "projected_total": 54.6,
+      "home_win_probability": 0.24607787588979244,
+      "predicted_winner": "Arizona",
+      "winner_confidence": 0.7539221241102075,
+      "data_reliability": 1.0,
+      "margin_uncertainty": 17.59229368491784,
+      "total_uncertainty": 16.390934940443874,
+      "current_season_games_min": 10,
+      "sportsbooks": [
+        {
+          "sportsbook": "draftkings",
+          "home_spread": 7.5,
+          "home_moneyline": 235.0,
+          "away_moneyline": null,
+          "total": 52.5,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": -7.5,
+              "odds": null,
+              "model_probability": 0.6009449768452708,
+              "market_probability": 0.5,
+              "edge": 0.10094497684527082,
+              "raw_point_edge": 4.5,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 52.5,
+              "odds": -105.0,
+              "model_probability": 0.5509728366607181,
+              "market_probability": 0.5,
+              "edge": 0.05097283666071806,
+              "raw_point_edge": 2.1000000000000014,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        },
+        {
+          "sportsbook": "bovada",
+          "home_spread": null,
+          "home_moneyline": null,
+          "away_moneyline": -289.9,
+          "total": 52.0,
+          "evaluations": [
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 52.0,
+              "odds": -112.0,
+              "model_probability": 0.5630175447488694,
+              "market_probability": 0.5,
+              "edge": 0.06301754474886945,
+              "raw_point_edge": 2.6000000000000014,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": "401858302",
+      "league": "cfb",
+      "season": 2026,
+      "week": 12,
+      "kickoff": "2026-11-22T00:00:00+00:00",
+      "home": "Miami",
+      "away": "Virginia Tech",
+      "projected_home": 40.7,
+      "projected_away": 16.4,
+      "projected_margin_home": 24.3,
+      "projected_total": 57.0,
+      "home_win_probability": 0.9066203996531956,
+      "predicted_winner": "Miami",
+      "winner_confidence": 0.9066203996531956,
+      "data_reliability": 1.0,
+      "margin_uncertainty": 17.59229368491784,
+      "total_uncertainty": 16.390934940443874,
+      "current_season_games_min": 10,
+      "sportsbooks": [
+        {
+          "sportsbook": "draftkings",
+          "home_spread": null,
+          "home_moneyline": null,
+          "away_moneyline": 950.0,
+          "total": 60.5,
+          "evaluations": [
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 60.5,
+              "odds": -105.0,
+              "model_probability": 0.5845442427358511,
+              "market_probability": 0.5,
+              "edge": 0.08454424273585115,
+              "raw_point_edge": 3.5,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        },
+        {
+          "sportsbook": "bovada",
+          "home_spread": -20.5,
+          "home_moneyline": -1408.5,
+          "away_moneyline": null,
+          "total": 61.0,
+          "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": -20.5,
+              "odds": -112.0,
+              "model_probability": 0.5855075565830437,
+              "market_probability": 0.5,
+              "edge": 0.08550755658304365,
+              "raw_point_edge": 3.8000000000000007,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
+            {
+              "market": "Total",
+              "side": "Under",
+              "line": 61.0,
+              "odds": -110.0,
+              "model_probability": 0.5963990457253623,
+              "market_probability": 0.5,
+              "edge": 0.09639904572536229,
+              "raw_point_edge": 4.0,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "game_id": "401856751",
       "league": "cfb",
       "season": 2026,
@@ -4154,9 +4233,9 @@
       "projected_away": 21.6,
       "projected_margin_home": 7.1,
       "projected_total": 50.2,
-      "home_win_probability": 0.6593970539381356,
+      "home_win_probability": 0.6593970539381353,
       "predicted_winner": "Missouri",
-      "winner_confidence": 0.6593970539381356,
+      "winner_confidence": 0.6593970539381353,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -4236,7 +4315,7 @@
       "projected_away": 39.7,
       "projected_margin_home": -26.7,
       "projected_total": 52.6,
-      "home_win_probability": 0.07590412067382199,
+      "home_win_probability": 0.07590412067382196,
       "predicted_winner": "Georgia",
       "winner_confidence": 0.924095879326178,
       "data_reliability": 1.0,
@@ -4246,11 +4325,25 @@
       "sportsbooks": [
         {
           "sportsbook": "draftkings",
-          "home_spread": null,
-          "home_moneyline": null,
-          "away_moneyline": -751.9,
+          "home_spread": 14.5,
+          "home_moneyline": 525.0,
+          "away_moneyline": null,
           "total": 51.5,
           "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Away",
+              "line": -14.5,
+              "odds": null,
+              "model_probability": 0.7559975284467457,
+              "market_probability": 0.5,
+              "edge": 0.2559975284467457,
+              "raw_point_edge": 12.2,
+              "qualified": false,
+              "gate_reasons": [
+                "spread edge requires review"
+              ]
+            },
             {
               "market": "Total",
               "side": "Over",
@@ -4279,7 +4372,7 @@
               "market": "Total",
               "side": "Over",
               "line": 51.5,
-              "odds": -108.0,
+              "odds": -105.0,
               "model_probability": 0.5267530392887319,
               "market_probability": 0.5,
               "edge": 0.02675303928873185,
@@ -4306,9 +4399,9 @@
       "projected_away": 17.7,
       "projected_margin_home": 11.9,
       "projected_total": 47.3,
-      "home_win_probability": 0.7521410652022522,
+      "home_win_probability": 0.7521410652022523,
       "predicted_winner": "Louisville",
-      "winner_confidence": 0.7521410652022522,
+      "winner_confidence": 0.7521410652022523,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -4362,7 +4455,7 @@
               "market": "Total",
               "side": "Under",
               "line": 50.5,
-              "odds": -114.9,
+              "odds": -110.0,
               "model_probability": 0.5773934996345542,
               "market_probability": 0.5,
               "edge": 0.07739349963455422,
@@ -4474,17 +4567,17 @@
           "home_spread": null,
           "home_moneyline": null,
           "away_moneyline": null,
-          "total": 56.5,
+          "total": 56.0,
           "evaluations": [
             {
               "market": "Total",
               "side": "Under",
-              "line": 56.5,
-              "odds": -110.0,
-              "model_probability": 0.5750041164178802,
+              "line": 56.0,
+              "odds": -105.0,
+              "model_probability": 0.5630175447488693,
               "market_probability": 0.5,
-              "edge": 0.07500411641788018,
-              "raw_point_edge": 3.1000000000000014,
+              "edge": 0.06301754474886934,
+              "raw_point_edge": 2.6000000000000014,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -4506,9 +4599,9 @@
       "projected_away": 16.4,
       "projected_margin_home": 29.1,
       "projected_total": 62.0,
-      "home_win_probability": 0.9385430213805385,
+      "home_win_probability": 0.9385430213805382,
       "predicted_winner": "Fresno State",
-      "winner_confidence": 0.9385430213805385,
+      "winner_confidence": 0.9385430213805382,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -4539,7 +4632,7 @@
         },
         {
           "sportsbook": "draftkings",
-          "home_spread": -20.5,
+          "home_spread": -19.5,
           "home_moneyline": -1449.3,
           "away_moneyline": 850.0,
           "total": 66.5,
@@ -4549,31 +4642,29 @@
               "side": "Home",
               "line": null,
               "odds": -1449.3,
-              "model_probability": 0.9385430213805385,
+              "model_probability": 0.9385430213805382,
               "market_probability": 0.8988552421552913,
-              "edge": 0.03968777922524713,
+              "edge": 0.03968777922524691,
               "qualified": true,
               "gate_reasons": []
             },
             {
               "market": "Spread",
               "side": "Home",
-              "line": -20.5,
-              "odds": -105.0,
-              "model_probability": 0.687526197317944,
+              "line": -19.5,
+              "odds": -114.9,
+              "model_probability": 0.7073616734971566,
               "market_probability": 0.5,
-              "edge": 0.18752619731794395,
-              "raw_point_edge": 8.600000000000001,
-              "qualified": false,
-              "gate_reasons": [
-                "probability below threshold"
-              ]
+              "edge": 0.20736167349715662,
+              "raw_point_edge": 9.600000000000001,
+              "qualified": true,
+              "gate_reasons": []
             },
             {
               "market": "Total",
               "side": "Under",
               "line": 66.5,
-              "odds": -118.1,
+              "odds": -112.0,
               "model_probability": 0.6081659327331557,
               "market_probability": 0.5,
               "edge": 0.10816593273315567,
@@ -4599,9 +4690,9 @@
       "projected_away": 30.1,
       "projected_margin_home": -11.9,
       "projected_total": 48.3,
-      "home_win_probability": 0.2478510992638774,
+      "home_win_probability": 0.24785109926387752,
       "predicted_winner": "UTSA",
-      "winner_confidence": 0.7521489007361226,
+      "winner_confidence": 0.7521489007361225,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -4612,16 +4703,16 @@
           "home_spread": 6.5,
           "home_moneyline": 200.0,
           "away_moneyline": -245.1,
-          "total": 51.5,
+          "total": 50.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Away",
               "line": null,
               "odds": -245.1,
-              "model_probability": 0.7521489007361226,
+              "model_probability": 0.7521489007361225,
               "market_probability": 0.6805812661977046,
-              "edge": 0.07156763453841797,
+              "edge": 0.07156763453841786,
               "qualified": true,
               "gate_reasons": []
             },
@@ -4629,7 +4720,7 @@
               "market": "Spread",
               "side": "Away",
               "line": -6.5,
-              "odds": -112.0,
+              "odds": -108.0,
               "model_probability": 0.6205602681424468,
               "market_probability": 0.5,
               "edge": 0.1205602681424468,
@@ -4642,12 +4733,12 @@
             {
               "market": "Total",
               "side": "Under",
-              "line": 51.5,
-              "odds": -112.0,
-              "model_probability": 0.5773934996345542,
+              "line": 50.5,
+              "odds": -110.0,
+              "model_probability": 0.5533859045019498,
               "market_probability": 0.5,
-              "edge": 0.07739349963455422,
-              "raw_point_edge": 3.200000000000003,
+              "edge": 0.0533859045019498,
+              "raw_point_edge": 2.200000000000003,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -4660,17 +4751,17 @@
           "home_spread": null,
           "home_moneyline": null,
           "away_moneyline": null,
-          "total": 51.5,
+          "total": 50.0,
           "evaluations": [
             {
               "market": "Total",
               "side": "Under",
-              "line": 51.5,
-              "odds": -110.0,
-              "model_probability": 0.5773934996345542,
+              "line": 50.0,
+              "odds": -108.0,
+              "model_probability": 0.5413025820549489,
               "market_probability": 0.5,
-              "edge": 0.07739349963455422,
-              "raw_point_edge": 3.200000000000003,
+              "edge": 0.041302582054948855,
+              "raw_point_edge": 1.7000000000000028,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -4701,17 +4792,17 @@
       "current_season_games_min": 10,
       "sportsbooks": [
         {
-          "sportsbook": "draftkings",
+          "sportsbook": "bovada",
           "home_spread": null,
           "home_moneyline": null,
-          "away_moneyline": -270.3,
+          "away_moneyline": -289.9,
           "total": 46.5,
           "evaluations": [
             {
               "market": "Total",
               "side": "Over",
               "line": 46.5,
-              "odds": -108.0,
+              "odds": -112.0,
               "model_probability": 0.5963990457253623,
               "market_probability": 0.5,
               "edge": 0.09639904572536229,
@@ -4724,17 +4815,31 @@
           ]
         },
         {
-          "sportsbook": "bovada",
-          "home_spread": null,
-          "home_moneyline": null,
-          "away_moneyline": -280.1,
+          "sportsbook": "draftkings",
+          "home_spread": 7.5,
+          "home_moneyline": 225.0,
+          "away_moneyline": null,
           "total": 46.5,
           "evaluations": [
+            {
+              "market": "Spread",
+              "side": "Home",
+              "line": 7.5,
+              "odds": -114.9,
+              "model_probability": 0.576624846723323,
+              "market_probability": 0.5,
+              "edge": 0.07662484672332304,
+              "raw_point_edge": 3.4000000000000004,
+              "qualified": false,
+              "gate_reasons": [
+                "probability below threshold"
+              ]
+            },
             {
               "market": "Total",
               "side": "Over",
               "line": 46.5,
-              "odds": -110.0,
+              "odds": -112.0,
               "model_probability": 0.5963990457253623,
               "market_probability": 0.5,
               "edge": 0.09639904572536229,
@@ -4760,9 +4865,9 @@
       "projected_away": 25.0,
       "projected_margin_home": 15.1,
       "projected_total": 65.1,
-      "home_win_probability": 0.8047658971295427,
+      "home_win_probability": 0.8047658971295428,
       "predicted_winner": "Boise State",
-      "winner_confidence": 0.8047658971295427,
+      "winner_confidence": 0.8047658971295428,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -4771,9 +4876,9 @@
         {
           "sportsbook": "bovada",
           "home_spread": -17.0,
-          "home_moneyline": -877.2,
+          "home_moneyline": -900.9,
           "away_moneyline": null,
-          "total": 60.0,
+          "total": 61.0,
           "evaluations": [
             {
               "market": "Spread",
@@ -4792,12 +4897,12 @@
             {
               "market": "Total",
               "side": "Over",
-              "line": 60.0,
-              "odds": -112.0,
-              "model_probability": 0.622155790295637,
+              "line": 61.0,
+              "odds": -110.0,
+              "model_probability": 0.5987597867717815,
               "market_probability": 0.5,
-              "edge": 0.12215579029563695,
-              "raw_point_edge": 5.099999999999994,
+              "edge": 0.09875978677178154,
+              "raw_point_edge": 4.099999999999994,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -4816,7 +4921,7 @@
               "market": "Total",
               "side": "Over",
               "line": 60.5,
-              "odds": -110.0,
+              "odds": -114.9,
               "model_probability": 0.6105078571674263,
               "market_probability": 0.5,
               "edge": 0.11050785716742628,
@@ -4842,9 +4947,9 @@
       "projected_away": 25.4,
       "projected_margin_home": 6.7,
       "projected_total": 57.4,
-      "home_win_probability": 0.6507991760814054,
+      "home_win_probability": 0.650799176081406,
       "predicted_winner": "Arizona State",
-      "winner_confidence": 0.6507991760814054,
+      "winner_confidence": 0.650799176081406,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -4885,9 +4990,9 @@
               "side": "Home",
               "line": null,
               "odds": 120.0,
-              "model_probability": 0.6507991760814054,
+              "model_probability": 0.650799176081406,
               "market_probability": 0.43650793650793646,
-              "edge": 0.2142912395734689,
+              "edge": 0.21429123957346957,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -4937,9 +5042,9 @@
       "projected_away": 23.5,
       "projected_margin_home": -6.4,
       "projected_total": 40.6,
-      "home_win_probability": 0.35418226396185487,
+      "home_win_probability": 0.3541822639618551,
       "predicted_winner": "Hawai'i",
-      "winner_confidence": 0.6458177360381452,
+      "winner_confidence": 0.645817736038145,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -4971,19 +5076,19 @@
         },
         {
           "sportsbook": "draftkings",
-          "home_spread": -4.5,
-          "home_moneyline": -204.9,
-          "away_moneyline": 170.0,
+          "home_spread": -5.5,
+          "home_moneyline": -217.9,
+          "away_moneyline": 180.0,
           "total": 40.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Away",
               "line": null,
-              "odds": 170.0,
-              "model_probability": 0.6458177360381452,
-              "market_probability": 0.35530747089601805,
-              "edge": 0.29051026514212713,
+              "odds": 180.0,
+              "model_probability": 0.645817736038145,
+              "market_probability": 0.342557272472576,
+              "edge": 0.30326046356556896,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -4992,12 +5097,12 @@
             {
               "market": "Spread",
               "side": "Away",
-              "line": 4.5,
-              "odds": -108.0,
-              "model_probability": 0.7322359509347447,
+              "line": 5.5,
+              "odds": -112.0,
+              "model_probability": 0.7506169701466877,
               "market_probability": 0.5,
-              "edge": 0.2322359509347447,
-              "raw_point_edge": 10.9,
+              "edge": 0.2506169701466877,
+              "raw_point_edge": 11.9,
               "qualified": true,
               "gate_reasons": []
             },
@@ -5032,9 +5137,9 @@
       "projected_away": 23.6,
       "projected_margin_home": 5.8,
       "projected_total": 53.0,
-      "home_win_probability": 0.6318922863870955,
+      "home_win_probability": 0.6318922863870953,
       "predicted_winner": "Oregon State",
-      "winner_confidence": 0.6318922863870955,
+      "winner_confidence": 0.6318922863870953,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5065,19 +5170,19 @@
         },
         {
           "sportsbook": "draftkings",
-          "home_spread": -9.5,
-          "home_moneyline": -354.6,
-          "away_moneyline": 280.0,
+          "home_spread": -8.5,
+          "home_moneyline": -324.7,
+          "away_moneyline": 260.0,
           "total": 50.5,
           "evaluations": [
             {
               "market": "Moneyline",
               "side": "Away",
               "line": null,
-              "odds": 280.0,
-              "model_probability": 0.3681077136129045,
-              "market_probability": 0.2522640504306135,
-              "edge": 0.115843663182291,
+              "odds": 260.0,
+              "model_probability": 0.36810771361290473,
+              "market_probability": 0.2665001694255845,
+              "edge": 0.10160754418732021,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -5086,12 +5191,12 @@
             {
               "market": "Spread",
               "side": "Away",
-              "line": 9.5,
-              "odds": -112.0,
-              "model_probability": 0.5832907880842374,
+              "line": 8.5,
+              "odds": -110.0,
+              "model_probability": 0.5609886574222877,
               "market_probability": 0.5,
-              "edge": 0.0832907880842374,
-              "raw_point_edge": 3.7,
+              "edge": 0.06098865742228765,
+              "raw_point_edge": 2.7,
               "qualified": false,
               "gate_reasons": [
                 "probability below threshold"
@@ -5127,9 +5232,9 @@
       "projected_away": 24.1,
       "projected_margin_home": 0.5,
       "projected_total": 48.7,
-      "home_win_probability": 0.5123282059256163,
+      "home_win_probability": 0.5123282059256168,
       "predicted_winner": "Western Michigan",
-      "winner_confidence": 0.5123282059256163,
+      "winner_confidence": 0.5123282059256168,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5148,9 +5253,9 @@
       "projected_away": 21.0,
       "projected_margin_home": 6.8,
       "projected_total": 48.9,
-      "home_win_probability": 0.6546999963676056,
+      "home_win_probability": 0.6546999963676052,
       "predicted_winner": "Eastern Michigan",
-      "winner_confidence": 0.6546999963676056,
+      "winner_confidence": 0.6546999963676052,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5169,9 +5274,9 @@
       "projected_away": 24.2,
       "projected_margin_home": 9.5,
       "projected_total": 57.9,
-      "home_win_probability": 0.7092025764927027,
+      "home_win_probability": 0.709202576492703,
       "predicted_winner": "Texas Tech",
-      "winner_confidence": 0.7092025764927027,
+      "winner_confidence": 0.709202576492703,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5248,9 +5353,9 @@
       "projected_away": 24.8,
       "projected_margin_home": 9.1,
       "projected_total": 58.8,
-      "home_win_probability": 0.7011585723950652,
+      "home_win_probability": 0.7011585723950655,
       "predicted_winner": "UTSA",
-      "winner_confidence": 0.7011585723950652,
+      "winner_confidence": 0.7011585723950655,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5269,9 +5374,9 @@
       "projected_away": 14.0,
       "projected_margin_home": 20.4,
       "projected_total": 48.4,
-      "home_win_probability": 0.8712149016437148,
+      "home_win_probability": 0.8712149016437145,
       "predicted_winner": "Ole Miss",
-      "winner_confidence": 0.8712149016437148,
+      "winner_confidence": 0.8712149016437145,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5290,9 +5395,9 @@
       "projected_away": 17.6,
       "projected_margin_home": 7.5,
       "projected_total": 42.8,
-      "home_win_probability": 0.6695232550471619,
+      "home_win_probability": 0.6695232550471624,
       "predicted_winner": "Iowa",
-      "winner_confidence": 0.6695232550471619,
+      "winner_confidence": 0.6695232550471624,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5350,9 +5455,9 @@
       "projected_away": 30.6,
       "projected_margin_home": -11.3,
       "projected_total": 49.9,
-      "home_win_probability": 0.257960387960611,
+      "home_win_probability": 0.2579603879606108,
       "predicted_winner": "Buffalo",
-      "winner_confidence": 0.7420396120393891,
+      "winner_confidence": 0.7420396120393892,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5371,9 +5476,9 @@
       "projected_away": 21.5,
       "projected_margin_home": 3.9,
       "projected_total": 47.0,
-      "home_win_probability": 0.5912487989748468,
+      "home_win_probability": 0.5912487989748465,
       "predicted_winner": "Ohio",
-      "winner_confidence": 0.5912487989748468,
+      "winner_confidence": 0.5912487989748465,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5392,9 +5497,9 @@
       "projected_away": 20.3,
       "projected_margin_home": 6.3,
       "projected_total": 46.9,
-      "home_win_probability": 0.6437503234232101,
+      "home_win_probability": 0.6437503234232103,
       "predicted_winner": "South Alabama",
-      "winner_confidence": 0.6437503234232101,
+      "winner_confidence": 0.6437503234232103,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5413,9 +5518,9 @@
       "projected_away": 22.9,
       "projected_margin_home": -1.2,
       "projected_total": 44.6,
-      "home_win_probability": 0.4721042767817466,
+      "home_win_probability": 0.4721042767817467,
       "predicted_winner": "Florida",
-      "winner_confidence": 0.5278957232182534,
+      "winner_confidence": 0.5278957232182533,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5434,9 +5539,9 @@
       "projected_away": 29.5,
       "projected_margin_home": -16.1,
       "projected_total": 42.9,
-      "home_win_probability": 0.1812897441440608,
+      "home_win_probability": 0.18128974414406052,
       "predicted_winner": "North Dakota State",
-      "winner_confidence": 0.8187102558559392,
+      "winner_confidence": 0.8187102558559395,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5455,9 +5560,9 @@
       "projected_away": 20.9,
       "projected_margin_home": 1.9,
       "projected_total": 43.7,
-      "home_win_probability": 0.5452875506941877,
+      "home_win_probability": 0.5452875506941874,
       "predicted_winner": "New Mexico",
-      "winner_confidence": 0.5452875506941877,
+      "winner_confidence": 0.5452875506941874,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5476,14 +5581,39 @@
       "projected_away": 24.2,
       "projected_margin_home": -6.4,
       "projected_total": 42.1,
-      "home_win_probability": 0.35553104000542246,
+      "home_win_probability": 0.355531040005422,
       "predicted_winner": "Texas",
-      "winner_confidence": 0.6444689599945775,
+      "winner_confidence": 0.644468959994578,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
       "current_season_games_min": 10,
-      "sportsbooks": []
+      "sportsbooks": [
+        {
+          "sportsbook": "draftkings",
+          "home_spread": null,
+          "home_moneyline": null,
+          "away_moneyline": -309.6,
+          "total": 41.5,
+          "evaluations": [
+            {
+              "market": "Total",
+              "side": "Over",
+              "line": 41.5,
+              "odds": -110.0,
+              "model_probability": 0.5146002606189299,
+              "market_probability": 0.5,
+              "edge": 0.014600260618929939,
+              "raw_point_edge": 0.6000000000000014,
+              "qualified": false,
+              "gate_reasons": [
+                "market edge below threshold",
+                "probability below threshold"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "game_id": "401858544",
@@ -5497,9 +5627,9 @@
       "projected_away": 21.5,
       "projected_margin_home": 0.9,
       "projected_total": 44.0,
-      "home_win_probability": 0.5215833085053555,
+      "home_win_probability": 0.521583308505355,
       "predicted_winner": "Wisconsin",
-      "winner_confidence": 0.5215833085053555,
+      "winner_confidence": 0.521583308505355,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5518,9 +5648,9 @@
       "projected_away": 20.8,
       "projected_margin_home": 18.2,
       "projected_total": 59.7,
-      "home_win_probability": 0.8457918067512177,
+      "home_win_probability": 0.8457918067512176,
       "predicted_winner": "Utah",
-      "winner_confidence": 0.8457918067512177,
+      "winner_confidence": 0.8457918067512176,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5560,9 +5690,9 @@
       "projected_away": 32.0,
       "projected_margin_home": -13.1,
       "projected_total": 50.8,
-      "home_win_probability": 0.22759040081234266,
+      "home_win_probability": 0.227590400812343,
       "predicted_winner": "Penn State",
-      "winner_confidence": 0.7724095991876574,
+      "winner_confidence": 0.772409599187657,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5581,9 +5711,9 @@
       "projected_away": 14.9,
       "projected_margin_home": 20.5,
       "projected_total": 50.4,
-      "home_win_probability": 0.8722551050607857,
+      "home_win_probability": 0.872255105060786,
       "predicted_winner": "Oregon",
-      "winner_confidence": 0.8722551050607857,
+      "winner_confidence": 0.872255105060786,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5602,9 +5732,9 @@
       "projected_away": 26.9,
       "projected_margin_home": -9.3,
       "projected_total": 44.5,
-      "home_win_probability": 0.2944867097545352,
+      "home_win_probability": 0.2944867097545348,
       "predicted_winner": "Michigan State",
-      "winner_confidence": 0.7055132902454648,
+      "winner_confidence": 0.7055132902454653,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5623,9 +5753,9 @@
       "projected_away": 22.0,
       "projected_margin_home": -2.0,
       "projected_total": 42.0,
-      "home_win_probability": 0.4528480368741319,
+      "home_win_probability": 0.4528480368741316,
       "predicted_winner": "USC",
-      "winner_confidence": 0.5471519631258681,
+      "winner_confidence": 0.5471519631258683,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5644,9 +5774,9 @@
       "projected_away": 29.2,
       "projected_margin_home": -5.9,
       "projected_total": 52.5,
-      "home_win_probability": 0.36484396008866926,
+      "home_win_probability": 0.3648439600886697,
       "predicted_winner": "UConn",
-      "winner_confidence": 0.6351560399113307,
+      "winner_confidence": 0.6351560399113303,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5665,9 +5795,9 @@
       "projected_away": 23.2,
       "projected_margin_home": 4.4,
       "projected_total": 50.7,
-      "home_win_probability": 0.6009568648823239,
+      "home_win_probability": 0.6009568648823241,
       "predicted_winner": "East Carolina",
-      "winner_confidence": 0.6009568648823239,
+      "winner_confidence": 0.6009568648823241,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5686,9 +5816,9 @@
       "projected_away": 22.0,
       "projected_margin_home": 8.1,
       "projected_total": 52.0,
-      "home_win_probability": 0.680346165236367,
+      "home_win_probability": 0.6803461652363669,
       "predicted_winner": "South Florida",
-      "winner_confidence": 0.680346165236367,
+      "winner_confidence": 0.6803461652363669,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5707,9 +5837,9 @@
       "projected_away": 28.8,
       "projected_margin_home": -4.8,
       "projected_total": 52.7,
-      "home_win_probability": 0.3901362590767725,
+      "home_win_probability": 0.39013625907677263,
       "predicted_winner": "Louisiana",
-      "winner_confidence": 0.6098637409232275,
+      "winner_confidence": 0.6098637409232274,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5728,9 +5858,9 @@
       "projected_away": 31.2,
       "projected_margin_home": -10.6,
       "projected_total": 51.9,
-      "home_win_probability": 0.27032047396767883,
+      "home_win_probability": 0.27032047396767866,
       "predicted_winner": "Navy",
-      "winner_confidence": 0.7296795260323212,
+      "winner_confidence": 0.7296795260323213,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5749,9 +5879,9 @@
       "projected_away": 23.2,
       "projected_margin_home": 10.0,
       "projected_total": 56.3,
-      "home_win_probability": 0.71756930817151,
+      "home_win_probability": 0.7175693081715102,
       "predicted_winner": "North Texas",
-      "winner_confidence": 0.71756930817151,
+      "winner_confidence": 0.7175693081715102,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5770,9 +5900,9 @@
       "projected_away": 23.2,
       "projected_margin_home": -0.2,
       "projected_total": 46.2,
-      "home_win_probability": 0.49577016057937406,
+      "home_win_probability": 0.4957701605793735,
       "predicted_winner": "UTEP",
-      "winner_confidence": 0.5042298394206259,
+      "winner_confidence": 0.5042298394206265,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5791,9 +5921,9 @@
       "projected_away": 21.7,
       "projected_margin_home": 10.9,
       "projected_total": 54.3,
-      "home_win_probability": 0.7349327958913738,
+      "home_win_probability": 0.7349327958913737,
       "predicted_winner": "James Madison",
-      "winner_confidence": 0.7349327958913738,
+      "winner_confidence": 0.7349327958913737,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5812,9 +5942,9 @@
       "projected_away": 27.8,
       "projected_margin_home": 1.8,
       "projected_total": 57.3,
-      "home_win_probability": 0.5417020196766699,
+      "home_win_probability": 0.5417020196766711,
       "predicted_winner": "Georgia Southern",
-      "winner_confidence": 0.5417020196766699,
+      "winner_confidence": 0.5417020196766711,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5833,9 +5963,9 @@
       "projected_away": 23.8,
       "projected_margin_home": -1.1,
       "projected_total": 46.4,
-      "home_win_probability": 0.4750789957633857,
+      "home_win_probability": 0.4750789957633852,
       "predicted_winner": "Illinois",
-      "winner_confidence": 0.5249210042366144,
+      "winner_confidence": 0.5249210042366148,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5854,9 +5984,9 @@
       "projected_away": 29.3,
       "projected_margin_home": -9.8,
       "projected_total": 48.8,
-      "home_win_probability": 0.286173968395109,
+      "home_win_probability": 0.2861739683951085,
       "predicted_winner": "Marshall",
-      "winner_confidence": 0.713826031604891,
+      "winner_confidence": 0.7138260316048914,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5875,9 +6005,9 @@
       "projected_away": 21.6,
       "projected_margin_home": 13.4,
       "projected_total": 56.6,
-      "home_win_probability": 0.777346553556512,
+      "home_win_probability": 0.777346553556511,
       "predicted_winner": "Old Dominion",
-      "winner_confidence": 0.777346553556512,
+      "winner_confidence": 0.777346553556511,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5896,9 +6026,9 @@
       "projected_away": 31.0,
       "projected_margin_home": -9.7,
       "projected_total": 52.3,
-      "home_win_probability": 0.28806147640454155,
+      "home_win_probability": 0.2880614764045411,
       "predicted_winner": "Army",
-      "winner_confidence": 0.7119385235954585,
+      "winner_confidence": 0.711938523595459,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5917,9 +6047,9 @@
       "projected_away": 29.5,
       "projected_margin_home": -6.1,
       "projected_total": 53.0,
-      "home_win_probability": 0.36103258901869617,
+      "home_win_probability": 0.3610325890186961,
       "predicted_winner": "Virginia",
-      "winner_confidence": 0.6389674109813038,
+      "winner_confidence": 0.6389674109813039,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5938,9 +6068,9 @@
       "projected_away": 30.3,
       "projected_margin_home": -11.2,
       "projected_total": 49.5,
-      "home_win_probability": 0.26003697949688265,
+      "home_win_probability": 0.26003697949688215,
       "predicted_winner": "Pittsburgh",
-      "winner_confidence": 0.7399630205031174,
+      "winner_confidence": 0.7399630205031178,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5959,9 +6089,9 @@
       "projected_away": 25.5,
       "projected_margin_home": -5.6,
       "projected_total": 45.5,
-      "home_win_probability": 0.372920003040763,
+      "home_win_probability": 0.37292000304076256,
       "predicted_winner": "Louisville",
-      "winner_confidence": 0.627079996959237,
+      "winner_confidence": 0.6270799969592374,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -5980,9 +6110,9 @@
       "projected_away": 16.1,
       "projected_margin_home": 16.5,
       "projected_total": 48.7,
-      "home_win_probability": 0.8245948467604869,
+      "home_win_probability": 0.824594846760487,
       "predicted_winner": "Alabama",
-      "winner_confidence": 0.8245948467604869,
+      "winner_confidence": 0.824594846760487,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6001,9 +6131,9 @@
       "projected_away": 28.1,
       "projected_margin_home": -11.3,
       "projected_total": 44.9,
-      "home_win_probability": 0.25843272857049915,
+      "home_win_probability": 0.2584327285704994,
       "predicted_winner": "LSU",
-      "winner_confidence": 0.7415672714295009,
+      "winner_confidence": 0.7415672714295005,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6022,9 +6152,9 @@
       "projected_away": 11.1,
       "projected_margin_home": 33.7,
       "projected_total": 55.8,
-      "home_win_probability": 0.9589639035201812,
+      "home_win_probability": 0.9589639035201815,
       "predicted_winner": "Georgia",
-      "winner_confidence": 0.9589639035201812,
+      "winner_confidence": 0.9589639035201815,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6043,9 +6173,9 @@
       "projected_away": 31.2,
       "projected_margin_home": -7.6,
       "projected_total": 54.8,
-      "home_win_probability": 0.3297749622800344,
+      "home_win_probability": 0.3297749622800345,
       "predicted_winner": "SMU",
-      "winner_confidence": 0.6702250377199657,
+      "winner_confidence": 0.6702250377199654,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6064,9 +6194,9 @@
       "projected_away": 19.5,
       "projected_margin_home": 6.6,
       "projected_total": 45.6,
-      "home_win_probability": 0.6486437956012467,
+      "home_win_probability": 0.6486437956012461,
       "predicted_winner": "Clemson",
-      "winner_confidence": 0.6486437956012467,
+      "winner_confidence": 0.6486437956012461,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6085,9 +6215,9 @@
       "projected_away": 26.9,
       "projected_margin_home": -9.2,
       "projected_total": 44.7,
-      "home_win_probability": 0.2971559918034041,
+      "home_win_probability": 0.2971559918034039,
       "predicted_winner": "Tennessee",
-      "winner_confidence": 0.7028440081965959,
+      "winner_confidence": 0.7028440081965961,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6127,9 +6257,9 @@
       "projected_away": 25.3,
       "projected_margin_home": 0.8,
       "projected_total": 51.4,
-      "home_win_probability": 0.519805634375803,
+      "home_win_probability": 0.5198056343758025,
       "predicted_winner": "Houston",
-      "winner_confidence": 0.519805634375803,
+      "winner_confidence": 0.5198056343758025,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6148,9 +6278,9 @@
       "projected_away": 27.1,
       "projected_margin_home": -1.8,
       "projected_total": 52.4,
-      "home_win_probability": 0.4583879439508996,
+      "home_win_probability": 0.4583879439508994,
       "predicted_winner": "Oklahoma",
-      "winner_confidence": 0.5416120560491005,
+      "winner_confidence": 0.5416120560491007,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6169,9 +6299,9 @@
       "projected_away": 14.9,
       "projected_margin_home": 20.5,
       "projected_total": 50.4,
-      "home_win_probability": 0.8725051191581175,
+      "home_win_probability": 0.8725051191581173,
       "predicted_winner": "BYU",
-      "winner_confidence": 0.8725051191581175,
+      "winner_confidence": 0.8725051191581173,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6190,9 +6320,9 @@
       "projected_away": 30.6,
       "projected_margin_home": 0.2,
       "projected_total": 61.3,
-      "home_win_probability": 0.5045405535569104,
+      "home_win_probability": 0.5045405535569109,
       "predicted_winner": "Oklahoma State",
-      "winner_confidence": 0.5045405535569104,
+      "winner_confidence": 0.5045405535569109,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6211,9 +6341,9 @@
       "projected_away": 21.0,
       "projected_margin_home": 10.6,
       "projected_total": 52.7,
-      "home_win_probability": 0.7303091777164591,
+      "home_win_probability": 0.7303091777164585,
       "predicted_winner": "Iowa State",
-      "winner_confidence": 0.7303091777164591,
+      "winner_confidence": 0.7303091777164585,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6253,9 +6383,9 @@
       "projected_away": 22.1,
       "projected_margin_home": 11.0,
       "projected_total": 55.2,
-      "home_win_probability": 0.7360902750417547,
+      "home_win_probability": 0.7360902750417542,
       "predicted_winner": "Wake Forest",
-      "winner_confidence": 0.7360902750417547,
+      "winner_confidence": 0.7360902750417542,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6274,9 +6404,9 @@
       "projected_away": 21.1,
       "projected_margin_home": 7.5,
       "projected_total": 49.7,
-      "home_win_probability": 0.6684605107717954,
+      "home_win_probability": 0.6684605107717949,
       "predicted_winner": "North Carolina",
-      "winner_confidence": 0.6684605107717954,
+      "winner_confidence": 0.6684605107717949,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6295,9 +6425,9 @@
       "projected_away": 33.7,
       "projected_margin_home": -16.1,
       "projected_total": 51.3,
-      "home_win_probability": 0.1814464476561786,
+      "home_win_probability": 0.18144644765617876,
       "predicted_winner": "Notre Dame",
-      "winner_confidence": 0.8185535523438214,
+      "winner_confidence": 0.8185535523438212,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6316,9 +6446,9 @@
       "projected_away": 22.1,
       "projected_margin_home": 4.2,
       "projected_total": 48.5,
-      "home_win_probability": 0.5962458957668642,
+      "home_win_probability": 0.596245895766864,
       "predicted_winner": "Colorado",
-      "winner_confidence": 0.5962458957668642,
+      "winner_confidence": 0.596245895766864,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6337,9 +6467,9 @@
       "projected_away": 19.4,
       "projected_margin_home": 8.5,
       "projected_total": 47.3,
-      "home_win_probability": 0.688385844278923,
+      "home_win_probability": 0.6883858442789229,
       "predicted_winner": "Bowling Green",
-      "winner_confidence": 0.688385844278923,
+      "winner_confidence": 0.6883858442789229,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6358,9 +6488,9 @@
       "projected_away": 17.2,
       "projected_margin_home": 12.7,
       "projected_total": 47.0,
-      "home_win_probability": 0.7665210900514088,
+      "home_win_probability": 0.7665210900514087,
       "predicted_winner": "Ohio State",
-      "winner_confidence": 0.7665210900514088,
+      "winner_confidence": 0.7665210900514087,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6379,9 +6509,9 @@
       "projected_away": 29.3,
       "projected_margin_home": -10.7,
       "projected_total": 47.9,
-      "home_win_probability": 0.2683999975540765,
+      "home_win_probability": 0.2683999975540767,
       "predicted_winner": "Central Michigan",
-      "winner_confidence": 0.7316000024459235,
+      "winner_confidence": 0.7316000024459233,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6400,9 +6530,9 @@
       "projected_away": 25.3,
       "projected_margin_home": 6.7,
       "projected_total": 57.3,
-      "home_win_probability": 0.6509762647330212,
+      "home_win_probability": 0.6509762647330217,
       "predicted_winner": "Western Kentucky",
-      "winner_confidence": 0.6509762647330212,
+      "winner_confidence": 0.6509762647330217,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6421,7 +6551,7 @@
       "projected_away": 26.7,
       "projected_margin_home": -4.5,
       "projected_total": 48.8,
-      "home_win_probability": 0.3963383158992501,
+      "home_win_probability": 0.3963383158992502,
       "predicted_winner": "Liberty",
       "winner_confidence": 0.6036616841007498,
       "data_reliability": 1.0,
@@ -6442,9 +6572,9 @@
       "projected_away": 17.6,
       "projected_margin_home": 12.1,
       "projected_total": 47.3,
-      "home_win_probability": 0.756996727670581,
+      "home_win_probability": 0.7569967276705807,
       "predicted_winner": "Florida International",
-      "winner_confidence": 0.756996727670581,
+      "winner_confidence": 0.7569967276705807,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6463,9 +6593,9 @@
       "projected_away": 22.4,
       "projected_margin_home": 5.0,
       "projected_total": 49.8,
-      "home_win_probability": 0.6143474410423833,
+      "home_win_probability": 0.614347441042383,
       "predicted_winner": "Middle Tennessee",
-      "winner_confidence": 0.6143474410423833,
+      "winner_confidence": 0.614347441042383,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6484,9 +6614,9 @@
       "projected_away": 23.8,
       "projected_margin_home": -1.2,
       "projected_total": 46.3,
-      "home_win_probability": 0.4708713462327694,
+      "home_win_probability": 0.4708713462327687,
       "predicted_winner": "Troy",
-      "winner_confidence": 0.5291286537672306,
+      "winner_confidence": 0.5291286537672313,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6505,9 +6635,9 @@
       "projected_away": 26.9,
       "projected_margin_home": -3.4,
       "projected_total": 50.4,
-      "home_win_probability": 0.4213160530334566,
+      "home_win_probability": 0.42131605303345665,
       "predicted_winner": "Jacksonville State",
-      "winner_confidence": 0.5786839469665435,
+      "winner_confidence": 0.5786839469665433,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6526,9 +6656,9 @@
       "projected_away": 16.7,
       "projected_margin_home": 16.5,
       "projected_total": 49.8,
-      "home_win_probability": 0.8240308895669749,
+      "home_win_probability": 0.8240308895669752,
       "predicted_winner": "UNLV",
-      "winner_confidence": 0.8240308895669749,
+      "winner_confidence": 0.8240308895669752,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6547,9 +6677,9 @@
       "projected_away": 15.4,
       "projected_margin_home": 11.6,
       "projected_total": 42.4,
-      "home_win_probability": 0.7478720323691261,
+      "home_win_probability": 0.7478720323691259,
       "predicted_winner": "Hawai'i",
-      "winner_confidence": 0.7478720323691261,
+      "winner_confidence": 0.7478720323691259,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
@@ -6568,9 +6698,9 @@
       "projected_away": 27.2,
       "projected_margin_home": 0.9,
       "projected_total": 55.3,
-      "home_win_probability": 0.5221421688659569,
+      "home_win_probability": 0.522142168865956,
       "predicted_winner": "Army",
-      "winner_confidence": 0.5221421688659569,
+      "winner_confidence": 0.522142168865956,
       "data_reliability": 1.0,
       "margin_uncertainty": 17.59229368491784,
       "total_uncertainty": 16.390934940443874,
