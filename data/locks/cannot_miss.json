@@ -293,10 +293,34 @@
     "units_profit": -1.0
   },
   {
+    "league": "nfl",
+    "season": 2026,
+    "generated_at": "2026-11-24T10:54:19.192507+00:00",
+    "status": "PASS",
+    "policy": {
+      "min_probability": 0.7,
+      "min_reliability": 0.64,
+      "min_legs": 3,
+      "max_legs": 6,
+      "preferred_odds": [
+        -500,
+        -150
+      ],
+      "minimum_parlay_odds": 250.0,
+      "preferred_max_odds": 350.0
+    },
+    "week": 12,
+    "candidate_counts": {
+      "bovada": 1,
+      "draftkings": 1
+    },
+    "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
+  },
+  {
     "league": "cfb",
     "season": 2026,
-    "generated_at": "2026-11-24T00:48:58.800954+00:00",
-    "status": "PASS",
+    "generated_at": "2026-11-24T10:54:19.192507+00:00",
+    "status": "QUALIFIED",
     "policy": {
       "min_probability": 0.75,
       "min_reliability": 0.72,
@@ -310,11 +334,78 @@
       "preferred_max_odds": 350.0
     },
     "week": 13,
-    "candidate_counts": {
-      "bovada": 0,
-      "draftkings": 3
-    },
-    "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
+    "sportsbook": "draftkings",
+    "legs": [
+      {
+        "game_id": "401856756",
+        "kickoff": "2026-11-28T00:30:00+00:00",
+        "away": "Texas",
+        "home": "Texas A&M",
+        "team": "Texas",
+        "side": "Away",
+        "moneyline": -454.5,
+        "model_probability": 0.8240534551967368,
+        "market_probability": 0.786710260601981,
+        "probability_edge": 0.03734319459475577,
+        "reliability": 1.0,
+        "safety_score": 0.8587042927488636
+      },
+      {
+        "game_id": "401866472",
+        "kickoff": "2026-11-27T17:00:00+00:00",
+        "away": "Buffalo",
+        "home": "Akron",
+        "team": "Buffalo",
+        "side": "Away",
+        "moneyline": -309.6,
+        "model_probability": 0.7998448226811057,
+        "market_probability": 0.7256897937315833,
+        "probability_edge": 0.07415502894952242,
+        "reliability": 1.0,
+        "safety_score": 0.8313448597734486
+      },
+      {
+        "game_id": "401864548",
+        "kickoff": "2026-11-29T02:00:00+00:00",
+        "away": "Nevada",
+        "home": "UNLV",
+        "team": "UNLV",
+        "side": "Home",
+        "moneyline": -225.2,
+        "model_probability": 0.7810579921043227,
+        "market_probability": 0.6637091270087485,
+        "probability_edge": 0.11734886509557418,
+        "reliability": 1.0,
+        "safety_score": 0.8064562778043485
+      },
+      {
+        "game_id": "401864550",
+        "kickoff": "2026-11-28T20:30:00+00:00",
+        "away": "UTEP",
+        "home": "Northern Illinois",
+        "team": "Northern Illinois",
+        "side": "Home",
+        "moneyline": -191.9,
+        "model_probability": 0.796116857648808,
+        "market_probability": 0.6308987911587679,
+        "probability_edge": 0.16521806649004012,
+        "reliability": 1.0,
+        "safety_score": 0.805783126614096
+      }
+    ],
+    "leg_count": 4,
+    "parlay_odds": 254.5,
+    "model_combined_probability": 0.40984649320496935,
+    "sportsbook_implied_probability": 0.2820874471086037,
+    "probability_edge": 0.12775904609636568,
+    "leg_results": [
+      "PENDING",
+      "PENDING",
+      "PENDING",
+      "PENDING"
+    ],
+    "result": "PENDING",
+    "units_profit": null
   },
   {
     "league": "nfl",
