@@ -295,7 +295,7 @@
   {
     "league": "nfl",
     "season": 2026,
-    "generated_at": "2026-11-24T23:00:24.239573+00:00",
+    "generated_at": "2026-11-25T09:50:11.646557+00:00",
     "status": "PASS",
     "policy": {
       "min_probability": 0.7,
@@ -311,15 +311,15 @@
     },
     "week": 12,
     "candidate_counts": {
-      "bovada": 1,
-      "draftkings": 1
+      "bovada": 2,
+      "draftkings": 2
     },
     "reason": "No combination met every confidence, reliability, individual-price, and +250 parlay requirement."
   },
   {
     "league": "cfb",
     "season": 2026,
-    "generated_at": "2026-11-24T23:00:24.239573+00:00",
+    "generated_at": "2026-11-25T09:50:11.646557+00:00",
     "status": "QUALIFIED",
     "policy": {
       "min_probability": 0.75,
@@ -334,7 +334,7 @@
       "preferred_max_odds": 350.0
     },
     "week": 13,
-    "sportsbook": "draftkings",
+    "sportsbook": "bovada",
     "legs": [
       {
         "game_id": "401856756",
@@ -343,12 +343,12 @@
         "home": "Texas A&M",
         "team": "Texas",
         "side": "Away",
-        "moneyline": -454.5,
-        "model_probability": 0.8240534551967371,
-        "market_probability": 0.786710260601981,
-        "probability_edge": 0.0373431945947561,
+        "moneyline": -490.2,
+        "model_probability": 0.8240534551967373,
+        "market_probability": 0.7960706807549047,
+        "probability_edge": 0.027982774441832614,
         "reliability": 1.0,
-        "safety_score": 0.8587042927488638
+        "safety_score": 0.8610443977870949
       },
       {
         "game_id": "401866472",
@@ -357,12 +357,12 @@
         "home": "Akron",
         "team": "Buffalo",
         "side": "Away",
-        "moneyline": -304.9,
-        "model_probability": 0.7998448226811056,
-        "market_probability": 0.7220630077464039,
-        "probability_edge": 0.07778181493470171,
+        "moneyline": -300.3,
+        "model_probability": 0.7998448226811059,
+        "market_probability": 0.7241878251283288,
+        "probability_edge": 0.0756569975527771,
         "reliability": 1.0,
-        "safety_score": 0.8304381632771538
+        "safety_score": 0.8309693676226352
       },
       {
         "game_id": "401864548",
@@ -372,11 +372,11 @@
         "team": "UNLV",
         "side": "Home",
         "moneyline": -225.2,
-        "model_probability": 0.7810579921043227,
+        "model_probability": 0.7810579921043217,
         "market_probability": 0.6637091270087485,
-        "probability_edge": 0.11734886509557418,
+        "probability_edge": 0.11734886509557318,
         "reliability": 1.0,
-        "safety_score": 0.8064562778043485
+        "safety_score": 0.806456277804348
       },
       {
         "game_id": "401864550",
@@ -385,19 +385,19 @@
         "home": "Northern Illinois",
         "team": "Northern Illinois",
         "side": "Home",
-        "moneyline": -191.9,
-        "model_probability": 0.796116857648808,
-        "market_probability": 0.6308987911587679,
-        "probability_edge": 0.16521806649004012,
+        "moneyline": -188.0,
+        "model_probability": 0.7961168576488087,
+        "market_probability": 0.6319206584530443,
+        "probability_edge": 0.16419619919576434,
         "reliability": 1.0,
-        "safety_score": 0.805783126614096
+        "safety_score": 0.8060385934376655
       }
     ],
     "leg_count": 4,
-    "parlay_odds": 255.9,
-    "model_combined_probability": 0.4098464932049696,
-    "sportsbook_implied_probability": 0.2809778027535825,
-    "probability_edge": 0.1288686904513871,
+    "parlay_odds": 255.0,
+    "model_combined_probability": 0.40984649320496963,
+    "sportsbook_implied_probability": 0.28169014084507044,
+    "probability_edge": 0.1281563523598992,
     "leg_results": [
       "PENDING",
       "PENDING",
